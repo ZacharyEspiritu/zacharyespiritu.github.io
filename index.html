@@ -35,6 +35,8 @@
         <link href="stylesheets/styles.css" rel="stylesheet">
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="javascripts/isotope.pkgd.min.js"></script>
+        <script src="javascripts/packery-mode.pkgd.js"></script>
         <script src="javascripts/jquery.fittext.js"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -47,70 +49,336 @@
     </head>
     
     <body>
-        <div class="header">
-            <div class="center-align">
+        <section id="header" class="header">
+            <hgroup class="vertical-align">
                 <h1 id="main-header">Hi there! I'm <img src="images/name.png">.</h1>
                 <div class="spacer"></div>
                 <h2 id="sub-header">This is my website.</h2>
+            </hgroup>
+        </section>
+        <section id="intro">
+            <div class="initial-curve">
+                <svg viewBox="0 0 2269 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+                    <defs></defs>
+                    <path d="M0,258.999995 L0,69.3698466 C0,69.3698466 241.889453,-22.1258979 572.5,5.45274695 C810.037321,25.267473 1299.82718,146.798228 1696,210.582038 C2009.86212,261.113828 2269,258.999995 2269,258.999995 L0,258.999995 Z" id="Rectangle-6" stroke="none" fill="#292929" fill-rule="evenodd"></path>
+                </svg>
             </div>
-        </div>
-        <div class="initial-curve">
-            <svg viewBox="0 0 2269 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-                <defs></defs>
-                <path d="M0,258.999995 L0,69.3698466 C0,69.3698466 241.889453,-22.1258979 572.5,5.45274695 C810.037321,25.267473 1299.82718,146.798228 1696,210.582038 C2009.86212,261.113828 2269,258.999995 2269,258.999995 L0,258.999995 Z" id="Rectangle-6" stroke="none" fill="#292929" fill-rule="evenodd"></path>
-            </svg>
-        </div>
-        <div class="gray content" style="margin-top: -1px;">
-            <div class="initial-curve-text">
-                I develop a lot of things.<br>
-                And design.<br>
-                And blog.<br>
-                And a bunch of extracurriculars.<br>
-                (That's all people really care about at that point.)
+            <div class="gray content" style="margin-top: -1px;">
+                <div class="initial-curve-text">
+                    I develop a lot of things.<br>
+                    And design.<br>
+                    And blog.<br>
+                    And a bunch of extracurriculars.<br>
+                    (That's all people really care about at that point.)
+                </div>
             </div>
-        </div>
-        <div class="content">
-            <div class="right-align section-header">I've worked on the following <a id="projects" href="#projects">projects</a>:</div>
+        </section>
+        <section id="projects" class="content">
+            <div class="right-align section-header">I've worked on the following <a class="section-link" href="#projects">projects</a>:</div>
             <div class="projects">
-                <div class="project-card">
-                    <div class="card-picture">
-                    
-                    </div>
-                    <div class="card-text">
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #33CB43;">
                         <div class="card-header">
-                            Header
+                            <img class="card-picture" src="">
                         </div>
-                        <div class="card-detail">
-                            Sole developer of several large projects as a Software Engineering Intern for the summer of 2016
+                        <div class="card-text">
+                            <div class="card-title">
+                                Negotiatus
+                            </div>
+                            <div class="card-detail">
+                                Sole developer of several large projects as a Software Engineering Intern for the summer of 2016
+                            </div>
                         </div>
+                        <img src="images/arrow.svg" class="card-arrow">
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="card-picture">
-                    
-                    </div>
-                    <div class="card-text">
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #E461FF;">
                         <div class="card-header">
-                            Header
+                            <img class="card-picture" src="">
+                            <div class="card-overlay">
+                                10Under20 Recipient
+                                <div class="card-overlay-extension">
+                                    <div class="card-overlay-triangle"></div>
+                                    + 2 more
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-detail">
-                            Sole developer of several large projects as a Software Engineering Intern for the summer of 2016
+                        <div class="card-text">
+                            <div class="card-title">
+                                Math Battle II
+                            </div>
+                            <div class="card-detail">
+                                An experiment in online real-time multiplayer, brand design, and how much people secretly like math
+                            </div>
                         </div>
+                        <img src="images/arrow.svg" class="card-arrow">
                     </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #4A90E2;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                            <div class="card-overlay">
+                                "Audience Choice" at Make<br>
+                                School Demo Day 2015
+                                <div class="card-overlay-extension">
+                                    <div class="card-overlay-triangle"></div>
+                                    + 1 more
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Tile, Tap, Push!
+                            </div>
+                            <div class="card-detail">
+                                A tile-tapping time for two players and blatant ripoff of "Don’t Touch The White Tile"
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #F5A623;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                            <div class="card-overlay">
+                                "Audience Choice" at Make<br>
+                                School Demo Day 2015
+                                <div class="card-overlay-extension">
+                                    <div class="card-overlay-triangle"></div>
+                                    + 1 more
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Reaction Line
+                            </div>
+                            <div class="card-detail">
+                                An allegory for political divisiveness in the United States, or a game about sorting lines in the shortest time 
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #B5B5B5;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Physics Guide
+                            </div>
+                            <div class="card-detail">
+                                I didn’t want to study for my Physics exam, but I wanted to learn LaTeX, so I made this instead
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #7ED321;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                            <div class="card-overlay">
+                                3rd Place at hackTrin III
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                FitFarm
+                            </div>
+                            <div class="card-detail">
+                                Fitness-based Farmville parody where players raise their own farm through real-world exercise
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #696969;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                            <div class="card-overlay">
+                                Blueprint @ MIT 2016
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Math Maze
+                            </div>
+                            <div class="card-detail">
+                                Using dynamic maze generation algorithms when tile-based math games aren’t enough
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #CCC34F;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                            <div class="card-overlay">
+                                Winner of hackGCT 2015
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Data Farm
+                            </div>
+                            <div class="card-detail">
+                                Motivating people to save on cellular data by exchanging their unused data bytes for "bites"
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #0EBA4F;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Art of Animation
+                            </div>
+                            <div class="card-detail">
+                                My final project for Regis High School’s Computer Technology I course
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #B5B5B5;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Game Idea Gen
+                            </div>
+                            <div class="card-detail">
+                                Random idea generator made in response to the brainstorming sessions at Make School
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #027DAD;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                            <div class="card-overlay">
+                                hackBCA III
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                onHealth
+                            </div>
+                            <div class="card-detail">
+                                An unified, online database for healthcare providers to store patient data for collaboration
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
             </div>
-        </div>
+        </section>
+        <section id="designs" class="gray content">
+            <div class="section-header">And I've worked on these <a class="section-link" href="#designs">designs</a>:</div>
+            <div class="projects">
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #2A334B;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Instimize Icon
+                            </div>
+                            <div class="card-detail">
+                                Designed the icon for my friend’s app that’s probably more useful than anything I’ve made so far
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #E0001B;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Calenday POC
+                            </div>
+                            <div class="card-detail">
+                                A proof-of-concept of a calendar app that focuses on intuitive visualization and navigation with cards
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="designs" class="content">
+            <div class="section-header center-align" style="color: black;">Recently, I've published these posts on my <a class="section-link" href="#designs">blog</a>:</div>
+            <div class="projects">
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #2A334B;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Instimize Icon
+                            </div>
+                            <div class="card-detail">
+                                Designed the icon for my friend’s app that’s probably more useful than anything I’ve made so far
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="project-card" style="background: #E0001B;">
+                        <div class="card-header">
+                            <img class="card-picture" src="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">
+                                Calenday POC
+                            </div>
+                            <div class="card-detail">
+                                A proof-of-concept of a calendar app that focuses on intuitive visualization and navigation with cards
+                            </div>
+                        </div>
+                        <img src="images/arrow.svg" class="card-arrow">
+                    </div>
+                </a>
+            </div>
+            <div class="spacer"></div>
+            <div class="center-align small" style="color: black;">(I don't blog often, but when I do, you'll probably find it here.)</div>
+        </section>
         
         <script>
             $("#main-header").fitText(1, { maxFontSize: '90px' });
             $("#sub-header").fitText(1, { maxFontSize: '52px' });
+            
+            $('.projects').isotope({
+                // options
+                itemSelector: '.project-card',
+                layoutMode: 'packery',
+                packery: {
+                    gutter: 20
+                }
+            });
         </script>
     </body>
 </html>

@@ -22,20 +22,34 @@ body {
     color: white;
 }
 
-.center-align {
+.vertical-align {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.center-align {
+    text-align: center;
 }
 
 .right-align {
     text-align: right;
 }
 
-a {
+.small {
+    font-size: 25px;
+}
+
+
+a.section-link {
     color: #B93838;
     text-decoration: none;
     border-bottom: 5px solid #B93838;
+}
+
+a.block-link {
+    display: block;
+    text-decoration: none;
 }
 
 
@@ -64,7 +78,7 @@ a {
     font-size: 52px;
 }
 
-.header .spacer {
+.spacer {
     height: 15px;
 }
 
@@ -89,11 +103,17 @@ a {
     margin-bottom: 17px;
 }
 
+
+/* Projects Section */
+
+.projects {
+    max-width: 1060px;
+    margin: auto;
+}
+
 .project-card {
-    margin: 18px;
     height: 350px;
-    width: 339px;
-    background-color: red;
+    width: 340px;
     border-radius: 6px;
     overflow: hidden;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
@@ -101,7 +121,7 @@ a {
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
 }
 
-.project-card .card-picture {
+.project-card .card-header {
     height: 210px;
     overflow: hidden;
     background-color: gray;
@@ -112,16 +132,64 @@ a {
     bottom: 0;
 }
 
+.project-card .card-header .card-picture {
+    height: 100%;
+    width: 100%;
+}
+
+.project-card .card-header .card-overlay,
+.project-card .card-header .card-overlay-extension,
+.project-card .card-header .card-overlay-triangle {
+    position: absolute;
+}
+
+.project-card .card-header .card-overlay,
+.project-card .card-header .card-overlay-extension {    
+    background-color: black;
+    color: white;
+    padding: 1px 5px;
+    text-align: right;
+}
+
+.project-card .card-header .card-overlay {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    max-width: 308px;
+}
+
+.project-card .card-header .card-overlay-extension {
+    right: 0;
+    font-size: 20px;
+}
+
+.project-card .card-header .card-overlay-triangle {
+    bottom: 0;
+    left: -27px;
+    width: 0;
+    height: 0; 
+    border-left: 27px solid transparent;
+    border-top: 27px solid black;
+}
+
+
 .project-card .card-text {
     height: 120px;
     padding: 8px 15px 12px;
-    color: white; align-self: 
+    color: white;
 }
 
-.project-card .card-text .card-header {
+.project-card .card-text .card-title {
     font-size: 40px;
 }
 
 .project-card .card-text .card-detail {
-    font-size: 19px;
+    margin-top: 2px;
+    font-size: 18px;
+}
+
+.project-card .card-arrow {
+    position: absolute;
+    right: 11px;
+    bottom: 11px;
 }
