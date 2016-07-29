@@ -6,6 +6,8 @@ body {
     font-weight: 700;
     color: #988F8F;
     font-size: 42px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -14,7 +16,7 @@ body {
 }
 
 .content {
-    padding: 20px;
+    padding: 24px 20px 33px 20px;
 }
 
 .gray {
@@ -104,14 +106,14 @@ a.block-link {
 }
 
 .section-header {
-    margin-bottom: 17px;
+    margin-bottom: 25px;
 }
 
 
 /* Projects Section */
 
 .projects {
-    max-width: 1060px;
+    max-width: 1080px;
     margin: auto;
 }
 
@@ -128,13 +130,14 @@ a.block-link {
 .project-card .card-header {
     height: 210px;
     overflow: hidden;
-    background-color: black;
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     text-align: center;
+    background-size: cover;
+    background-position: center center;
 }
 
 .project-card .card-header img {
@@ -200,17 +203,23 @@ a.block-link {
 }
 
 
+.articles {
+    max-width: 1108px;
+    margin: auto;
+}
+
 .article-card__first,
 .article-card__second,
 .article-card__third {
-    height: 350px;
-    width: 340px;
+    height: 340px;
+    width: 330px;
     border: 3px solid #979797;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     padding: 0;
     background-color: white;
+    transition: all 0.5s;
 }
 
 .article-card__third .card-title,
