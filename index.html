@@ -65,7 +65,7 @@
                 </svg>
             </div>
             <div class="gray content" style="margin-top: -1px;">
-                <div class="initial-curve-text">
+                <div class="initial-curve-text wrapper">
                     I develop a lot of things.<br>
                     And design.<br>
                     And blog.<br>
@@ -75,7 +75,7 @@
             </div>
         </section>
         <section id="projects" class="content">
-            <div class="right-align section-header">I've worked on the following <a class="section-link" href="#projects">projects</a>:</div>
+            <div class="right-align section-header wrapper">I've worked on the following <a class="section-link" href="#projects">projects</a>:</div>
             <div class="projects">
                 <a class="block-link" href="#">
                     <div class="project-card" style="background: #33CB43;">
@@ -276,7 +276,7 @@
             </div>
         </section>
         <section id="designs" class="gray content">
-            <div class="section-header">And I've worked on these <a class="section-link" href="#designs">designs</a>:</div>
+            <div class="section-header wrapper">And I've worked on these <a class="section-link" href="#designs">designs</a>:</div>
             <div class="projects">
                 <a class="block-link" href="#">
                     <div class="project-card" style="background: #2A334B;">
@@ -312,12 +312,13 @@
             <div class="section-header center-align" style="color: black;">Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:</div>
             <div class="articles">
                 <div class="article-card__first">
-                    <div class="article-card__second" style="transform: rotate(3deg);">
-                        <div class="article-card__third" style="transform: rotate(-6deg);">
+                    <div class="article-card__second">
+                        <div class="article-card__third">
                             <div class="card-title">
                                 Physics and<br>LaTeX
                             </div>
                             <div class="card-content">
+                                <div class="card-image"  style="background-image: url('images/design-instimize.png');"></div>
                                 In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
                             </div>
                         </div>
@@ -330,18 +331,20 @@
                                 The Make School Experience
                             </div>
                             <div class="card-content">
+                                <div class="card-image"  style="background-image: url('images/bg.jpg');"></div>
                                 In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="article-card__first">
-                    <div class="article-card__second" style="transform: rotate(3deg);">
-                        <div class="article-card__third" style="transform: rotate(-6deg);">
+                    <div class="article-card__second">
+                        <div class="article-card__third">
                             <div class="card-title">
                                 Local Hack Day 2015
                             </div>
                             <div class="card-content">
+                                <div class="card-image"  style="background-image: url('images/portfolio-math.png');"></div>
                                 In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
                             </div>
                         </div>
@@ -353,15 +356,31 @@
         </section>
         <section id="speech-and-debate" class="gray content">
             <div class="right-align section-header">I also do other stuff, like <a class="section-link" href="#speech-and-debate">speech &amp; debate</a>:</div>
-            <div>Placeholder text.</div>
+            <div>Placeholder text.
+                
+            </div>
         </section>
-        <section id="music" class="content">
-            <div class="right-align section-header" style="color: black;">and <a class="section-link" href="#music">make music</a>:</div>
-            <div>Placeholder text.</div>
+        <section id="music">
+            <div class="section-header section-tab">
+                <div class="right-align tab-content" style="">
+                    and <a class="section-link" href="#music">make music</a>:
+                    <div class="tab-triangle" style="right: 360px;"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div>Placeholder text.</div>
+            </div>
         </section>
-        <section id="extracurriculars" class="gray content">
-            <div class="right-align section-header">and these <a class="section-link" href="#extracurriculars">extracurriculars</a>:</div>
-            <div>Placeholder text.</div>
+        <section id="extracurriculars" class="gray">
+            <div class="section-header section-tab">
+                <div class="right-align tab-content">
+                    and <a class="section-link" href="#music"> even more</a>:
+                    <div class="tab-triangle" style="right: 328px;"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div>Placeholder text.</div>
+            </div>
         </section>
         
         <script>
@@ -373,6 +392,7 @@
                 itemSelector: '.project-card',
                 layoutMode: 'packery',
                 packery: {
+                    columnWidth: '.project-card',
                     gutter: 30
                 }
             });

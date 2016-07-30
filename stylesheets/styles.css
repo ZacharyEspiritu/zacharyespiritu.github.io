@@ -8,6 +8,7 @@ body {
     font-size: 42px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
 }
 
 .container {
@@ -28,6 +29,11 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: auto;
 }
 
 .center-align {
@@ -92,7 +98,7 @@ a.block-link {
 .initial-curve {
     position: relative;
     z-index: 1;
-}
+} 
 
 .initial-curve svg {
     min-width: 1000px;
@@ -125,6 +131,7 @@ a.block-link {
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+    transition: all 0.2s;
 }
 
 .project-card .card-header {
@@ -180,7 +187,6 @@ a.block-link {
     border-top: 29px solid rgba(0, 0, 0, 0.90);
 }
 
-
 .project-card .card-text {
     height: 120px;
     padding: 8px 15px 12px;
@@ -200,12 +206,74 @@ a.block-link {
     position: absolute;
     right: 11px;
     bottom: 11px;
+    transform: rotate(0deg);
+    transition: all 0.2s;
+}
+
+@media (max-width: 1120px) {
+    .project-card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 765px) {
+    .project-card {
+        height: 280px;
+        width: 100%;
+    }
+    
+    .project-card .card-header {
+        height: 140px;
+    }
+}
+
+@media (min-width: 766px) {
+    .project-card:hover {
+        -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.6);
+        -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.6);
+        box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.6);
+        transform: scale(1.02, 1.02);
+    }
+    
+    .project-card:hover > .card-arrow {
+        right: 3px;
+        bottom: 18px;
+        transform: rotate(-90deg);
+    }
 }
 
 
 .articles {
     max-width: 1108px;
     margin: auto;
+}
+
+.article-card__first {
+    transform: rotate(0deg);
+}
+
+.article-card__first:hover {
+    box-shadow: none;
+}
+
+.article-card__second {
+    transform: rotate(3deg);
+}
+
+.article-card__second:hover {
+    transform: rotate(0deg);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.article-card__third {
+    transform: rotate(-6deg);
+}
+
+.article-card__third:hover {
+    transform: rotate(0deg);
+    margin-left: -16px;
+    margin-top: -16px;
 }
 
 .article-card__first,
@@ -219,7 +287,8 @@ a.block-link {
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     padding: 0;
     background-color: white;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    -webkit-backface-visibility: hidden;
 }
 
 .article-card__third .card-title,
@@ -229,8 +298,61 @@ a.block-link {
 
 .article-card__third .card-title {
     font-size: 38px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
 .article-card__third .card-content {
-    font-size: 18px;
+    font-size: 17px;
+}
+
+.article-card__third .card-content .card-image {
+    margin-top: 3px;
+    height: 130px;
+    width: 180px;
+    float: right;
+    background-size: cover;
+    background-position: center center;
+    border: 3px solid #bcbcbc;
+}
+
+.section-tab {
+    position: absolute;
+    background: #292929;
+    width: 100%;
+}
+
+.section-tab .tab-content {
+    background: white;
+    color: black;
+    padding: 20px 20px;
+    display: inline-block;
+    float: right;
+}
+
+.section-tab .tab-triangle {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0; 
+    border-left: 91px solid transparent;
+    border-bottom: 91px solid white;
+}
+
+.gray .section-tab {
+    background: white;
+}
+
+.gray .section-tab .tab-content {
+    background: #292929;
+    color: white;
+}
+
+.gray .section-tab .tab-triangle {
+    border-bottom: 91px solid #292929;
+}
+
+.section-tab+.content {
+    padding-top: 112px;
+    padding-bottom: 22px;
 }
