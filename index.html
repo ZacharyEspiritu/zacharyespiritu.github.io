@@ -31,8 +31,10 @@
         <title>Zachary Espiritu</title>
 
         <!-- Custom CSS -->
-        <link href="fonts/stylesheet.css" rel="stylesheet">
-        <link href="stylesheets/styles.css" rel="stylesheet">
+        <link type="text/css" href="fonts/stylesheet.css" rel="stylesheet">
+        <link type="text/css" href="stylesheets/styles.css" rel="stylesheet">
+		<link type="text/css" href="stylesheets/normalize.css" rel="stylesheet" >
+		<link rel="stylesheet" type="text/css" href="stylesheets/tilteffect.css" />
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="javascripts/isotope.pkgd.min.js"></script>
@@ -311,75 +313,83 @@
         <section id="blog" class="content">
             <div class="section-header center-align" style="color: black;">Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:</div>
             <div class="articles">
-                <div class="article-card__first">
-                    <div class="article-card__second">
-                        <div class="article-card__third">
-                            <div class="card-title">
-                                Physics and<br>LaTeX
-                            </div>
-                            <div class="card-content">
-                                <div class="card-image"  style="background-image: url('images/design-instimize.png');"></div>
-                                In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="article-card__first">
-                    <div class="article-card__second">
-                        <div class="article-card__third">
-                            <div class="card-title">
-                                The Make School Experience
-                            </div>
-                            <div class="card-content">
-                                <div class="card-image"  style="background-image: url('images/bg.jpg');"></div>
-                                In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
+                <a class="block-link" href="#">
+                    <div class="article-card__first">
+                        <div class="article-card__second">
+                            <div class="article-card__third">
+                                <div class="card-title">
+                                    Physics and<br>LaTeX
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-image"  style="background-image: url('images/design-instimize.png');"></div>
+                                    In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="article-card__first">
-                    <div class="article-card__second">
-                        <div class="article-card__third">
-                            <div class="card-title">
-                                Local Hack Day 2015
-                            </div>
-                            <div class="card-content">
-                                <div class="card-image"  style="background-image: url('images/portfolio-math.png');"></div>
-                                In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
+                </a>
+                <a class="block-link" href="#">
+                    <div class="article-card__first">
+                        <div class="article-card__second">
+                            <div class="article-card__third">
+                                <div class="card-title">
+                                    The Make School Experience
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-image"  style="background-image: url('images/bg.jpg');"></div>
+                                    In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
+                <a class="block-link" href="#">
+                    <div class="article-card__first">
+                        <div class="article-card__second">
+                            <div class="article-card__third">
+                                <div class="card-title">
+                                    Local Hack Day 2015
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-image"  style="background-image: url('images/portfolio-math.png');"></div>
+                                    In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="spacer__double"></div>
             <div class="center-align small" style="color: black;">(I don't blog often, but when I do, you'll probably find it here.)</div>
         </section>
-        <section id="speech-and-debate" class="gray content">
-            <div class="right-align section-header">I also do other stuff, like <a class="section-link" href="#speech-and-debate">speech &amp; debate</a>:</div>
-            <div>Placeholder text.
-                
+        <section id="speech-and-debate">
+            <div class="center-align">
+                <div class="section-tab section-tab__gray">
+                    <div class="tab-triangle__left"></div>
+                    These are some of the <a class="section-link" href="#speech-and-debate">skills</a> I know:
+                    <div class="tab-triangle__right"></div>
+                </div>
+            </div>
+            <div class="content gray">
+                <div class="wrapper">
+                    <div class="skills-panel">
+                        <img class="tilt-effect" src="images/design-instimize.png" data-tilt-options='{ "opacity" : 1, "movement": { "perspective" : 1500, "translateX" : 10, "translateY" : 10, "translateZ" : 2, "rotateX" : 3, "rotateY" : 3 } }'>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="music">
-            <div class="section-header section-tab">
-                <div class="right-align tab-content" style="">
-                    and <a class="section-link" href="#music">make music</a>:
-                    <div class="tab-triangle" style="right: 360px;"></div>
+        <section id="speech-and-debate">
+            <div class="center-align gray">
+                <div class="section-tab">
+                    <div class="tab-triangle__left"></div>
+                    and <a class="section-link" href="#speech-and-debate">make music</a>:
+                    <div class="tab-triangle__right"></div>
                 </div>
             </div>
             <div class="content">
-                <div>Placeholder text.</div>
-            </div>
-        </section>
-        <section id="extracurriculars" class="gray">
-            <div class="section-header section-tab">
-                <div class="right-align tab-content">
-                    and <a class="section-link" href="#music"> even more</a>:
-                    <div class="tab-triangle" style="right: 328px;"></div>
+                <div>
+                    Placeholder text.
                 </div>
-            </div>
-            <div class="content">
-                <div>Placeholder text.</div>
             </div>
         </section>
         
@@ -406,5 +416,6 @@
                 }
             });
         </script>
+        <script src="javascripts/tiltfx.js"></script>
     </body>
 </html>

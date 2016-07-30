@@ -147,10 +147,6 @@ a.block-link {
     background-position: center center;
 }
 
-.project-card .card-header img {
-    height: 100%;
-}
-
 .project-card .card-header .card-overlay,
 .project-card .card-header .card-overlay-extension,
 .project-card .card-header .card-overlay-triangle {
@@ -231,8 +227,9 @@ a.block-link {
     .project-card:hover {
         -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.6);
         -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.6);
-        box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.6);
-        transform: scale(1.02, 1.02);
+        box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.6);
+        transform: scale(1.01, 1.01) translateY(-7px);
+        margin-bottom: 13px;
     }
     
     .project-card:hover > .card-arrow {
@@ -248,29 +245,49 @@ a.block-link {
     margin: auto;
 }
 
+@media (max-width: 1150px) {
+    .articles {
+        max-width: 723px;
+    }
+    
+    .block-link:last-child > .article-card__first {
+        display: none;
+    }
+}
+
+@media (max-width: 765px) {
+    .articles {
+        max-width: 337px;
+    }
+    
+    .block-link:nth-last-child(2) > .article-card__first {
+        display: none;
+    }
+}
+
 .article-card__first {
     transform: rotate(0deg);
 }
 
-.article-card__first:hover {
-    box-shadow: none;
-}
-
 .article-card__second {
-    transform: rotate(3deg);
-}
-
-.article-card__second:hover {
-    transform: rotate(0deg);
-    margin-left: 10px;
-    margin-top: 10px;
+    transform: rotate(3deg) translateX(-3px);
 }
 
 .article-card__third {
     transform: rotate(-6deg);
 }
 
-.article-card__third:hover {
+.article-card__first:hover {
+    box-shadow: none;
+}
+
+.article-card__first:hover > .article-card__second {
+    transform: rotate(0deg);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.article-card__first:hover > .article-card__second > .article-card__third {
     transform: rotate(0deg);
     margin-left: -16px;
     margin-top: -16px;
@@ -286,9 +303,18 @@ a.block-link {
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     padding: 0;
-    background-color: white;
+    color: #988F8F;
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
+}
+
+.article-card__first,
+.article-card__third {
+    background-color: white;
+}
+
+.article-card__second {
+    background-color: #eaeaea;
 }
 
 .article-card__third .card-title,
@@ -316,43 +342,58 @@ a.block-link {
     border: 3px solid #bcbcbc;
 }
 
+
 .section-tab {
-    position: absolute;
-    background: #292929;
-    width: 100%;
-}
-
-.section-tab .tab-content {
-    background: white;
-    color: black;
-    padding: 20px 20px;
     display: inline-block;
-    float: right;
+    padding: 18px;
+    background-color: white;
+    color: #988F8F;
+    position: relative;
 }
 
-.section-tab .tab-triangle {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 0; 
-    border-left: 91px solid transparent;
-    border-bottom: 91px solid white;
-}
-
-.gray .section-tab {
-    background: white;
-}
-
-.gray .section-tab .tab-content {
-    background: #292929;
+.section-tab__gray {
+    background-color: #292929;
     color: white;
 }
 
-.gray .section-tab .tab-triangle {
-    border-bottom: 91px solid #292929;
+.section-tab .tab-triangle__left,
+.section-tab .tab-triangle__right {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0px;
+    border-bottom: 87px solid white;
 }
 
-.section-tab+.content {
-    padding-top: 112px;
-    padding-bottom: 22px;
+.section-tab .tab-triangle__left {
+    left: -87px;
+    border-left: 87px solid transparent;
+}
+
+.section-tab .tab-triangle__right {
+    right: -87px;
+    border-right: 87px solid transparent;
+}
+
+.section-tab .tab-triangle__left,
+.section-tab .tab-triangle__right {
+    border-bottom: 87px solid white;
+}
+
+.section-tab__gray .tab-triangle__left,
+.section-tab__gray .tab-triangle__right {
+    border-bottom: 87px solid #292929;
+}
+
+
+.skills-panel {
+    height: 160px;
+    width: 207px;
+    background-color: rgba(28, 28, 28, 0.91);
+    border-radius: 10px;
+}
+
+.picture {
+    height: 160px;
+    width: 207px;
 }
