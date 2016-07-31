@@ -387,13 +387,58 @@ a.block-link {
 
 
 .skills-panel {
+    display: inline-block;
     height: 160px;
     width: 207px;
     background-color: rgba(28, 28, 28, 0.91);
     border-radius: 10px;
 }
 
-.picture {
-    height: 160px;
-    width: 207px;
+.skills-panel .spacer {
+    height: 18px;
+}
+
+.skills-panel .skills-icon {
+    height: 88px;
+    width: inherit;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.skills-panel .skills-icon img {
+    max-height: 100%;
+    max-width: 70%;
+    margin: auto;
+}
+
+.skills-panel .skills-caption {
+    margin-top: 12px;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.skills {
+    width: 1000px;
+    margin: auto;
+}
+
+.skills-row__left,
+.skills-row__right {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.skills-row__right {
+    text-align: right;
+}
+
+.skills-row__left .skills-panel {
+    margin-right: 7px;
+}
+
+.skills-row__right .skills-panel {
+    margin-left: 7px;
 }
