@@ -386,12 +386,26 @@ a.block-link {
 }
 
 
+#skills .content {
+    padding-bottom: 13px;
+}
+
 .skills-panel {
     display: inline-block;
     height: 160px;
     width: 207px;
     background-color: rgba(28, 28, 28, 0.91);
     border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+    transition: all 0.15s;
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.skills-panel:hover {
+    transform: scale(0.95, 0.95);
+    color: white;
 }
 
 .skills-panel .spacer {
@@ -416,7 +430,6 @@ a.block-link {
 .skills-panel .skills-caption {
     margin-top: 12px;
     font-size: 23px;
-    color: rgba(255, 255, 255, 0.15);
     text-align: center;
 }
 
