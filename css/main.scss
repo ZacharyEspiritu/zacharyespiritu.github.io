@@ -9,12 +9,16 @@ $base-font-color:  #988F8F;
 $base-font-size:   42px;
 $base-font-weight: 700;
 
-$small-font-size:  25px;
+$small-font-size: 25px;
 
-$gray-bg-color:    #292929;
-$gray-font-color:  #FFFFFF;
+$gray-bg-color:   #292929;
+$gray-font-color: #FFFFFF;
 
-$link-color:       #B93838;
+$link-color: #B93838;
+
+$article-card-color:          #979797;
+$article-card-interior-color: #eaeaea;
+$article-card-image-color:    #bcbcbc;
 
 // Imports
 @import "styles";
