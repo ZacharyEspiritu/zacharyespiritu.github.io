@@ -10,7 +10,6 @@ layout: default
     </hgroup>
     <div class="initial-curve">
         <svg viewBox="0 0 2269 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<!--                     Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
             <defs></defs>
             <path d="M0,258.999995 L0,69.3698466 C0,69.3698466 241.889453,-22.1258979 572.5,5.45274695 C810.037321,25.267473 1299.82718,146.798228 1696,210.582038 C2009.86212,261.113828 2269,258.999995 2269,258.999995 L0,258.999995 Z" id="Rectangle-6" stroke="none" fill="#292929" fill-rule="evenodd"></path>
         </svg>
@@ -28,7 +27,7 @@ layout: default
     </div>
 </section>
 <section id="projects" class="content">
-    <div class="right-align section-header wrapper">I've worked on the following <a class="section-link" href="#projects">projects</a>:</div>
+    <header class="right-align section-header wrapper">I've worked on the following <a class="section-link" href="#projects">projects</a>:</header>
     <div class="projects">
         {% for project in site.projects %}
             {% include project_card.html project=project %}
@@ -54,29 +53,27 @@ layout: default
     <div class="center-align small" style="color: black;">(I don't blog often, but when I do, you'll probably find it here.)</div>
 </section>
 <section id="skills">
-    <div class="center-align">
+    <header class="center-align">
         <div class="section-tab section-tab__gray">
             <div class="tab-triangle__left"></div>
             These are some of the <a class="section-link" href="#skills">skills</a> I know:
             <div class="tab-triangle__right"></div>
         </div>
-    </div>
+    </header>
     <div class="content gray">
         {% include skills.html %}
     </div>
 </section>
 <section id="speech-and-debate">
-    <div class="center-align gray">
+    <header class="center-align gray">
         <div class="section-tab">
             <div class="tab-triangle__left"></div>
             and <a class="section-link" href="#speech-and-debate">make music</a>:
             <div class="tab-triangle__right"></div>
         </div>
-    </div>
+    </header>
     <div class="content">
-        <div>
-            Placeholder text.
-        </div>
+        Placeholder text.
     </div>
 </section>
 

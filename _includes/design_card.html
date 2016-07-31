@@ -1,18 +1,18 @@
 <a class="block-link" href="{{ design.url }}">
-    <div class="project-card" style="background: {{ design.card_color }};">
+    <figure class="project-card" style="background: {{ design.card_color }};">
         <div class="card-header" style="background-image: url('{{ design.image_path }}');"></div>
-        <div class="card-text">
-            <div class="card-title">
+        <figcaption class="card-text">
+            <header class="card-title">
                 {% if design.short_title %}
                     {{ design.short_title }}
                 {% else %}
                     {{ design.title }}
                 {% endif %}
-            </div>
-            <div class="card-detail">
+            </header>
+            <footer class="card-detail">
                 {{ design.tagline }}
-            </div>
-        </div>
+            </footer>
+        </figcaption>
         <img src="images/arrow.svg" class="card-arrow">
-    </div>
+    </figure>
 </a>

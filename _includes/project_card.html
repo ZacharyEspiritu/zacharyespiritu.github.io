@@ -1,5 +1,5 @@
 <a class="block-link" href="{{ project.url }}">
-    <div class="project-card" style="background: {{ project.card_color }};">
+    <figure class="project-card" style="background: {{ project.card_color }};">
         <div class="card-header" style="background-image: url('{{ project.image_path }}');">
             {% if project.awards %}
                 <div class="card-overlay">
@@ -18,18 +18,18 @@
                 </div>
             {% endif %}
         </div>
-        <div class="card-text">
-            <div class="card-title">
+        <figcaption class="card-text">
+            <header class="card-title">
                 {% if project.short_title %}
                     {{ project.short_title }}
                 {% else %}
                     {{ project.title }}
                 {% endif %}
-            </div>
-            <div class="card-detail">
+            </header>
+            <footer class="card-detail">
                 {{ project.tagline }}
-            </div>
-        </div>
+            </footer>
+        </figcaption>
         <img src="images/arrow.svg" class="card-arrow">
-    </div>
+    </figure>
 </a>

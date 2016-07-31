@@ -1,15 +1,15 @@
 <a class="block-link" href="{{ post.url }}">
-    <div class="article-card__first">
+    <figure class="article-card__first">
         <div class="article-card__second">
             <div class="article-card__third">
-                <div class="card-title">
+                <header class="card-title">
                     {{ post.title }}
-                </div>
-                <div class="card-content">
-                    <div class="card-image"  style="background-image: url('{{ post.preview_image_path }}');"></div>
+                </header>
+                <figcaption class="card-content">
+                    <div class="card-image" style="background-image: url('{{ post.preview_image_path }}');"></div>
                     {{ post.tagline }}
-                </div>
+                </figcaption>
             </div>
         </div>
-    </div>
+    </figure>
 </a>
