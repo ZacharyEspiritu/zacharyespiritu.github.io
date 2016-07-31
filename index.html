@@ -31,41 +31,7 @@ layout: default
     <div class="right-align section-header wrapper">I've worked on the following <a class="section-link" href="#projects">projects</a>:</div>
     <div class="projects">
         {% for project in site.projects %}
-            <a class="block-link" href="{{ project.url }}">
-                <div class="project-card" style="background: {{ project.card_color }};">
-                    <div class="card-header" style="background-image: url('{{ project.image_path }}');">
-                        {% if project.awards %}
-                            <div class="card-overlay">
-                                {% for award in project.awards %}
-                                    {% if forloop.first %}
-                                        {{ award }}
-                                    {% elsif forloop.last %}
-                                        {% if forloop.index0 > 0 %}
-                                            <div class="card-overlay-extension">
-                                                <div class="card-overlay-triangle"></div>
-                                                + {{ forloop.index0 }} more
-                                            </div>
-                                        {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    </div>
-                    <div class="card-text">
-                        <div class="card-title">
-                            {% if project.short_title %}
-                                {{ project.short_title }}
-                            {% else %}
-                                {{ project.title }}
-                            {% endif %}
-                        </div>
-                        <div class="card-detail">
-                            {{ project.tagline }}
-                        </div>
-                    </div>
-                    <img src="images/arrow.svg" class="card-arrow">
-                </div>
-            </a>
+            {% include project_card.html project=project %}
         {% endfor %}
     </div>
 </section>
@@ -73,24 +39,7 @@ layout: default
     <header class="section-header wrapper">And I've worked on these <a class="section-link" href="#designs">designs</a>:</header>
     <div class="projects">
         {% for design in site.designs %}
-            <a class="block-link" href="{{ design.url }}">
-                <div class="project-card" style="background: {{ design.card_color }};">
-                    <div class="card-header" style="background-image: url('{{ design.image_path }}');"></div>
-                    <div class="card-text">
-                        <div class="card-title">
-                            {% if design.short_title %}
-                                {{ design.short_title }}
-                            {% else %}
-                                {{ design.title }}
-                            {% endif %}
-                        </div>
-                        <div class="card-detail">
-                            {{ design.tagline }}
-                        </div>
-                    </div>
-                    <img src="images/arrow.svg" class="card-arrow">
-                </div>
-            </a>
+            {% include design_card.html design=design %}
         {% endfor %}
     </div>
 </section>
@@ -98,21 +47,7 @@ layout: default
     <header class="section-header center-align" style="color: black;">Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:</header>
     <div class="articles">
         {% for post in site.posts %}
-            <a class="block-link" href="{{ post.url }}">
-                <div class="article-card__first">
-                    <div class="article-card__second">
-                        <div class="article-card__third">
-                            <div class="card-title">
-                                {{ post.title }}
-                            </div>
-                            <div class="card-content">
-                                <div class="card-image"  style="background-image: url('{{ post.preview_image_path }}');"></div>
-                                {{ post.tagline }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
+            {% include post_card.html post=post %}
         {% endfor %}
     </div>
     <div class="spacer__double"></div>
@@ -127,128 +62,7 @@ layout: default
         </div>
     </div>
     <div class="content gray">
-        <div class="skills">
-            <div class="skills-row__left">
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-swift.svg">
-                    </div>
-                    <div class="skills-caption">Swift</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-objc.svg">
-                    </div>
-                    <div class="skills-caption">Objective-C</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-ruby.svg">
-                    </div>
-                    <div class="skills-caption">Ruby</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-python.svg">
-                    </div>
-                    <div class="skills-caption">Python</div>
-                </div>
-            </div>
-            <div class="skills-row__right">
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-java.svg">
-                    </div>
-                    <div class="skills-caption">Java</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-javascript.svg">
-                    </div>
-                    <div class="skills-caption">Javascript</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-jquery.svg">
-                    </div>
-                    <div class="skills-caption">JQuery</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-rails.svg">
-                    </div>
-                    <div class="skills-caption">Rails</div>
-                </div>
-            </div>
-            <div class="skills-row__left">
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-sass.svg">
-                    </div>
-                    <div class="skills-caption">Sass</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-postgresql.svg">
-                    </div>
-                    <div class="skills-caption">PostgreSQL</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-photoshop.svg">
-                    </div>
-                    <div class="skills-caption">Photoshop</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-firebase.svg">
-                    </div>
-                    <div class="skills-caption">Firebase</div>
-                </div>
-            </div>
-            <div class="skills-row__right">
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-bootstrap.svg">
-                    </div>
-                    <div class="skills-caption">Bootstrap</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-latex.svg">
-                    </div>
-                    <div class="skills-caption">LaTeX</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-sketch.svg">
-                    </div>
-                    <div class="skills-caption">Sketch</div>
-                </div>
-                <div class="skills-panel">
-                    <div class="spacer"></div>
-                    <div class="skills-icon">
-                        <img src="images/skills-git.svg">
-                    </div>
-                    <div class="skills-caption">Git</div>
-                </div>
-            </div>
-        </div>
+        {% include skills.html %}
     </div>
 </section>
 <section id="speech-and-debate">
