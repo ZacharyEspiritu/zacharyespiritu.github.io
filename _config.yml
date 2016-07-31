@@ -22,6 +22,16 @@ url: "http://zacharyespiritu.com" # the base hostname & protocol for your site
 twitter_username: ZacharyEspiritu
 github_username:  ZacharyEspiritu
 
+permalink: /blog/:slug/
+
 # Build settings
 markdown: kramdown
 theme: minima
+
+collections:
+  projects:
+    output: true
+    permalink: /project/:title/
+  designs:
+    output: true
+    permalink: /design/:title/

@@ -30,285 +30,90 @@ layout: default
 <section id="projects" class="content">
     <div class="right-align section-header wrapper">I've worked on the following <a class="section-link" href="#projects">projects</a>:</div>
     <div class="projects">
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #33CB43;">
-                <div class="card-header" style="background-image: url('images/callout.jpg');"></div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Negotiatus
+        {% for project in site.projects %}
+            <a class="block-link" href="{{ project.url }}">
+                <div class="project-card" style="background: {{ project.card_color }};">
+                    <div class="card-header" style="background-image: url('{{ project.image_path }}');">
+                        {% if project.awards %}
+                            <div class="card-overlay">
+                                {% for award in project.awards %}
+                                    {% if forloop.first %}
+                                        {{ award }}
+                                    {% elsif forloop.last %}
+                                        {% if forloop.index0 > 0 %}
+                                            <div class="card-overlay-extension">
+                                                <div class="card-overlay-triangle"></div>
+                                                + {{ forloop.index0 }} more
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
-                    <div class="card-detail">
-                        Sole developer of several large projects as a Software Engineering Intern for the summer of 2016
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #E461FF;">
-                <div class="card-header" style="background-image: url('images/portfolio-math.png');">
-                    <div class="card-overlay">
-                        10Under20 Recipient
-                        <div class="card-overlay-extension">
-                            <div class="card-overlay-triangle"></div>
-                            + 2 more
+                    <div class="card-text">
+                        <div class="card-title">
+                            {% if project.short_title %}
+                                {{ project.short_title }}
+                            {% else %}
+                                {{ project.title }}
+                            {% endif %}
+                        </div>
+                        <div class="card-detail">
+                            {{ project.tagline }}
                         </div>
                     </div>
+                    <img src="images/arrow.svg" class="card-arrow">
                 </div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Math Battle II
-                    </div>
-                    <div class="card-detail">
-                        An experiment in online real-time multiplayer, brand design, and how much people secretly like math
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #4A90E2;">
-                <div class="card-header" style="background-image: url('images/portfolio-ttp.png');">
-                    <div class="card-overlay">
-                        "Audience Choice" at Make<br>
-                        School Demo Day 2015
-                        <div class="card-overlay-extension">
-                            <div class="card-overlay-triangle"></div>
-                            + 1 more
-                        </div>
-                    </div>
-                </div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Tile, Tap, Push!
-                    </div>
-                    <div class="card-detail">
-                        A tile-tapping time for two players and blatant ripoff of "Don’t Touch The White Tile"
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #F5A623;">
-                <div class="card-header" style="background-image: url('images/bg.jpg');">
-                    <div class="card-overlay">
-                        "Audience Choice" at Make<br>
-                        School Demo Day 2015
-                        <div class="card-overlay-extension">
-                            <div class="card-overlay-triangle"></div>
-                            + 1 more
-                        </div>
-                    </div>
-                </div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Reaction Line
-                    </div>
-                    <div class="card-detail">
-                        An allegory for political divisiveness in the United States, or a game about sorting lines in the shortest time 
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #B5B5B5;">
-                <div class="card-header" style="background-image: url('images/portfolio-physics.png');"></div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Physics Guide
-                    </div>
-                    <div class="card-detail">
-                        I didn’t want to study for my Physics exam, but I wanted to learn LaTeX, so I made this instead
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #7ED321;">
-                <div class="card-header" style="background-image: url('images/portfolio-fitfarm.png');">
-                    <div class="card-overlay">
-                        3rd Place at hackTrin III
-                    </div>
-                </div>
-                <div class="card-text">
-                    <div class="card-title">
-                        FitFarm
-                    </div>
-                    <div class="card-detail">
-                        Fitness-based Farmville parody where players raise their own farm through real-world exercise
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #696969;">
-                <div class="card-header" style="background-image: url('images/portfolio-maze.png');">
-                    <div class="card-overlay">
-                        Blueprint @ MIT 2016
-                    </div>
-                </div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Math Maze
-                    </div>
-                    <div class="card-detail">
-                        Using dynamic maze generation algorithms when tile-based math games aren’t enough
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #CCC34F;">
-                <div class="card-header" style="background-image: url('images/portfolio-data.png');">
-                    <div class="card-overlay">
-                        Winner of hackGCT 2015
-                    </div>
-                </div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Data Farm
-                    </div>
-                    <div class="card-detail">
-                        Motivating people to save on cellular data by exchanging their unused data bytes for "bites"
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #0EBA4F;">
-                <div class="card-header" style="background-image: url('images/portfolio-animation.png');"></div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Art of Animation
-                    </div>
-                    <div class="card-detail">
-                        My final project for Regis High School’s Computer Technology I course
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #B5B5B5;">
-                <div class="card-header" style="background-image: url('images/portfolio-gig.png');"></div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Game Idea Gen
-                    </div>
-                    <div class="card-detail">
-                        Random idea generator made in response to the brainstorming sessions at Make School
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #027DAD;">
-                <div class="card-header" style="background-image: url('images/bg.jpg');">
-                    <div class="card-overlay">
-                        hackBCA III
-                    </div>
-                </div>
-                <div class="card-text">
-                    <div class="card-title">
-                        onHealth
-                    </div>
-                    <div class="card-detail">
-                        An unified, online database for healthcare providers to store patient data for collaboration
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
+            </a>
+        {% endfor %}
     </div>
 </section>
 <section id="designs" class="gray content">
-    <div class="section-header wrapper">And I've worked on these <a class="section-link" href="#designs">designs</a>:</div>
+    <header class="section-header wrapper">And I've worked on these <a class="section-link" href="#designs">designs</a>:</header>
     <div class="projects">
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #2A334B;">
-                <div class="card-header" style="background-image: url('images/design-instimize.png');"></div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Instimize Icon
+        {% for design in site.designs %}
+            <a class="block-link" href="{{ design.url }}">
+                <div class="project-card" style="background: {{ design.card_color }};">
+                    <div class="card-header" style="background-image: url('{{ design.image_path }}');"></div>
+                    <div class="card-text">
+                        <div class="card-title">
+                            {% if design.short_title %}
+                                {{ design.short_title }}
+                            {% else %}
+                                {{ design.title }}
+                            {% endif %}
+                        </div>
+                        <div class="card-detail">
+                            {{ design.tagline }}
+                        </div>
                     </div>
-                    <div class="card-detail">
-                        Designed the icon for my friend’s app that’s probably more useful than anything I’ve made so far
-                    </div>
+                    <img src="images/arrow.svg" class="card-arrow">
                 </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="project-card" style="background: #E0001B;">
-                <div class="card-header" style="background-image: url('images/design-calenday.png');"></div>
-                <div class="card-text">
-                    <div class="card-title">
-                        Calenday POC
-                    </div>
-                    <div class="card-detail">
-                        A proof-of-concept of a calendar app that focuses on intuitive visualization and navigation with cards
-                    </div>
-                </div>
-                <img src="images/arrow.svg" class="card-arrow">
-            </div>
-        </a>
+            </a>
+        {% endfor %}
     </div>
 </section>
 <section id="blog" class="content">
-    <div class="section-header center-align" style="color: black;">Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:</div>
+    <header class="section-header center-align" style="color: black;">Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:</header>
     <div class="articles">
-        <a class="block-link" href="#">
-            <div class="article-card__first">
-                <div class="article-card__second">
-                    <div class="article-card__third">
-                        <div class="card-title">
-                            Physics and<br>LaTeX
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image"  style="background-image: url('images/design-instimize.png');"></div>
-                            In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="article-card__first">
-                <div class="article-card__second">
-                    <div class="article-card__third">
-                        <div class="card-title">
-                            The Make School Experience
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image"  style="background-image: url('images/bg.jpg');"></div>
-                            In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
+        {% for post in site.posts %}
+            <a class="block-link" href="{{ post.url }}">
+                <div class="article-card__first">
+                    <div class="article-card__second">
+                        <div class="article-card__third">
+                            <div class="card-title">
+                                {{ post.title }}
+                            </div>
+                            <div class="card-content">
+                                <div class="card-image"  style="background-image: url('{{ post.preview_image_path }}');"></div>
+                                {{ post.tagline }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </a>
-        <a class="block-link" href="#">
-            <div class="article-card__first">
-                <div class="article-card__second">
-                    <div class="article-card__third">
-                        <div class="card-title">
-                            Local Hack Day 2015
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image"  style="background-image: url('images/portfolio-math.png');"></div>
-                            In the summer of 2015, I attended the Make School Summer Academy, an eight-week program dedicated to teaching students how to code their first iOS app. I had no idea what I was going to be in for. 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
+            </a>
+        {% endfor %}
     </div>
     <div class="spacer__double"></div>
     <div class="center-align small" style="color: black;">(I don't blog often, but when I do, you'll probably find it here.)</div>
@@ -460,26 +265,6 @@ layout: default
         </div>
     </div>
 </section>
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
 
 <script>
     $("#main-header").fitText(1, { maxFontSize: '90px' });
