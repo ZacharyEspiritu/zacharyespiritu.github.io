@@ -29,7 +29,8 @@ layout: default
 <section id="projects" class="content">
     <header class="right-align section-header wrapper">I've worked on the following <a class="section-link" href="#projects">projects</a>:</header>
     <div class="projects">
-        {% for project in site.projects %}
+        {% assign sorted_projects = (site.projects | sort: 'date') | reverse %}
+        {% for project in sorted_projects %}
             {% include project_card.html project=project %}
         {% endfor %}
     </div>
