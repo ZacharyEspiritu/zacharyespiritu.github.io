@@ -69,13 +69,14 @@ a.block-link {
 .header {
   position: relative;
   text-align: center;
-  height: 600px;
-  
+  padding: 30px;
+
   h1 {
     display: block;
     margin: 0;
     font-size: 90px;
-    
+    margin-bottom: 20px;
+
     img {
       display: inline;
       margin-bottom: -33px;
@@ -83,7 +84,7 @@ a.block-link {
       margin-right: 5px;
     }
   }
-  
+
   h2 {
     display: block;
     margin: 0;
@@ -101,7 +102,7 @@ a.block-link {
 
 
 #header {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 
@@ -111,15 +112,15 @@ a.block-link {
   left: 0;
   z-index: 1;
   width: 100%;
-  
+
   svg {
     min-width: 100%;
     vertical-align: top;
   }
-} 
+}
 
 .initial-curve-text {
-  margin-top: -75px;
+  /*margin-top: -75px;*/
   z-index: 10;
   position: relative;
 }
@@ -143,7 +144,7 @@ a.block-link {
   overflow: hidden;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
   transition: all 0.2s;
-  
+
   .card-header {
     height: 210px;
     overflow: hidden;
@@ -163,51 +164,51 @@ a.block-link {
     }
 
     .card-overlay,
-    .card-overlay-extension {    
+    .card-overlay-extension {
         background-color: rgba(0, 0, 0, 0.90);
         color: white;
         padding: 2px 5px;
         text-align: right;
     }
-    
+
     .card-overlay {
       top: 10px;
       right: 10px;
       font-size: 24px;
       max-width: 308px;
     }
-    
+
     .card-overlay-extension {
       right: 0;
       bottom: -29px;
       font-size: 20px;
     }
-    
+
     .card-overlay-triangle {
       bottom: 0px;
       left: -29px;
       width: 0;
-      height: 0; 
+      height: 0;
       border-left: 29px solid transparent;
       border-top: 29px solid rgba(0, 0, 0, 0.90);
     }
   }
-  
+
   .card-text {
     height: 120px;
     padding: 8px 15px 12px;
     color: white;
-    
+
     .card-title {
       font-size: 40px;
     }
-    
+
     .card-detail {
       margin-top: 2px;
       font-size: 18px;
     }
   }
-  
+
   .card-arrow {
     position: absolute;
     right: 11px;
@@ -227,7 +228,7 @@ a.block-link {
   .project-card {
     height: 280px;
     width: 100%;
-    
+
     .card-header {
       height: 140px;
     }
@@ -240,7 +241,7 @@ a.block-link {
     transform: scale(1.01, 1.01) translateY(-7px);
     margin-bottom: 13px;
   }
-  
+
   .project-card:hover > .card-arrow {
     right: 3px;
     bottom: 18px;
@@ -258,7 +259,7 @@ a.block-link {
   .articles {
     max-width: 723px;
   }
-  
+
   .block-link:last-child > .article-card__first {
     display: none;
   }
@@ -268,7 +269,7 @@ a.block-link {
   .articles {
     max-width: 337px;
   }
-  
+
   .block-link:nth-last-child(2) > .article-card__first {
     display: none;
   }
@@ -338,7 +339,7 @@ a.block-link {
 
   .card-content {
     font-size: 17px;
-    
+
     .card-image {
       margin-top: 3px;
       height: 130px;
@@ -351,6 +352,9 @@ a.block-link {
   }
 }
 
+.section-tab-background {
+  background-color: $gray-bg-color;
+}
 
 .section-tab {
   display: inline-block;
@@ -358,7 +362,7 @@ a.block-link {
   background-color: white;
   color: $base-font-color;
   position: relative;
-  
+
   .tab-triangle__left,
   .tab-triangle__right {
     position: absolute;
@@ -404,7 +408,7 @@ a.block-link {
   transition: all 0.15s;
   color: rgba(255, 255, 255, 0.15);
   margin-bottom: 17px;
-  
+
   .spacer {
     height: 18px;
   }
@@ -417,7 +421,7 @@ a.block-link {
     display: flex;
     align-items: center;
     margin: auto;
-    
+
     img {
       max-height: 100%;
       max-width: 70%;
@@ -458,7 +462,7 @@ a.block-link {
   .skills-row__left,
   .skills-row__right {
     text-align: center;
-  
+
     .skills-panel,
     .skills-panel {
       margin-left: 3.5px;

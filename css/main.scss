@@ -21,4 +21,6 @@ $article-card-interior-color: #eaeaea;
 $article-card-image-color:    #bcbcbc;
 
 // Imports
+@import "normalize";
+@import "syntax";
 @import "styles";
