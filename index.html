@@ -8,12 +8,12 @@ layout: default
         <div class="spacer"></div>
         <h2 id="sub-header">This is my website.</h2>
     </hgroup>
-    <div class="initial-curve">
+   <!--  <div class="initial-curve">
         <svg viewBox="0 0 2269 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <path d="M0,258.999995 L0,69.3698466 C0,69.3698466 241.889453,-22.1258979 572.5,5.45274695 C810.037321,25.267473 1299.82718,146.798228 1696,210.582038 C2009.86212,261.113828 2269,258.999995 2269,258.999995 L0,258.999995 Z" id="Rectangle-6" stroke="none" fill="#292929" fill-rule="evenodd"></path>
         </svg>
-    </div>
+    </div> -->
 </section>
 <section id="intro">
     <div class="gray content" style="margin-top: -1px;">
@@ -26,8 +26,10 @@ layout: default
         </div>
     </div>
 </section>
-<section id="projects" class="content">
-    <header class="right-align section-header wrapper">I've worked on the following <a class="section-link" href="#projects">projects</a>:</header>
+<section id="projects" class="content" style="box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);">
+    <header class="right-align section-header wrapper">
+        I've worked on the following <a class="section-link" href="#projects">projects</a>:
+    </header>
     <div class="projects">
         {% assign sorted_projects = (site.projects | sort: 'date') | reverse %}
         {% for project in sorted_projects %}
@@ -35,8 +37,10 @@ layout: default
         {% endfor %}
     </div>
 </section>
-<section id="designs" class="gray content">
-    <header class="section-header wrapper">And I've worked on these <a class="section-link" href="#designs">designs</a>:</header>
+<section id="designs" class="gray content" style="box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);">
+    <header class="section-header wrapper">
+        And I've worked on these <a class="section-link" href="#designs">designs</a>:
+    </header>
     <div class="projects">
         {% for design in site.designs %}
             {% include design_card.html design=design %}
@@ -44,7 +48,9 @@ layout: default
     </div>
 </section>
 <section id="blog" class="content">
-    <header class="section-header center-align" style="color: black;">Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:</header>
+    <header class="section-header center-align" style="color: black;">
+        Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:
+    </header>
     <div class="articles">
         {% for post in site.posts %}
             {% include post_card.html post=post %}
@@ -53,29 +59,22 @@ layout: default
     <div class="spacer__double"></div>
     <div class="center-align small" style="color: black;">(I don't blog often, but when I do, you'll probably find it here.)</div>
 </section>
-<section id="skills">
-    <header class="center-align">
+<section id="skills" class="gray content">
+    <!-- <header class="center-align">
         <div class="section-tab section-tab__gray">
             <div class="tab-triangle__left"></div>
             These are some of the <a class="section-link" href="#skills">skills</a> I know:
             <div class="tab-triangle__right"></div>
         </div>
+    </header> -->
+    <header class="section-header center-align">
+        These are some of the <a class="section-link" href="#skills">skills</a> I know:
     </header>
-    <div class="content gray">
+    <div>
         {% include skills.html %}
     </div>
-</section>
-<section id="speech-and-debate">
-    <header class="center-align gray">
-        <div class="section-tab">
-            <div class="tab-triangle__left"></div>
-            and <a class="section-link" href="#speech-and-debate">make music</a>:
-            <div class="tab-triangle__right"></div>
-        </div>
-    </header>
-    <div class="content">
-        Placeholder text.
-    </div>
+    <div class="spacer"></div>
+    <div class="center-align small">(Click a skill to see some of the projects I've made with it!)</div>
 </section>
 
 <script>

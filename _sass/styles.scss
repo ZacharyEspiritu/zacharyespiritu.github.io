@@ -130,8 +130,6 @@ a.block-link {
 }
 
 
-/* Projects Section */
-
 .projects {
   max-width: 1080px;
   margin: auto;
@@ -154,6 +152,7 @@ a.block-link {
     right: 0;
     bottom: 0;
     text-align: center;
+    background-color: white;
     background-size: cover;
     background-position: center center;
 
@@ -165,7 +164,7 @@ a.block-link {
 
     .card-overlay,
     .card-overlay-extension {
-        background-color: rgba(0, 0, 0, 0.90);
+        background-color: black;
         color: white;
         padding: 2px 5px;
         text-align: right;
@@ -190,7 +189,7 @@ a.block-link {
       width: 0;
       height: 0;
       border-left: 29px solid transparent;
-      border-top: 29px solid rgba(0, 0, 0, 0.90);
+      border-top: 29px solid black;
     }
   }
 
@@ -218,6 +217,10 @@ a.block-link {
   }
 }
 
+.gray .project-card .card-header {
+  background-color: $gray-bg-color;
+}
+
 @media (max-width: 1120px) {
   .project-card {
     width: 48%;
@@ -238,7 +241,7 @@ a.block-link {
 @media (min-width: 766px) {
   .project-card:hover {
     box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.6);
-    transform: scale(1.01, 1.01) translateY(-7px);
+    transform: translateY(-7px);
     margin-bottom: 13px;
   }
 
@@ -408,6 +411,7 @@ a.block-link {
   transition: all 0.15s;
   color: rgba(255, 255, 255, 0.15);
   margin-bottom: 17px;
+  cursor: pointer;
 
   .spacer {
     height: 18px;
@@ -506,4 +510,48 @@ a.block-link {
 .skills-panel:hover {
   transform: scale(0.96, 0.96);
   color: white;
+}
+
+#footer {
+  font-size: 26px;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+  background-color: #F5A623;
+
+  .footer-left { float: left; }
+
+  .footer-right {
+    float: right;
+
+    a {
+      display: inline-block;
+      margin-left: 9px;
+      border-bottom: 2px white dotted;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .footer-left,
+    .footer-right {
+      float: none;
+      text-align: center;
+    }
+
+    .footer-left { padding-bottom: 4px; }
+  }
+
+  .footer-clear { clear: both; }
+
+  .footer-name {
+    display: inline;
+    padding-right: 10px;
+  }
+
+  .footer-social-icons { display: inline; }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .fa { padding: 0 2px; }
 }
