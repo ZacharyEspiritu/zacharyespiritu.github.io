@@ -26,5 +26,5 @@ Olivia made a presentation deck for our demo, which you can find [here][data-far
 
 You can also view the source code for the entire project [here][data-farm-github].
 
-[data-farm-deck]:   http://example.com
-[data-farm-github]: http://example.com
+[data-farm-deck]:   https://www.dropbox.com/s/uehkaylyjz53xfy/DATA%20FARM.pdf?dl=0
+[data-farm-github]: https://github.com/johnward2/HackGCT-Mast

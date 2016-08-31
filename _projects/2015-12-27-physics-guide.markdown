@@ -10,7 +10,7 @@ Immediately following Christmas Break, all Regis High School students are requir
 
 <img src="">
 
-Using [MathJax][mathjax-github], a Javascript integration for LaTeX rendering on webpages, I built a website covering all of the topics that were going to be on the exam with LaTeX for displaying necessary formulas and example solution sets for extra practice.
+Using [MathJax][mathjax-website], a Javascript integration for LaTeX rendering on webpages, I built a website covering all of the topics that were going to be on the exam with LaTeX for displaying necessary formulas and example solution sets for extra practice.
 
 The results were conclusive: 100% of people surveyed agreed that they scored higher on the exam because of the website.<sup>*</sup>
 
@@ -18,5 +18,5 @@ The results were conclusive: 100% of people surveyed agreed that they scored hig
 
 You can find the website [here][physics-midyear-guide].
 
-[mathjax-github]: http://example.com
-[physics-midyear-guide]: http://example.com
+[mathjax-website]:       https://www.mathjax.org/
+[physics-midyear-guide]: http://zacharyespiritu.com/physics-midyear

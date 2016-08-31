@@ -28,8 +28,8 @@ After an open demo round where all the participating teams were allowed to prese
 
 You can view the source code for FitFarm [here][fitfarm-github].
 
-[nc-github]:
-[vm-github]:
-[data-farm-post]:
-[fitfarm-website]:
-[fitfarm-github]:
+[nc-github]:       https://github.com/nwcimaszewski
+[vm-github]:       https://github.com/vmcauliffe
+[data-farm-post]:  /project/data-farm
+[fitfarm-website]: http://zacharyespiritu.com/FitFarm/
+[fitfarm-github]:  https://github.com/ZacharyEspiritu/FitFarm

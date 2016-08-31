@@ -12,11 +12,12 @@ I was commissioned by Skakel McCooey and John Timony, two of my friends at Regis
 
 [mhm.nyc][mhm-website] is built on top of the [Chameleon CMS][chameleon-cms] for Ruby on Rails. Specifically for this project, I found Chameleon superior over other alternatives such as Butter (a Heroku addon for Rails) and WordPress. While Chameleon's documentation is somewhat lacking, its customizability on the developer side (in addition to the fact it's completely free) made it a great choice for a project where the clients specifically expressed disinterest in modifying the site's design after initial production.
 
-You can visit the website [here][mhm-website]. The website is fully responsive on mobile as well, if you're into that sort of thing.
+This project was also an opportunity to experiment delivering production websites from Heroku with external AWS S3 buckets for data storage for the first time.
+
+You can visit the website [here][mhm-website].
 
 <img src="">
 
-This project was also an opportunity to experiment delivering production websites from Heroku with external AWS S3 buckets for data storage for the first time.
 
-[mhm-website]: www.mhm.nyc
-[chameleon-cms]:
+[mhm-website]:   www.mhm.nyc
+[chameleon-cms]: https://github.com/owen2345/camaleon-cms
