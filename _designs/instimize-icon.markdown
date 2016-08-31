@@ -20,4 +20,6 @@ After several iterations, we settled on a flat design:
 
 <img src="/images/designs/instimize-final.png" alt="All the Instimize icon designs.">
 
+You can (and you should!) download Instimize [here][instimize-link].
+
 [instimize-link]: https://itunes.apple.com/us/app/instimize-optimize-my-instagram/id1027067170?mt=8
