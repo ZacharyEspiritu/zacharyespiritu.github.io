@@ -8,4 +8,4 @@ awards:
   - "hackBCA III"
 ---
 
-A proof-of-concept of a calendar app that focuses on intuitive visualization and navigation with cards
+An unified, online database for healthcare providers to store patient data for collaboration

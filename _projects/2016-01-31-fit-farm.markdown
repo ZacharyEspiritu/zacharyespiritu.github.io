@@ -8,4 +8,28 @@ awards:
   - "3rd Place at hackTrin III"
 ---
 
-Fitness-based Farmville parody where players raise their own farm through real-world exercise
+At the health-themed hackTrin III, I teamed up with [Nicholas Cimiwezeski][nc-github] and [Vincent McAuliffe][vm-github] to create FitFarm, a fitness-based farm management game where players raise their own farm through real-world exercise.
+
+<img src="">
+
+The app tracks players' steps in real-life using HealthKit, and converts those steps to in-game currency that can be used to buy supplies for their personal farm, akin to the game Farmville.
+
+I programmed the majority of the app, Nick was responsible for art asset creation, and Vincent made a landing page for the app, which you can find [here][fitfarm-website].
+
+Intrepid readers will notice the similarities between FitFarm and [Data Farm][data-farm-post], another project I've worked on, though they'll also notice from the screenshots that we were able to actually create a prototype with basic game mechanics working as opposed to just a proof of concept of the data tracking mechanism.
+
+<img src="">
+
+Over 8 hours of hacking, 75% of the time was spent figuring out how to actually integrate HealthKit into our application. (Turns out that requesting permissions to access a client's HealthKit data is the first step to resolving all your problems.)
+
+After an open demo round where all the participating teams were allowed to present, we won 3rd place at the hackathon!
+
+<img src="">
+
+You can view the source code for FitFarm [here][fitfarm-github].
+
+[nc-github]:
+[vm-github]:
+[data-farm-post]:
+[fitfarm-website]:
+[fitfarm-github]:

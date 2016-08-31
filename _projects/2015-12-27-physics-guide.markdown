@@ -6,4 +6,17 @@ tagline: I didn’t want to study for my Physics exam, but I wanted to learn LaT
 card_color: "#B5B5B5"
 ---
 
-I didn’t want to study for my Physics exam, but I wanted to learn LaTeX, so I made this instead
+Immediately following Christmas Break, all Regis High School students are required to take a Science Mid-Year Exam covering all of the material in their respective science class from the past half-year. However, over the break, I didn’t want to study for my Physics exam, but I wanted to learn LaTeX, so I made a website about Physics using LaTeX.
+
+<img src="">
+
+Using [MathJax][mathjax-github], a Javascript integration for LaTeX rendering on webpages, I built a website covering all of the topics that were going to be on the exam with LaTeX for displaying necessary formulas and example solution sets for extra practice.
+
+The results were conclusive: 100% of people surveyed agreed that they scored higher on the exam because of the website.<sup>*</sup>
+
+<sup>*Disclaimer: 100% of people surveyed also agreed that they had no basis of comparison for their exam scores.</sup>
+
+You can find the website [here][physics-midyear-guide].
+
+[mathjax-github]: http://example.com
+[physics-midyear-guide]: http://example.com
