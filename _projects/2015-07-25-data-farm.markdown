@@ -8,7 +8,7 @@ awards:
   - "Winner of hackGCT 2015"
 ---
 
-At the inaugural hackGCT 2015 (my first hackathon!), I teamed up with Olivia Ross, Nico Cobb, and John Ward to create *Data Farm*. It's an iOS application that tracks your cellular data usage and motivates people to consider cheaper cellular data plans by exchanging their unused data bytes for "bites" which are used to raise animals on a virtual farm.
+At the inaugural hackGCT 2015 (my first hackathon!), I teamed up with [Olivia Ross][or-github], [Nico Cobb][nc-github], and [John Ward][jw-github] to create *Data Farm*. It's an iOS application that tracks your cellular data usage and motivates people to consider cheaper cellular data plans by exchanging their unused data bytes for "bites" which are used to raise animals on a virtual farm.
 
 It's a fantastic concept, we know.
 
@@ -26,5 +26,8 @@ Olivia made a presentation deck for our demo, which you can find [here][data-far
 
 You can also view the source code for the entire project [here][data-farm-github].
 
+[or-github]:        https://github.com/oliviaiscool
+[nc-github]:        https://github.com/NicoCobb
+[jw-github]:        https://github.com/johnward2
 [data-farm-deck]:   https://www.dropbox.com/s/uehkaylyjz53xfy/DATA%20FARM.pdf?dl=0
 [data-farm-github]: https://github.com/johnward2/HackGCT-Mast
