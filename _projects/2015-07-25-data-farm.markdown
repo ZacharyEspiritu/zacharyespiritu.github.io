@@ -12,15 +12,15 @@ At the inaugural hackGCT 2015 (my first hackathon!), I teamed up with [Olivia Ro
 
 It's a fantastic concept, we know.
 
-<img src="">
-
 I was responsible for building the cellular data tracking mechanism. After much trial and error (and some clever Googling), I figured out that it was possible to partially determine data usage simply by accessing certain functions in the `ifaddrs` iOS library.
 
 Unfortunately, `ifaddrs` only allows retreival of microcosms of information at a time (it only shows data usage up to the last four gigabytes since the last launch), so I implemented a system to continually sniff the framework for more accurate heuristics.
 
 <img src="">
 
-After 6 hours of non-stop development (and a brief hiccup with XCode projects failing to work nicely across multiple computers), we qualified for the finals and eventually were crowned the "Beginner Group Winner" of hackGCT 2015.
+After 6 hours of non-stop development (and a brief hiccup with XCode projects failing to work nicely across multiple computers), we qualified for the finals and eventually were crowned the "Beginner Group Winner" of hackGCT 2015!
+
+<img src="/images/projects/data-farm/team-photo.png" alt="The Data Farm team.">
 
 Olivia made a presentation deck for our demo, which you can find [here][data-farm-deck].
 

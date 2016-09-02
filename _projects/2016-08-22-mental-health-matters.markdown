@@ -19,5 +19,5 @@ You can visit the website [here][mhm-website].
 <img src="">
 
 
-[mhm-website]:   www.mhm.nyc
+[mhm-website]:   http://www.mhm.nyc
 [chameleon-cms]: https://github.com/owen2345/camaleon-cms
