@@ -34,19 +34,36 @@
             <div class="post-wrapper">
                 {{ content }}
             </div>
-            <!-- <footer class="post-footer">
-                {% if post.ending %}
-                    <div class="post-ending">
-                        {{ post.ending }}
-                    </div>
-                {% endif %}
-                <nav>
-                    <div class="previous-post" style="background-image: url('{{ previous_post.image_path }}');">
-                    </div>
-                    <div class="next-post" style="background-image: url('{{ next_post.image_path }}');">
-                    </div>
+            <footer class="post-footer">
+                <nav role="navigation">
+                    {% assign next_post = page.next %}
+                    {% assign previous_post = page.previous %}
+                    {% if next_post %}
+                        <a href="{{ next_post.url }}" class="post-block" style="background-image: url('{{ next_post.image_path }}');">
+                            <div class="overlay" style="background: {{ next_post.card_color }};"></div>
+                            <div class="overlay-text">
+                                <div class="overlay-text-table">
+                                    <div class="overlay-text-content">
+                                        {{ next_post.title }}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    {% endif %}
+                    {% if previous_post %}
+                        <a href="{{ previous_post.url }}" class="post-block" style="background-image: url('{{ previous_post.image_path }}');">
+                            <div class="overlay" style="background: {{ previous_post.card_color }};"></div>
+                            <div class="overlay-text">
+                                <div class="overlay-text-table">
+                                    <div class="overlay-text-content">
+                                        {{ previous_post.title }}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    {% endif %}
                 </nav>
-            </footer> -->
+            </footer>
         </main>
         {% include footer.html %}
     </body>
