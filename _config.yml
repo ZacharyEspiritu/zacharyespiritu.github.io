@@ -3,7 +3,9 @@ email: me@zacharyespiritu.com
 description: I'm a high school developer looking to create. Creator of Tile, Tap, Push!, Reaction Line, and Math Battle II.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://zacharyespiritu.com" # the base hostname & protocol for your site
-twitter_username: ZacharyEspiritu
+
+twitter:
+  username: ZacharyEspiritu
 github_username:  ZacharyEspiritu
 
 markdown: rdiscount
@@ -15,6 +17,11 @@ permalink: /blog/:slug/
 # Build settings
 markdown: kramdown
 theme: minima
+
+# Plugins
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 collections:
   projects:

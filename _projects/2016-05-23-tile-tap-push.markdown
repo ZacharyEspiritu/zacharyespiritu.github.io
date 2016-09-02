@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Tile, Tap, Push!
-image_path: images/portfolio-ttp.png
+image_path: /images/portfolio-ttp.png
 tagline: A tile-tapping time for two players and blatant ripoff of "Don’t Touch The White Tile"
 card_color: "#4A90E2"
 awards:

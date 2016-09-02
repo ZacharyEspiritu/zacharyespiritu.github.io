@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Reaction Line
-image_path: images/portfolio-reaction.png
+image_path: /images/portfolio-reaction.png
 tagline: An allegory for political divisiveness in the United States, or a game about sorting lines in the shortest time
 card_color: "#F5A623"
 awards:

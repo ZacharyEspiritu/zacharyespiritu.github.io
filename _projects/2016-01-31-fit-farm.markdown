@@ -8,7 +8,7 @@ awards:
   - "3rd Place at hackTrin III"
 ---
 
-At the health-themed hackTrin III, I teamed up with [Nicholas Cimiwezeski][nc-github] and [Vincent McAuliffe][vm-github] to create FitFarm, a fitness-based farm management game where players raise their own farm through real-world exercise.
+At the health-themed hackTrin III, I teamed up with [Nicholas Cimaszewski][nc-github] and [Vincent McAuliffe][vm-github] to create FitFarm, a fitness-based farm management game where players raise their own farm through real-world exercise.
 
 <img src="">
 

@@ -2,22 +2,23 @@
 <html lang="en">
     <head>
         {% include head.html %}
+        {% seo %}
     </head>
     <body>
         {% include header.html %}
         <main>
-            <header class="post-intro" style="background-image: url('{{ page.image_path }}');">
-                <div class="overlay" style="background: rgba(0, 109, 255, 0.5);">
+            <hgroup class="post-intro" style="background-image: url('{{ page.image_path }}');">
+                <div class="overlay" style="background: rgba(0, 109, 255, 0.7);">
                     <div class="intro-wrapper">
-                        <div class="title">
+                        <header class="title">
                             {{ page.title }}
-                        </div>
-                        <div class="tagline">
+                        </header>
+                        <header class="tagline">
                             {{ page.tagline }}
-                        </div>
+                        </header>
                     </div>
                 </div>
-            </header>
+            </hgroup>
             <div class="post-wrapper">
                 {{ content }}
             </div>
