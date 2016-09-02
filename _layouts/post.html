@@ -3,12 +3,24 @@
     <head>
         {% include head.html %}
         {% seo %}
+
+        <style>
+            .post-wrapper a {
+                {% if page.link_color %}
+                    color: {{ page.link_color }};
+                {% else %}
+                    color: {{ page.card_color }};
+                {% endif %}
+            }
+        </style>
     </head>
     <body>
         {% include header.html %}
         <main>
             <hgroup class="post-intro" style="background-image: url('{{ page.image_path }}');">
-                <div class="overlay" style="background: rgba(0, 109, 255, 0.7);">
+                <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.75;">
+                </div>
+                <div class="overlay">
                     <div class="intro-wrapper">
                         <header class="title">
                             {{ page.title }}
