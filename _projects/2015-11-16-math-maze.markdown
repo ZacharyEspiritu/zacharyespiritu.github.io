@@ -6,6 +6,10 @@ tagline: Using dynamic maze generation algorithms when tile-based math games are
 card_color: "#696969"
 awards:
   - "Blueprint @ MIT 2016"
+ending:
+  tagline: Math Maze was developed at MIT Blueprint in February 2016.
+  link: https://github.com/ZacharyEspiritu/mit-blueprint
+  link_text: view Github repo
 ---
 
 Using dynamic maze generation algorithms when tile-based math games aren’t enough
