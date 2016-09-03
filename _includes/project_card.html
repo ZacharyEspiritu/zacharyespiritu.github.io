@@ -18,7 +18,7 @@
                 </div>
             {% endif %}
         </div>
-        <figcaption class="card-text" style="background: {{ project.card_color }};">
+        <div class="card-text" style="background: {{ project.card_color }};">
             <header class="card-title">
                 {% if project.short_title %}
                     {{ project.short_title }}
@@ -29,7 +29,7 @@
             <footer class="card-detail">
                 {{ project.tagline }}
             </footer>
-        </figcaption>
+        </div>
         <img src="images/arrow.svg" class="card-arrow">
     </figure>
 </a>

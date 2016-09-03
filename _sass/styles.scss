@@ -657,6 +657,11 @@ a.block-link {
     display: block;
   }
 
+  h3 {
+    font-size: 1.25em;
+    margin-bottom: -14px;
+  }
+
   @media (max-width: 810px) {
     padding: 20px 40px;
   }
@@ -810,10 +815,12 @@ img.responsive-screenshot {
       width: 49%;
     }
   }
+}
 
+figure {
   figcaption {
     text-align: center;
-    padding-top: 5px;
+    padding-top: 8px;
     color: black;
     font-size: 18px;
     font-style: oblique;
@@ -852,13 +859,18 @@ img.responsive-screenshot {
     }
 
     .overlay {
-      opacity: 0.8;
+      opacity: 0.82;
+      transition: 0.15s all;
     }
 
     @media (max-width: 700px) {
       width: 100%;
       display: block;
     }
+  }
+
+  .post-block:hover > .overlay {
+    opacity: 0.92;
   }
 
   .overlay-text-table {

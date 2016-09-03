@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Math Battle II
-image_path: /images/portfolio-math.png
+image_path: /images/projects/math-battle/banner.png
 tagline: An experiment in online real-time multiplayer, brand design, and how much people secretly like math
 card_color: "#E461FF"
 awards:
@@ -10,7 +10,7 @@ awards:
   - "\"Best UI Design\" at Local Hack Day 2015"
 ending:
   tagline: Math Battle was released in August 2016.
-  link: http://zacharyespiritu.com/MathBattle
+  link: http://mathbattle.pw
   link_text: visit site
 ---
 
@@ -65,13 +65,30 @@ To give the game more polish, the last month or so of development was spent work
 
 For marketing purposes, I designed and printed Math Battle "trading cards." They feature download information on the backside, and a randomized tile and background color combination on the front.
 
+I usually always have some on hand, so if you ever meet me in person, feel free to ask me for one.
+
 <img class="responsive-image" src="/images/projects/math-battle/trading-cards.jpg">
 
-### Awards
+### Press/Award History
 
-<img class="responsive-image" src="/images/projects/math-battle/ceweek-presentation.jpg">
+Math Battle was originally created at [Local Hack Day][local-hack-day] 2015 @ General Assembly in October 2015, where it won "Best UI Design" out of several dozen teams.
+
+After a complete redesign of the app, in February 2016, I won the 2015 [Congressional App Challenge][congressional-app-challenge]. As a result, I was invited to Washington, D.C. to a reception with the other regional winners, political representatives, and engineers from tech companies such as Spotify and IBM.
+
+Most recently, I was named on CEWeek's [10Under20: Young Innovators To Watch][ceweek-awards] list for my work on Math Battle. Since then, I've been featured in several publications around the internet—you can view several of these articles on the [Math Battle website][math-battle-website].
+
+<figure>
+    <img class="responsive-image" src="/images/projects/math-battle/ceweek-presentation.jpg">
+    <figcaption>
+        Receiving the 10Under20 award at CEWeek 2016.
+    </figcaption>
+</figure>
 
 [cocos2d-github]: https://github.com/cocos2d/cocos2d-objc
 [firebase]: https://firebase.google.com/
 [elo-ratings]: https://en.wikipedia.org/wiki/Elo_rating_system
 [adam-cg-pro]: https://www.behance.net/gallery/13756975/ADAMCG-PRO-Free-Typeface
+[local-hack-day]: https://localhackday.mlh.io/
+[congressional-app-challenge]: http://www.congressionalappchallenge.us/
+[ceweek-awards]: http://ceweekny.com/about/10under20-2016/
+[math-battle-website]: http://mathbattle.pw
