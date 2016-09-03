@@ -1,0 +1,18 @@
+{% if page.ending %}
+    <div class="post-ending" style="background-image: url('{{ page.image_path }}');">
+        <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.80;">
+        </div>
+        <div class="overlay">
+            <div class="post-ending-content">
+                <div class="post-ending-tagline">
+                    {{ page.ending.tagline }}
+                </div>
+                {% if page.ending.link and page.ending.link_text %}
+                    <a href="{{ page.ending.link }}" class="post-ending-button">
+                        {{ page.ending.link_text }} <i class="fa fa-long-arrow-right post-ending-arrow" aria-hidden="true"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}

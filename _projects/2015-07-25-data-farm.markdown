@@ -6,6 +6,10 @@ tagline: Motivating people to save on cellular data by exchanging their unused d
 card_color: "#CCC34F"
 awards:
   - "Winner of hackGCT 2015"
+ending:
+  tagline: Data Farm was developed at hackGCT 2015 in August 2015.
+  link: https://github.com/ZacharyEspiritu/FitFarm
+  link_text: view Github repo
 ---
 
 At the inaugural hackGCT 2015 (my first hackathon!), I teamed up with [Olivia Ross][or-github], [Nico Cobb][nc-github], and [John Ward][jw-github] to create *Data Farm*. It's an iOS application that tracks your cellular data usage and motivates people to consider cheaper cellular data plans by exchanging their unused data bytes for "bites" which are used to raise animals on a virtual farm.
