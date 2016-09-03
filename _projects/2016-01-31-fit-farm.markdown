@@ -8,27 +8,32 @@ awards:
   - "3rd Place at hackTrin III"
 ending:
   tagline: FitFarm was developed at hackTrin III in January 2016.
-  link: http://example.com
+  link: https://github.com/ZacharyEspiritu/FitFarm
   link_text: view Github repo
 ---
 
 At the health-themed hackTrin III, I teamed up with [Nicholas Cimaszewski][nc-github] and [Vincent McAuliffe][vm-github] to create FitFarm, a fitness-based farm management game where players raise their own farm through real-world exercise.
 
-<img src="">
-
 The app tracks players' steps in real-life using HealthKit, and converts those steps to in-game currency that can be used to buy supplies for their personal farm, akin to the game Farmville.
 
-I programmed the majority of the app, Nick was responsible for art asset creation, and Vincent made a landing page for the app, which you can find [here][fitfarm-website].
+<img class="responsive-image" src="/images/projects/fit-farm/progress.jpg" alt="A view of the FitFarm progress screen that converts the number of steps the player took since last app load to in-game currency." style="max-width: 500px;">
+
+I programmed the majority of the app and worked with Nick to design and source the art assets, and Vincent made a landing page for the app, which you can find [here][fitfarm-website].
 
 Intrepid readers will notice the similarities between FitFarm and [Data Farm][data-farm-post], another project I've worked on, though they'll also notice from the screenshots that we were able to actually create a prototype with basic game mechanics working as opposed to just a proof of concept of the data tracking mechanism.
 
-<img src="">
+<figure class="four-landscape-screenshot-grid">
+    <img src="/images/projects/fit-farm/main.jpg" alt="The main menu screen of FitFarm.">
+    <img src="/images/projects/fit-farm/farm.jpg" alt="A view of a FitFarm farm in its early stages.">
+    <img src="/images/projects/fit-farm/shop.jpg" alt="A view of the FitFarm shop where players can buy supplies to build their farm.">
+    <img src="/images/projects/fit-farm/in-app-purchase.jpg" alt="A view of the Choco Bar Shop in FitFarm where players can pay real-world currency to expedite their farm's progress.">
+</figure>
 
 Over 8 hours of hacking, 75% of the time was spent figuring out how to actually integrate HealthKit into our application. (Turns out that requesting permissions to access a client's HealthKit data is the first step to resolving all your problems.)
 
 After an open demo round where all the participating teams were allowed to present, we won 3rd place at the hackathon!
 
-<img src="">
+<img class="responsive-image" src="/images/projects/fit-farm/team-photo.jpg" alt="The FitFarm development team after winning 3rd Place at the hackTrin hackathon." style="max-width: 650px;">
 
 You can view the source code for FitFarm [here][fitfarm-github].
 
