@@ -18,7 +18,7 @@
         {% include header.html %}
         <main>
             <hgroup class="post-intro" style="background-image: url('{{ page.image_path }}');">
-                <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.75;">
+                <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.8;">
                 </div>
                 <div class="overlay">
                     <div class="intro-wrapper">
@@ -34,7 +34,25 @@
             <article class="post-wrapper">
                 {{ content }}
             </article>
-            {% include post_preview.html %}
+            <footer class="post-footer">
+                {% if page.ending %}
+                    <div class="post-ending" style="background-image: url('{{ page.image_path }}');">
+                        <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.80;">
+                        </div>
+                        <div class="overlay">
+                            <div class="post-ending-content">
+                                <div class="post-ending-tagline">
+                                    {{ page.ending.tagline }}
+                                </div>
+                                <a href="{{ page.ending.link }}" class="post-ending-button">
+                                    {{ page.ending.link_text }} <i class="fa fa-long-arrow-right post-ending-arrow" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% include post_preview.html %}
+            </footer>
         </main>
         {% include footer.html %}
     </body>

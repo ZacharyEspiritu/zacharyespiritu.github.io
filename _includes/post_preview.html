@@ -1,50 +1,48 @@
 {% assign next_post = page.next %}
 {% assign previous_post = page.previous %}
 
-<footer class="post-footer">
-    <nav role="navigation">
-        {% if previous_post %}
-            <a href="{{ previous_post.url }}" class="post-block" style="background-image: url('{{ previous_post.image_path }}');">
-                <div class="overlay" style="background: {{ previous_post.card_color }};"></div>
-                <div class="overlay-text">
-                    <div class="overlay-text-table">
-                        <div class="overlay-text-content">
-                            <div class="preview-direction">
-                                <i class="fa fa-long-arrow-left" aria-hidden="true"></i> Previous Project
-                            </div>
-                            <div class="preview-title">
-                                {{ previous_post.title }}
-                            </div>
-                            <div class="preview-tagline">
-                                {{ previous_post.tagline }}
-                            </div>
+<nav role="navigation">
+    {% if previous_post %}
+        <a href="{{ previous_post.url }}" class="post-block" style="background-image: url('{{ previous_post.image_path }}');">
+            <div class="overlay" style="background: {{ previous_post.card_color }};"></div>
+            <div class="overlay-text">
+                <div class="overlay-text-table">
+                    <div class="overlay-text-content">
+                        <div class="preview-direction">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i> Previous Project
+                        </div>
+                        <div class="preview-title">
+                            {{ previous_post.title }}
+                        </div>
+                        <div class="preview-tagline">
+                            {{ previous_post.tagline }}
                         </div>
                     </div>
                 </div>
-            </a>
-        {% endif %}
-        {% if next_post %}
-            <a href="{{ next_post.url }}" class="post-block" style="background-image: url('{{ next_post.image_path }}');">
-                <div class="overlay" style="background: {{ next_post.card_color }};"></div>
-                <div class="overlay-text">
-                    <div class="overlay-text-table">
-                        <div class="overlay-text-content">
-                            <div class="preview-direction">
-                                Next Project <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </div>
-                            <div class="preview-title">
-                                {{ next_post.title }}
-                            </div>
-                            <div class="preview-tagline">
-                                {{ next_post.tagline }}
-                            </div>
+            </div>
+        </a>
+    {% endif %}
+    {% if next_post %}
+        <a href="{{ next_post.url }}" class="post-block" style="background-image: url('{{ next_post.image_path }}');">
+            <div class="overlay" style="background: {{ next_post.card_color }};"></div>
+            <div class="overlay-text">
+                <div class="overlay-text-table">
+                    <div class="overlay-text-content">
+                        <div class="preview-direction">
+                            Next Project <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="preview-title">
+                            {{ next_post.title }}
+                        </div>
+                        <div class="preview-tagline">
+                            {{ next_post.tagline }}
                         </div>
                     </div>
                 </div>
-            </a>
-        {% endif %}
-    </nav>
-</footer>
+            </div>
+        </a>
+    {% endif %}
+</nav>
 
 <script>
     $(document).ready(function(){

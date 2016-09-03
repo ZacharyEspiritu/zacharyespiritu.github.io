@@ -715,9 +715,8 @@ a.block-link {
 }
 
 .post-footer {
-  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
-
   nav {
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     display: table;
     width: 100%;
     height: 180px;
@@ -779,5 +778,52 @@ a.block-link {
   .preview-tagline {
     margin-top: 4px;
     font-size: 18px;
+  }
+}
+
+.post-ending {
+  position: relative;
+  z-index: 100;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+  height: 200px;
+  text-align: center;
+  display: table;
+  width: 100%;
+  color: white;
+
+  .overlay {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    min-height: 200px;
+    color: white;
+    display: table;
+  }
+
+  .post-ending-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .post-ending-tagline {
+    font-size: 32px;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .post-ending-button {
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    margin-top: 19px;
+    display: inline-block;
+    font-size: 26px;
+    background: white;
+    min-width: 260px;
+    padding: 5px 6px;
+    opacity: 0.90;
+    text-decoration: none;
+    color: black;
+
+    .post-ending-arrow {
+      margin-left: 6px;
+    }
   }
 }

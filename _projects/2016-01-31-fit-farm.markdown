@@ -6,6 +6,10 @@ tagline: Fitness-based Farmville parody where players raise their own farm throu
 card_color: "#7ED321"
 awards:
   - "3rd Place at hackTrin III"
+ending:
+  tagline: FitFarm was developed at hackTrin III in January 2016.
+  link: http://example.com
+  link_text: view Github repo
 ---
 
 At the health-themed hackTrin III, I teamed up with [Nicholas Cimaszewski][nc-github] and [Vincent McAuliffe][vm-github] to create FitFarm, a fitness-based farm management game where players raise their own farm through real-world exercise.
