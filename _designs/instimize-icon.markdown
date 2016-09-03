@@ -4,6 +4,10 @@ title:  Instimize Icon
 image_path: /images/design-instimize.png
 tagline: Designed the icon for my friend’s app that’s probably more useful than anything I’ve made so far
 card_color: "#2A334B"
+ending:
+  tagline: Instimize was released in August 2015.
+  link: https://itunes.apple.com/us/app/instimize-optimize-my-instagram/id1027067170?mt=8
+  link_text: view on App Store
 ---
 
 While studying at Make School in 2015, I worked with my friend, [Cassandra Kane][ck-github], to redesign the app icon for her iOS app *[Instimize][instimize-link]*. It's an app that's probably more practical than anything I've made so far, so if you're looking to improve your social influence on Instagram, you can download it [here][instimize-link].

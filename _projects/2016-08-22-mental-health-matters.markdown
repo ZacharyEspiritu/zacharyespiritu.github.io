@@ -4,6 +4,10 @@ title:  mhm.nyc
 image_path: /images/portfolio-mhm.png
 tagline: Designed website for Mental Health Matters, a blog raising awareness of mental health issues in NYC.
 card_color: "#122076"
+ending:
+  tagline: mhm.nyc was released in August 2016.
+  link: http://www.mhm.nyc
+  link_text: visit site
 ---
 
 I was commissioned by Skakel McCooey and John Timony, two of my friends at Regis, to design the website for [Mental Health Matters][mhm-website], a blog dedicated to raising awareness of mental health issues in New York City.
