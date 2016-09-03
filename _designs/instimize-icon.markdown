@@ -14,15 +14,21 @@ While studying at Make School in 2015, I worked with my friend, [Cassandra Kane]
 
 This is what the old icon looked like:
 
-<img src="/images/designs/instimize/instimize-old.png" alt="The old Instimize icon." style="max-width: 200px;">
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-icon lazyload" data-src="/images/designs/instimize/instimize-old.png" alt="The old Instimize icon.">
+</figure>
 
 Pretty good so far, and it gets the app's message across, but Cassandra and I thought there was room for improvement. Using Sketch, I designed a bunch of icons:
 
-<img src="/images/designs/instimize/instimize-designs.png" alt="All the Instimize icon iterations.">
+<figure class="lazyload" data-expand="-20">
+    <img class="lazyload" data-src="/images/designs/instimize/instimize-designs.png" alt="All the Instimize icon iterations.">
+</figure>
 
 After several iterations, we settled on a flat design:
 
-<img src="/images/designs/instimize/instimize-final.png" alt="The final Instimize icon design."  style="max-width: 200px;">
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-icon lazyload" data-src="/images/designs/instimize/instimize-final.png" alt="The final Instimize icon design.">
+</figure>
 
 You can (and you should!) download Instimize [here][instimize-link].
 

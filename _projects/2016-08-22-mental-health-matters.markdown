@@ -16,9 +16,9 @@ I was commissioned by Skakel McCooey and John Timony, two of my friends at Regis
 
 This project was also an opportunity to experiment delivering production websites from Heroku with external AWS S3 buckets for data storage for the first time.
 
-<img src="/images/projects/mental-health-matters/render.png">
-
-You can visit the website [here][mhm-website].
+<figure class="lazyload" data-expand="-20">
+    <img class="lazyload" data-src="/images/projects/mental-health-matters/render.png">
+</figure>
 
 [mhm-website]:   http://www.mhm.nyc
 [chameleon-cms]: https://github.com/owen2345/camaleon-cms

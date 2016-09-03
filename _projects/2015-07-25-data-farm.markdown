@@ -22,7 +22,9 @@ Unfortunately, `ifaddrs` only allows retreival of microcosms of information at a
 
 After 6 hours of non-stop development (and a brief hiccup with XCode projects failing to work nicely across multiple computers), we qualified for the finals and eventually were crowned the "Beginner Group Winner" of hackGCT 2015!
 
-<img class="responsive-image" src="/images/projects/data-farm/team-photo.png" alt="The Data Farm team." style="max-width: 650px;">
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-large-image lazyload" src="/images/projects/data-farm/team-photo.png" alt="The Data Farm team.">
+</figure>
 
 Olivia also made a presentation deck for our demo, which you can find [here][data-farm-deck].
 

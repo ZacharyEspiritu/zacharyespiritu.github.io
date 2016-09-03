@@ -15,7 +15,9 @@ Immediately following Christmas Break, all Regis High School students are requir
 
 Using [MathJax][mathjax-website], a Javascript integration for LaTeX rendering on webpages, I built a website covering all of the topics that were going to be on the exam with LaTeX for displaying necessary formulas and example solution sets for extra practice. I also used Sketch to design a little mascot to cheer people on while they were studying.
 
-<img class="responsive-image" src="/images/portfolio-physics.png" style="max-width: 500px;">
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-image lazyload" src="/images/portfolio-physics.png">
+</figure>
 
 The results were conclusive: 100% of people surveyed agreed that they scored higher on the exam because of the website.<sup>*</sup>
 

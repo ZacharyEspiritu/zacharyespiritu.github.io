@@ -30,11 +30,11 @@ I programmed the majority of the app in Swift using the open-source game engine 
 
 All puzzles are generated on the fly, each with a guaranteed solution. This allows for massive replayability, so you can challenge your enemies (and your math teachers, of course) to a Math Battle as many times as you want and still get new puzzles every time.
 
-<div class="four-screenshot-grid">
-    <img src="/images/projects/math-battle/custom-match.png">
-    <img src="/images/projects/math-battle/practice-match.png">
-    <img src="/images/projects/math-battle/player-stats.png">
-    <img src="/images/projects/math-battle/leaderboard.png">
+<div class="four-screenshot-grid lazyload" data-expand="-20">
+    <img class="lazyload" data-src="/images/projects/math-battle/custom-match.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/practice-match.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/player-stats.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/leaderboard.png">
 </div>
 
 I also used [Firebase][firebase]'s Realtime Database, Authentication, Cloud Messaging (push notifications), and Analytics modules for the backend. I engineered a way to take advantage of Firebase's notably fast data update and retreival benchmarks to allow for real-time online multiplayer battles. This allows players to compete on separate devices while still seeing all of the taps and moves of their opponent on the other side of their playfield.
@@ -45,13 +45,13 @@ Finally, I implemented an [ELO rating system][elo-ratings] which further incenti
 
 A large amount of Math Battle's time in production was spent developing an unified brand design. As a starting point, I was primarily inspired by the look of the typeface, [ADAM.CG PRO][adam-cg-pro]. This led to the thick, black borders and the drop shadows seen around most of the elements. I also used bright colors to give the game a more friendly mood.
 
-<figure class="six-screenshot-grid">
-    <img src="/images/projects/math-battle/gameplay-design-1.png">
-    <img src="/images/projects/math-battle/gameplay-design-2.png">
-    <img src="/images/projects/math-battle/gameplay-design-3.png">
-    <img src="/images/projects/math-battle/gameplay-design-4.png">
-    <img src="/images/projects/math-battle/gameplay-design-5.png">
-    <img src="/images/projects/math-battle/gameplay-scene.png">
+<figure class="six-screenshot-grid lazyload" data-expand="-20">
+    <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-1.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-2.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-3.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-4.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-5.png">
+    <img class="lazyload" data-src="/images/projects/math-battle/gameplay-scene.png">
     <figcaption>Several iterations were necessary before the final gameplay design was reached.</figcaption>
 </figure>
 
@@ -59,7 +59,9 @@ A large amount of Math Battle's time in production was spent developing an unifi
 
 To give the game more polish, the last month or so of development was spent working on the animations seen throughout the game. In particular, the menu transition animations took a lot of time to get just right—however, it was worth it in the end for technical reasons as it allowed me to seamlessly load and deallocate memory for each gamemode menu instead of loading all the menus at once, which was calling memory warnings.
 
-<img class="responsive-screenshot" src="/images/projects/math-battle/animations.gif" loop="-1">
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-screenshot lazyload" data-src="/images/projects/math-battle/animations.gif">
+</figure>
 
 ### Trading Cards
 
@@ -67,7 +69,9 @@ For marketing purposes, I designed and printed Math Battle "trading cards." They
 
 I usually always have some on hand, so if you ever meet me in person, feel free to ask me for one.
 
-<img class="responsive-image" src="/images/projects/math-battle/trading-cards.jpg">
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-image lazyload" data-src="/images/projects/math-battle/trading-cards.jpg">
+</figure>
 
 ### Press/Award History
 
@@ -77,8 +81,8 @@ After a complete redesign of the app, in February 2016, I won the 2015 [Congress
 
 Most recently, I was named on CEWeek's [10Under20: Young Innovators To Watch][ceweek-awards] list for my work on Math Battle. Since then, I've been featured in several publications around the internet—you can view several of these articles on the [Math Battle website][math-battle-website].
 
-<figure>
-    <img class="responsive-image" src="/images/projects/math-battle/ceweek-presentation.jpg">
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-image lazyload" data-src="/images/projects/math-battle/ceweek-presentation.jpg">
     <figcaption>
         Receiving the 10Under20 award at CEWeek 2016.
     </figcaption>

@@ -13,11 +13,11 @@ Calenday is a proof-of-concept of a calendar app that focuses on intuitive visua
 
 (I used Sketch to design the mockups. I apologize for my dry sense of humor.)
 
-<figure class="six-large-screenshot-grid">
-    <img src="/images/designs/calenday/calenday-main-view.png" alt="Calenday app main view.">
-    <img src="/images/designs/calenday/calenday-push-notification.png" alt="Calenday app main view with sample push notification displaying.">
-    <img src="/images/designs/calenday/calenday-hidden-calendar-view.png" alt="Calenday app main view with the calendar hidden.">
-    <img src="/images/designs/calenday/calenday-large-view.png" alt="Calenday app large view.">
-    <img src="/images/designs/calenday/calenday-date-entry.png" alt="Calenday app date picker layout.">
-    <img src="/images/designs/calenday/calenday-event-creation.png" alt="Calenday app event creation screen.">
+<figure class="six-large-screenshot-grid lazyload">
+    <img class="lazyload" data-src="/images/designs/calenday/calenday-main-view.png" alt="Calenday app main view.">
+    <img class="lazyload" data-src="/images/designs/calenday/calenday-push-notification.png" alt="Calenday app main view with sample push notification displaying.">
+    <img class="lazyload" data-src="/images/designs/calenday/calenday-hidden-calendar-view.png" alt="Calenday app main view with the calendar hidden.">
+    <img class="lazyload" data-src="/images/designs/calenday/calenday-large-view.png" alt="Calenday app large view.">
+    <img class="lazyload" data-src="/images/designs/calenday/calenday-date-entry.png" alt="Calenday app date picker layout.">
+    <img class="lazyload" data-src="/images/designs/calenday/calenday-event-creation.png" alt="Calenday app event creation screen.">
 </figure>

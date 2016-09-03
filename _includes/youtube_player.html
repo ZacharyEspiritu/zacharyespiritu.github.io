@@ -1,5 +1,5 @@
-<div class="video-sizer" style="max-width: {{ include.width }}px;">
+<figure class="video-sizer" style="max-width: {{ include.width }}px;">
     <div class="video-wrapper">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="" allowfullscreen></iframe>
+        <iframe width="640" height="360" data-src="https://www.youtube.com/embed/{{ include.id }}" frameborder="" class="lazyload" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
