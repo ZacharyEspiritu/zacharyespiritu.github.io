@@ -13,7 +13,7 @@ Calenday is a proof-of-concept of a calendar app that focuses on intuitive visua
 
 (I used Sketch to design the mockups. I apologize for my dry sense of humor.)
 
-<figure class="six-screenshot-grid">
+<figure class="six-large-screenshot-grid">
     <img src="/images/designs/calenday/calenday-main-view.png" alt="Calenday app main view.">
     <img src="/images/designs/calenday/calenday-push-notification.png" alt="Calenday app main view with sample push notification displaying.">
     <img src="/images/designs/calenday/calenday-hidden-calendar-view.png" alt="Calenday app main view with the calendar hidden.">
