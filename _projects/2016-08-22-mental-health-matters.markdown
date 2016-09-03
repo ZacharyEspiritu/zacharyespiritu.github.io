@@ -16,7 +16,7 @@ I was commissioned by Skakel McCooey and John Timony, two of my friends at Regis
 
 This project was also an opportunity to experiment delivering production websites from Heroku with external AWS S3 buckets for data storage for the first time.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="lazyload" data-src="/images/projects/mental-health-matters/render.png">
 </figure>
 

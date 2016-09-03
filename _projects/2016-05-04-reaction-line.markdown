@@ -10,3 +10,7 @@ awards:
 ---
 
 An allegory for political divisiveness in the United States, or a game about sorting lines in the shortest time
+
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-image lazyload" data-src="/images/projects/reaction-line/make-school-presentation.jpg">
+</figure>

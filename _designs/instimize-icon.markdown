@@ -14,8 +14,8 @@ While studying at Make School in 2015, I worked with my friend, [Cassandra Kane]
 
 This is what the old icon looked like:
 
-<figure class="lazyload" data-expand="-20">
-    <img class="responsive-icon lazyload" data-src="/images/designs/instimize/instimize-old.png" alt="The old Instimize icon.">
+<figure>
+    <img class="responsive-icon" src="/images/designs/instimize/instimize-old.png" alt="The old Instimize icon.">
 </figure>
 
 Pretty good so far, and it gets the app's message across, but Cassandra and I thought there was room for improvement. Using Sketch, I designed a bunch of icons:

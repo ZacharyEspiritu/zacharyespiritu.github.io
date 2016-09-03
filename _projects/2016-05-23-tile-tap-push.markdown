@@ -10,3 +10,7 @@ awards:
 ---
 
 A tile-tapping time for two players and blatant ripoff of "Don’t Touch The White Tile"
+
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-large-image lazyload" data-src="/images/projects/tile-tap-push/make-school-presentation.jpg">
+</figure>

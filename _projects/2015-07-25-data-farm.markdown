@@ -16,6 +16,13 @@ At the inaugural hackGCT 2015 (my first hackathon!), I teamed up with [Olivia Ro
 
 It's a fantastic concept, we know.
 
+<figure class="three-screenshot-grid lazyload" data-expand="-20">
+    <img class="lazyload" src="/images/projects/data-farm/graph.png">
+    <img class="lazyload" src="/images/projects/data-farm/pet-stats.png">
+    <img class="lazyload" src="/images/projects/data-farm/shop.png">
+    <figcaption>Several mockups I designed for our hackathon demo.</figcaption>
+</figure>
+
 I was responsible for building the cellular data tracking mechanism. After much trial and error (and some clever Googling), I figured out that it was possible to partially determine data usage simply by accessing certain functions in the `ifaddrs` iOS library.
 
 Unfortunately, `ifaddrs` only allows retreival of microcosms of information at a time (it only shows data usage up to the last four gigabytes since the last launch), so I implemented a system to continually sniff the framework for more accurate heuristics.

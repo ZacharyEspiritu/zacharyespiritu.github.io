@@ -83,7 +83,10 @@ a.block-link {
     z-index: 2;
   }
 
-  .logo {
+  .logo,
+  .logo-container {
+    display: inline-block;
+    margin: 0 auto;
     width: $header-logo-width;
   }
 
@@ -613,7 +616,6 @@ a.block-link {
   @media (max-width: 1080px) {
     .title {
       padding: 0 30px 6px;
-      font-size: $post-intro-title-sm-size;
     }
 
     .tagline {
@@ -674,6 +676,26 @@ a.block-link {
     display: inline;
     width: 49%;
     max-width: 250px;
+  }
+}
+
+.three-screenshot-grid {
+  text-align: center;
+
+  img {
+    display: inline;
+    width: 32.5%;
+    max-width: 250px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 200px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      max-width: 200px;
+    }
   }
 }
 
@@ -900,6 +922,16 @@ figure {
     padding: 0 30px;
   }
 
+  .preview-title {
+    font-size: $post-preview-title-font-size;
+
+    @media (max-width: 700px) {
+      font-size: $post-preview-title-sm-font-size;
+    }
+  }
+
+
+
   .preview-direction {
     font-size: $post-preview-direction-font-size;
     text-transform: uppercase;
@@ -936,9 +968,13 @@ figure {
   }
 
   .post-ending-tagline {
-    font-size: $post-ending-tagline-font-size;
+    font-size: $post-ending-tagline-size;
     padding: 0 12px;
     text-shadow: 0px 2px 8px rgba(0,0,0,0.5);
+
+    @media (max-width: 700px) {
+      font-size: $post-ending-tagline-sm-size;
+    }
   }
 
   .post-ending-button {
