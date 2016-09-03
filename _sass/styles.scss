@@ -18,7 +18,7 @@ body {
 
 .container {
   margin: auto;
-  max-width: 1200px;
+  max-width: $container-max-width;
 }
 
 .content {
@@ -37,7 +37,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1080px;
+  max-width: $wrapper-max-width;
   margin: auto;
 }
 
@@ -69,7 +69,7 @@ a.block-link {
 .header {
   position: relative;
   text-align: center;
-  background: #18212D;
+  background: $header-background-color;
   padding-top: 35px;
   padding-bottom: 20px;
   z-index: 3;
@@ -84,7 +84,7 @@ a.block-link {
   }
 
   .logo {
-    width: 250px;
+    width: $header-logo-width;
   }
 
   .header-content {
@@ -109,26 +109,6 @@ a.block-link {
     text-align: center;
     padding: 0 52px;
     text-decoration: none;
-  }
-
-  h1 {
-    display: block;
-    margin: 0;
-    font-size: 90px;
-    margin-bottom: 20px;
-
-    img {
-      display: inline;
-      margin-bottom: -33px;
-      height: 100px;
-      margin-right: 5px;
-    }
-  }
-
-  h2 {
-    display: block;
-    margin: 0;
-    font-size: 52px;
   }
 
   @media (max-width: 1080px) {
@@ -289,7 +269,6 @@ a.block-link {
   }
 }
 
-
 .articles {
   max-width: 1108px;
   margin: auto;
@@ -432,7 +411,6 @@ a.block-link {
     border-bottom: 87px solid $gray-bg-color;
   }
 }
-
 
 #skills .content {
   padding-bottom: 13px;
@@ -596,17 +574,18 @@ a.block-link {
 }
 
 .post-intro {
-  min-height: 250px;
   position: relative;
+  min-height: $post-intro-height;
   z-index: 1;
   box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
   background-size: cover;
   background-position: center center;
 
   .overlay {
+    position: absolute;
+    min-height: $post-intro-height;
+    width: 100%;
     text-align: center;
-    position: absolute; width: 100%;
-    min-height: 250px;
     color: white;
     display: table;
   }
@@ -621,24 +600,25 @@ a.block-link {
   .title {
     margin: 0 auto;
     padding-bottom: 7px;
-    max-width: 750px;
+    max-width: $post-intro-max-width;
+    font-size: $post-intro-title-size;
   }
 
   .tagline {
     margin: 0 auto;
-    max-width: 750px;
-    font-size: 30px;
+    max-width: $post-intro-max-width;
+    font-size: $post-intro-tagline-size;
   }
 
   @media (max-width: 1080px) {
     .title {
       padding: 0 30px 6px;
-      font-size: 36px;
+      font-size: $post-intro-title-sm-size;
     }
 
     .tagline {
       padding: 0 30px;
-      font-size: 26px;
+      font-size: $post-intro-tagline-sm-size;
     }
   }
 
@@ -648,28 +628,27 @@ a.block-link {
     }
 
     .title {
-      padding: 0 30px 5px;
-      font-size: 36px;
+      padding-bottom: 5px;
+      font-size: $post-intro-title-sm-size;
     }
 
     .tagline {
-      padding: 0 30px;
-      font-size: 26px;
+      font-size: $post-intro-tagline-sm-size;
     }
   }
 }
 
 .post-wrapper {
-  max-width: 870px;
+  max-width: $post-wrapper-max-width;
+  font-weight: $post-font-weight;
+  font-size: $post-font-size;
   margin: auto;
-  font-weight: 400;
-  font-size: 22px;
   padding: 30px 40px;
 
   a {
+    color: $post-link-color;
+    font-weight: $post-link-font-weight;
     text-decoration: none;
-    font-weight: 500;
-    color: #006DFF;
   }
 
   img {
@@ -752,24 +731,24 @@ a.block-link {
 
 .post-footer {
   nav {
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     display: table;
     width: 100%;
-    height: 180px;
+    height: $post-preview-height;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
   }
 
   .post-block {
-    position: relative;
     display: table-cell;
+    position: relative;
     width: 50%;
-    height: 180px;
+    height: $post-preview-height;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    color: white;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
     background-size: cover;
     background-position: center center;
+    color: white;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
 
     .overlay,
     .overlay-text {
@@ -809,35 +788,33 @@ a.block-link {
   }
 
   .preview-direction {
-    font-size: 20px;
+    font-size: $post-preview-direction-font-size;
     text-transform: uppercase;
   }
 
   .preview-tagline {
+    font-size: $post-preview-tagline-font-size;
     margin-top: 4px;
-    font-size: 18px;
   }
 }
 
 .post-ending {
   position: relative;
-  z-index: 100;
-  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
-  height: 200px;
-  text-align: center;
   display: table;
+  height: $post-ending-height;
   width: 100%;
-  color: white;
+  z-index: $post-ending-z-index;
   background-size: cover;
   background-position: center center;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
 
   .overlay {
-    text-align: center;
     position: absolute;
-    width: 100%;
-    min-height: 200px;
-    color: white;
     display: table;
+    min-height: $post-ending-height;
+    width: 100%;
+    color: white;
+    text-align: center;
   }
 
   .post-ending-content {
@@ -846,25 +823,43 @@ a.block-link {
   }
 
   .post-ending-tagline {
-    font-size: 32px;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: $post-ending-tagline-font-size;
     padding: 0 12px;
+    text-shadow: 0px 2px 8px rgba(0,0,0,0.5);
   }
 
   .post-ending-button {
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
-    margin-top: 19px;
     display: inline-block;
-    font-size: 26px;
-    background: white;
-    min-width: 260px;
+    min-width: $post-ending-button-max-width;
     padding: 5px 6px;
+    margin-top: 19px;
+    color: $post-ending-button-font-color;
+    font-size: $post-ending-button-font-size;
+    background: $post-ending-button-background;
     opacity: 0.90;
     text-decoration: none;
-    color: black;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
 
     .post-ending-arrow {
       margin-left: 6px;
     }
   }
+}
+
+.video-sizer {
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
