@@ -21,7 +21,11 @@
     <body>
         {% include header.html %}
         <main>
-            <hgroup class="post-intro" style="background-image: url('{{ page.image_path }}');">
+            {% assign banner_image = page.image_path %}
+            {% if page.banner_path %}
+                {% assign banner_image = page.banner_path %}
+            {% endif %}
+            <hgroup class="post-intro" style="background-image: url('{{ banner_image }}');">
                 <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.8;">
                 </div>
                 <div class="overlay">

@@ -1,5 +1,9 @@
 {% if page.ending %}
-    <div class="post-ending" style="background-image: url('{{ page.image_path }}');">
+    {% assign banner_image = page.image_path %}
+    {% if page.banner_path %}
+        {% assign banner_image = page.banner_path %}
+    {% endif %}
+    <div class="post-ending" style="background-image: url('{{ banner_image }}');">
         <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.80;">
         </div>
         <div class="overlay">
