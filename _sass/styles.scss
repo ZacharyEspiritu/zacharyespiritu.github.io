@@ -669,26 +669,85 @@ a.block-link {
   }
 }
 
-.two-screenshot-grid {
+.two-screenshot-grid,
+.three-screenshot-grid,
+.four-screenshot-grid,
+.four-landscape-screenshot-grid,
+.six-screenshot-grid,
+.six-large-screenshot-grid {
   text-align: center;
 
   img {
     display: inline;
-    width: 49%;
-    max-width: 250px;
   }
 }
 
-.three-screenshot-grid {
-  text-align: center;
+.two-screenshot-grid img,
+.three-screenshot-grid img {
+  max-width: 250px;
+}
 
-  img {
-    display: inline;
-    width: 32.5%;
-    max-width: 250px;
+.two-screenshot-grid img,
+.four-landscape-screenshot-grid img {
+  width: 49%;
+}
+
+.three-screenshot-grid img,
+.six-large-screenshot-grid img {
+  width: 32.5%;
+}
+
+.four-screenshot-grid img {
+  width: 24%;
+}
+
+.six-screenshot-grid img {
+  width: 15.75%;
+}
+
+@media (min-width: $post-wrapper-max-width + $photo-grid-extension + ($photo-grid-horizontal-padding * 2)) {
+  .four-screenshot-grid,
+  .four-landscape-screenshot-grid,
+  .six-screenshot-grid,
+  .six-large-screenshot-grid {
+    width: $post-wrapper-max-width + $photo-grid-extension;
+    margin-left: -($photo-grid-extension / 2);
+    padding-top: 20px;
   }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: $post-wrapper-max-width + $photo-grid-extension + ($photo-grid-horizontal-padding * 2) - 1) {
+  .four-screenshot-grid,
+  .four-landscape-screenshot-grid,
+  .six-screenshot-grid,
+  .six-large-screenshot-grid {
+    max-width: $post-wrapper-max-width + $photo-grid-extension;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .four-landscape-screenshot-grid img {
+    width: 100%;
+    max-width: 500px;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .six-screenshot-grid {
+    max-width: 525px;
+    margin: 0 auto;
+
+    img {
+      width: 32%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .three-screenshot-grid {
     max-width: 200px;
     margin: 0 auto;
 
@@ -697,38 +756,30 @@ a.block-link {
       max-width: 200px;
     }
   }
+
+  .four-screenshot-grid img,
+  .six-large-screenshot-grid img {
+    width: 49%;
+  }
+
+  .four-screenshot-grid img {
+    max-width: 500px;
+  }
 }
 
-.six-large-screenshot-grid {
-  text-align: center;
+@media (max-width: 500px) {
+  .six-screenshot-grid {
+    max-width: 320px;
 
-  img {
-    width: 32.5%;
-    display: inline;
-  }
-
-  @media (min-width: 980px) {
-    width: 970px;
-    margin-left: -50px;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 979px) {
-    max-width: 970px;
-    margin-left: 0;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 600px) {
     img {
       width: 49%;
     }
   }
+}
 
-  @media (max-width: 390px) {
-    img {
-      width: 100%;
-    }
+@media (max-width: 390px) {
+  .six-large-screenshot-grid img {
+    width: 100%;
   }
 }
 
@@ -753,100 +804,6 @@ img.responsive-icon {
 
 img.responsive-screenshot {
   max-width: 250px;
-}
-
-.four-screenshot-grid {
-  text-align: center;
-
-  img {
-    width: 24%;
-    display: inline;
-  }
-
-  @media (min-width: 980px) {
-    width: 970px;
-    margin-left: -50px;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 979px) {
-    max-width: 970px;
-    margin-left: 0;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 600px) {
-    img {
-      width: 49%;
-      max-width: 500px;
-    }
-  }
-}
-
-.four-landscape-screenshot-grid {
-  text-align: center;
-
-  img {
-    width: 49%;
-    display: inline;
-  }
-
-  @media (min-width: 980px) {
-    width: 970px;
-    margin-left: -50px;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 979px) {
-    max-width: 970px;
-    margin-left: 0;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 700px) {
-    img {
-      width: 100%;
-      max-width: 500px;
-      padding: 5px 0;
-    }
-  }
-}
-
-.six-screenshot-grid {
-  text-align: center;
-
-  img {
-    width: 15.75%;
-    display: inline;
-  }
-
-  @media (min-width: 980px) {
-    width: 970px;
-    margin-left: -50px;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 979px) {
-    max-width: 970px;
-    margin-left: 0;
-    padding-top: 20px;
-  }
-
-  @media (max-width: 800px) {
-    max-width: 525px;
-    margin: 0 auto;
-
-    img {
-      width: 32%;
-    }
-  }
-
-  @media (max-width: 500px) {
-    max-width: 320px;
-    img {
-      width: 49%;
-    }
-  }
 }
 
 figure {
