@@ -37,7 +37,7 @@ Olivia also made a presentation deck for our demo, which you can find [here][dat
 
 You can view the source code for the entire project [here][data-farm-github].
 
-[or-github]:        https://github.com/oliviaiscool
+[or-github]:        http://oliviaiscool.me/
 [nc-github]:        https://github.com/NicoCobb
 [jw-github]:        https://github.com/johnward2
 [data-farm-deck]:   https://www.dropbox.com/s/uehkaylyjz53xfy/DATA%20FARM.pdf?dl=0

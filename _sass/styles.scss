@@ -75,12 +75,12 @@ a.block-link {
   z-index: 3;
 
   .curve {
-    width: 100%;
     position: absolute;
     bottom: 0;
-    left: 0;
-    -webkit-transform: translate(0, 96%);
+    left: -10px;
+    width: 102%;
     z-index: 2;
+    -webkit-transform: translate(0, 96%);
   }
 
   .logo,
@@ -705,6 +705,12 @@ a.block-link {
   width: 15.75%;
 }
 
+@media (min-width: 630px) {
+  .grid-padding img {
+    padding: 0 7px;
+  }
+}
+
 @media (min-width: $post-wrapper-max-width + $photo-grid-extension + ($photo-grid-horizontal-padding * 2)) {
   .four-screenshot-grid,
   .four-landscape-screenshot-grid,
@@ -958,7 +964,7 @@ figure {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
 }
 
