@@ -12,14 +12,10 @@
                 {% endif %}
             }
         </style>
-        <script>
-            window.lazySizesConfig = {
-                addClasses: true
-            };
-        </script>
     </head>
     <body>
         {% include preloader.html %}
+        {% include scripts.html %}
         {% include header.html %}
         <main>
             {% assign banner_image = page.image_path %}
@@ -35,7 +31,11 @@
                             {{ page.title }}
                         </header>
                         <header class="tagline">
-                            {{ page.tagline }}
+                            {% if page.is_post %}
+                                {{ page.date | date: "%B %d, %Y" }}
+                            {% else %}
+                                {{ page.tagline }}
+                            {% endif %}
                         </header>
                     </div>
                 </div>
@@ -49,7 +49,6 @@
             </footer>
         </main>
         {% include footer.html %}
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
         {% include preloader_resolver.html %}
     </body>
 </html>

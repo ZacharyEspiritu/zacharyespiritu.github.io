@@ -12,8 +12,9 @@ ending:
   link_text: visit site
 ---
 
-An unified, online database for healthcare providers to store patient data for collaboration
+At [hackBCA III][hackBCA], I teamed up with [Gianluca Rago][gr-website] to create [onHealth][onHealth-website], an online database platform focused on making healthcare data more accessible to all caretakers via a centralized database. As a proof-of-concept, we launched with an app to help Alzhemier's patients.
 
+[hackBCA]: http://2016.hackbca.com/
 [onHealth-website]: http://onhealth.tech/
 [onHealth-github]: https://github.com/ZacharyEspiritu/hackBCA
-[gr-github]: https://github.com/grago1999
+[gr-website]: http://grago.xyz/

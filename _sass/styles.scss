@@ -16,6 +16,34 @@ body {
   height: 100%;
 }
 
+table {
+  margin: 0 auto;
+  color: #333333;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  td,
+  th {
+    padding: 0.3rem 1rem;
+    border: 1px solid #CCC;
+    height: 30px;
+
+    @media (max-width: 500px) {
+      padding: 0.2rem 0.8rem;
+    }
+  }
+
+  th {
+    background: #F3F3F3;
+    font-weight: bold;
+  }
+
+  td {
+    background: #FAFAFA;
+    text-align: center;
+  }
+}
+
 .container {
   margin: auto;
   max-width: $container-max-width;
