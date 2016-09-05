@@ -12,4 +12,49 @@ ending:
   link_text: view Github repo
 ---
 
-Using dynamic maze generation algorithms when tile-based math games aren’t enough
+At the 3rd [Blueprint @ MIT][blueprint-mit], I created Math Maze, a two-player game about finding your way through a maze faster than the other player. The trick? There are no walls in the maze—you have to find a path that adds up to the specified target number.
+
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-screenshot lazyload" data-src="/images/projects/math-maze/title-screen.png">
+</figure>
+
+Since I had already created [another math-related game][math-battle-post], the real project here wasn't as so much as the gameplay as figuring out how to develop a maze generation algorithm that worked as quickly as possible as to not interrupt gameplay.
+
+### Implementation
+
+For those who are unfamiliar with Math Maze, each puzzle starts with a "Start" point and an "End" point displayed on a 4 x 5 grid of numbers. The "End" point displays the target number for the current puzzle. Players trace a path of numbers from the "Start" point to the end point that adds up to the target number. As the players trace the path, the "End" point updates with the current value of their path so far.
+
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-screenshot lazyload" data-src="/images/projects/math-maze/gameplay.png">
+</figure>
+
+To generate a path, I first select a random "Start" point on the 4 x 5 grid and decide on a random length for the path. (The funky typecasting seen here is necessary to properly convert the random `UInt32` given to a higher-level `CGFloat`.)
+
+{% highlight swift %}
+let pathLength = Int(arc4random_uniform(5)) + 5
+
+var currentRow = Int(arc4random_uniform(5))
+var currentColumn = Int(arc4random_uniform(4))
+
+var startingPoint = CGPoint(x: CGFloat(currentRow), y: CGFloat(currentColumn))
+{% endhighlight %}
+
+From there, I randomly decide on a direction to head from that point, and continually append new points to a storage array. Path generation stops once the `pathLength` has been reached.
+
+However, the path is not allowed to intersect itself nor land outside of the edges of the grid, so we first check to see if the current path already contains the given point or if it lands outside a boundary. If so, we then check to see if the current path is completely "boxed-in"—that is, it has no possible point to head towards in its current state. If so, maze generation immediately stops there.
+
+{% highlight swift %}
+if currentPath.contains(ccp(point.x + 1, point.y)) &&
+   currentPath.contains(ccp(point.x - 1, point.y)) &&
+   currentPath.contains(ccp(point.x, point.y + 1)) &&
+   currentPath.contains(ccp(point.x, point.y - 1)) {
+    // The point is boxed in, and maze generation should stop immediately.
+}
+{% endhighlight %}
+
+From there, all we have to do is randomly populate the grid with numbers and calculate an answer from the numbers that fall in the specified path.
+
+Finally, even though we know the desired path, I add up the numbers for every solution the player comes up with just in case unexpected solutions come up from the numbers we generate. This guarantees that there always is at least one possible answer to every puzzle. Perfect!
+
+[blueprint-mit]: https://blueprint.hackmit.org/
+[math-battle-post]: /project/math-battle

@@ -13,7 +13,7 @@ ending:
 
 Immediately following Christmas Break, all Regis High School students are required to take a Science Mid-Year Exam covering all of the material in their respective science class from the past half-year. Obviously, I didn’t want to study for my Physics exam, but I *did* want to learn LaTeX, so I made [a website about Physics][physics-midyear-guide] using LaTeX.
 
-Using [MathJax][mathjax-website], a Javascript integration for LaTeX rendering on webpages, I built a website covering all of the topics that were going to be on the exam with LaTeX for displaying necessary formulas and example solution sets for extra practice. I also used Sketch to design a little mascot to cheer people on while they were studying.
+Using [MathJax][mathjax-website], a Javascript integration for LaTeX rendering on webpages, I built a website covering all of the topics that were going to be on the exam with LaTeX for displaying necessary formulas and example solution sets for extra practice. I also used Sketch to design a cute, little mascot to cheer people on while they were studying.
 
 <figure class="lazyload" data-expand="-20">
     <img class="responsive-image lazyload" src="/images/portfolio-physics.png">

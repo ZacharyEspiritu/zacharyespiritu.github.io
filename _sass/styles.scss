@@ -44,6 +44,28 @@ table {
   }
 }
 
+figure {
+  pre,
+  code {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.4;
+    font-size: 16px;
+    overflow-x: auto;
+    white-space: pre;
+    color: #333333;
+
+    @media (max-width: 750px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+}
+
 .container {
   margin: auto;
   max-width: $container-max-width;
