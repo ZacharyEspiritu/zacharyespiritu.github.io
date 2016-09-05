@@ -2,8 +2,9 @@
 layout: post
 title:  "Local Hack Day 2015 @ General Assembly: A Recap"
 short_title: "Local Hack Day 2015: A Recap"
+image_path: /images/design-calenday.png
 tagline: Over the weekend, I went to Local Hack Day 2015 @ General Assembly. Local Hack Day is a pretty cool event because other students around the world host their own Local Hack Days simultaneously.
-preview_image_path: /images/design-calenday.png
+card_color: "red"
 ---
 
 Over the weekend, I went to Local Hack Day 2015 @ General Assembly. Local Hack Day is a pretty cool event because other students around the world host their own Local Hack Days simultaneously. Also, MLH hosts a livestream throughout the day so everyone's "watching" lectures at the same time and can comment and ask questions in real-time as well, which is really cool.

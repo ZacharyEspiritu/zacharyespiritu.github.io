@@ -2,8 +2,9 @@
 layout: post
 title:  "Creating a Ranking System for Math Battle II"
 short_title: "Math Battle II's Ranking System"
+image_path: /images/portfolio-math.png
 tagline: I'm about three months into the process of rewriting Math Battle from scratch, when somewhere along the way, I thought to myself, "What if Math Battle had a multiplayer ELO rating system?"
-preview_image_path: /images/portfolio-math.png
+card_color: "#E461FF"
 ---
 
 I'm about three months into the process of rewriting Math Battle from scratch, when somewhere along the way, I thought to myself:
