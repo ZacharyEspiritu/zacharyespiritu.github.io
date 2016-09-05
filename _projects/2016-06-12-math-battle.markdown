@@ -55,13 +55,17 @@ A large amount of Math Battle's time in production was spent developing an unifi
     <figcaption>Several iterations were necessary before the final gameplay design was reached.</figcaption>
 </figure>
 
-### Animations
+As an aside, one of the things I always like to do in my games is make sure that there is motion on the screen at all times—this prevents players from ever thinking that the game froze and also, in my opinion, simply makes for a better game feel overall. As such, almost all of the backgrounds in Math Battle are moving on a loop.
 
-To give the game more polish, the last month or so of development was spent working on the animations seen throughout the game. In particular, the menu transition animations took a lot of time to get just right—however, it was worth it in the end for technical reasons as it allowed me to seamlessly load and deallocate memory for each gamemode menu instead of loading all the menus at once, which was calling memory warnings.
+I'm most proud of the subtle, "intersecting" backgrounds as seen in the gameplay screens, which I achieved through some custom OpenGL tinkering to selectively prevent textures from rendering on top of one another. You can see this in the GIF below:
 
 <figure class="lazyload" data-expand="-20">
     <img class="responsive-screenshot lazyload" data-src="/images/projects/math-battle/animations.gif">
 </figure>
+
+### Animations
+
+To give the game more polish, the last month or so of development was spent working on the animations seen throughout the game. In particular, the menu transition animations took a lot of time to get just right—however, it was worth it in the end for technical reasons as it allowed me to seamlessly load and deallocate memory for each gamemode menu instead of loading all the menus at once, which was calling memory warnings.
 
 ### Trading Cards
 

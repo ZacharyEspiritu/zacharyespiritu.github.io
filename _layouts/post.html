@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         {% include head.html %}
-        {% seo %}
+        {% seo title=false %}
         <style>
             .post-wrapper a {
                 {% if page.link_color %}
@@ -19,6 +19,7 @@
         </script>
     </head>
     <body>
+        {% include preloader.html %}
         {% include header.html %}
         <main>
             {% assign banner_image = page.image_path %}
@@ -48,5 +49,7 @@
             </footer>
         </main>
         {% include footer.html %}
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+        {% include preloader_resolver.html %}
     </body>
 </html>

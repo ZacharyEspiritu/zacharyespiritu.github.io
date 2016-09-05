@@ -2,11 +2,13 @@
 <html lang="en">
     <head>
         {% include head.html %}
-        {% seo %}
+        {% seo title=false %}
     </head>
     <body>
+        {% include preloader.html %}
         {% include header.html %}
         {{ content }}
         {% include footer.html %}
+        {% include preloader_resolver.html %}
     </body>
 </html>

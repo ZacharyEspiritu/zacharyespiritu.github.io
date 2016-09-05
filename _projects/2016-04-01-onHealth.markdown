@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  onHealth
-image_path: /images/bg.jpg
+image_path: /images/callout.jpg
 tagline: An unified, online database for healthcare providers to store patient data for collaboration
 card_color: "#027DAD"
 awards:

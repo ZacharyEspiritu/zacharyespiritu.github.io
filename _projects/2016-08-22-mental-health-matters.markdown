@@ -3,7 +3,7 @@ layout: post
 title:  mhm.nyc
 image_path: /images/portfolio-mhm.png
 banner_path: /images/projects/mental-health-matters/render.png
-tagline: Designed website for Mental Health Matters, a blog raising awareness of mental health issues in NYC.
+tagline: Designed website for Mental Health Matters, a blog raising awareness of mental health issues in NYC
 card_color: "#122076"
 ending:
   tagline: mhm.nyc was released in August 2016.
