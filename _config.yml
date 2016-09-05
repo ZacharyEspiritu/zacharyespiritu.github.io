@@ -14,11 +14,9 @@ timezone: America/New_York
 
 permalink: /blog/:slug/
 
-# Build settings
 markdown: kramdown
 theme: minima
 
-# Plugins
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -34,13 +32,13 @@ collections:
 defaults:
   -
     scope:
-      path: ""      # empty string for all files
-      type: posts   # limit to posts
+      path: ""
+      type: posts
     values:
-      is_post: true # automatically set is_post=true for all posts
+      is_post: true
   -
     scope:
-      path: ""      # empty string for all files
-      type: projects   # limit to posts
+      path: ""
+      type: projects
     values:
-      is_project: true # automatically set is_post=true for all posts
+      is_project: true
