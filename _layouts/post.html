@@ -18,12 +18,18 @@
         {% include scripts.html %}
         {% include header.html %}
         <main>
-            {% assign banner_image = page.image_path %}
-            {% if page.banner_path %}
-                {% assign banner_image = page.banner_path %}
+            {% if page.image_path %}
+                {% assign opacity = 0.8 %}
+                {% assign banner_image = page.image_path %}
+                {% if page.banner_path %}
+                    {% assign banner_image = page.banner_path %}
+                {% endif %}
+                <hgroup class="post-intro" style="background-image: url('{{ banner_image }}');">
+            {% else %}
+                {% assign opacity = 1.0 %}
+                <hgroup class="post-intro">
             {% endif %}
-            <hgroup class="post-intro" style="background-image: url('{{ banner_image }}');">
-                <div class="overlay" style="background: {{ page.card_color }}; opacity: 0.8;">
+                <div class="overlay" style="background: {{ page.card_color }}; opacity: {{ opacity }};">
                 </div>
                 <div class="overlay">
                     <div class="intro-wrapper">
