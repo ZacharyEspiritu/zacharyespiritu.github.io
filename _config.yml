@@ -4,9 +4,6 @@ description: I'm a high school developer looking to create. Creator of Tile, Tap
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://zacharyespiritu.com" # the base hostname & protocol for your site
 
-image:
-  path: /images/social-banner.png
-
 twitter:
   username: ZacharyEspiritu
 github_username: ZacharyEspiritu
@@ -33,6 +30,11 @@ collections:
     permalink: /design/:title/
 
 defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /images/social-banner.png
   -
     scope:
       path: ""
