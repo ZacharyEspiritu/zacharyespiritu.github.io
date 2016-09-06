@@ -4,12 +4,13 @@ title:  "Easy Audio in iOS: Using OALSimpleAudio in Swift"
 short_title: "OALSimpleAudio: Easy Audio in iOS"
 image_path: /images/design-instimize.png
 tagline: There’s numerous ways to play audio in your iOS apps, but the simplest way to do so is using the OALSimpleAudio class from the extremely helpful ObjectAL open-source library.
-card_color: "yellow"
+card_color: "blue"
 ---
 
 There’s numerous ways to play audio in your iOS apps, but the simplest way to do so is using the `OALSimpleAudio` class that you can download from the extremely helpful [ObjectAL open-source library][OALSimpleAudio-Github]. It has its advantages and disadvantages, but ultimately, if you're just looking to play audio without much customization or control, this is probably what you're looking for.
 
-##OALSimpleAudio: The Simple Way To Play Audio
+### OALSimpleAudio: The Simple Way To Play Audio
+
 `OALSimpleAudio` is just that: simple. In exchange for giving up a bit of control over your audio files, `OALSimpleAudio` is much, much simpler to use in comparison to Apple's standard `AVAudioPlayer` if you’re just looking to play a little jingle or effect somewhere in your app or some background music in your game.
 
 You'll first need to **download and import** the `OALSimpleAudio` interface into your project. You can download it [here][OALSimpleAudio-Github].
