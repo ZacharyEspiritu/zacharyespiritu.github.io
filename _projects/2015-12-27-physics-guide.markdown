@@ -9,6 +9,7 @@ ending:
   tagline: Physics Guide was released in December 2015.
   link: http://zacharyespiritu.com/physics-midyear
   link_text: visit site
+skills: bootstrap sketch git latex
 ---
 
 Immediately following Christmas Break, all Regis High School students are required to take a Science Mid-Year Exam covering all of the material in their respective science class from the past half-year. Obviously, I didn’t want to study for my Physics exam, but I *did* want to learn LaTeX, so I made [a website about Physics][physics-midyear-guide] using LaTeX.

@@ -9,6 +9,7 @@ ending:
   tagline: mhm.nyc was released in August 2016.
   link: http://www.mhm.nyc
   link_text: visit site
+skills: sass ruby rails jquery javascript git sketch
 ---
 
 I was commissioned by Skakel McCooey and John Timony, two of my fellow classmates at Regis, to design the website for [Mental Health Matters][mhm-website], a blog dedicated to raising awareness of mental health issues in New York City.

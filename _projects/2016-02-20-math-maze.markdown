@@ -10,6 +10,7 @@ ending:
   tagline: Math Maze was developed at MIT Blueprint in February 2016.
   link: https://github.com/ZacharyEspiritu/mit-blueprint
   link_text: view Github repo
+skills: swift objective-c sketch git
 ---
 
 At the 3rd [Blueprint @ MIT][blueprint-mit], I created Math Maze, a two-player game about finding your way through a maze faster than the other player. The trick? There are no walls in the maze—you have to find a path that adds up to the specified target number.

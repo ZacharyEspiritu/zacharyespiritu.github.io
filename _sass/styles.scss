@@ -16,6 +16,10 @@ body {
   height: 100%;
 }
 
+a {
+  outline: 0;
+}
+
 table {
   margin: 0 auto;
   color: #333333;
@@ -208,7 +212,8 @@ a.block-link {
 }
 
 
-.projects {
+.projects,
+.designs {
   max-width: 1080px;
   margin: auto;
 }
@@ -423,6 +428,7 @@ a.block-link {
     .card-image {
       margin-top: 3px;
       height: 130px;
+      margin-left: 9px;
       width: 180px;
       float: right;
       background-size: cover;

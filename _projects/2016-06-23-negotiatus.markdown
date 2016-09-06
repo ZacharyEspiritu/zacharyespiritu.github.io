@@ -9,9 +9,17 @@ ending:
   tagline: I worked for Negotiatus from June to August 2016.
   link: http://negotiatus.com
   link_text: visit site
+skills: postgresql javascript ruby rails jquery git sass
 ---
 
-In the summer of 2016, I worked with Negotiatus as a Software Engineering Intern.
+In the summer of 2016, I worked with [Negotiatus][negotiatus] as a Software Engineering Intern.
+
+<figure class="lazyload" data-expand="-20">
+    <img class="responsive-image lazyload" data-src="/images/projects/negotiatus/team-photo.jpg">
+    <figcaption>The Negotiatus team.</figcaption>
+</figure>
+
+I'm going to write a more conclusive article later, but this is a quick breakdown of some of the things I did:
 
 - Engineered several web scrapers with natural language processing capabilities to automate proprietary processes covered by NDA, saving hundreds of hours of human labor.
 - Co-developed automated test suite from scratch for over 7000 lines of code with over 70% coverage.
@@ -24,7 +32,4 @@ In the summer of 2016, I worked with Negotiatus as a Software Engineering Intern
     <figcaption>An example of an HTML email template I created.</figcaption>
 </figure>
 
-<figure class="lazyload" data-expand="-20">
-    <img class="responsive-image lazyload" data-src="/images/projects/negotiatus/team-photo.jpg">
-</figure>
-
+[negotiatus]: http://negotiatus.com

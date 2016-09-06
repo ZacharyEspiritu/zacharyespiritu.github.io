@@ -1,5 +1,5 @@
 <a class="block-link" href="{{ project.url }}">
-    <figure class="project-card">
+    <figure class="project-card {{ project.skills | downcase }}">
         <div class="card-header" style="background-image: url('{{ project.image_path }}');">
             {% if project.awards %}
                 <div class="card-overlay">

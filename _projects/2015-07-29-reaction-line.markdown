@@ -11,6 +11,7 @@ ending:
   tagline: Reaction Line was released in July 2015.
   link: http://zacharyespiritu.com/ReactionLine
   link_text: visit site
+skills: swift objective-c bootstrap sketch photoshop git
 ---
 
 Designed to be as aggravating as it is addicting, [Reaction Line][reaction-line-website] is a minimalistic, hardcore, single-player game where you have a single objective: sort lines into red and blue stacks as quickly as possible. The catch? You only have one life.

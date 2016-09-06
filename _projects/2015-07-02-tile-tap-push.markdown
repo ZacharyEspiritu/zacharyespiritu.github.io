@@ -11,6 +11,7 @@ ending:
   tagline: Tile, Tap, Push! was released in July 2015.
   link: http://zacharyespiritu.com/TileTapPush
   link_text: visit site
+skills: swift objective-c bootstrap git
 ---
 
 [Tile, Tap, Push!][tile-tap-push-website] is a two-player, fast-paced game that's all about reaction time and quick thinking. Tap an endless stream of white tiles faster than your opponent to win!

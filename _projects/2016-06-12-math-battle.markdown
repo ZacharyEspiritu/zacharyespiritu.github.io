@@ -12,6 +12,7 @@ ending:
   tagline: Math Battle was released in August 2016.
   link: http://mathbattle.pw
   link_text: visit site
+skills: swift objective-c python sass photoshop git sketch firebase
 ---
 
 Nowadays, getting children (and adults!) to play “educational games” can be hard to nearly impossible. That’s where Math Battle comes in. Originally created at Local Hack Day 2015 @ General Assembly and winner of the 2015 Congressional App Challenge, Math Battle is an iOS game where two players play on the same screen and go head-to-head in a battle of intellect attempting to solve procedurally generating, math-based puzzles faster than the other player.

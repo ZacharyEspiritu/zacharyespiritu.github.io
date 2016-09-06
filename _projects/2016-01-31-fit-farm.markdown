@@ -10,6 +10,7 @@ ending:
   tagline: FitFarm was developed at hackTrin III in January 2016.
   link: https://github.com/ZacharyEspiritu/FitFarm
   link_text: view Github repo
+skills: swift objective-c sketch photoshop bootstrap git
 ---
 
 At the health-themed [hackTrin III][hackTrin], I teamed up with [Nicholas Cimaszewski][nc-github] and [Vincent McAuliffe][vm-github] to create FitFarm, a fitness-based farm management game where players raise their own farm through real-world exercise.

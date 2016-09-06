@@ -8,6 +8,7 @@ ending:
   tagline: Art of Animation was published in May 2014.
   link: http://zacharyespiritu.com/ArtOfAnimation
   link_text: visit site
+skills: html css
 ---
 
 [Art Of Animation][art-of-animation] was a website that I created as my final project for my Computer Science I class at Regis High School in May 2014. I was the only person in the class to score a perfect 100%!
