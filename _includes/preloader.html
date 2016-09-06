@@ -1,10 +1,26 @@
 <link href="/css/please-wait.css" rel="stylesheet">
 <script type="text/javascript" src="/javascripts/please-wait.min.js"></script>
 <script type="text/javascript">
-  window.loading_screen = window.pleaseWait({
-    logo: "/images/logo.svg",
-    backgroundColor: '#18212D',
-    loadingHtml: "<div class='spinner'><div class='double-bounce1'></div><div class='double-bounce2'></div></div>"
-  });
+    const loadingMessages = ["Gathering necessary pylons...",
+                             "Spinning up the hamster...",
+                             "Shovelling coal into the server...",
+                             "Programming the flux capacitor...",
+                             "Digging for treasure...",
+                             "Testing your patience...",
+                             "Looking for friends...",
+                             "Loading humorous message...",
+                             "Trying to go faster...",
+                             "Downloading extra RAM...",
+                             "Warming up the particle accelerator...",
+                             "Hoping this works...",
+                             "Tapping white tiles...",
+                             "Solving math problems...",
+                             "Negotiating for net neutrality..."]
+    const loadingMessage = loadingMessages[Math.floor(Math.random()*loadingMessages.length)];
+    window.loading_screen = window.pleaseWait({
+        logo: "/images/logo.svg",
+        backgroundColor: '#18212D',
+        loadingHtml: loadingMessage + "<div class='spinner'><div class='double-bounce1'></div><div class='double-bounce2'></div></div>"
+    });
 </script>
 
