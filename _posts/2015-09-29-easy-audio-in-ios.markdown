@@ -2,7 +2,7 @@
 layout: post
 title:  "Easy Audio in iOS: Using OALSimpleAudio in Swift"
 short_title: "OALSimpleAudio: Easy Audio in iOS"
-image_path: /images/design-instimize.png
+image_path: /images/design-calenday.png
 tagline: There’s numerous ways to play audio in your iOS apps, but the simplest way to do so is using the OALSimpleAudio class from the extremely helpful ObjectAL open-source library.
 card_color: "blue"
 ---
