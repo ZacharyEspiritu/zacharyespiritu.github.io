@@ -411,6 +411,8 @@ a.block-link {
 }
 
 .article-card__third {
+  overflow: hidden;
+
   .card-title,
   .card-content {
     padding: 10px 12px 0;
