@@ -21,7 +21,7 @@ For 11 weeks, I worked on their Ruby on Rails-based web application with the CTO
     <figcaption>The Negotiatus team.</figcaption>
 </figure>
 
-### Internship, the tl;dr version
+### The tl;dr Version
 
 This is a quick breakdown of some of the things I did:
 
@@ -44,8 +44,30 @@ I shudder at the thought of having to use table-based layouts for anything other
 
 ### Notification System
 
-I also was tasked with creating a user-facing "notification center" at which businesses could see updates on their order status and other important information.
+I also was tasked with creating a user-facing "notification center" at which businesses could see updates on their order status and other important information. I developed both the backend and frontend for this feature.
 
 Since I like to keep modules as isolated as possible in my code as to make integration as easy as possible, I engineered a modular system that allowed notifications associated with any database object to be sent to any user with a single line of code.
 
+Part of the design specs for the notification center was the implementation of a three-tiered priority system, which you can see in the screenshots below.
+
+### Scheduled Orders
+
+I developed both the backend and frontend for the "Scheduled Orders" feature, which allows clients to schedule recurring orders on an interval or calendar-based pattern. Every time the current date matches the pattern on a schedule, it automatically creates a new order using the products the client has placed in the schedule.
+
+The system also allows clients to update their schedule's pattern as well as change the products in their scheduled order at any point.
+
+### Automated Testing
+
+While I was at Negotiatus, one of the major problems the team and I encountered was that we had no test suite of any kind. To solve this problem, I worked in tandem with the Lead Engineer to develop an automated test suite from scratch.
+
+I personally configured [rSpec][rspec] and [Travis CI][travis-ci] to give us the testing functionality that we wanted and wrote behavior-driven tests for approximately three weeks. By the time I had left the company, we had over 70% coverage for over 7000 lines of code.
+
+### Web Scrapers
+
+Throughout my internship, I engineered several web scrapers with natural language processing capabilities, which included fuzzy string matching and adjective/specifier extraction.
+
+While I'm not able to go into the specifics of what these scrapers did due to NDA, they all automated proprietary processes that originally had to be done manually, which ultimately saved hundreds of hours of human labor in the long-term.
+
 [negotiatus]: http://negotiatus.com
+[rspec]: http://rspec.info/
+[travis-ci]: https://travis-ci.com/
