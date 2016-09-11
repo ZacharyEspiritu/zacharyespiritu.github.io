@@ -1,49 +1,13 @@
-<!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-<!-- Isotope + Packery Mode -->
 <script src="/javascripts/isotope.pkgd.min.js"></script>
 <script src="/javascripts/packery-mode.pkgd.js"></script>
 
-<!-- ScrollMe Javascript -->
 <script src="/javascripts/jquery.scrollme.min.js"></script>
 
-<!-- anime.js -->
 <script src="/javascripts/anime.min.js"></script>
 
-<!-- Lazyloading Images -->
 <script src="/javascripts/lazysizes.min.js"></script>
 
-<!-- MathJax -->
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-<script>
-    window.onblur = function() {
-        document.title = "Where'd you go? ツ";
-    };
-    window.onfocus = function() {
-        document.title = "{{ page.title }} | Zachary Espiritu";
-    };
-</script>
-
-<script>
-    window.lazySizesConfig = {
-        addClasses: true
-    };
-</script>
-
-<script>
-    $(document).ready(function(){
-        $('a[href*=#]').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var $target = $(this.hash);
-                $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-                if ($target.length) {
-                    var targetOffset = $target.offset().top;
-                    $('html,body').animate({scrollTop: targetOffset}, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-</script>
+<script src="/javascripts/scripts.min.js"></script>
