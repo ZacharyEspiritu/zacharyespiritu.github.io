@@ -1,11 +1,3 @@
-// Change title on page focus
-window.onblur = function() {
-  document.title = "Where'd you go? ツ";
-};
-window.onfocus = function() {
-  document.title = "{{ page.title }} | Zachary Espiritu";
-};
-
 // Lazysizes configuration
 window.lazySizesConfig = {
   addClasses: true
