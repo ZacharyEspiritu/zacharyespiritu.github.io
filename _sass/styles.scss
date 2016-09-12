@@ -257,6 +257,10 @@ a.block-link {
       right: 10px;
       font-size: 24px;
       max-width: 308px;
+
+      @media (max-width: 481px) {
+        display: none;
+      }
     }
 
     .card-overlay-extension {
