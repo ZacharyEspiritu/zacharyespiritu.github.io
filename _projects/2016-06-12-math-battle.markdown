@@ -9,7 +9,7 @@ awards:
   - "Winner of 2015 Congressional App Challenge"
   - "\"Best UI Design\" at Local Hack Day 2015"
 ending:
-  tagline: Math Battle was released in August 2016.
+  tagline: Math Battle was released in July 2016.
   link: http://mathbattle.pw
   link_text: visit site
 skills: swift objective-c python sass photoshop git sketch firebase
