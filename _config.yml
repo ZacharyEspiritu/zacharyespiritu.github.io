@@ -15,7 +15,7 @@ timezone: America/New_York
 permalink: /blog/:slug/
 
 markdown: kramdown
-theme: minima
+theme: zacharyespiritu
 
 gems:
   - jekyll-sitemap
