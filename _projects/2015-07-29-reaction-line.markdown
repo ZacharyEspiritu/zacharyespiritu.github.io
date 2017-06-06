@@ -2,6 +2,7 @@
 layout: post
 title:  Reaction Line
 image_path: /images/portfolio-reaction.png
+banner_path: /images/projects/reaction-line/banner.png
 tagline: A minimalistic, hardcore, single-player game for iOS about sorting lines in the shortest time
 card_color: "#F5A623"
 awards:

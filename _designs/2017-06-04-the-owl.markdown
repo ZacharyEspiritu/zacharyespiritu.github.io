@@ -3,7 +3,7 @@ layout: post
 title:  The Owl
 image_path: /images/design-owl.png
 banner_path: /images/designs/the-owl/banner.jpg
-tagline: As Layout Editor for my high school's newspaper, updated overall design and published seven issues
+tagline: As Layout Editor for my high school's newspaper, updated overall design and published six issues
 card_color: "#432930"
 ending:
   tagline: I worked as The Owl's Layout Editor from September 2016 to May 2017.
