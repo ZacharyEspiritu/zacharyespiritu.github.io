@@ -9,10 +9,20 @@
 {% assign next_post = page.next %}
 {% assign previous_post = page.previous %}
 
+{% assign next_banner_image = next_post.image_path %}
+{% if next_post.banner_path %}
+    {% assign next_banner_image = next_post.banner_path %}
+{% endif %}
+
+{% assign previous_banner_image = previous_post.image_path %}
+{% if previous_post.banner_path %}
+    {% assign previous_banner_image = previous_post.banner_path %}
+{% endif %}
+
 {% if previous_post or next_post %}
     <nav role="navigation">
         {% if previous_post %}
-            <a href="{{ previous_post.url }}" class="post-block" style="background-image: url('{{ previous_post.image_path }}');">
+            <a href="{{ previous_post.url }}" class="post-block" style="background-image: url('{{ previous_banner_image }}');">
                 <div class="overlay" style="background: {{ previous_post.card_color }};"></div>
                 <div class="overlay-text">
                     <div class="overlay-text-table">
@@ -38,7 +48,7 @@
             </a>
         {% endif %}
         {% if next_post %}
-            <a href="{{ next_post.url }}" class="post-block" style="background-image: url('{{ next_post.image_path }}');">
+            <a href="{{ next_post.url }}" class="post-block" style="background-image: url('{{ next_banner_image }}');">
                 <div class="overlay" style="background: {{ next_post.card_color }};"></div>
                 <div class="overlay-text">
                     <div class="overlay-text-table">
