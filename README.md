@@ -8,7 +8,8 @@ You can find the 2015 version of my website [here](https://github.com/ZacharyEsp
 ## Installation
 
 ```
-git clone https://github.com/ZacharyEspiritu/2016-website.git
-cd 2016-website
+git clone https://github.com/ZacharyEspiritu/zacharyespiritu.github.io.git
+cd zacharyespiritu.github.io
+bundle install
 jekyll serve
 ```
