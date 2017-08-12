@@ -7,7 +7,7 @@ You can find the 2015 version of my website [here](https://github.com/ZacharyEsp
 
 ## Installation
 
-```
+```console
 git clone https://github.com/ZacharyEspiritu/zacharyespiritu.github.io.git
 cd zacharyespiritu.github.io
 bundle install
