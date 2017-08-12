@@ -14,4 +14,4 @@ bundle install
 bundle exec jekyll serve
 ```
 
-You can use <kbd>⌥C</kbd> to stop the server.
+You can use <kbd>Option</kbd><kbd>C</kbd> to stop the server.
