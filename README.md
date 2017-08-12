@@ -1,5 +1,5 @@
-# 2016-website
-The 2016 version of my personal website. No more Bootstrap, hooray!
+# personal-website
+The current version of my personal website. No more Bootstrap, hooray!
 
 Built using Jekyll.
 
