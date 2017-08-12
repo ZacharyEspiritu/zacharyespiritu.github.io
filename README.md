@@ -11,5 +11,7 @@ You can find the 2015 version of my website [here](https://github.com/ZacharyEsp
 git clone https://github.com/ZacharyEspiritu/zacharyespiritu.github.io.git
 cd zacharyespiritu.github.io
 bundle install
-jekyll serve
+bundle exec jekyll serve
 ```
+
+You can use <kbd>⌥C</kbd> to stop the server.
