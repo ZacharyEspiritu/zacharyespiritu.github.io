@@ -16,7 +16,7 @@ layout: default
         I've worked on the following <a class="section-link" href="#projects">projects</a>:
     </header>
     <div class="projects">
-        {% assign sorted_projects = (site.projects | sort: 'date') | reverse %}
+        {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
         {% for project in sorted_projects %}
             {% include project_card.html project=project %}
         {% endfor %}
@@ -27,7 +27,7 @@ layout: default
         And I've worked on these <a class="section-link" href="#designs">designs</a>:
     </header>
     <div class="designs">
-        {% assign sorted_designs = (site.designs | sort: 'date') | reverse %}
+        {% assign sorted_designs = site.designs | sort: 'date' | reverse %}
         {% for design in sorted_designs %}
             {% include design_card.html design=design %}
         {% endfor %}
