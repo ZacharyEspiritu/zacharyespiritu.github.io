@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Github-Flavored READMEs"
-image_path: /images/portfolio-math.png
-tagline: Test
+tagline: Github-Flavored Markdown provides unique tools for formatting easy-to-understand READMEs on Github, but there's not a lot of documentation on these features.
 card_color: "#E461FF"
 ---
 

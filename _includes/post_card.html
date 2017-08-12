@@ -10,7 +10,9 @@
                     {% endif %}
                 </header>
                 <footer class="card-content">
-                    <div class="card-image" style="background-image: url('{{ post.image_path }}');"></div>
+                    {% if post.image_path %}
+                      <div class="card-image" style="background-image: url('{{ post.image_path }}');"></div>
+                    {% endif %}
                     {{ post.tagline }}
                 </footer>
             </div>
