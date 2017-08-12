@@ -1,25 +1,35 @@
 title: Zachary Espiritu
 email: me@zacharyespiritu.com
-description: >
+description: >-
   I'm a software engineer and lighting designer. Named one of 10Under20 @ CEWeek
   2016. Developer of Math Battle, Tile, Tap, Push!, and Reaction Line.
 baseurl: ""
-url: "http://zacharyespiritu.com"
 
 markdown: kramdown
-
-timezone: America/New_York
-
-twitter:
-  username: ZacharyEspiritu
-github_username: ZacharyEspiritu
 
 sass:
   style: compressed
 
+timezone: America/New_York
+
+github_username: ZacharyEspiritu
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# jekyll-seo-tag options.
+# Refer to https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+url: http://zacharyespiritu.com
+twitter:
+  username: ZacharyEspiritu
+social:
+  name: Zachary Espiritu
+  links:
+    - https://www.facebook.com/zachary.espiritu
+    - https://twitter.com/ZacharyEspiritu
+    - https://github.com/ZacharyEspiritu
+    - https://www.linkedin.com/in/zacharyespiritu/
 
 collections:
   projects:
