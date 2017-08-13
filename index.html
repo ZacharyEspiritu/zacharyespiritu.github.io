@@ -33,29 +33,25 @@ layout: default
         {% endfor %}
     </div>
 </section>
-<section id="blog" class="content">
+<section id="writings" class="content">
     <header class="section-header center-align">
-        Recently, I've published these posts on my <a class="section-link" href="#blog">blog</a>:
+        And, sometimes, I just <a class="section-link" href="#writings">write</a> about things:
     </header>
     <div class="articles">
         {% for post in site.posts %}
             {% include post_card.html post=post %}
         {% endfor %}
     </div>
-    <div class="spacer__double"></div>
-    <div class="center-align small" style="color: black;">(I don't blog often, but when I do, you'll probably find it here.)</div>
+    <div class="spacer"></div>
 </section>
-<section id="skills" class="gray content">
-    <!-- <header class="center-align">
+    <header class="center-align">
         <div class="section-tab section-tab__gray">
             <div class="tab-triangle__left"></div>
             These are some of the <a class="section-link" href="#skills">skills</a> I know:
             <div class="tab-triangle__right"></div>
         </div>
-    </header> -->
-    <header class="section-header center-align">
-        These are some of the <a class="section-link" href="#skills">skills</a> I know:
     </header>
+<section id="skills" class="gray content">
     <div>
         {% include skills.html %}
     </div>

@@ -455,23 +455,33 @@ a.block-link {
   color: $base-font-color;
   position: relative;
 
-  .tab-triangle__left,
-  .tab-triangle__right {
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: 0px;
-    border-bottom: 87px solid white;
-  }
+  @media (min-width: 810px) {
+    .tab-triangle__left,
+    .tab-triangle__right {
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: 0px;
+      border-bottom: 87px solid white;
+    }
 
-  .tab-triangle__left {
-    left: -87px;
-    border-left: 87px solid transparent;
-  }
+    .tab-triangle__left {
+      left: -87px;
+      border-left: 87px solid transparent;
+    }
 
-  .tab-triangle__right {
-    right: -87px;
-    border-right: 87px solid transparent;
+    .tab-triangle__right {
+      right: -87px;
+      border-right: 87px solid transparent;
+    }
+  }
+  @media (max-width: 809px) {
+    display: block;
+
+    .tab-triangle__left,
+    .tab-triangle__right {
+      display: none;
+    }
   }
 }
 
