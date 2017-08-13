@@ -15,11 +15,15 @@ From September 2013 to May 2017, I worked in the lighting department for the Reg
 
 During my run in the Regis Repertory, I had the opportunity to work on twelve mainstage productions in addition to providing lighting technical assistance for several smaller performances by the various extracurricular groups at Regis High School.
 
-You can find my technical lighting resume [here][lighting-resume]. You can also view images featuring some of the lighting work I've designed in the slideshows below.
+You can find my technical lighting resume [here][lighting-resume]. You can also view images and videos featuring some of the lighting work I've designed  below.
 
-### Scenes from *Once On This Island*, Regis Repertory Fall 2016 Production
+### *Once On This Island*, Regis Repertory Fall 2016 Production
 
-<div class="bss-slides lighting-design-slideshow" style="margin-top: 40px;">
+> A reimagined staging of Once on This Island, placing the musical’s themes of social prejudice and classism in our modern age. 
+
+{% include youtube_player.html width=640 id="nnm2Xjgy-AA" %}
+
+<div class="bss-slides lighting-design-slideshow">
     <figure>
         <img src="/images/designs/lighting-design/once-on-this-island-1.jpg" width="100%" />
         <figcaption>Scene from "Prologue".</figcaption>
@@ -69,10 +73,6 @@ You can find my technical lighting resume [here][lighting-resume]. You can also 
         <figcaption>Scene from "Part of Us".</figcaption>
     </figure>
 </div>
-
-### Lighting Design Reel from *Once On This Island*, Regis Repertory Fall 2016 Production
-
-{% include youtube_player.html width=640 id="nnm2Xjgy-AA" %}
 
 <script src="/javascripts/better-simple-slideshow.min.js"></script>
 <link type="text/css" href="/css/simple-slideshow-styles.css" rel="stylesheet">
