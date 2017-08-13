@@ -20,6 +20,9 @@ plugins:
 
 # jekyll-seo-tag options.
 # Refer to https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+seo:
+  name: Zachary Espiritu
+  type: Person
 url: http://zacharyespiritu.com
 twitter:
   username: ZacharyEspiritu
