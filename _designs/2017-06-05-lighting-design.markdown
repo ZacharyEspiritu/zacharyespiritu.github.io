@@ -70,6 +70,10 @@ You can find my technical lighting resume [here][lighting-resume]. You can also 
     </figure>
 </div>
 
+### Lighting Design Reel from *Once On This Island*, Regis Repertory Fall 2016 Production
+
+{% include youtube_player.html width=640 id="nnm2Xjgy-AA" %}
+
 <script src="/javascripts/better-simple-slideshow.min.js"></script>
 <link type="text/css" href="/css/simple-slideshow-styles.css" rel="stylesheet">
 <script>
