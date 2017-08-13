@@ -928,7 +928,7 @@ figure {
   }
 }
 
-blockquote {
+.blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
@@ -1121,6 +1121,17 @@ blockquote {
 .lazyloaded {
   opacity: 1;
   transition: 0.2s opacity;
+}
+
+.gist-data {
+  .markdown-body {
+    margin: 15px;
+
+    blockquote {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .lighting-design-slideshow {

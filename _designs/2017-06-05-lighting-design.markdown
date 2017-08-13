@@ -19,7 +19,9 @@ You can find my technical lighting resume [here][lighting-resume]. You can also 
 
 ### *Once On This Island*, Regis Repertory Fall 2016 Production
 
-> A reimagined staging of Once on This Island, placing the musical’s themes of social prejudice and classism in our modern age. 
+<blockquote class="blockquote">
+    A reimagined staging of Once on This Island, placing the musical’s themes of social prejudice and classism in our modern age.
+</blockquote>
 
 {% include youtube_player.html width=640 id="nnm2Xjgy-AA" %}
 
