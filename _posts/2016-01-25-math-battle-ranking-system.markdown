@@ -9,7 +9,9 @@ card_color: "#E461FF"
 
 I'm about three months into the process of rewriting Math Battle from scratch, when somewhere along the way, I thought to myself:
 
-> Huh, what if Math Battle was became an online multiplayer game where players compete for rankings?
+<blockquote class="blockquote">
+    Huh, what if Math Battle was became an online multiplayer game where players compete for rankings?
+</blockquote>
 
 And so the quest began to create a ranking system.
 
@@ -19,7 +21,11 @@ And so the quest began to create a ranking system.
 
 ## Goals for creating a ranking system
 
-[GiantBomb](http://www.giantbomb.com/ranking-system/3015-2163/) defines a ranking system as a mechanism that "tallies the player's current progress and relative skill, by tracking raw numbers of multiple statistics (like score and time) during a session of gameplay. This results in a competitive meta-game where the goal is usually to reach the top position."
+[GiantBomb](http://www.giantbomb.com/ranking-system/3015-2163/) defines a ranking system as a mechanism that:
+
+<blockquote class="blockquote">
+    ...tallies the player's current progress and relative skill, by tracking raw numbers of multiple statistics (like score and time) during a session of gameplay. This results in a competitive meta-game where the goal is usually to reach the top position.
+</blockquote>
 
 In establishing a ranking system for Math Battle, I set out with three goals in mind:
 
