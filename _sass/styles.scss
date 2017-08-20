@@ -183,7 +183,7 @@ a.block-link {
     }
   }
 
-  @media (max-width: 810px) {
+  @media (max-width: 870px) {
     ul {
       display: none;
     }
@@ -192,14 +192,19 @@ a.block-link {
 
 .intro {
   text-align: center;
-  padding-top: 70px;
+  padding-top: 74px;
   box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+
+  @media (max-width: 1440px) {
+    padding-top: 70px;
+  }
 
   @media (max-width: 1080px) {
     padding-top: 60px;
+    font-size: $header-sm-size;
   }
 
-  @media (max-width: 810px) {
+  @media (max-width: 870px) {
     padding-top: 50px;
   }
 }
@@ -214,6 +219,18 @@ a.block-link {
 
 .section-header {
   margin-bottom: 25px;
+
+  @media (max-width: 1080px) {
+    font-size: $header-sm-size;
+  }
+}
+
+.section-header-with-tabs {
+  margin-bottom: 0;
+
+  @media (max-width: 700px) {
+    margin-bottom: -25px;
+  }
 }
 
 .projects,
