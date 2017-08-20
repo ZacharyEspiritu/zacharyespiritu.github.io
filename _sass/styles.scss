@@ -128,14 +128,18 @@ a.block-link {
   padding-bottom: 20px;
   z-index: 3;
 
-  .curve {
+  .curve-container {
     position: absolute;
     bottom: 0;
-    left: -10px;
-    width: 103%;
+    width: 100%;
     z-index: 2;
     -webkit-transform: translate(0, 96%);
     transform: translate(0, 96%);
+
+    .curve {
+      width: 103%;
+      left: -10px;
+    }
   }
 
   .logo,
