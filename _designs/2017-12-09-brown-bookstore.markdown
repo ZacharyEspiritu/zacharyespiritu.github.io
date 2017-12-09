@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Brown Bookstore
+title:  Store Redesign
 image_path: /images/design-brown-bookstore.png
 banner_path: /images/designs/brown-bookstore/photos/bookstore.jpg
 tagline: A "responsive redesign" aimed towards streamlining the anxiety-filled textbook buying process
