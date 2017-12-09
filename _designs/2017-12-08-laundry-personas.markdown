@@ -9,7 +9,7 @@ ending:
 skills: photoshop indesign
 ---
 
-The laundry room—whether you love it for what it can do or hate it for how long it can take to get out of it, it’s an unavoidable yet essential part of everyday life. At Brown University, I’ve heard stories about my peers’ experiences in th laundry room ranging from someone’s first-time doing laundry away from home to another having difficulty finding time to do it in the first place.
+The laundry room—whether you love it for what it can do or hate it for how long it can take to get out of it, it’s an unavoidable yet essential part of everyday life. At Brown University, I’ve heard stories about my peers’ experiences in the laundry room ranging from someone’s first-time doing laundry away from home to another having difficulty finding time to do it in the first place.
 
 In this project, I construct two personas with corresponding mental models based on data collected from two sessions of observation in the laundry room in the Archibald-Bronson dormitory at Brown. I also present a storyboard depicting the process by which users use the machines specific to the Archibald-Bronson laundry room.
 
