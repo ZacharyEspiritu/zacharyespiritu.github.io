@@ -4,7 +4,7 @@ title:  Racket Against Humanity
 short_title: CAH in Racket
 image_path: /images/portfolio-racket.png
 banner_path: /images/projects/racket-against-humanity/banner.png
-tagline: Cards Against Humanity generator, semi-functionally programmed in Racket (because why not?)
+tagline: A Racket-based Cards Against Humanity generator using functional programming
 card_color: "#D35400"
 ending:
   tagline: Racket Against Humanity was released on Github in July 2017.
