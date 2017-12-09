@@ -2,7 +2,7 @@
 layout: post
 title:  Instimize Icon
 image_path: /images/design-instimize.png
-tagline: Designed the icon for my friend’s app that’s probably more useful than anything I’ve made so far
+tagline: Iteratively designed the icon for Instimize, an app that optimizes your social media presence
 card_color: "#2A334B"
 ending:
   tagline: Instimize was released in August 2015.
