@@ -784,6 +784,7 @@ a.block-link {
   }
 }
 
+.banner-grid,
 .two-screenshot-grid,
 .two-landscape-screenshot-grid,
 .three-screenshot-grid,
@@ -797,6 +798,10 @@ a.block-link {
   img {
     display: inline;
   }
+}
+
+.banner-grid img {
+  width: 100%;
 }
 
 .two-screenshot-grid img,
@@ -824,6 +829,7 @@ a.block-link {
 }
 
 @media (min-width: $post-wrapper-max-width + $photo-grid-extension + ($photo-grid-horizontal-padding * 2)) {
+  .banner-grid,
   .two-landscape-screenshot-grid,
   .four-screenshot-grid,
   .four-landscape-screenshot-grid,
