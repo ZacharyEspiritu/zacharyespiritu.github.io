@@ -22,15 +22,7 @@
             </div>
         </div>
         <div class="right">
-            <nav role="navigation">
-                <ul class="header-nav-list">
-                    <li><a href="mailto:me@zacharyespiritu.com">me@zacharyespiritu.com</a></li>
-                    <li><a href="/resume">resume.pdf</a></li>
-                    <li><a href="/about">about.html</a></li>
-                    <li><a href="https://github.com/ZacharyEspiritu/zacharyespiritu.github.io">source.git</a></li>
-                    <li><a href="/friends">friends.yaml</a></li>
-                </ul>
-            </nav>
+            {% include navigation_links.html %}
             <div class="commit-history">
                 Last updated with commit 
                 <span class="commit-sha">#{{ site.git["total_commits"] }} ({{ site.git["last_commit"]["short_sha"] }})</span>:<br>
