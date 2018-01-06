@@ -21,7 +21,7 @@ While I had briefly tinkered around with HTML/CSS and Javascript before, this wa
 That said, I'm extremely happy with the way it came out, so I like to show this as an example of design work I've done in the past.
 
 <figure class="lazyload">
-    <img class="lazyload" data-src="/images/projects/art-of-animation/render.png">
+    <img class="responsive-image lazyload" data-src="/images/projects/art-of-animation/render.png">
 </figure>
 
 [art-of-animation]: http://zacharyespiritu.com/ArtOfAnimation
