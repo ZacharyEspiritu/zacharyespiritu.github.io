@@ -4,7 +4,7 @@
         {% include head.html %}
         {% seo title=false %}
         <style>
-            .post-wrapper a {
+            .post-content a {
                 {% if page.link_color %}
                     color: {{ page.link_color }};
                 {% else %}
@@ -64,6 +64,7 @@
                     {{ content }}
                 </article>
             </div>
+            <div class="color-detail" style="background: {{ page.card_color }};"></div>
             <!-- <footer class="post-footer">
                 {% include post_ending.html %}
                 {% include post_preview.html %}
