@@ -22,5 +22,4 @@ group :jekyll_plugins do
   # gem "jekyll-github-metadata", "~> 1.0"
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
-  gem "jekyll-git_metadata"
 end

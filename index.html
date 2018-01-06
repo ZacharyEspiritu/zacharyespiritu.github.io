@@ -29,11 +29,15 @@ layout: default
         <div class="right">
             {% include navigation_links.html %}
             <div class="commit-history">
+                {% assign site_repository = site.github["public_repositories"] | last %}
                 Last updated with commit 
-                <span class="commit-sha">#{{ site.git["total_commits"] }} ({{ site.git["last_commit"]["short_sha"] }})</span>:<br>
-                Author: {{ site.git["last_commit"]["author_name"] }}<br>
-                Date: {{ site.git["last_commit"]["commit_date"] }}<br>
-                {{ site.git["last_commit"]["message"] }}
+                <span class="commit-sha">
+                    <a href="https://github.com/ZacharyEspiritu/zacharyespiritu.github.io/commits/master">
+                        @{{ site.github["build_revision"] | truncate: 8, "" }}
+                    </a>
+                </span>
+                <br>
+                on {{ site_repository["pushed_at"] }}
             </div>
         </div>
     </div>

@@ -340,8 +340,12 @@ a.block-link {
       }
 
       .commit-sha {
-        color: #EEEB80;
         font-weight: 600;
+
+        a {
+          text-decoration: none;
+          color: #EEEB80;
+        }
       }
     }
   }

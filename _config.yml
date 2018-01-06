@@ -14,10 +14,11 @@ timezone: America/New_York
 
 github_username: ZacharyEspiritu
 
+repository: ZacharyEspiritu/zacharyespiritu.github.io
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-git_metadata
 
 # jekyll-seo-tag options.
 # Refer to https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
