@@ -11,6 +11,7 @@ ending:
   link: https://github.com/ZacharyEspiritu/racket-against-humanity
   link_text: visit repo
 skills: racket git
+filters: fun_things
 ---
 
 # Overview

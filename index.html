@@ -49,15 +49,15 @@ layout: default
 </header>
 <section class="content">
     <div class="wrapper">
-        <div class="project-filter">
+        <div class="project-filters">
             > Zachary.projects.filter({(p): p.type == 
-            <span class="filter-option selected">all</span>
-            <span class="filter-option">software</span>
-            <span class="filter-option">research</span>
-            <span class="filter-option">design</span>
-            <span class="filter-option">games</span>
-            <span class="filter-option">case_studies</span>
-            <span class="filter-option">fun_things</span> 
+            <span data-filter="*" class="filter-option selected">all</span>
+            <span data-filter=".software" class="filter-option">software</span>
+            <span data-filter=".research" class="filter-option">research</span>
+            <span data-filter=".design" class="filter-option">design</span>
+            <span data-filter=".games" class="filter-option">games</span>
+            <span data-filter=".case_studies" class="filter-option">case_studies</span>
+            <span data-filter=".fun_things" class="filter-option">fun_things</span> 
             })     
         </div>
         <div class="projects">
@@ -68,6 +68,10 @@ layout: default
                   <div class="project-gutter-sizer"></div>
                 {% endif %}
             {% endfor %}
+        </div>
+        <div class="no-projects-message">
+            <div class="big-message">Sorry, there's nothing here yet.</div>
+            <div class="small-message">(Try a different filter!)</div>
         </div>
     </div>
 </section>
@@ -134,10 +138,7 @@ layout: default
             </div>
         </div>
         <div class="terminal">
-            > Zachary.work_experience.sort_by({(e): e.date }, 
-            <span class="filter-option selected">:asc</span>
-            <span class="filter-option">:desc</span>
-            )
+            > Zachary.work_experience.sort_by({(e): e.date }, :asc)
         </div>
         {% for experience in site.experience %}
             {% include experience_item.html experience=experience %}
@@ -154,6 +155,21 @@ layout: default
         percentPosition: true,
         fitRows: {
           gutter: '.project-gutter-sizer'
+        }
+    });
+
+    $('.project-filters').on('click', '.filter-option', function() {
+        var $filterButton = $(this);
+        var filterValue = $filterButton.attr('data-filter');
+        $projects.isotope({ filter: filterValue });
+
+        $('.filter-option.selected').removeClass('selected');
+        $filterButton.addClass('selected');
+
+        if (!$projects.data('isotope').filteredItems.length) {
+            $('.no-projects-message').show();
+        } else {
+            $('.no-projects-message').hide();
         }
     });
 </script>

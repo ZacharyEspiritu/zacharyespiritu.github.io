@@ -13,6 +13,7 @@ ending:
   link: http://zacharyespiritu.com/ReactionLine
   link_text: visit site
 skills: swift objective-c bootstrap sketch photoshop git
+filters: software games
 ---
 
 # Elevator Pitch

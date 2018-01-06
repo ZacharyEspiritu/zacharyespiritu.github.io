@@ -12,6 +12,7 @@ ending:
   link: http://githubdatingsim.com
   link_text: visit site
 skills: postgresql ruby rails git sass
+filters: software
 ---
 
 # Background

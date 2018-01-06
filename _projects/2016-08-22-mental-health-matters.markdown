@@ -10,6 +10,7 @@ ending:
   link: http://www.mhm.nyc
   link_text: visit site
 skills: sass ruby rails jquery javascript git sketch
+filters: software 
 ---
 
 # Overview

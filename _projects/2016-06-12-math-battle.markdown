@@ -13,6 +13,7 @@ ending:
   link: http://mathbattle.pw
   link_text: visit site
 skills: swift objective-c python sass photoshop git sketch firebase
+filters: software games design
 ---
 
 # Introduction

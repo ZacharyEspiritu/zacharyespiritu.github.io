@@ -12,6 +12,7 @@ ending:
   link: http://zacharyespiritu.com/TileTapPush
   link_text: visit site
 skills: swift objective-c bootstrap git
+filters: software games
 ---
 
 # Overview

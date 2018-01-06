@@ -9,6 +9,7 @@ ending:
   link: http://zacharyespiritu.com/ArtOfAnimation
   link_text: visit site
 skills: html css
+filters: design
 ---
 
 # Overview

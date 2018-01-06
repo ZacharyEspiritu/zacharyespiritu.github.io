@@ -10,6 +10,7 @@ ending:
   link: http://zacharyespiritu.com/physics-midyear
   link_text: visit site
 skills: bootstrap sketch git latex
+filters: fun_things
 ---
 
 # Overview

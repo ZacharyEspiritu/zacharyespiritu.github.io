@@ -11,6 +11,7 @@ ending:
   link: https://github.com/ZacharyEspiritu/mit-blueprint
   link_text: view Github repo
 skills: swift objective-c sketch git
+filters: software games
 ---
 
 # Overview

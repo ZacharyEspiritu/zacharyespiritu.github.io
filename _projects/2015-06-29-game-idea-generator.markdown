@@ -10,6 +10,7 @@ ending:
   link: https://itunes.apple.com/us/app/game-idea-generator/id1037629356?mt=8
   link_text: view on App Store
 skills: swift objective-c git
+filters: software fun_things
 ---
 
 # Overview
