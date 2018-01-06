@@ -12,9 +12,11 @@ ending:
 skills: swift objective-c git
 ---
 
+# Overview
+
 [Game Idea Generator][game-idea-generator] was a side project I started while studying at Make School. It's an iOS app that creates random game ideas composed of several predetermined phrases.
 
-<figure class="six-screenshot-grid lazyload" data-expand="-20">
+<figure class="six-screenshot-grid lazyload">
     <img class="lazyload" data-src="/images/projects/game-idea-generator/example-idea-1.jpg">
     <img class="lazyload" data-src="/images/projects/game-idea-generator/example-idea-2.jpg">
     <img class="lazyload" data-src="/images/projects/game-idea-generator/example-idea-3.jpg">

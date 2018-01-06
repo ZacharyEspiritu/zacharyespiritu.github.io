@@ -13,21 +13,23 @@ ending:
 skills: swift objective-c sketch photoshop bootstrap git
 ---
 
+# Overview
+
 At the health-themed [hackTrin III][hackTrin], I teamed up with [Nicholas Cimaszewski][nc-github] and [Vincent McAuliffe][vm-github] to create FitFarm, a fitness-based farm management game where players raise their own farm through real-world exercise.
 
 The app tracks players' steps in real-life using HealthKit, and converts those steps on a 1:1 ratio to in-game currency named CardioCoins (we really liked alliteration) that can be used to buy supplies for their personal farm akin to the game Farmville.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" src="/images/projects/fit-farm/progress.jpg" alt="A view of the FitFarm progress screen that converts the number of steps the player took since last app load to in-game currency.">
 </figure>
 
-### Implementation
+# Implementation
 
 I programmed the majority of the app in Swift, with some Objective-C bridged over in order to implement `HKHealthStore`, Apple's API for accessing data from HealthKit. I also worked with Nick to design and source the art assets, and Vincent made a landing page for the app, which you can find [here][fitfarm-website].
 
 Intrepid readers will notice the similarities between FitFarm and [Data Farm][data-farm-post], another project I've worked on, though they'll also notice from the screenshots that we were able to actually create a prototype with basic game mechanics working as opposed to just a proof of concept of the data tracking mechanism.
 
-<figure class="four-landscape-screenshot-grid lazyload" data-expand="-20">
+<figure class="four-landscape-screenshot-grid lazyload">
     <img class="lazyload" data-src="/images/projects/fit-farm/main.jpg" alt="The main menu screen of FitFarm.">
     <img class="lazyload" data-src="/images/projects/fit-farm/farm.jpg" alt="A view of a FitFarm farm in its early stages.">
     <img class="lazyload" data-src="/images/projects/fit-farm/shop.jpg" alt="A view of the FitFarm shop where players can buy supplies to build their farm.">
@@ -36,11 +38,11 @@ Intrepid readers will notice the similarities between FitFarm and [Data Farm][da
 
 Over 8 hours of hacking, 75% of the time was spent figuring out how to actually integrate HealthKit into our application. (Turns out that requesting permissions to access a client's HealthKit data is the first step to resolving all your problems.)
 
-### Result
+# Result
 
 After an open demo round where all the participating teams were allowed to present, we won 3rd place at the hackathon!
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" src="/images/projects/fit-farm/team-photo.jpg" alt="The FitFarm development team after winning 3rd Place at the hackTrin hackathon.">
 </figure>
 

@@ -1,32 +1,44 @@
 <header id="header" class="header">
-    <div class="header-content">
-        <a href="/" class="logo-container">
-            <img src="/images/logo.svg" class="logo" alt="The logo of the site.">
-        </a>
-    </div>
-    <nav role="navigation" class="header-content">
-        <ul>
-            <li><a href="/#projects">projects</a></li>
-            <li><a href="/#designs">designs</a></li>
-            <li><a href="/#writings">writings</a></li>
-            <li><a href="/resume">resume</a></li>
-        </ul>
-    </nav>
-    <div class="curve-container">
-        <svg class="curve" width="2850px" height="103px" viewBox="0 0 2850 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet">
-            <title>Curve</title>
-            <desc>Created with Sketch.</desc>
-            <defs>
-                <path d="M0,570.5 L2850,570.5 L2850,594.401961 C2850,594.401961 2512.5,662.5 2070.5,662.5 C1628.5,662.5 1146.5,594.401961 694,594.401961 C241.5,594.401961 0,662.5 0,662.5 L0,570.5 Z" id="path-1"></path>
-            </defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Artboard" transform="translate(0.000000, -567.000000)">
-                    <g id="Rectangle-14">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                        <use fill="#18212D" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    </g>
-                </g>
-            </g>
-        </svg>
+    <div class="wrapper">
+        <div class="left">
+            <a href="/" class="logo-container">
+                <img src="/images/logo.svg" class="logo" alt="The logo of the site.">
+            </a>
+            <div class="intro">
+                Hi there!
+                <br>
+                I’m <span class="intro-emphasis">Zachary Espiritu</span>. I’m 
+                currently studying <span class="intro-emphasis">Computer 
+                Science</span> at <span class="intro-emphasis">Brown 
+                University</span>.
+                <br><br>
+                Right now, I’m a TA for <span class="intro-emphasis">CSCI0040</span>, 
+                a course on scientific computing in Python and Matlab. 
+                Previously, I interned at <span class="intro-emphasis">
+                Negotiatus</span> where I automated data-intensive processes and
+                developed several client-facing interfaces. This summer, I’ll be 
+                doing research in Brown’s <span class="intro-emphasis">PLT 
+                Group</span>.
+            </div>
+        </div>
+        <div class="right">
+            <nav role="navigation">
+                <ul class="header-nav-list">
+                    <li><a href="mailto:me@zacharyespiritu.com">me@zacharyespiritu.com</a></li>
+                    <li><a href="/resume">resume.pdf</a></li>
+                    <li><a href="/about">about.html</a></li>
+                    <li><a href="https://github.com/ZacharyEspiritu/zacharyespiritu.github.io">source.git</a></li>
+                    <li><a href="/friends">friends.yaml</a></li>
+                </ul>
+            </nav>
+            <div class="commit-history">
+                Last updated with commit 
+                <span class="commit-sha">#{{ site.git["total_commits"] }} ({{ site.git["last_commit"]["short_sha"] }})</span>:<br>
+                Author: {{ site.git["last_commit"]["author_name"] }}<br>
+                Date: {{ site.git["last_commit"]["commit_date"] }}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{ site.git["last_commit"]["message"] }}
+            </div>
+        </div>
     </div>
 </header>

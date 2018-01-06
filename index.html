@@ -3,15 +3,169 @@ title: "Home"
 layout: default
 ---
 
-<section id="intro">
-    <div class="gray content intro">
-        <div class="wrapper">
-            Hi there! I'm Zachary Espiritu.<br>
-            I'm a software engineer.
+<header id="header" class="landing-header">
+    <div class="wrapper">
+        <div class="left">
+            <a href="/" class="logo-container">
+                <img src="/images/logo.svg" class="logo" alt="The logo of the site.">
+            </a>
+            <div class="intro">
+                Hi there!
+                <br>
+                I’m <span class="intro-emphasis">Zachary Espiritu</span>. I’m 
+                currently studying <span class="intro-emphasis">Computer 
+                Science</span> at <span class="intro-emphasis">Brown 
+                University</span>.
+                <br><br>
+                Right now, I’m a TA for <span class="intro-emphasis">CSCI0040</span>, 
+                a course on scientific computing in Python and Matlab. 
+                Previously, I interned at <span class="intro-emphasis">
+                Negotiatus</span> where I automated data-intensive processes and
+                developed several client-facing interfaces. This summer, I’ll be 
+                doing research in Brown’s <span class="intro-emphasis">PLT 
+                Group</span>.
+            </div>
+        </div>
+        <div class="right">
+            <nav role="navigation">
+                <ul class="header-nav-list">
+                    <li><a href="mailto:me@zacharyespiritu.com">me@zacharyespiritu.com</a></li>
+                    <li><a href="/resume">resume.pdf</a></li>
+                    <li><a href="/about">about.html</a></li>
+                    <li><a href="https://github.com/ZacharyEspiritu/zacharyespiritu.github.io">source.git</a></li>
+                    <li><a href="/friends">friends.yaml</a></li>
+                </ul>
+            </nav>
+            <div class="commit-history">
+                Last updated with commit 
+                <span class="commit-sha">#{{ site.git["total_commits"] }} ({{ site.git["last_commit"]["short_sha"] }})</span>:<br>
+                Author: {{ site.git["last_commit"]["author_name"] }}<br>
+                Date: {{ site.git["last_commit"]["commit_date"] }}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{ site.git["last_commit"]["message"] }}
+            </div>
+        </div>
+    </div>
+</header>
+<section class="content">
+    <div class="wrapper">
+        <div class="project-filter">
+            > Zachary.projects.filter({(p): p.type == 
+            <span class="filter-option selected">all</span>
+            <span class="filter-option">software</span>
+            <span class="filter-option">research</span>
+            <span class="filter-option">design</span>
+            <span class="filter-option">games</span>
+            <span class="filter-option">case_studies</span>
+            <span class="filter-option">fun_things</span> 
+            })     
+        </div>
+        <div class="projects">
+            {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+            {% for project in sorted_projects %}
+                {% include project_card.html project=project %}
+                {% if forloop.last == false %}
+                  <div class="project-gutter-sizer"></div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </section>
-<section id="projects" class="content">
+<section class="experience">
+    <div class="wrapper">
+        <div class="terminal">
+            > Zachary.college.merge(Zachary.high_school)
+        </div>
+        <div class="experience-item">
+            <div class="left">
+                <div class="date-range">
+                    2017 - 2021
+                </div>
+            </div>
+            <div class="right">
+                <div class="item-header">
+                    <div class="title">
+                        Brown University
+                    </div>
+                    <div class="location">
+                        Providence, R.I.
+                    </div>
+                </div>
+                <div class="item-info">
+                    <div class="tagline">
+                        Sc.B. in Computer Science<br>
+                        Pursing Concurrent Sc.B/Sc.M Program
+                    </div>
+                    <div class="detail">
+                        Relevant Coursework:<br>
+                        &nbsp;* Accelerated Intro to Computer Science<br>
+                        &nbsp;* Computer Systems Security<br>
+                        &nbsp;* Discrete Structures and Probability<br>
+                        &nbsp;* Introduction to Computer Systems<br>
+                        &nbsp;* Linear Algebra<br>
+                        &nbsp;* Logic For Systems (Formal Methods and Verification)<br>
+                        &nbsp;* User Interfaces and User Experience
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="experience-item">
+            <div class="left">
+                <div class="date-range">
+                    2013 - 2017
+                </div>
+            </div>
+            <div class="right">
+                <div class="item-header">
+                    <div class="title">
+                        Regis High School
+                    </div>
+                    <div class="location">
+                        New York, N.Y.
+                    </div>
+                </div>
+                <div class="item-info">
+                    <div class="tagline">
+                        Tuition-free education<br>
+                        90-minute commute each way
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="terminal">
+            > Zachary.work_experience.sort_by({(e): e.date }, 
+            <span class="filter-option selected">:asc</span>
+            <span class="filter-option">:desc</span>
+            )
+        </div>
+        {% for experience in site.experience %}
+            {% include experience_item.html experience=experience %}
+            {% if forloop.last == false %}
+              <hr>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+<script>
+    var $projects = $('.projects').isotope({
+        itemSelector: '.project-box',
+        layoutMode: 'fitRows',
+        percentPosition: true,
+        fitRows: {
+          gutter: '.project-gutter-sizer'
+        }
+    });
+</script>
+    <!-- <nav role="navigation" class="header-content">
+        <ul>
+            <li><a href="/#projects">projects</a></li>
+            <li><a href="/#designs">designs</a></li>
+            <li><a href="/#writings">writings</a></li>
+            <li><a href="/resume">resume</a></li>
+        </ul>
+    </nav> -->
+<!-- <section id="projects" class="content">
     <header class="right-align section-header wrapper">
         I've worked on the following <a class="section-link" href="#projects">projects</a>:
     </header>
@@ -88,3 +242,4 @@ layout: default
         }
     });
 </script>
+ -->

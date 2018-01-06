@@ -13,21 +13,25 @@ ending:
 skills: swift objective-c sketch git
 ---
 
+# Overview
+
 At the 3rd [Blueprint @ MIT][blueprint-mit], I created Math Maze, a two-player game about finding your way through a maze faster than the other player. The trick? There are no walls in the maze—you have to find a path that adds up to the specified target number.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-screenshot lazyload" data-src="/images/projects/math-maze/title-screen.png">
 </figure>
 
 Since I had already created [another math-related game][math-battle-post], the real project here wasn't as so much as the gameplay as figuring out how to develop a maze generation algorithm that worked as quickly as possible as to not interrupt gameplay.
 
-### Implementation
+# Implementation
 
-For those who are unfamiliar with Math Maze, each puzzle starts with a "Start" point and an "End" point displayed on a 4 x 5 grid of numbers. The "End" point displays the target number for the current puzzle. Players trace a path of numbers from the "Start" point to the end point that adds up to the target number. As the players trace the path, the "End" point updates with the current value of their path so far.
+In "Math Maze", each puzzle starts with a "Start" point and an "End" point displayed on a 4 x 5 grid of numbers. The "End" point displays the target number for the current puzzle. Players trace a path of numbers from the "Start" point to the end point that adds up to the target number. As the players trace the path, the "End" point updates with the current value of their path so far.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-screenshot lazyload" data-src="/images/projects/math-maze/gameplay.png">
 </figure>
+
+## Puzzle Generation
 
 To generate a path, I first select a random "Start" point on the 4 x 5 grid and decide on a random length for the path. (The funky typecasting seen here is necessary to properly convert the random `UInt32` given to a higher-level `CGFloat`.)
 

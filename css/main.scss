@@ -4,10 +4,10 @@
 @charset "utf-8";
 
 // Variables
-$base-font-family: DINRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-color:  #988F8F;
-$base-font-size:   42px;
-$base-font-weight: 700;
+$base-font-family: "SF Mono", "Lucida Console", Monaco, monospace;
+$base-font-color:  #000000;
+$base-font-size:   17px;
+$base-font-weight: 200;
 
 $small-font-size: 25px;
 
@@ -22,10 +22,10 @@ $article-card-image-color:    #BCBCBC;
 
 $container-max-width: 1200px;
 
-$wrapper-max-width: 1080px;
+$wrapper-max-width: 980px;
 
 $header-background-color: #18212D;
-$header-logo-width:       250px;
+$header-logo-width:       190px;
 $header-sm-size:           36px;
 
 $post-intro-height:         250px;
@@ -67,4 +67,5 @@ $post-ending-button-font-color: #000000;
 // Imports
 @import "normalize";
 @import "syntax";
+@import "fonts";
 @import "styles";

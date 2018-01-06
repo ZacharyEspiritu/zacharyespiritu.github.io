@@ -1,0 +1,26 @@
+<div class="experience-item">
+    <div class="left">
+        <div class="date-range">
+            {{ experience.date_string }}
+        </div>
+    </div>
+    <div class="right">
+        <div class="item-header">
+            <div class="title">
+                {{ experience.title }}
+            </div>
+            <div class="location">
+                {{ experience.location }}
+            </div>
+        </div>
+        <div class="item-info">
+            <div class="tagline">
+                {{ experience.tagline }}
+            </div>
+            <div class="detail">
+                {{ experience.content | rstrip | strip_html }}
+            </div>
+        </div>
+    </div>
+</div>
+

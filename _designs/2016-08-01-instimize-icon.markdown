@@ -20,13 +20,13 @@ This is what the old icon looked like:
 
 Pretty good so far, and it gets the app's message across, but Cassandra and I thought there was room for improvement. Using Sketch, I designed a bunch of icons:
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="lazyload" data-src="/images/designs/instimize/instimize-designs.png" alt="All the Instimize icon iterations.">
 </figure>
 
 After several iterations, we settled on a flat design:
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-icon lazyload" data-src="/images/designs/instimize/instimize-final.png" alt="The final Instimize icon design.">
 </figure>
 

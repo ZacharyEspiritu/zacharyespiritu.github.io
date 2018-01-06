@@ -13,9 +13,11 @@ ending:
 skills: racket git
 ---
 
+# Overview
+
 In the summer of 2017, I was taking the Brown Computer Science placement exam, which was conducted in Racket. Around the same time, I bought my own copy of [Cards Against Humanity][cards-against-humanity], and I thought it was pretty fun. Wanting to explore the potential of Racket, I developed **racket-against-humanity**, an application designed to allow users to easily generate their own print-ready cards in the style of Cards Against Humanity.
 
-<figure class="four-screenshot-grid lazyload" data-expand="-20">
+<figure class="four-screenshot-grid lazyload">
     <img class="lazyload card-against-humanity" data-src="/images/projects/racket-against-humanity/black-1.png">
     <img class="lazyload card-against-humanity" data-src="/images/projects/racket-against-humanity/white-1.png">
     <img class="lazyload card-against-humanity" data-src="/images/projects/racket-against-humanity/white-2.png">

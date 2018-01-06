@@ -16,43 +16,58 @@
     <body>
         {% include preloader.html %}
         {% include scripts.html %}
-        {% include header.html %}
         <main>
-            {% if page.image_path %}
-                {% assign opacity = 0.8 %}
-                {% assign banner_image = page.image_path %}
-                {% if page.banner_path %}
-                    {% assign banner_image = page.banner_path %}
-                {% endif %}
-                <hgroup class="post-intro" style="background-image: url('{{ banner_image }}');">
-            {% else %}
-                {% assign opacity = 1.0 %}
-                <hgroup class="post-intro">
-            {% endif %}
-                <div class="overlay" style="background: {{ page.card_color }}; opacity: {{ opacity }};">
-                </div>
-                <div class="overlay">
-                    <div class="intro-wrapper">
-                        <header class="title">
-                            {{ page.title }}
-                        </header>
-                        <header class="tagline">
-                            {% if page.is_post %}
-                                {{ page.date | date: "%B %d, %Y" }}
-                            {% else %}
-                                {{ page.tagline }}
-                            {% endif %}
-                        </header>
+            <header id="header" class="article-header">
+                <div class="wrapper">
+                    <div class="left">
+                        <a href="/" class="logo-container">
+                            <img src="/images/logo.svg" class="logo" alt="The logo of the site.">
+                        </a>
+                        <div class="intro">
+                            <div class="page-type">
+                                {% if page.is_post %}
+                                    Post:
+                                {% elsif page.is_project %} 
+                                    Project:
+                                {% else %}
+                                    Writeup:
+                                {% endif %}
+                            </div>
+                            <h1 class="page-title">
+                                {{ page.title }}
+                            </h1>
+                            <div class="page-tagline">
+                                {% if page.is_post %}
+                                    {{ page.date | date: "%B %d, %Y" }}
+                                {% else %}
+                                    {{ page.tagline }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <nav role="navigation">
+                            <ul class="header-nav-list">
+                                <li><a href="mailto:me@zacharyespiritu.com">me@zacharyespiritu.com</a></li>
+                                <li><a href="/resume">resume.pdf</a></li>
+                                <li><a href="/about">about.html</a></li>
+                                <li><a href="https://github.com/ZacharyEspiritu/zacharyespiritu.github.io">source.git</a></li>
+                                <li><a href="/friends">friends.yaml</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </hgroup>
-            <article class="post-wrapper">
-                {{ content }}
-            </article>
-            <footer class="post-footer">
+            </header>
+            <div class="color-detail" style="background: {{ page.card_color }};"></div>
+            <div class="wrapper">
+                <article class="post-content">
+                    {{ content }}
+                </article>
+            </div>
+            <!-- <footer class="post-footer">
                 {% include post_ending.html %}
                 {% include post_preview.html %}
-            </footer>
+            </footer> -->
         </main>
         {% include footer.html %}
         {% include preloader_resolver.html %}

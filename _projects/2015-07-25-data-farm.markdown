@@ -13,11 +13,15 @@ ending:
 skills: swift objective-c sketch git
 ---
 
+# Overview
+
 At the inaugural hackGCT 2015 (and my first hackathon!), I teamed up with [Olivia Ross][or-github], [Nico Cobb][nc-github], and [John Ward][jw-github] to create *Data Farm*. It's an iOS application that tracks your cellular data usage and motivates people to consider cheaper cellular data plans by exchanging their unused data bytes for "bites" which are used to raise animals on a virtual farm.
 
 It's a fantastic concept, we know.
 
-<figure class="three-screenshot-grid lazyload" data-expand="-20">
+# Implementation
+
+<figure class="three-screenshot-grid lazyload">
     <img class="lazyload" src="/images/projects/data-farm/graph.png">
     <img class="lazyload" src="/images/projects/data-farm/pet-stats.png">
     <img class="lazyload" src="/images/projects/data-farm/shop.png">
@@ -30,7 +34,7 @@ Unfortunately, `ifaddrs` only allows retreival of microcosms of information at a
 
 After 6 hours of non-stop development (and a brief hiccup with XCode projects failing to work nicely across multiple computers), we qualified for the finals and eventually were crowned the "Beginner Group Winner" of hackGCT 2015!
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-large-image lazyload" src="/images/projects/data-farm/team-photo.png" alt="The Data Farm team.">
 </figure>
 

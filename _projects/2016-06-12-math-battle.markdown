@@ -15,38 +15,48 @@ ending:
 skills: swift objective-c python sass photoshop git sketch firebase
 ---
 
+# Introduction
+
+<aside class="post-aside">
+  This is an aside. For 
+more context, see this 
+link here. Alternatively, 
+you could also just 
+not.
+</aside>
+
 Nowadays, getting children (and adults!) to play “educational games” can be hard to nearly impossible. That’s where Math Battle comes in. Originally created at Local Hack Day 2015 @ General Assembly and winner of the 2015 Congressional App Challenge, Math Battle is an iOS game where two players play on the same screen and go head-to-head in a battle of intellect attempting to solve procedurally generating, math-based puzzles faster than the other player.
 
-{% include youtube_player.html width=640 id="OmnT4P_ALu4" %}
+{% include youtube_player.html id="OmnT4P_ALu4" %}
 
-### Overview
+## Overview
 
 Users can either play Math Battle locally on the same phone using a split-screen form of the game or compete in “ranked battles” via an online multiplayer mode. Battles consist of players competing to solve five procedurally generated puzzles faster than the other player. To do so, they are given a random set of nine “number tiles” and a target number.
 
 Players must use *all* nine number tiles in order to come up with a math equation that, when evaluated, results in the target number. A player wins the battle when they have solved five puzzles faster than the other player or, after two minutes, the player with the highest number of solved puzzles wins.
 
-### Implementation
+## Implementation
 
 I programmed the majority of the app in Swift using the open-source game engine [cocos2d-objc][cocos2d-github], and designed and created all of the artwork myself using a combination of Adobe Illustrator and Sketch.
 
 All puzzles are generated on the fly, each with a guaranteed solution. This allows for massive replayability, so you can challenge your enemies (and your math teachers, of course) to a Math Battle as many times as you want and still get new puzzles every time.
 
-<div class="four-screenshot-grid lazyload" data-expand="-20">
+<figure class="four-screenshot-grid lazyload">
     <img class="lazyload" data-src="/images/projects/math-battle/custom-match.png">
     <img class="lazyload" data-src="/images/projects/math-battle/practice-match.png">
     <img class="lazyload" data-src="/images/projects/math-battle/player-stats.png">
     <img class="lazyload" data-src="/images/projects/math-battle/leaderboard.png">
-</div>
+</figure>
 
 I also used [Firebase][firebase]'s Realtime Database, Authentication, Cloud Messaging (push notifications), and Analytics modules for the backend. I engineered a way to take advantage of Firebase's notably fast data update and retreival benchmarks to allow for real-time online multiplayer battles. This allows players to compete on separate devices while still seeing all of the taps and moves of their opponent on the other side of their playfield.
 
 Finally, I implemented an [ELO rating system][elo-ratings] which further incentives players and students to continually play and improve their quick thinking skills in order to climb up the leaderboards.
 
-### Design
+# Design
 
 A large amount of Math Battle's time in production was spent developing an unified brand design. As a starting point, I was primarily inspired by the look of the typeface, [ADAM.CG PRO][adam-cg-pro]. This led to the thick, black borders and the drop shadows seen around most of the elements. I also used bright colors to give the game a more friendly mood.
 
-<figure class="six-screenshot-grid lazyload" data-expand="-20">
+<figure class="six-screenshot-grid lazyload">
     <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-1.png">
     <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-2.png">
     <img class="lazyload" data-src="/images/projects/math-battle/gameplay-design-3.png">
@@ -56,29 +66,29 @@ A large amount of Math Battle's time in production was spent developing an unifi
     <figcaption>Several iterations were necessary before the final gameplay design was reached.</figcaption>
 </figure>
 
-As an aside, one of the things I always like to do in my games is make sure that there is motion on the screen at all times—this prevents players from ever thinking that the game froze and also, in my opinion, simply makes for a better game feel overall. As such, almost all of the backgrounds in Math Battle are moving on a loop.
+## Animations
+
+One of the things I always like to do in my games is make sure that there is motion on the screen at all times—this prevents players from ever thinking that the game froze and also, in my opinion, simply makes for a better game feel overall. As such, almost all of the backgrounds in Math Battle are moving on a loop.
 
 I'm most proud of the subtle, "intersecting" backgrounds as seen in the gameplay screens, which I achieved through some custom OpenGL tinkering to selectively prevent textures from rendering on top of one another. You can see this in the GIF below:
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-screenshot lazyload" data-src="/images/projects/math-battle/animations.gif">
 </figure>
 
-### Animations
-
 To give the game more polish, the last month or so of development was spent working on the animations seen throughout the game. In particular, the menu transition animations took a lot of time to get just right—however, it was worth it in the end for technical reasons as it allowed me to seamlessly load and deallocate memory for each gamemode menu instead of loading all the menus at once, which was calling memory warnings.
 
-### Trading Cards
+## Trading Cards
 
 For marketing purposes, I designed and printed Math Battle "trading cards." They feature download information on the backside, and a randomized tile and background color combination on the front.
 
 I usually always have some on hand, so if you ever meet me in person, feel free to ask me for one.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/projects/math-battle/trading-cards.jpg">
 </figure>
 
-### Press/Award History
+# Press/Award History
 
 Math Battle was originally created at [Local Hack Day][local-hack-day] 2015 @ General Assembly in October 2015, where it won "Best UI Design" out of several dozen teams.
 
@@ -86,7 +96,7 @@ After a complete redesign of the app, in February 2016, I won the 2015 [Congress
 
 Most recently, I was named on CEWeek's [10Under20: Young Innovators To Watch][ceweek-awards] list for my work on Math Battle. Since then, I've been featured in several publications around the internet—you can view several of these articles on the [Math Battle website][math-battle-website].
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/projects/math-battle/ceweek-presentation.jpg">
     <figcaption>
         Receiving the 10Under20 award at CEWeek 2016.

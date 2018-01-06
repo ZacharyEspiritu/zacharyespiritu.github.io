@@ -1,35 +1,12 @@
-<a class="block-link" href="{{ project.url }}">
-    <figure class="project-card {{ project.skills | downcase }}">
-        <div class="card-header" style="background-image: url('{{ project.image_path }}');">
-            {% if project.awards %}
-                <div class="card-overlay">
-                    {% for award in project.awards %}
-                        {% if forloop.first %}
-                            {{ award }}
-                        {% elsif forloop.last %}
-                            {% if forloop.index0 > 0 %}
-                                <div class="card-overlay-extension">
-                                    <div class="card-overlay-triangle"></div>
-                                    + {{ forloop.index0 }} more
-                                </div>
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            {% endif %}
-        </div>
-        <div class="card-text" style="background: {{ project.card_color }};">
-            <header class="card-title">
-                {% if project.short_title %}
-                    {{ project.short_title }}
-                {% else %}
-                    {{ project.title }}
-                {% endif %}
-            </header>
-            <footer class="card-detail">
+<div class="project-box {{ project.skills | downcase }}">
+    <a class="block-link" href="{{ project.url }}">
+        <div class="thumbnail" style="background-image: url('{{ project.image_path }}');">
+            <div class="detail-overlay" style="background: {{ project.card_color }};">
                 {{ project.tagline }}
-            </footer>
+            </div>
         </div>
-        <img src="images/arrow.svg" class="card-arrow">
-    </figure>
-</a>
+        <div class="title">
+            {{ project.title }}
+        </div>
+    </a>
+</div>

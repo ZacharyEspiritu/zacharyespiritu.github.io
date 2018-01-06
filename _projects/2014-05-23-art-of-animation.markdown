@@ -11,6 +11,8 @@ ending:
 skills: html css
 ---
 
+# Overview
+
 [Art Of Animation][art-of-animation] was a website that I created as my final project for my Computer Science I class at Regis High School in May 2014. I was the only person in the class to score a perfect 100%!
 
 While I had briefly tinkered around with HTML/CSS and Javascript before, this was the first website I had ever created from scratch, so my web development techniques weren't exactly as great as they are now. For example, if you look at the source code, you'll notice that it's entirely static, so I had to repeat header and footer elements on every page.

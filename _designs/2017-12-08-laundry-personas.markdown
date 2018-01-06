@@ -17,7 +17,7 @@ In this project, I construct two personas with corresponding mental models based
 
 Laundry at Brown involves two interfaces—the **laundry machines** and the **payment terminals**. This extra terminal is significant as it allows students to continue to use their Brown ID for all Brown-specific purchases. After a user loads a laundry machine, they walk to a terminal and swipe their ID to access their payment account. The terminal then prompts the user to enter the number of their laundry machine (found next to the machine’s door) via a keypad. Users can then start the machine by selecting one of six wash cycle options using a button panel on their laundry machine.
 
-<figure class="two-landscape-screenshot-grid lazyload" data-expand="-20">
+<figure class="two-landscape-screenshot-grid lazyload">
     <img class="lazyload" data-src="/images/designs/laundry-personas/interface-1.png">
     <img class="lazyload" data-src="/images/designs/laundry-personas/interface-2.png">
     <figcaption>Sketches of the laundry machine and payment terminal in the Brown laundry rooms.</figcaption>
@@ -58,7 +58,7 @@ Sam is an 17-year-old freshman planning to concentrate in music. Having relied o
 
 But Sam’s recollection of his mother saying that he must sort clothes by color allows him to use the dorm laundry machines easily. Since three of the machines’ wash cycle options are simply “Whites”, “Colors”, and “Brights”, he quickly translates his mental model to the limited options the machine interface presents. Sam just has to look at the color of the clothes he’s washing in order to determine which button to press.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/designs/laundry-personas/persona-1.png">
     <figcaption>Sam's empathy map.</figcaption>
 </figure>
@@ -69,7 +69,7 @@ Brianna is a 19-year-old sophomore at Brown. After a year of pursuing a Computer
 
 Brianna’s not used to the simplified configuration options of the laundry machine in her dorm. Not able to set individual settings such as cycle length, temperature, and spin intensity, she’s confused by the wash cycle buttons’ lack of detail. Despite her experience doing laundry by herself at home, Brianna’s unable to tell the difference between the cycle types, so she spends extra time thinking about what each wash type could mean.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/designs/laundry-personas/persona-2.png">
     <figcaption>Brianna's empathy map.</figcaption>
 </figure>
@@ -82,6 +82,6 @@ As a final step in the project, I created a storyboard for Sam’s user journey 
 * It conveys his nervousness in completing a task that he’s unknowledgeable about but his realization that there’s no other way around the issue.
 * It demonstrates how Sam’s simplified understanding of how laundry works fits well with the provided interface, which ultimately allows him to fulfill his goal of self-cleanliness by washing his clothes.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="lazyload" data-src="/images/designs/laundry-personas/storyboard.png">
 </figure>

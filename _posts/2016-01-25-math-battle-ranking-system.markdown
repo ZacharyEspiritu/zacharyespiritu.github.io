@@ -15,7 +15,7 @@ I'm about three months into the process of rewriting Math Battle from scratch, w
 
 And so the quest began to create a ranking system.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-screenshot lazyload" data-src="/images/projects/math-battle/leaderboard.png">
 </figure>
 

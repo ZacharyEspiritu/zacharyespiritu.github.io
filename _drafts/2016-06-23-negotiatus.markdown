@@ -16,7 +16,7 @@ In the summer of 2016, I worked with [Negotiatus][negotiatus] as a Software Engi
 
 For 11 weeks, I worked on their Ruby on Rails-based web application with the CTO and the Lead Engineer as my mentors. While my knowledge of Rails (and Ruby, for that matter) was minimal before I started, by the end of my internship, I had developed several user-facing projects, performed emergency bug fixes, and engineered automated solutions on the backend to several processes that previously had to be completed manually.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/projects/negotiatus/team-photo.jpg">
     <figcaption>The Negotiatus team.</figcaption>
 </figure>
@@ -37,7 +37,7 @@ My first main project was to transform the company's automated, plain-text email
 
 I shudder at the thought of having to use table-based layouts for anything other than email templates.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="lazyload" data-src="/images/projects/negotiatus/email-template.png">
     <figcaption>An example of an HTML email template I created.</figcaption>
 </figure>

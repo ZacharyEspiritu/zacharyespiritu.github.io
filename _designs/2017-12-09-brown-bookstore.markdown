@@ -20,7 +20,7 @@ In this project, I redesigned the textbook buying workflow on the [Brown Booksto
 
 Currently, the Brown Bookstore has a somewhat less-than-stellar design:
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/designs/brown-bookstore/current.png">
     <figcaption>The current homepage of the Brown Bookstore.</figcaption>
 </figure>
@@ -41,7 +41,7 @@ Why is this a good strategy? It’s less convenient for students to have to sear
 
 Using my redesigned wireframes, I created the following simplified workflow for buying a textbook from my version of the Brown Bookstore:
 
-<figure class="banner-grid lazyload" data-expand="-20">
+<figure class="banner-grid lazyload">
     <img class="lazyload" data-src="/images/designs/brown-bookstore/workflow.png">
     <figcaption>A redesigned textbook purchasing workflow.</figcaption>
 </figure>
@@ -50,7 +50,7 @@ Using my redesigned wireframes, I created the following simplified workflow for 
 
 To expand on my designs, I took the textbook landing page mockup I created and expanded it into a high-fidelity mockup. Since the original website did not have a responsive design, I also wanted to make sure I was keeping smaller devices in mind as I was creating my prototype. As such, I added annotations to my mockup as I created it to describe how it would change based on changing screen sizes and device types.
 
-<figure class="lazyload" data-expand="-20">
+<figure class="lazyload">
     <img class="lazyload" data-src="/images/designs/brown-bookstore/annotated-mockup.png">
 </figure>
 

@@ -17,6 +17,7 @@ github_username: ZacharyEspiritu
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-git_metadata
 
 # jekyll-seo-tag options.
 # Refer to https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
@@ -44,6 +45,8 @@ collections:
   posts:
     output: true
     permalink: /blog/:slug/
+  experience:
+    output: false
 
 defaults:
   - scope:
