@@ -1,8 +1,12 @@
 ---
-title: Negotiatus
-date_string: Summer 2016
-location: New York, N.Y.
-tagline: Software Engineering Intern
+title: Brown Computer Science Department
+date_string: Fall 2017 — Present
+location: Providence, R.I.
+tagline: Teaching Assistant
 ---
 
-Co-developed automated sales lead information validation tool. Streamlined operations team workflows with Slack integrations and automated price comparison tools integrated with product vendor APIs. Optimized PostgreSQL queries for up to ~500x faster full-text searches. 
+Worked with a team of TAs and course professors for different courses each semester. Answered student questions during weekly office hours. Graded student assignments.
+
+Courses:
+* **CS4:** Intro to Scientific Computing and Problem Solving
+* **CS5:** A Data-Centric Introduction to Programming

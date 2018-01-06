@@ -140,7 +140,8 @@ layout: default
         <div class="terminal">
             > Zachary.work_experience.sort_by({(e): e.date }, :asc)
         </div>
-        {% for experience in site.experience %}
+        {% assign sorted_experience = site.experience | reverse %}
+        {% for experience in sorted_experience %}
             {% include experience_item.html experience=experience %}
             {% if forloop.last == false %}
               <hr>

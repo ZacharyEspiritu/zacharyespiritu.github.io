@@ -246,7 +246,15 @@ figure {
       .detail {
         font-size: 14.5px;
         font-weight: 400;
-        margin-right: 90px;
+        margin-right: 75px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        ul {
+          margin: 0;
+        }
       }
     }
   }

@@ -1,6 +1,6 @@
 ---
 title: Negotiatus
-date_string: Summer 2016
+date_string: Summer 2017
 location: New York, N.Y.
 tagline: Software Engineering Intern
 ---
