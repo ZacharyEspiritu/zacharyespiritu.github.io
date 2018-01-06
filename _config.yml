@@ -64,3 +64,8 @@ defaults:
       type: projects
     values:
       is_project: true
+  - scope:
+      path: ""
+      type: designs
+    values:
+      is_design: true

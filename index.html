@@ -41,7 +41,6 @@ layout: default
                 <span class="commit-sha">#{{ site.git["total_commits"] }} ({{ site.git["last_commit"]["short_sha"] }})</span>:<br>
                 Author: {{ site.git["last_commit"]["author_name"] }}<br>
                 Date: {{ site.git["last_commit"]["commit_date"] }}<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 {{ site.git["last_commit"]["message"] }}
             </div>
         </div>
@@ -61,7 +60,8 @@ layout: default
             })     
         </div>
         <div class="projects">
-            {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+            {% assign combined_collections = site.projects | concat: site.designs %}
+            {% assign sorted_projects = combined_collections | sort: 'date' | reverse %}
             {% for project in sorted_projects %}
                 {% include project_card.html project=project %}
                 {% if forloop.last == false %}
@@ -176,89 +176,3 @@ layout: default
         }
     });
 </script>
-    <!-- <nav role="navigation" class="header-content">
-        <ul>
-            <li><a href="/#projects">projects</a></li>
-            <li><a href="/#designs">designs</a></li>
-            <li><a href="/#writings">writings</a></li>
-            <li><a href="/resume">resume</a></li>
-        </ul>
-    </nav> -->
-<!-- <section id="projects" class="content">
-    <header class="right-align section-header wrapper">
-        I've worked on the following <a class="section-link" href="#projects">projects</a>:
-    </header>
-    <div class="projects">
-        {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
-        {% for project in sorted_projects %}
-            {% include project_card.html project=project %}
-        {% endfor %}
-    </div>
-</section>
-<section id="designs" class="gray content" style="box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);">
-    <header class="section-header wrapper">
-        And I've worked on these <a class="section-link" href="#designs">designs</a>:
-    </header>
-    <div class="designs">
-        {% assign sorted_designs = site.designs | sort: 'date' | reverse %}
-        {% for design in sorted_designs %}
-            {% include design_card.html design=design %}
-        {% endfor %}
-    </div>
-</section>
-<section id="writings" class="content">
-    <header class="section-header center-align">
-        And, sometimes, I just <a class="section-link" href="#writings">write</a> about things:
-    </header>
-    <div class="articles">
-        {% for post in site.posts %}
-            {% include post_card.html post=post %}
-        {% endfor %}
-    </div>
-    <div class="spacer"></div>
-</section>
-<header class="section-header section-header-with-tabs center-align">
-    <div class="section-tab section-tab__gray">
-        <div class="tab-triangle__left"></div>
-        These are some of the <a class="section-link" href="#skills">skills</a> I know:
-        <div class="tab-triangle__right"></div>
-    </div>
-</header>
-<section id="skills" class="gray content">
-    <div>
-        {% include skills.html %}
-    </div>
-    <div class="spacer"></div>
-    <div class="center-align small">
-        Click a skill to see some of the projects I've made with it!
-    </div>
-</section>
-
-<script>
-    $('.projects').isotope({
-        itemSelector: '.project-card',
-        layoutMode: 'packery',
-        packery: {
-            columnWidth: '.project-card',
-            gutter: 30
-        }
-    });
-
-    $('.designs').isotope({
-        itemSelector: '.project-card',
-        layoutMode: 'packery',
-        packery: {
-            columnWidth: '.project-card',
-            gutter: 30
-        }
-    });
-
-    $('.articles').isotope({
-        itemSelector: '.article-card__first',
-        layoutMode: 'packery',
-        packery: {
-            gutter: 50
-        }
-    });
-</script>
- -->

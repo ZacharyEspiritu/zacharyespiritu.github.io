@@ -4,6 +4,10 @@
 @charset "utf-8";
 
 // Variables
+$monospace-fonts: "SF Mono", "Lucida Console", Monaco, monospace;
+$sans-serif-fonts: "Lato", Verdana, "Helvetica Neue", Helvetica, sans-serif;
+$serif-fonts: "Minion Pro", "Charter", "Garamond", "Palatino", "Times New Roman", "Times", serif;
+
 $base-font-family: "SF Mono", "Lucida Console", Monaco, monospace;
 $base-font-color:  #000000;
 $base-font-size:   17px;

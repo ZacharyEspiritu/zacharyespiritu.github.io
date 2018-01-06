@@ -5,9 +5,10 @@ short_title: Calenday POC
 image_path: /images/design-calenday.png
 tagline: A proof-of-concept of a calendar app that focuses on intuitive visualization and navigation with cards
 card_color: "#E0001B"
-ending:
-  tagline: The Calenday mockups were published in October 2015.
+filters: design 
 ---
+
+# Overview
 
 Calenday is a proof-of-concept of a calendar app that focuses on intuitive visualization and navigation with card design. It's an idea I've been toying around with in my head for some time, and I eventually decided I might as well sketch it out.
 

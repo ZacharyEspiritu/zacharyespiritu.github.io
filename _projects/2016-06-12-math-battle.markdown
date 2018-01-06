@@ -18,14 +18,6 @@ filters: software games design
 
 # Introduction
 
-<aside class="post-aside">
-  This is an aside. For 
-more context, see this 
-link here. Alternatively, 
-you could also just 
-not.
-</aside>
-
 Nowadays, getting children (and adults!) to play “educational games” can be hard to nearly impossible. That’s where Math Battle comes in. Originally created at Local Hack Day 2015 @ General Assembly and winner of the 2015 Congressional App Challenge, Math Battle is an iOS game where two players play on the same screen and go head-to-head in a battle of intellect attempting to solve procedurally generating, math-based puzzles faster than the other player.
 
 {% include youtube_player.html id="OmnT4P_ALu4" %}

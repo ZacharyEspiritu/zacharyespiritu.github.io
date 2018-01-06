@@ -9,7 +9,10 @@ ending:
   tagline: I worked as The Owl's Layout Editor from September 2016 to May 2017.
   link: https://issuu.com/zacharyespiritu
   link_text: read more issues
+filters: design 
 ---
+
+# Overview
 
 From September 2016 to May 2017, I worked as the Layout Editor for *The Owl*, the newspaper of record of Regis High School, my alma mater. While from September 2014 to May 2016 I had worked as the Assistant Layout Editor, this was my first opportunity to design issues myself for publication.
 
@@ -17,9 +20,9 @@ During my tenure as The Owl's Layout Editor, I redesigned overall design element
 
 You can read sample issues that I designed below or view the entirety of Volume 81 of The Owl at [Issuu][issuu-profile].
 
-<div data-configid="29943213/49709816" style="width:100%; height:700px; margin-bottom: 15px;" class="issuuembed"></div>
+<figure data-configid="29943213/49709816" class="issuuembed"></figure>
 
-<div data-configid="29943213/49709810" style="width:100%; height:700px;" class="issuuembed"></div>
+<figure data-configid="29943213/49709810" class="issuuembed"></figure>
 
 <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
 

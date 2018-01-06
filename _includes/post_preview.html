@@ -1,106 +1,24 @@
 {% if page.is_post %}
-    {% assign post_type = "Post" %}
+    {% assign post_type = "writeup" %}
 {% elsif page.is_project %}
-    {% assign post_type = "Project" %}
+    {% assign post_type = "project" %}
 {% else %}
-    {% assign post_type = "Design" %}
+    {% assign post_type = "design" %}
 {% endif %}
 
 {% assign next_post = page.next %}
 {% assign previous_post = page.previous %}
 
-{% assign next_banner_image = next_post.image_path %}
-{% if next_post.banner_path %}
-    {% assign next_banner_image = next_post.banner_path %}
-{% endif %}
-
-{% assign previous_banner_image = previous_post.image_path %}
-{% if previous_post.banner_path %}
-    {% assign previous_banner_image = previous_post.banner_path %}
-{% endif %}
-
-{% if previous_post or next_post %}
-    <nav role="navigation">
-        {% if previous_post %}
-            <a href="{{ previous_post.url }}" class="post-block" style="background-image: url('{{ previous_banner_image }}');">
-                <div class="overlay" style="background: {{ previous_post.card_color }};"></div>
-                <div class="overlay-text">
-                    <div class="overlay-text-table">
-                        <div class="overlay-text-content">
-                            <div class="preview-direction">
-                                <i class="fa fa-long-arrow-left" aria-hidden="true"></i> Previous {{ post_type }}
-                            </div>
-                            <div class="preview-title">
-                                {% if previous_post.short_title %}
-                                    {{ previous_post.short_title }}
-                                {% else %}
-                                    {{ previous_post.title }}
-                                {% endif %}
-                            </div>
-                            {% unless page.is_post %}
-                                <div class="preview-tagline">
-                                    {{ previous_post.tagline }}
-                                </div>
-                            {% endunless %}
-                        </div>
-                    </div>
-                </div>
-            </a>
-        {% endif %}
+<div class="post-preview">
+    <div class="wrapper">
+        previews.txt<br>
+        ------------<br>
+        <a class="preview-link" href="/">-> home</a><br>
         {% if next_post %}
-            <a href="{{ next_post.url }}" class="post-block" style="background-image: url('{{ next_banner_image }}');">
-                <div class="overlay" style="background: {{ next_post.card_color }};"></div>
-                <div class="overlay-text">
-                    <div class="overlay-text-table">
-                        <div class="overlay-text-content">
-                            <div class="preview-direction">
-                                Next {{ post_type }} <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </div>
-                            <div class="preview-title">
-                                {% if next_post.short_title %}
-                                    {{ next_post.short_title }}
-                                {% else %}
-                                    {{ next_post.title }}
-                                {% endif %}
-                            </div>
-                            {% unless page.is_post %}
-                                <div class="preview-tagline">
-                                    {{ next_post.tagline }}
-                                </div>
-                            {% endunless %}
-                        </div>
-                    </div>
-                </div>
-            </a>
+            <a class="preview-link" href="{{ next_post.url }}">-> next_{{ post_type }}</a><br>
         {% endif %}
-    </nav>
-
-    <script>
-        $(document).ready(function(){
-            if ($(window).width() > 700) {
-                $(".preview-tagline").slideUp();
-            }
-
-            {% unless page.is_post %}
-                $(".post-block").hover(function() {
-                    $(this).find(".preview-tagline").stop();
-                    $(this).find(".preview-tagline").slideDown("fast");
-                }, function() {
-                    if ($(window).width() > 700) {
-                        $(this).find(".preview-tagline").stop();
-                        $(this).find(".preview-tagline").slideUp("fast");
-                    }
-                });
-
-                $(window).resize(function() {
-                    if ($(window).width() <= 700) {
-                        $(".preview-tagline").slideDown();
-                    }
-                    else {
-                        $(".preview-tagline").slideUp();
-                    }
-                });
-            {% endunless %}
-        });
-    </script>
-{% endif %}
+        {% if previous_post %}
+            <a class="preview-link" href="{{ previous_post.url }}">-> previous_{{ post_type }}</a>
+        {% endif %}
+    </div>
+</div>

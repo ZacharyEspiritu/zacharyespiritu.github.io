@@ -29,6 +29,8 @@
                                     Post:
                                 {% elsif page.is_project %} 
                                     Project:
+                                {% elsif page.is_design %}
+                                    Design:
                                 {% else %}
                                     Writeup:
                                 {% endif %}
@@ -62,14 +64,24 @@
             <div class="wrapper">
                 <article class="post-content">
                     {{ content }}
+                    {% if page.ending %}
+                        <div class="post-ending">
+                            <div class="ending-tagline">
+                                {{ page.ending.tagline }}
+                            </div>
+                            {% if page.ending.link and page.ending.link_text %}
+                                <a href="{{ page.ending.link }}" class="ending-button">
+                                    {{ page.ending.link_text }} 
+                                    <i class="fa fa-long-arrow-right post-ending-arrow" aria-hidden="true"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                    {% endif %}
                 </article>
             </div>
-            <div class="color-detail" style="background: {{ page.card_color }};"></div>
-            <!-- <footer class="post-footer">
-                {% include post_ending.html %}
-                {% include post_preview.html %}
-            </footer> -->
         </main>
+        {% include post_preview.html %}
+        <div class="color-detail" style="background: {{ page.card_color }};"></div>
         {% include footer.html %}
         {% include preloader_resolver.html %}
     </body>
