@@ -1,7 +1,5 @@
 # personal-website
-The current version of my personal website. No more Bootstrap, hooray!
-
-Built using Jekyll.
+The current version of my personal website, built using Jekyll.
 
 You can find the 2017 version of my website [here](https://github.com/ZacharyEspiritu/2017-website), and you can find the 2015 version of my website [here](https://github.com/ZacharyEspiritu/2015-website).
 
