@@ -154,10 +154,11 @@ layout: default
         $('.filter-option.selected').removeClass('selected');
         $filterButton.addClass('selected');
 
+        var $noProjectsMessage = $('.no-projects-message');
         if (!$projects.data('isotope').filteredItems.length) {
-            $('.no-projects-message').show();
+            $noProjectsMessage.show();
         } else {
-            $('.no-projects-message').hide();
+            $noProjectsMessage.hide();
         }
     });
 </script>
