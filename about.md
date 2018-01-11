@@ -13,7 +13,20 @@ ending:
 
 I was born in New Jersey, moved to Arizona when I was two, and moved back to New Jersey when I was nine. (Phew!) Right now, I'm in Providence, Rhode Island, where I'm studying computer science at Brown University.
 
-Before Brown, I was a student at Regis High School, a tuition-free instutition located in the Upper East Side of Manhattan. I commuted ninety minutes each way, and it was great.
+<aside class="post-aside">
+  Since I lived in New Jersey while attending Regis, I commuted ninety minutes each way to school—ask me about that!
+</aside>
+
+Before Brown, I was a student at Regis High School, a tuition-free instutition located in the Upper East Side of Manhattan. While I was there, I was the [Layout Editor of _The Owl_](/designs/the-owl), the [Lighting Designer](/designs/lighting-design) for the _Regis Repertory_, and one of the founding members of the school's Mock Trial team. I also was the Speech President of _The Hearn_, Regis's nationally-ranked speech and debate society, where I managed and coached a cohort of about sixty peers during weekly tournaments within New York and other events around the country.
+
+In 2016, I was named on [CEWeek's _10Under20: Young Innovators To Watch_ list](https://younginnovatorstowatch.com/2016/08/03/zachary-espiritu-math-battle/) for my work on [_Math Battle_](/projects/math-battle), a game where players compete against each other in competitive online multiplayer math battles with a focus on increasing access to educational materials via technology.
+
+As a result of _Math Battle_, I've been featured in the following publications:
+- [The Star-Ledger](http://www.nj.com/morris/index.ssf/2016/07/espiritu_named_innovator_to_watch.html)
+- [Huffington Post](http://www.huffingtonpost.com/robin-raskin/10-under-20-young-innovat_b_10842520.html)
+- [CEWeek 2016](http://ceweekny.com/blog/2016/06/16/zachary-espiritu-math-battle/)
+- [Filipino Reporter](http://www.filipinoreporter.us/home/filipino-american/3841-young-fil-am-wins-2015-congressional-district-app-challenge.html) 
+- [Hanover Eagle](http://www.newjerseyhills.com/hanover_eagle/news/article_808debd0-edfa-592b-92e0-93941026fded.html)
 
 # About This Site
 
