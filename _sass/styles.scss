@@ -732,6 +732,7 @@ a.block-link {
   }
 }
 
+.hq-screenshot-grid,
 .banner-grid,
 .two-screenshot-grid,
 .two-landscape-screenshot-grid,
@@ -752,6 +753,7 @@ a.block-link {
   width: 100%;
 }
 
+.hq-screenshot-grid img,
 .two-screenshot-grid img,
 .three-screenshot-grid img {
   max-width: 250px;
@@ -763,9 +765,17 @@ a.block-link {
   width: 49%;
 }
 
+.hq-screenshot-grid img,
 .three-screenshot-grid img,
 .six-large-screenshot-grid img {
   width: 32.5%;
+}
+
+.hq-screenshot-grid {
+  .trend-graph {
+    width: 65%;
+    display: inline-block;
+  }
 }
 
 .four-screenshot-grid img {
