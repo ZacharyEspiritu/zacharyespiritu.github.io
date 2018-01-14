@@ -18,7 +18,7 @@ I kept track of all of the questions asked during the January 11, 2018 3:00 PM g
 ## Question 1
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/1.png">
+  <img src="/images/projects/hq/01-11/1.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"ring","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-01T15 2018-01-12T02&q=ring","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -27,7 +27,7 @@ I kept track of all of the questions asked during the January 11, 2018 3:00 PM g
 ## Question 2
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/2.png">
+  <img src="/images/projects/hq/01-11/2.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0sx5w","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=%2Fm%2F0sx5w","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -36,7 +36,7 @@ I kept track of all of the questions asked during the January 11, 2018 3:00 PM g
 ## Question 3
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/3.png">
+  <img src="/images/projects/hq/01-11/3.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"vermonster","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=vermonster","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -49,7 +49,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 4
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/4.png">
+  <img src="/images/projects/hq/01-11/4.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0cw10","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=%2Fm%2F0cw10","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -58,7 +58,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 5
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/5.png">
+  <img src="/images/projects/hq/01-11/5.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/02zcd2","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=%2Fm%2F02zcd2","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -67,7 +67,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 6
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/6.png">
+  <img src="/images/projects/hq/01-11/6.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"aviophobia","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=aviophobia","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -76,7 +76,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 7
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/7.png">
+  <img src="/images/projects/hq/01-11/7.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0bwb3","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=%2Fm%2F0bwb3","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -85,7 +85,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 8
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/8.png">
+  <img src="/images/projects/hq/01-11/8.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"where 2 technologies","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=where%202%20technologies","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -94,7 +94,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 9
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/9.png">
+  <img src="/images/projects/hq/01-11/9.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"noodling","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=noodling","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -103,7 +103,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 10
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/10.png">
+  <img src="/images/projects/hq/01-11/10.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/07qnf","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=%2Fm%2F07qnf","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -112,7 +112,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 11
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/11.png">
+  <img src="/images/projects/hq/01-11/11.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Bill Nye ballet shoe","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=Bill%20Nye%20ballet%20shoe","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
@@ -121,7 +121,7 @@ I haven't figured out what this means yet, but there might be some interesting d
 ## Question 12
 
 <figure class="hq-screenshot-grid">
-  <img src="/images/projects/hq/01-11/12.png">
+  <img src="/images/projects/hq/01-11/12.PNG">
   <div class="trend-graph">
     <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/01bk3n","geo":"","time":"2018-01-11T15 2018-01-12T02"}],"category":0,"property":""}, {"exploreQuery":"date=2018-01-11T15 2018-01-12T02&q=%2Fm%2F01bk3n","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
   </div>
