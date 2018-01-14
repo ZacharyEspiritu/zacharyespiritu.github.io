@@ -284,6 +284,10 @@ figure {
 .wrapper {
   max-width: $wrapper-max-width;
   margin: auto;
+
+  @media (max-width: 1050px) {
+    margin: 0 30px;
+  }
 }
 
 .center-align {
@@ -346,6 +350,10 @@ a.block-link {
           text-decoration: none;
           color: #EEEB80;
         }
+      }
+
+      @media (max-width: 870px) {
+        display: none;
       }
     }
   }
@@ -500,12 +508,20 @@ a.block-link {
   > blockquote {
     padding-left: 30px;
     margin-right: 280px;
+
+    @media (max-width: 870px) {
+      margin-right: 0px;
+    }
   }
 
   > p,
   > ul,
   > blockquote {
     margin-right: 310px;
+
+    @media (max-width: 870px) {
+      margin-right: 0px;
+    }
   }
 
   > blockquote {
@@ -529,6 +545,17 @@ a.block-link {
         margin-left: -32px;
         width: 0;
       }
+    }
+  }
+
+  > figure {
+    margin-right: 280px;
+    max-width: 700px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+
+    @media (max-width: 870px) {
+      margin-right: 0px;
     }
   }
 
@@ -561,13 +588,6 @@ a.block-link {
       padding: 9px 14px;
       text-decoration: none;
     }
-  }
-
-  > figure {
-    margin-right: 280px;
-    max-width: 700px;
-    padding-top: 12px;
-    padding-bottom: 8px;
   }
 
   .post-aside {
@@ -696,7 +716,6 @@ a.block-link {
 }
 
 .post-wrapper {
-  max-width: $post-wrapper-max-width;
   font-weight: $post-font-weight;
   font-size: $post-font-size;
   margin: auto;
