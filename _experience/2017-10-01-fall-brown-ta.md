@@ -5,9 +5,9 @@ location: Providence, R.I.
 tagline: Teaching Assistant
 ---
 
-Worked with a team of TAs and course professors for different courses each semester. Answered student questions during weekly office hours. Graded student assignments.
+Worked with a team of TAs and professors for different courses each semester. Answered student questions online through Piazza and in-person during weekly office hours. Developed rubrics, graded, and wrote feedback reports for student assignments. Developed new course materials and projects, both internally (within the TA staff) and externally (new assignments for students).
 
 Courses:
-* **CS19 (HTA):** Accelerated Introduction to Computer Science
-* **CS4:** Intro to Scientific Computing and Problem Solving
-* **CS5:** A Data-Centric Introduction to Programming
+* **HTA for cs0190** (Accelerated Introduction to Computer Science), Summer/Fall 2018
+* **UTA for cs0040** (Intro to Scientific Computing and Problem Solving), Spring 2018
+* **UTA for cs0050** (A Data-Centric Introduction to Programming), Fall 2017
