@@ -5,7 +5,7 @@ location: Providence, R.I.
 tagline: Teaching Assistant
 ---
 
-Worked with a team of TAs and professors for different courses each semester. Answered student questions online through Piazza and in-person during weekly office hours. Developed rubrics, graded, and wrote feedback reports for student assignments. Developed new course materials and projects, both internally (within the TA staff) and externally (new assignments for students).
+Worked with a team of TAs and professors for different courses each semester. Answered student questions online through Piazza and in-person during weekly office hours. Created rubrics for and graded student assignments. Developed new course scripts and materials both internally (for the TA staff) and externally (new assignments for students).
 
 Courses:
 * **HTA for cs0190:** Accelerated Introduction to Computer Science (Summer/Fall 2018)
