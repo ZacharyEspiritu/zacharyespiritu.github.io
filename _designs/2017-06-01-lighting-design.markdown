@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Lighting Design
-image_path: /images/designs/lighting-design/heathers/heathers-14.jpg
+image_path: /images/designs/lighting-design/heathers/heathers-17.jpg
 banner_path: /images/designs/lighting-design/banner.jpg
 tagline: Designed lighting for 12 mainstage productions at my high school and other extracurricular shows
 card_color: "#2e236c"
@@ -30,7 +30,7 @@ You can find my technical lighting resume [here][lighting-resume]. You can also 
 
 <figure class="bss-slides lighting-design-slideshow">
     <figure>
-        <img src="/images/designs/lighting-design/heathers/heathers-27.jpg" width="100%" />
+        <img src="/images/designs/lighting-design/heathers/heathers-14.jpg" width="100%" />
         <figcaption>Scene from "Beautiful".</figcaption>
     </figure>
     <figure>
@@ -42,7 +42,7 @@ You can find my technical lighting resume [here][lighting-resume]. You can also 
         <figcaption>Scene from "Beautiful".</figcaption>
     </figure>
     <figure>
-        <img src="/images/designs/lighting-design/heathers/heathers-14.jpg" width="100%" />
+        <img src="/images/designs/lighting-design/heathers/heathers-27.jpg" width="100%" />
         <figcaption>Scene from "Beautiful".</figcaption>
     </figure>
     <figure>
