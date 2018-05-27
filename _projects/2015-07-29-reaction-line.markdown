@@ -3,7 +3,7 @@ layout: post
 title:  Reaction Line
 image_path: /images/portfolio-reaction.png
 banner_path: /images/projects/reaction-line/banner.png
-tagline: A minimalistic, hardcore, single-player game for iOS about sorting lines in the shortest time
+tagline: A minimalistic, single-player game for iOS about sorting lines in the shortest time
 card_color: "#F5A623"
 awards:
   - "\"Audience Choice\" at Make<br>School Demo Day 2015"
@@ -18,7 +18,7 @@ filters: software games
 
 # Elevator Pitch
 
-Designed to be as aggravating as it is addicting, [Reaction Line][reaction-line-website] is a minimalistic, hardcore, single-player game where you have a single objective: sort lines into red and blue stacks as quickly as possible. The catch? You only have one life.
+Designed to be as aggravating as it is addicting, [Reaction Line][reaction-line-website] is a minimalistic, single-player game where you have a single objective: sort lines into red and blue stacks as quickly as possible. The catch? You only have one life.
 
 <figure class="two-screenshot-grid grid-padding lazyload">
     <img class="lazyload" data-src="/images/projects/reaction-line/timed-mode.png">

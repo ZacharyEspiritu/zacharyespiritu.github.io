@@ -246,7 +246,7 @@ figure {
         float: right;
       }
     }
-    
+
     .item-info {
       clear: both;
       line-height: 23px;
@@ -266,7 +266,7 @@ figure {
           margin-bottom: 0;
         }
 
-        ul {
+        ul, ol {
           margin: 0;
           padding-left: 36px;
         }
@@ -320,7 +320,7 @@ a.block-link {
   background: $header-background-color;
   padding-top: 40px;
   z-index: 3;
-  
+
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -431,7 +431,7 @@ a.block-link {
   }
 
   @media (max-width: 870px) {
-    ul {
+    ul, ol {
       display: none;
     }
   }
@@ -516,6 +516,7 @@ a.block-link {
 
   > p,
   > ul,
+  > ol,
   > blockquote {
     margin-right: 310px;
 
@@ -559,7 +560,8 @@ a.block-link {
     }
   }
 
-  > ul {
+  > ul,
+  > ol {
     padding-left: 60px;
   }
 
@@ -702,8 +704,8 @@ a.block-link {
     padding-right: 10px;
   }
 
-  .footer-social-icons { 
-    display: inline-block; 
+  .footer-social-icons {
+    display: inline-block;
     margin: 0 auto;
   }
 
@@ -1055,8 +1057,8 @@ figure {
 }
 
 .lighting-design-slideshow {
-  margin-top: 34px !important; 
- 
+  margin-top: 34px !important;
+
   @media (max-width: 600px) {
     margin-top: 25px !important;
   }
