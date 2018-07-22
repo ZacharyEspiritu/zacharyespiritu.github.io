@@ -11,7 +11,7 @@ ending:
 
 # About Me
 
-I was born in New Jersey, moved to Arizona when I was two, and moved back to New Jersey when I was nine. (Phew!) Right now, I'm in Providence, Rhode Island, where I'm studying computer science at Brown University.
+I was born in New Jersey, moved to Arizona when I was two, and moved back to New Jersey when I was nine. (Woah!) Right now, I'm in Providence, Rhode Island, where I'm studying computer science at Brown University.
 
 <aside class="post-aside">
   Since I lived in New Jersey while attending Regis, I commuted ninety minutes each way to school!
