@@ -17,7 +17,7 @@ layout: default
             {% include navigation_links.html %}
             <div class="commit-history">
                 {% assign site_repository = site.github["public_repositories"] | last %}
-                Last updated with commit 
+                Last updated with commit
                 <span class="commit-sha">
                     <a href="https://github.com/ZacharyEspiritu/zacharyespiritu.github.io/commits/master">
                         @{{ site.github["build_revision"] | truncate: 8, "" }}
@@ -32,15 +32,15 @@ layout: default
 <section class="content">
     <div class="wrapper">
         <div class="project-filters">
-            > Zachary.projects.filter({(p): p.type == 
+            > Zachary.projects.filter({(p): p.type ==
             <span data-filter="*" class="filter-option selected">all</span>
             <span data-filter=".software" class="filter-option">software</span>
             <span data-filter=".research" class="filter-option">research</span>
             <span data-filter=".design" class="filter-option">design</span>
             <span data-filter=".games" class="filter-option">games</span>
             <span data-filter=".case_studies" class="filter-option">case_studies</span>
-            <span data-filter=".fun_things" class="filter-option">fun_things</span> 
-            })     
+            <span data-filter=".fun_things" class="filter-option">fun_things</span>
+            })
         </div>
         <div class="projects">
             {% assign combined_collections = site.projects | concat: site.designs %}
@@ -61,7 +61,12 @@ layout: default
 <section class="experience">
     <div class="wrapper">
         <div class="terminal">
-            > Zachary.college.merge(Zachary.high_school)
+            <div class="large-buffer">
+                > Zachary.college.merge(Zachary.high_school)
+            </div>
+            <div class="small-buffer">
+                Education
+            </div>
         </div>
         <div class="experience-item">
             <div class="left">
@@ -75,7 +80,7 @@ layout: default
                         Brown University
                     </div>
                     <div class="location">
-                        Providence, R.I.
+                        Providence, RI
                     </div>
                 </div>
                 <div class="item-info">
@@ -96,7 +101,7 @@ layout: default
                         </ul>
                         <!-- &hairsp;<sup>*</sup>
                         <br>
-                        <sup>* in progress</sup> 
+                        <sup>* in progress</sup>
                         -->
                     </div>
                 </div>
@@ -115,7 +120,7 @@ layout: default
                         Regis High School
                     </div>
                     <div class="location">
-                        New York, N.Y.
+                        New York, NY
                     </div>
                 </div>
                 <div class="item-info">
@@ -124,17 +129,52 @@ layout: default
                         90-minute commute each way
                     </div>
                     <div class="detail">
-                        During February 2017 – May 2017, in lieu of traditional courses, I participated in the "Social Justice Entrepreneurship" program, where I completed three days of service work and two days of senior thesis research every week. The final project, “Bridging the Digital Divide”, focused on disparities on access to technology among different parts of the city and combined empirical research with in-person interviews from volunteer work as a Computer Science assistant in an elementary school in New York City.
+                        During February 2017 – May 2017, in lieu of traditional courses, I participated in the "Social Justice Entrepreneurship" program, where I completed three days of service work and two days of senior thesis research every week. The final project, "Connecting for Good: Bridging the Digital Divide Through Effective Integration Policies", focused on disparities on access to technology among different parts of the city and combined empirical research with in-person interviews from volunteer work as a Computer Science assistant in an elementary school in New York City.
                     </div>
                 </div>
             </div>
         </div>
         <div class="terminal">
-            > Zachary.work_experience.sort_by({(e): e.date }, :asc)
+            <div class="large-buffer">
+                > Zachary.work_experience.sort_by({(e): e.date }, :asc)
+            </div>
+            <div class="small-buffer">
+                Experience
+            </div>
         </div>
         {% assign sorted_experience = site.experience | reverse %}
         {% for experience in sorted_experience %}
             {% include experience_item.html experience=experience %}
+            {% if forloop.last == false %}
+              <hr>
+            {% endif %}
+        {% endfor %}
+        <div class="terminal">
+            <div class="large-buffer">
+                > Zachary.presentations.recap()
+            </div>
+            <div class="small-buffer">
+                Presentations
+            </div>
+        </div>
+        {% assign sorted_presentations = site.presentations | reverse %}
+        {% for presentation in sorted_presentations %}
+            {% include experience_item.html experience=presentation %}
+            {% if forloop.last == false %}
+              <hr>
+            {% endif %}
+        {% endfor %}
+        <div class="terminal">
+            <div class="large-buffer">
+                > Zachary.awards.display()
+            </div>
+            <div class="small-buffer">
+                Awards
+            </div>
+        </div>
+        {% assign sorted_awards = site.awards | reverse %}
+        {% for award in sorted_awards %}
+            {% include experience_item.html experience=award %}
             {% if forloop.last == false %}
               <hr>
             {% endif %}
