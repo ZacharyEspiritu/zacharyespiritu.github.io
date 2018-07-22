@@ -2,8 +2,9 @@
     <a class="block-link" href="{{ project.url }}">
         <div class="thumbnail" style="background-image: url('{{ project.image_path }}');">
             <div class="detail-overlay">
-                <div class="overlay-color" style="background: {{ project.card_color }};"></div>
-                <div class="overlay-text">{{ project.tagline }}</div>
+                <div class="overlay-color" style="background: {{ project.card_color }};">
+                    <div class="overlay-text">{{ project.tagline }}</div>
+                </div>
             </div>
         </div>
         <div class="title">
