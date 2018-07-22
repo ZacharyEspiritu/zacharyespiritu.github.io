@@ -1,7 +1,7 @@
 ---
 title: Brown Computer Science Department
 date_string: Fall 2017 — Present
-location: Providence, R.I.
+location: Providence, RI
 tagline: Teaching Assistant
 ---
 
