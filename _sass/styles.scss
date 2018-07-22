@@ -119,10 +119,10 @@ figure {
   &:after {
     content: "";
     flex: 0 0 auto;
-    width: 32%;
+    width: 31.5%;
 
     @media (max-width: $two-column-break) {
-      width: 49%;
+      width: 48%;
     }
 
     @media (max-width: $one-column-break) {
@@ -131,12 +131,12 @@ figure {
   }
 
   .project-box {
-    width: 32%;
+    width: 31.5%;
     flex: 0 0 auto;
     margin-bottom: 21px;
 
     @media (max-width: $two-column-break) {
-      width: 49%;
+      width: 48%;
     }
 
     @media (max-width: $one-column-break) {
