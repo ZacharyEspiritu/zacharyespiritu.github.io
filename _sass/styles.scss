@@ -119,7 +119,7 @@ figure {
   &:after {
     content: "";
     flex: 0 0 auto;
-    width: 31.5%;
+    width: 31%;
 
     @media (max-width: $two-column-break) {
       width: 48%;
@@ -131,7 +131,7 @@ figure {
   }
 
   .project-box {
-    width: 31.5%;
+    width: 31%;
     flex: 0 0 auto;
     margin-bottom: 21px;
 
