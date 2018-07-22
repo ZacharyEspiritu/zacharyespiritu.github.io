@@ -85,6 +85,10 @@ figure {
   color: #979797;
   font-style: italic;
   padding: 24px 0 18px;
+
+  @media (max-width: 570px) {
+    display: none;
+  }
 }
 
 .filter-option {
@@ -109,16 +113,35 @@ figure {
   flex-flow: row wrap;
   justify-content: space-between;
 
+  $two-column-break: 960px;
+  $one-column-break: 570px;
+
   &:after {
     content: "";
     flex: 0 0 auto;
     width: 32%;
+
+    @media (max-width: $two-column-break) {
+      width: 49%;
+    }
+
+    @media (max-width: $one-column-break) {
+      width: 100%;
+    }
   }
 
   .project-box {
     width: 32%;
     flex: 0 0 auto;
     margin-bottom: 21px;
+
+    @media (max-width: $two-column-break) {
+      width: 49%;
+    }
+
+    @media (max-width: $one-column-break) {
+      width: 100%;
+    }
 
     .thumbnail {
       width: 100%;
@@ -169,6 +192,10 @@ figure {
   .project-gutter-sizer {
     width: 2%;
   }
+
+  @media (max-width: 570px) {
+    padding: 30px 0 10px;
+  }
 }
 
 .no-projects-message {
@@ -203,6 +230,23 @@ figure {
     font-weight: 400;
     padding: 7px;
     border-radius: 6px;
+
+    .small-buffer {
+      text-align: center;
+      font-size: 15.5px;
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      margin: 23px 0;
+
+      .large-buffer {
+        display: none;
+      }
+      .small-buffer {
+        display: inherit;
+      }
+    }
   }
 
   hr,
@@ -212,6 +256,10 @@ figure {
 
   hr {
     margin: 33px auto;
+
+    @media (max-width: 800px) {
+      margin: 25px auto;
+    }
   }
 
   .experience-item {
@@ -270,6 +318,57 @@ figure {
           margin: 0;
           padding-left: 36px;
         }
+
+        a {
+          color: darkblue;
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      display: block;
+
+      $main-cv-text-sm-size: 15px;
+
+      .left {
+        display: none;
+      }
+
+      .item-header {
+        .title {
+          float: none;
+          margin-bottom: 7px;
+          font-size: $main-cv-text-sm-size;
+        }
+
+        .location {
+          float: none;
+          text-align: left;
+          font-size: $main-cv-text-sm-size;
+        }
+      }
+
+      .item-info {
+        line-height: 20.5px;
+
+        .tagline {
+          font-size: $main-cv-text-sm-size;
+        }
+
+        .detail {
+          font-size: 13.5px;
+          font-weight: 400;
+          margin-right: 0;
+
+          ul {
+            padding-left: 27px;
+          }
+        }
+      }
+
+      .date-range {
+        font-weight: 400;
+        width: 100%;
       }
     }
   }
@@ -327,6 +426,10 @@ a.block-link {
 
     .left {
       padding-right: 50px;
+
+      @media (max-width: 870px) {
+        padding-right: 0px;
+      }
     }
 
     .right {
@@ -394,6 +497,15 @@ a.block-link {
       font-size: 23px;
       font-weight: 700;
       margin: 3px 0 6px;
+
+      @media (max-width: 720px) {
+        line-height: 26px;
+      }
+    }
+
+    @media (max-width: 1080px) {
+      font-size: 15px;
+      line-height: 21px;
     }
   }
 
@@ -402,6 +514,11 @@ a.block-link {
     display: inline-block;
     margin: 0 auto;
     width: $header-logo-width;
+
+    @media (max-width: 720px) {
+      margin-top: 4px;
+      margin-bottom: 3px;
+    }
   }
 
   ul.header-nav-list {
@@ -422,7 +539,7 @@ a.block-link {
 
   @media (max-width: 1080px) {
     .logo {
-      width: 200px;
+      width: $header-logo-sm-width;
     }
 
     .header-content {
@@ -467,6 +584,11 @@ a.block-link {
     .right {
       flex: 1 0 0;
     }
+  }
+
+  @media (max-width: 570px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -590,6 +712,10 @@ a.block-link {
       padding: 9px 14px;
       text-decoration: none;
     }
+
+    @media (max-width: 870px) {
+      margin-right: 0;
+    }
   }
 
   .post-aside {
@@ -654,6 +780,15 @@ a.block-link {
   h6 {
     font-size: 19px;
   }
+
+  @media (max-width: 720px) {
+    font-size: 17px;
+    line-height: 24px;
+
+    h1 {
+      font-size: 21px;
+    }
+  }
 }
 
 .post-preview {
@@ -673,11 +808,16 @@ a.block-link {
   font-size: 15px;
   background-color: $header-background-color;
   z-index: 2;
-  padding: 60px;
+  padding: 60px 0;
   color: white;
 
   .footer-social {
     margin: 0 10px;
+  }
+
+  .footer-group {
+    display: inline-block;
+    margin: 3px 0;
   }
 
   @media (max-width: 700px) {
