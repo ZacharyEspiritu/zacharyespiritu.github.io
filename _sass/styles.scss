@@ -728,6 +728,10 @@ a.block-link {
     font-style: italic;
     font-size: 15.5px;
     line-height: 23.5px;
+
+    @media (max-width: 870px) {
+      display: none;
+    }
   }
 
   h1,
