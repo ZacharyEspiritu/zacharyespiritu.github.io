@@ -7,7 +7,7 @@ tagline: I didn’t want to study for my Physics exam, but I wanted to learn LaT
 card_color: "#B5B5B5"
 ending:
   tagline: Physics Guide was released in December 2015.
-  link: http://zacharyespiritu.com/physics-midyear
+  link: https://zacharyespiritu.com/physics-midyear
   link_text: visit site
 skills: bootstrap sketch git latex
 filters: fun_things
@@ -30,4 +30,4 @@ The results were conclusive: 100% of people surveyed agreed that they scored hig
 You can find the website [here][physics-midyear-guide].
 
 [mathjax-website]:       https://www.mathjax.org/
-[physics-midyear-guide]: http://zacharyespiritu.com/physics-midyear
+[physics-midyear-guide]: https://zacharyespiritu.com/physics-midyear

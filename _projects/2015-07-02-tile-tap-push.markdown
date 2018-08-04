@@ -9,7 +9,7 @@ awards:
   - "\"Student Choice Runner-up\" at Make School Demo Day 2015"
 ending:
   tagline: Tile, Tap, Push! was released in July 2015.
-  link: http://zacharyespiritu.com/TileTapPush
+  link: https://zacharyespiritu.com/TileTapPush
   link_text: visit site
 skills: swift objective-c bootstrap git
 filters: software games
@@ -59,7 +59,7 @@ You can view the entire presentation in the video below:
 
 Tile, Tap, Push! is available to download on the App Store [here][tile-tap-push-app-store].
 
-[tile-tap-push-website]: http://zacharyespiritu.com/TileTapPush
+[tile-tap-push-website]: https://zacharyespiritu.com/TileTapPush
 [make-school-sa]: https://www.makeschool.com/summer-academy
 [cocos2d-github]: https://github.com/cocos2d/cocos2d-objc
 [mixpanel]: http://mixpanel.com/

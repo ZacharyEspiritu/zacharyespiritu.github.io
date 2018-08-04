@@ -53,5 +53,5 @@ You can view the source code for FitFarm [here][fitfarm-github].
 [nc-github]:       https://github.com/nwcimaszewski
 [vm-github]:       https://github.com/vmcauliffe
 [data-farm-post]:  /project/data-farm
-[fitfarm-website]: http://zacharyespiritu.com/FitFarm/
+[fitfarm-website]: https://zacharyespiritu.com/FitFarm/
 [fitfarm-github]:  https://github.com/ZacharyEspiritu/FitFarm

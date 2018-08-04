@@ -10,7 +10,7 @@ awards:
   - "\"Student Choice Runner-up\" at Make School Demo Day 2015"
 ending:
   tagline: Reaction Line was released in July 2015.
-  link: http://zacharyespiritu.com/ReactionLine
+  link: https://zacharyespiritu.com/ReactionLine
   link_text: visit site
 skills: swift objective-c bootstrap sketch photoshop git
 filters: software games
@@ -72,7 +72,7 @@ At the Demo Day at the end of the program, Reaction Line (along with [Tile, Tap,
 
 You can view a video of my entire presentation [here][make-school-demo-day-video]. Reaction Line is also available on the App Store [here][reaction-line-app-store].
 
-[reaction-line-website]: http://zacharyespiritu.com/ReactionLine
+[reaction-line-website]: https://zacharyespiritu.com/ReactionLine
 [make-school-sa]: https://www.makeschool.com/summer-academy
 [cocos2d-github]: https://github.com/cocos2d/cocos2d-objc
 [mixpanel]: http://mixpanel.com/

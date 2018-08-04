@@ -6,7 +6,7 @@ tagline: My final project for Regis High School’s Computer Technology I course
 card_color: "#0EBA4F"
 ending:
   tagline: Art of Animation was published in May 2014.
-  link: http://zacharyespiritu.com/ArtOfAnimation
+  link: https://zacharyespiritu.com/ArtOfAnimation
   link_text: visit site
 skills: html css
 filters: design
@@ -24,4 +24,4 @@ That said, I'm extremely happy with the way it came out, so I like to show this 
     <img class="responsive-image lazyload" data-src="/images/projects/art-of-animation/render.png">
 </figure>
 
-[art-of-animation]: http://zacharyespiritu.com/ArtOfAnimation
+[art-of-animation]: https://zacharyespiritu.com/ArtOfAnimation

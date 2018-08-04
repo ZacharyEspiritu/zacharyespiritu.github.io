@@ -11,7 +11,7 @@ filters: design case_studies
 # Overview
 
 <aside class="post-aside">
-  Parts of this case study were developed as part of a project for the <a href="http://cs.brown.edu/courses/csci1300/">CSCI1300: User Interfaces and User Experience</a> course at Brown University.
+  Parts of this case study were developed as part of a project for the <a href="https://cs.brown.edu/courses/csci1300/">CSCI1300: User Interfaces and User Experience</a> course at Brown University.
 </aside>
 
 The laundry room—whether you love it for what it can do or hate it for how long it can take to get out of it, it’s an unavoidable yet essential part of everyday life. At Brown University, I’ve heard stories about my peers’ experiences in the laundry room ranging from someone’s first-time doing laundry away from home to another having difficulty finding time to do it in the first place.
@@ -34,7 +34,7 @@ I observed consenting participants in the laundry room as they went from putting
 
 * **Akari** carefully pulled apart tangled clothes before placing them in the washer. Before moving to the payment terminal, she leaned in closely to see her machine’s number. After starting the machine, she ran out of the room while saying she had to do work.
 * **Elijah** had to walk back to the machine to see the machine’s number because he apparently had forgotten what it was despite his verbal attempts to memorize it before walking to the payment terminal. He set a timer on his phone, left during the wash cycle, and came back several minutes before the cycle ended. He had less trouble paying for the dryer cycle.
-* **Lisa** stayed in the laundry room while she waited for the washer to complete its cycle. She set a timer on her phone and worked on homework until the washer had completed. 
+* **Lisa** stayed in the laundry room while she waited for the washer to complete its cycle. She set a timer on her phone and worked on homework until the washer had completed.
 * **Ryan** quickly dumped the clothes in his basket into the washer, then ran to the payment terminal. He spent approximately thirty seconds staring at the wash cycle buttons before finally selecting an option. He set a timer on his phone and left the room when it began, though he came back about 45 minutes after the cycle had ended.
 * **Lawrence** stayed in the laundry room while waiting for both the washer and the dryer to complete their cycles. He had to go back to the machine to see its number in order to use the payment terminal, and verbally expressed confusion on which cycle option (“Whites”, “Colors”, “Brights”, etc.) he was supposed to select.
 * **Sumu** folded his clothes before placing them into the washing machine. He asked me for help on which cycle option to select. He left the room, and came back about thirty minutes after the laundry machine had ended. He folded his clothes again before placing them into the dryer and asked me for help on which dryer options to select. He left the room and came back just as the dryer was ending its cycle.

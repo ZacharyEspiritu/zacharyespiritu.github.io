@@ -7,7 +7,7 @@ tagline: A "responsive redesign" focused on streamlining the anxiety-filled text
 card_color: "#F39C12"
 ending:
   tagline: I published my redesign in November 2017.
-  link: http://zacharyespiritu.com/brown-bookstore-redesign/
+  link: https://zacharyespiritu.com/brown-bookstore-redesign/
   link_text: visit demo
 skills: sass
 filters: design case_studies
@@ -16,7 +16,7 @@ filters: design case_studies
 # Overview
 
 <aside class="post-aside">
-  Parts of this case study were developed as part of a project for the <a href="http://cs.brown.edu/courses/csci1300/">CSCI1300: User Interfaces and User Experience</a> course at Brown University.
+  Parts of this case study were developed as part of a project for the <a href="https://cs.brown.edu/courses/csci1300/">CSCI1300: User Interfaces and User Experience</a> course at Brown University.
 </aside>
 
 As a college student, part of the beginning-of-semester experience includes buying textbooks for your classes. Between deciding whether to take four or five classes and last-minute shopping period anxiety, the beginning of the semester can be an overwhelming time—as such, it would be great if the textbook buying process could be as streamlined as possible.
@@ -64,4 +64,4 @@ To expand on my designs, I took the textbook landing page mockup I created and e
 
 # Prototype
 
-As a final step, to demonstrate that the high-fidelity mockup was possible to implement, I developed my own version of my final website which can be found [at this link](http://zacharyespiritu.com/brown-bookstore-redesign/).
+As a final step, to demonstrate that the high-fidelity mockup was possible to implement, I developed my own version of my final website which can be found [at this link](https://zacharyespiritu.com/brown-bookstore-redesign/).
