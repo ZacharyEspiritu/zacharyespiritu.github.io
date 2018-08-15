@@ -541,11 +541,11 @@ a.block-link {
     li {
       margin-bottom: 12px;
       font-weight: 400;
-      color: white;
     }
 
-    li a {
-      color: inherit;
+    li a,
+    li i {
+      color: white;
     }
   }
 
