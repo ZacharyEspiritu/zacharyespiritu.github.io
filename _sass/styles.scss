@@ -639,6 +639,11 @@ a.block-link {
     }
   }
 
+  .header-social-nav,
+  .header-nav-divider {
+    display: none
+  }
+
   @media (max-width: $header-sm-break-size) {
     ul, ol {
       display: none;
