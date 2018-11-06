@@ -5,9 +5,11 @@ tagline: "A general sense of my availability at any given moment (currently in b
 card_color: "#4990E2"
 ---
 
-# Note
+# Notes
 
-This calendar is only viewable if you are logged into a Brown University Google account. Please don't distribute---thanks!
+This calendar is in *beta*---I've tried my best to make sure it accurately reflects my availability, though for one reason or another something might be missing. Apologies in advance!
+
+Also, the calendar is only viewable if you are logged into a Brown University Google account. (Please don't distribute---thanks!)
 
 # Calendar
 
