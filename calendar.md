@@ -7,7 +7,7 @@ card_color: "#4990E2"
 
 # Note
 
-This calendar is only viewable if you are logged into a Brown University Google account.
+This calendar is only viewable if you are logged into a Brown University Google account. Please don't distribute---thanks!
 
 # Calendar
 
