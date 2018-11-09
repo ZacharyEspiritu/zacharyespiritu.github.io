@@ -2,7 +2,7 @@
 layout: post
 title:  "Schedule"
 tagline: "A general sense of my availability at any given moment (currently in beta)"
-card_color: "#4990E2"
+card_color: "#D2982D"
 ---
 
 # Notes
