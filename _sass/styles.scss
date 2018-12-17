@@ -1297,22 +1297,31 @@ figure {
   }
 }
 
-.video-sizer {
+.video-sizer,
+.calendar-sizer {
   margin: 0 auto;
 }
 
-.video-wrapper {
+.video-wrapper,
+.calendar-wrapper {
   position: relative;
-  padding-bottom: 56.25%;
   height: 0;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.video-wrapper { 
+  padding-bottom: 56.25%;
+}
+
+.calendar-wrapper {
+  padding-bottom: 100%;
 }
 
 .lazyload,
