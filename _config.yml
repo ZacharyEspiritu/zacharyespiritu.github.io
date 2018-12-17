@@ -52,6 +52,8 @@ collections:
     output: false
   awards:
     output: false
+  teaching:
+    output: false
 
 defaults:
   - scope:

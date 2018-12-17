@@ -1,0 +1,13 @@
+<div class="teaching-item">
+    <div class="course-title">
+        <a class="course-link" href="{{ include.teaching.course_link }}">
+            {{ include.teaching.title }}
+        </a>
+    </div>
+    <div class="semester">
+        {{ include.teaching.date_string }}
+    </div>
+    <div class="description">
+        {{ include.teaching.content | rstrip }}
+    </div>
+</div>
