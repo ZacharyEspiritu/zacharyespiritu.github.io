@@ -16,6 +16,10 @@ body {
   height: 100%;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .pg-loading-screen {
   font-size: 42px;
 }
@@ -216,6 +220,82 @@ figure {
   }
 }
 
+.cv-section {
+  .section-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+
+    .section-title {
+      display: inline-block;
+      padding: 15px 30px;
+      font-weight: bold;
+      font-size: 19px;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    @mixin section-coloring($color) {
+      border-color: $color;
+      color: $color;
+    }
+
+    .white-text { @include section-coloring(white); }
+    .black-text { @include section-coloring(black); }
+  }
+}
+
+.teaching {
+  .teaching-header {
+    font-family: $monospace-fonts;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 16px auto;
+  }
+
+  .teaching-intro {
+    font-family: $serif-fonts;
+    max-width: 800px;
+    font-size: 19px;
+    line-height: 26px;
+    margin: 34px 0;
+  }
+
+  .teaching-item {
+    margin: 38px 0;
+
+    .course-title {
+      font-family: $monospace-fonts;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .course-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .semester {
+      font-family: $monospace-fonts;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 400;
+      margin: 7.5px 0;
+    }
+
+    .description {
+      font-family: $serif-fonts;
+      font-size: 18px;
+
+      p {
+        margin-top: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
 .experience {
   background: #F6F6F6;
   padding: 1px;
@@ -321,6 +401,12 @@ figure {
         a {
           color: darkblue;
         }
+
+        .asterisk-description {
+          margin-top: 7px;
+          font-style: italic;
+          font-size: 12px;
+        }
       }
     }
 
@@ -386,6 +472,11 @@ figure {
   @media (max-width: 1050px) {
     margin: 0 30px;
   }
+}
+
+.small-wrapper {
+  max-width: 800px;
+  margin: auto;
 }
 
 .center-align {
