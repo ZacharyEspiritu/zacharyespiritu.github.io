@@ -4,7 +4,7 @@ date_range: 2017 - 2021
 location: Providence, RI
 ---
 
-Currently pursuing a Sc.B. in Computer Science.
+Currently pursuing a **Sc.B. in Computer Science.**
 
 <span class="text-underline">Relevant Coursework:</span>
 
