@@ -243,21 +243,33 @@ figure {
     .white-text { @include section-coloring(white); }
     .black-text { @include section-coloring(black); }
   }
+
+  &.gray-cv-section {
+    background: #F6F6F6;
+    padding: 1px 0;
+  }
+
+  &.dark-gray-cv-section {
+    background: #18212D;
+    padding: 1px 0 12px;
+  }
 }
 
+.cv-section-intro {
+  font-family: $serif-fonts;
+  max-width: 800px;
+  font-size: 19px;
+  line-height: 26px;
+  margin: 34px 0;
 
-.experience {
-  background: #F6F6F6;
-  padding: 1px 0;
-}
+  @media (max-width: 1080px) {
+    font-size: 17px;
+    margin: 23px 0;
+  }
 
-.teaching {
-  .teaching-intro {
-    font-family: $serif-fonts;
-    max-width: 800px;
-    font-size: 19px;
-    line-height: 26px;
-    margin: 34px 0;
+  @media (max-width: 720px) {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -279,6 +291,19 @@ figure {
 
     .cv-item-header-right {
       text-align: right;
+    }
+
+    @media (max-width: 720px) {
+      display: block;
+
+      .cv-item-header-main {
+        margin-bottom: 7px;
+      }
+
+      .cv-item-header-right {
+        text-align: inherit;
+        font-size: 16px;
+      }
     }
   }
 
@@ -312,6 +337,36 @@ figure {
     li {
       margin-bottom: 3.5px;
     }
+  }
+
+  @media (max-width: 1080px) {
+    .cv-item-description {
+      font-size: 17px;
+
+      p { line-height: 23px; }
+    }
+  }
+
+  @media (max-width: 720px) {
+    .cv-item-header .cv-item-header-main {
+      font-size: 16px;
+    }
+
+    .cv-item-subtitle {
+      font-size: 15px;
+    }
+
+    .cv-item-description {
+      font-size: 16px;
+
+      p { line-height: 22px; }
+      li { margin-bottom: 3px; }
+    }
+  }
+
+  @media (max-width: 360px) {
+    border-left-width: 5px;
+    padding: 18px 0 1px 13px;
   }
 }
 
