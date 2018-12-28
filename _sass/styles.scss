@@ -308,19 +308,31 @@ figure {
       padding-left: 26px;
       margin-top: -7px;
     }
+
+    li {
+      margin-bottom: 3.5px;
+    }
   }
 }
 
-@function rgba-hex($hexcolor, $alpha) {
-  @return rgba(red($hexcolor), green($hexcolor), blue($hexcolor), $alpha)
+@function rgba-hex($hex-color, $alpha) {
+  @return rgba(red($hex-color), green($hex-color), blue($hex-color), $alpha)
 }
 
-.cv-item:nth-of-type(6n+2) { border-left-color: rgba-hex($rainbow-two, 0.75); }
-.cv-item:nth-of-type(6n+3) { border-left-color: rgba-hex($rainbow-three, 0.75); }
-.cv-item:nth-of-type(6n+4) { border-left-color: rgba-hex($rainbow-four, 0.75); }
-.cv-item:nth-of-type(6n+5) { border-left-color: rgba-hex($rainbow-five, 0.75); }
-.cv-item:nth-of-type(6n+6) { border-left-color: rgba-hex($rainbow-six, 0.75); }
-.cv-item:nth-of-type(6n+7) { border-left-color: rgba-hex($rainbow-seven, 0.75); }
+@mixin cv-item-styles($item-color) {
+  border-left-color: rgba-hex($item-color, 0.75);
+
+  .cv-item-description a {
+    color: #2980B9;
+  }
+}
+
+.cv-item:nth-of-type(6n+2) { @include cv-item-styles($rainbow-two); }
+.cv-item:nth-of-type(6n+3) { @include cv-item-styles($rainbow-three); }
+.cv-item:nth-of-type(6n+4) { @include cv-item-styles($rainbow-four); }
+.cv-item:nth-of-type(6n+5) { @include cv-item-styles($rainbow-five); }
+.cv-item:nth-of-type(6n+6) { @include cv-item-styles($rainbow-six); }
+.cv-item:nth-of-type(6n+7) { @include cv-item-styles($rainbow-seven); }
 
 .vertical-align {
   position: relative;
