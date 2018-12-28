@@ -85,7 +85,8 @@ layout: default
                 {% assign experience_subtitle = experience.tagline
                                               | append: "<div style='height: 4.5px;'></div>"
                                               | append: experience.date_string %}
-                {% include cv_item.html main_header=experience.title
+                {% include cv_item.html link=experience.link
+                                        main_header=experience.title
                                         right_header=experience.location
                                         subtitle=experience_subtitle
                                         content=experience.content %}
