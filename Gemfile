@@ -7,7 +7,7 @@ ruby RUBY_VERSION
 #
 #     bundle exec jekyll serve
 #
-gem "jekyll", "3.5.1"
+gem "jekyll", ">= 3.6.3"
 gem "nokogiri", "~> 1.8.2"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
