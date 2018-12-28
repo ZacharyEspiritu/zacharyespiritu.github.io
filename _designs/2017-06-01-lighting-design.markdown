@@ -199,4 +199,4 @@ You can find my technical lighting resume [here][lighting-resume]. You can also 
     makeBSS('.lighting-design-slideshow', options);
 </script>
 
-[lighting-resume]: /images/designs/lighting-design/resume.pdf
+[lighting-resume]: /documents/lighting/resume.pdf
