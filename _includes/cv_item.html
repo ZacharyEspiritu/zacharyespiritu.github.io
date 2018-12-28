@@ -1,0 +1,22 @@
+<div class="cv-item">
+    <div class="cv-item-header">
+        <div class="cv-item-header-main">
+            {% if include.link %}
+                <a class="cv-item-link" href="{{ include.link }}">
+            {% endif %}
+            {{ include.main_header }}
+            {% if include.link %}
+                </a>
+            {% endif %}
+        </div>
+        <div class="cv-item-header-right">
+            {{ include.right_header }}
+        </div>
+    </div>
+    <div class="cv-item-subtitle">
+        {{ include.subtitle }}
+    </div>
+    <div class="cv-item-description">
+        {{ include.content | rstrip }}
+    </div>
+</div>

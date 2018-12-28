@@ -58,7 +58,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="experience teaching cv-section" style="background: #18212D; padding-bottom: 30px;">
+<!-- <section class="experience teaching cv-section" style="background: #18212D; padding-bottom: 30px;">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -67,12 +67,29 @@ layout: default
             <div class="teaching-intro" style="color: white;">
                 <p>I'm Zachary! I'm currently a second-year undergraduate in Computer Science at Brown University.</p>
 
-                <p>As a way of blending my interests in education and technology, I've served as a teaching assistant within the Computer Science department at Brown every semester. </p>
-
                 <p>In addition to funding from Brown University, my undergraduate studies have been generously supported by the CIT Group Scholarship. Additionally, my secondary school experience was completely free, having been funded by numerous generations of Regis High School alumni. (Thanks to everyone for helping me get to this point!)</p>
 
                 <p>Recently, I've been interested in musical theater, lighting design, inter-grader consistency on homework assignments, voting security (both in real-life and online), speech and debate, multiplayer game design, and Dance Dance Revolution.</p>
             </div>
+        </div>
+    </div>
+</section> -->
+<section class="experience cv-section">
+    <div class="wrapper">
+        <div class="small-wrapper">
+            <div class="section-box">
+                <div class="section-title black-text">Experience</div>
+            </div>
+            {% assign sorted_experience = site.experience | reverse %}
+            {% for experience in sorted_experience %}
+                {% assign experience_subtitle = experience.tagline
+                                              | append: "<div style='height: 4.5px;'></div>"
+                                              | append: experience.date_string %}
+                {% include cv_item.html main_header=experience.title
+                                        right_header=experience.location
+                                        subtitle=experience_subtitle
+                                        content=experience.content %}
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -90,130 +107,28 @@ layout: default
             <hr>
             {% assign sorted_teaching = site.teaching | reverse %}
             {% for teaching in sorted_teaching %}
-                {% include teaching_item.html teaching=teaching %}
+                {% include cv_item.html link=teaching.course_link
+                                        main_header=teaching.title
+                                        subtitle=teaching.date_string
+                                        content=teaching.content %}
             {% endfor %}
         </div>
     </div>
 </section>
-<section class="experience">
+<section class="experience cv-section">
     <div class="wrapper">
-        <div class="terminal">
-            <div class="large-buffer">
-                > Zachary.college.merge(Zachary.high_school)
+        <div class="small-wrapper">
+            <div class="section-box">
+                <div class="section-title black-text">Education</div>
             </div>
-            <div class="small-buffer">
-                Education
-            </div>
+            {% assign sorted_education = site.education | reverse %}
+            {% for education in sorted_education %}
+                {% include cv_item.html main_header=education.title
+                                        right_header=education.location
+                                        subtitle=education.date_range
+                                        content=education.content %}
+            {% endfor %}
         </div>
-        <div class="experience-item">
-            <div class="left">
-                <div class="date-range">
-                    2017 - 2021
-                </div>
-            </div>
-            <div class="right">
-                <div class="item-header">
-                    <div class="title">
-                        Brown University
-                    </div>
-                    <div class="location">
-                        Providence, RI
-                    </div>
-                </div>
-                <div class="item-info">
-                    <div class="tagline">
-                        Sc.B. in Computer Science
-                    </div>
-                    <div class="detail">
-                        Relevant Coursework:
-                        <ul>
-                            <li>Computer Systems Security</li>
-                            <li>Design and Analysis of Algorithms</li>
-                            <li>Discrete Structures and Probability</li>
-                            <li>Introduction to Computer Systems</li>
-                            <li>Introduction to Computer Graphics</li>
-                            <li>Logic For Systems (Formal Methods and Verification)</li>
-                            <li>Design and Implementation of Programming Languages</li>
-                            <li>User Interfaces and User Experience</li>
-                        </ul>
-                        <!-- &hairsp;<sup>*</sup>
-                        -->
-                        <br>
-                        <sup>* in progress</sup>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="experience-item">
-            <div class="left">
-                <div class="date-range">
-                    2013 - 2017
-                </div>
-            </div>
-            <div class="right">
-                <div class="item-header">
-                    <div class="title">
-                        Regis High School
-                    </div>
-                    <div class="location">
-                        New York, NY
-                    </div>
-                </div>
-                <div class="item-info">
-                    <div class="tagline">
-                    </div>
-                    <div class="detail">
-                        During February 2017 – May 2017, in lieu of traditional courses, I participated in the "Social Justice Entrepreneurship" program, where I completed three days of service work and two days of senior thesis research every week. The final project, "Connecting for Good: Bridging the Digital Divide Through Effective Integration Policies", focused on disparities on access to technology among different parts of the city and combined empirical research with in-person interviews from volunteer work as a Computer Science assistant in an elementary school in New York City.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="terminal">
-            <div class="large-buffer">
-                > Zachary.work_experience.sort_by({(e): e.date }, :asc)
-            </div>
-            <div class="small-buffer">
-                Experience
-            </div>
-        </div>
-        {% assign sorted_experience = site.experience | reverse %}
-        {% for experience in sorted_experience %}
-            {% include experience_item.html experience=experience %}
-            {% if forloop.last == false %}
-              <hr>
-            {% endif %}
-        {% endfor %}
-        <div class="terminal">
-            <div class="large-buffer">
-                > Zachary.presentations.recap()
-            </div>
-            <div class="small-buffer">
-                Presentations
-            </div>
-        </div>
-        {% assign sorted_presentations = site.presentations | reverse %}
-        {% for presentation in sorted_presentations %}
-            {% include experience_item.html experience=presentation %}
-            {% if forloop.last == false %}
-              <hr>
-            {% endif %}
-        {% endfor %}
-        <div class="terminal">
-            <div class="large-buffer">
-                > Zachary.awards.display()
-            </div>
-            <div class="small-buffer">
-                Awards
-            </div>
-        </div>
-        {% assign sorted_awards = site.awards | reverse %}
-        {% for award in sorted_awards %}
-            {% include experience_item.html experience=award %}
-            {% if forloop.last == false %}
-              <hr>
-            {% endif %}
-        {% endfor %}
     </div>
 </section>
 <script>
