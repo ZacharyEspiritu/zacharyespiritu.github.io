@@ -94,7 +94,7 @@ layout: default
             {% for teaching in sorted_teaching %}
                 {% include cv_item.html link=teaching.course_link
                                         main_header=teaching.title
-                                        subtitle=teaching.date_string
+                                        subtitle=teaching.semester
                                         content=teaching.content %}
             {% endfor %}
         </div>
