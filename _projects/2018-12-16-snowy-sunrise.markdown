@@ -27,41 +27,41 @@ Our program uses three main shaders:
 
 1. A raymarching shader, which renders the scene (both the landscape and the trees) to two render targets: a texture containing the normal, raymarched scene and an "occlusion texture", where all objects in the raymarched scene are rendered black with the light source as a white circle. (Originally, we had two separate raymarches for the occlusion texture and the normal scene---however, we were able to significantly optimize the performance of our program by combining them into a single shader with multiple render targets.)
 
-<figure class="lazyload">
-    <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/occlusion-texture.png">
-    <figcaption>
-        A sample of the occlusion texture.
-    </figcaption>
-</figure>
-
-<figure class="lazyload">
-    <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/scene-texture.png">
-    <figcaption>
-        A sample of the scene texture without the volumetric lighting effect.
-    </figcaption>
-</figure>
+    <figure class="lazyload">
+        <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/occlusion-texture.png">
+        <figcaption>
+            A sample of the occlusion texture.
+        </figcaption>
+    </figure>
+    <div class="vertical-spacer spacer-medium"></div>
+    <figure class="lazyload">
+        <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/scene-texture.png">
+        <figcaption>
+            A sample of the scene texture without the volumetric lighting effect.
+        </figcaption>
+    </figure>
 
 2. A volumetric lighting shader, which takes samples from the occlusion texture in a radial fashion to simulate light rays shining across the screen. This shader then additively blends the light ray samples with the original texture to achieve the desired lighting effect.
 
-<figure class="lazyload">
-    <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/volumetric-lighting-texture.png">
-    <figcaption>
-        The volumetric lighting texture, as sampled from the occlusion texture.
-    </figcaption>
-</figure>
-
-<figure class="lazyload">
-    <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/blended-without-fxaa.png">
-    <figcaption>
-        The scene texture additively blended with the volumetric lighting texture.
-    </figcaption>
-</figure>
+    <figure class="lazyload">
+        <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/volumetric-lighting-texture.png">
+        <figcaption>
+            The volumetric lighting texture, as sampled from the occlusion texture.
+        </figcaption>
+    </figure>
+    <div class="vertical-spacer spacer-medium"></div>
+    <figure class="lazyload">
+        <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/blended-without-fxaa.png">
+        <figcaption>
+            The scene texture additively blended with the volumetric lighting texture.
+        </figcaption>
+    </figure>
 
 3. A FXAA shader, which performs edge detection on the texture returned by the volumetric lighting shader and applies an anti-aliasing effect to those edges.
 
-<figure class="lazyload">
-    <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/fxaa-edge-detection.png">
-    <figcaption>
-        The edges where the FXAA effect is applied are highlighted in red.
-    </figcaption>
-</figure>
+    <figure class="lazyload">
+        <img class="responsive-image lazyload" data-src="/images/projects/snowy-sunrise/fxaa-edge-detection.png">
+        <figcaption>
+            The edges where the FXAA effect is applied are highlighted in red.
+        </figcaption>
+    </figure>

@@ -1291,3 +1291,10 @@ figure {
 .issuuembed {
   height: 550px;
 }
+
+.vertical-spacer {
+  &.spacer-tiny   { height: 4.5px; }
+  &.spacer-small  { height: 9px; }
+  &.spacer-medium { height: 13.5px; }
+  &.spacer-large  { height: 18px; }
+}
