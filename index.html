@@ -35,7 +35,7 @@ layout: default
             > Zachary.projects.filter({(p): p.type ==
             <span data-filter="*" class="filter-option selected">all</span>
             <span data-filter=".software" class="filter-option">software</span>
-            <span data-filter=".research" class="filter-option">research</span>
+            <span data-filter=".academic" class="filter-option">academic</span>
             <span data-filter=".design" class="filter-option">design</span>
             <span data-filter=".games" class="filter-option">games</span>
             <span data-filter=".case_studies" class="filter-option">case_studies</span>
@@ -58,6 +58,26 @@ layout: default
         </div>
     </div>
 </section>
+<!-- <section class="cv-section dark-gray-cv-section">
+    <div class="wrapper">
+        <div class="small-wrapper">
+            <div class="section-box">
+                <div class="section-title white-text">More About Me</div>
+            </div>
+            <div class="cv-section-intro" style="color: white;">
+                <p>I'm Zachary! I'm currently a second-year undergraduate in
+                Computer Science at Brown University.</p>
+
+                <p>In addition to funding from Brown University, my undergraduate studies have been generously supported by the CIT Group Scholarship. Additionally, my secondary school experience was completely free, having been funded by numerous generations of Regis High School alumni. (Thanks to everyone for helping me get to this point!)</p>
+
+                <p>Recently, I've been interested in musical theater, lighting
+                design, inter-grader consistency on homework assignments, voting
+                security (both in real-life and online), multiplayer game
+                design, and Pusheen.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
 <section class="cv-section gray-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
@@ -67,7 +87,7 @@ layout: default
             {% assign sorted_experience = site.experience | reverse %}
             {% for experience in sorted_experience %}
                 {% assign experience_subtitle = experience.tagline
-                                              | append: "<div style='height: 4.5px;'></div>"
+                                              | append: "<div class='vertical-spacer spacer-tiny'></div>"
                                               | append: experience.date_string %}
                 {% include cv_item.html link=experience.link
                                         main_header=experience.title

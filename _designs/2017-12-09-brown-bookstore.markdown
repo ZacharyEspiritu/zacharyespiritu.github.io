@@ -10,7 +10,7 @@ ending:
   link: https://zacharyespiritu.com/brown-bookstore-redesign/
   link_text: visit demo
 skills: sass
-filters: design case_studies
+filters: design case_studies academic
 ---
 
 # Overview
