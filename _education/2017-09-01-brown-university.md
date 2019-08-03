@@ -15,4 +15,6 @@ Currently pursuing a **Sc.B. in Computer Science.**
 * Introduction to Computer Systems
 * Introduction to Computer Graphics
 * Logic For Systems (Formal Methods and Verification)
+* Operating Systems
+* Foundations of Prescriptive Analytics
 * User Interfaces and User Experience
