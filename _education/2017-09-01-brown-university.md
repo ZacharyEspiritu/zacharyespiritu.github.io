@@ -1,6 +1,6 @@
 ---
 title: Brown University
-date_range: 2017 - 2021
+date_range: September 2017 - December 2021
 location: Providence, RI
 ---
 
