@@ -1,0 +1,62 @@
+---
+layout: post
+title:  Weenix
+image_path: /images/projects/weenix/portfolio-weenix.png
+banner_path:
+tagline: A full operating system kernel, based on Unix, built as a semester-long project
+card_color: "#CB356B"
+ending:
+  tagline: Weenix was developed in Spring 2019.
+  link: http://cs.brown.edu/courses/cs167/content/weenix-doc.pdf
+  link_text: see official documentation
+skills: c
+filters: academic
+---
+
+# Overview
+
+In Spring 2019, I developed the majority of a operating system kernel known as "Weenix" as part of the <a href="https://cs.brown.edu/courses/csci1670/">CSCI1670: Operating Systems</a> course (and its optional half-credit lab <a href="http://cs.brown.edu/courses/cs167/content/weenix-doc.pdf">CSCI1690: Operating Systems Laboratory</a> course) at Brown University.
+
+<figure class="banner-grid lazyload">
+    <img class="lazyload" data-src="/images/projects/weenix/weenix-filesystem.png">
+    <figcaption>
+        An example of the Weenix filesystem (S5FS) in action.
+    </figcaption>
+</figure>
+
+Weenix was designed to be developed over the course of the entire semester. I did my best to start things as early as possible, and after writing over 6,000 lines of code, I ended up finishing the project three weeks early. (Phew!)
+
+I implemented the following features as part of Weenix:
+
+* **Procs.** Threads, processes, and synchronization primitives.
+* **Drivers.** Device drivers for terminals, disks, and the memory devices `/dev/zero` and `/dev/null`.
+* **VFS (Virtual File System).** A common interface between the operating system kernel and the various file systems (such as S5FS and device drivers).
+* **S5FS (System V File System).** A file system based on the original Unix file system.
+* **VM (Virtual Memory).** User address space management, running user-level code, servicing system calls, and basically everything else needed to combine all of the previous componenets into a fully functioning operating system. This includes virtual memory maps, handling page faults, memory management via anonymous objects and shadow objects, and system calls (in particular, the elusive `fork` syscall).
+
+# Screenshots
+
+<figure class="banner-grid lazyload">
+    <img class="lazyload" data-src="/images/projects/weenix/weenix-initial.png">
+    <figcaption>
+        Weenix in its initial state after starting up.
+    </figcaption>
+</figure>
+<figure class="banner-grid lazyload">
+    <img class="lazyload" data-src="/images/projects/weenix/weenix-stat.png">
+    <figcaption>
+        An example of running a program in Weenix via the shell.
+    </figcaption>
+</figure>
+<figure class="banner-grid lazyload">
+    <img class="lazyload" data-src="/images/projects/weenix/weenix-stress.png">
+    <figcaption>
+        One of the many stress testing programs in Weenix; this program culminates in a <a href="https://en.wikipedia.org/wiki/Fork_bomb">fork bomb</a> test.
+    </figcaption>
+</figure>
+<figure class="banner-grid lazyload">
+    <img class="lazyload" data-src="/images/projects/weenix/weenix-halt.png">
+    <figcaption>
+        A sample of the occlusion texture.
+    </figcaption>
+</figure>
