@@ -6,17 +6,18 @@ location: Providence, RI
 
 Currently pursuing a **Sc.B. in Computer Science.**
 
-<span class="text-underline">Relevant Coursework:</span>
+<span class="text-underline">Graduate-Level Coursework:</span>
 
-* Algorithms: In Depth
+* Foundations of Prescriptive Analytics
+
+<span class="text-underline">Undergraduate Coursework:</span>
+
 * Computer Systems Security
 * Design and Analysis of Algorithms
 * Design and Implementation of Programming Languages
 * Discrete Structures and Probability
-* Foundations of Prescriptive Analytics (SAT, Constraint / Linear / Integer Programming, Local Search)
 * Introduction to Computer Systems
 * Introduction to Computer Graphics
 * Logic For Systems (Formal Methods and Verification)
 * Operating Systems
-* Operating Systems Laboratory
 * User Interfaces and User Experience
