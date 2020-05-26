@@ -39,6 +39,15 @@
 
 }
 
+/* DM Sans */
+
+@font-face { font-family: "DM Sans"; font-weight: 400; font-style: normal; src: url(../fonts/dm_sans/DMSans-Regular.ttf); }
+@font-face { font-family: "DM Sans"; font-weight: 400; font-style: italic; src: url(../fonts/dm_sans/DMSans-Italic.ttf); }
+@font-face { font-family: "DM Sans"; font-weight: 500; font-style: normal; src: url(../fonts/dm_sans/DMSans-Medium.ttf); }
+@font-face { font-family: "DM Sans"; font-weight: 500; font-style: italic; src: url(../fonts/dm_sans/DMSans-MediumItalic.ttf); }
+@font-face { font-family: "DM Sans"; font-weight: 700; font-style: normal; src: url(../fonts/dm_sans/DMSans-Bold.ttf); }
+@font-face { font-family: "DM Sans"; font-weight: 700; font-style: italic; src: url(../fonts/dm_sans/DMSans-BoldItalic.ttf); }
+
 /* SF Mono */
 
 @font-face { font-family: "SF Mono"; font-weight: 200; font-style: normal; src: url(../fonts/sf_mono/SFMono-Light.otf); }

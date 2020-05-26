@@ -138,6 +138,7 @@ figure {
     width: 31%;
     flex: 0 0 auto;
     margin-bottom: 21px;
+    font-family: $sans-serif-fonts;
 
     @media (max-width: $two-column-break) {
       width: 48%;
@@ -174,7 +175,7 @@ figure {
           padding: 20px;
           font-size: 15px;
           color: white;
-          font-weight: 600;
+          font-weight: 500;
         }
       }
 
@@ -187,7 +188,7 @@ figure {
 
     .title {
       color: black;
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 500;
     }
   }
@@ -233,6 +234,7 @@ figure {
       font-size: 19px;
       border-style: solid;
       border-width: 1px;
+      font-family: $sans-serif-fonts;
     }
 
     @mixin section-coloring($color) {
@@ -281,9 +283,9 @@ figure {
   .cv-item-header {
     display: flex;
     justify-content: space-between;
+    font-family: $sans-serif-fonts;
 
     .cv-item-header-main {
-      font-family: $monospace-fonts;
       font-size: 18px;
       font-weight: bold;
       text-align: left;
@@ -313,11 +315,10 @@ figure {
   }
 
   .cv-item-subtitle {
-    font-family: $monospace-fonts;
-    font-size: 16px;
-    font-style: italic;
+    font-family: $sans-serif-fonts;
+    font-size: 16.5px;
     font-weight: 400;
-    margin: 7.5px 0;
+    margin: 5.5px 0;
   }
 
   .cv-item-description {
@@ -1298,8 +1299,12 @@ figure {
 }
 
 .vertical-spacer {
-  &.spacer-tiny   { height: 4.5px; }
+  &.spacer-tiny   { height: 2.5px; }
   &.spacer-small  { height: 9px; }
   &.spacer-medium { height: 13.5px; }
   &.spacer-large  { height: 18px; }
+}
+
+.cv-super-star {
+  margin-left: 2px;
 }
