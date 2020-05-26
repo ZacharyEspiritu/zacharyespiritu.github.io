@@ -881,11 +881,13 @@ a.block-link {
 
 #footer {
   position: relative;
-  font-size: 15px;
+  font-size: 16px;
   background-color: $header-background-color;
   z-index: 2;
   padding: 60px 0;
   color: white;
+  font-family: $sans-serif-fonts;
+  font-weight: 200;
 
   .footer-social {
     margin: 0 10px;
