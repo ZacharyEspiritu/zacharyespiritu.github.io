@@ -1,10 +1,8 @@
 ---
 title: Brown University
-date_range: September 2017 - December 2021
+date_range: "Sc.B. in Computer Science<div class='vertical-spacer spacer-tiny'></div>September 2017 - December 2021"
 location: Providence, RI
 ---
-
-Currently pursuing a **Sc.B. in Computer Science.**
 
 <span class="text-underline">Graduate-Level Coursework:</span>
 
