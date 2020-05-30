@@ -329,12 +329,12 @@ To expedite this process, we initialized our initial solution using a first-fit 
         \STATE $assigned \gets$ \FALSE \COMMENT{used for ghost vehicle assignment}
         \FOR{$v \gets 0$ \TO $num\_vehicles$ \AND \NOT $assigned$}
           \IF{$\left ( \sum_{j \in routes[v]} demand_j \right ) + demand_i \leq vehicle\_capacity$}
-            \STATE add customer $i$ to $routes[v]$
+            \STATE $routes[v] \gets routes[v] \cup \{i\}$
             \STATE $assigned \gets$ \TRUE
           \ENDIF
         \ENDFOR
         \IF{\NOT $assigned$} \COMMENT{customer did not fit in any route}
-          \STATE add customer $i$ to $ghost$
+          \STATE $ghost \gets ghost \cup \{i\}$
         \ENDIF
       \ENDFOR
       \RETURN $(routes, ghost)$
