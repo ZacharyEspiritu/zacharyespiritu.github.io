@@ -179,10 +179,6 @@ def local_search(objective_function: Callable[[Solution], Number],
     \end{algorithm}
   </pre>
 </figure>
-<script>
-  pseudocode.renderElement(document.getElementById("local-search-algorithm"),
-                           { lineNumber: true });
-</script>
 
 With `local_search` implemented, the main work involved is in figuring out how to best apply such a routine to <span class="small-caps">Crvp</span>. We discuss our <span class="small-caps">Crvp</span>-specific work below in four parts.
 
@@ -293,10 +289,6 @@ To combat this, we had our solver skip certain calls to `local_search` early in 
     \end{algorithm}
   </pre>
 </figure>
-<script>
-  pseudocode.renderElement(document.getElementById("simulated-annealing-algorithm"),
-                           { lineNumber: true });
-</script>
 
 An alternative approach we considered to mitigate the "large vs small instance epsilon" calibration issues was to use percentage-based epsilons, where the epsilon would be some decreasing percentage of the current objective value. While this seemed cleaner to implement compared to the "one-third" skip trick mentioned in the previous paragraph, we found that this caused the local search to get stuck too quickly on small instances because of the discrete nature of the problem. It was difficult to calibrate exactly what kinds of percentage epsilons would work on both samll-scale and large-scale instances, and thus we found that just using the integer-based approach worked better with the solution space at play.
 
@@ -351,8 +343,14 @@ To expedite this process, we initialized our initial solution using a first-fit 
   </pre>
 </figure>
 <script>
-  pseudocode.renderElement(document.getElementById("initial-solution-algorithm"),
-                           { lineNumber: true });
+  (function() {
+    pseudocode.renderElement(document.getElementById("local-search-algorithm"),
+                             { lineNumber: true });
+    pseudocode.renderElement(document.getElementById("simulated-annealing-algorithm"),
+                             { lineNumber: true });
+    pseudocode.renderElement(document.getElementById("initial-solution-algorithm"),
+                             { lineNumber: true });
+  })();
 </script>
 
 This allowed us to place most, if not all, of the customers for a given <span class="small-caps">Cvrp</span> instance immediately so the solver no longer had to worry about finding feasible solutions and could focus on finding more optimal solutions.
