@@ -23,7 +23,11 @@ The **Capacitated Vehicle Routing Problem (<span class="small-caps">Crvp</span>)
 
 The motivations here are clear: minimizing the driving distance of your delivery fleet minimizes fueling costs, and thus produces greater profits overall. The challenges are abound though: <span class="small-caps">Crvp</span> is $$\textsf{NP}$$-hard, and so developing a deterministic algorithm that produces optimal results while still operating under reasonable computation bounds is difficult and unpractical.
 
-In Spring 2019, <a href="https://github.com/a-wagner">Andrew Wagner</a> and I took on the challenge of developing a local-search-based solver for a set of <span class="small-caps">Crvp</span> instances. With some carefully crafted metaheuristics, some engineering optimizations, and a little bit of luck, our Python solver (at a concise &tilde;200 lines of effective code!) produced the most optimal results when compared against 21\ other implementations on 16 large-scale instances of the problem.
+In Spring 2019, <a href="https://github.com/a-wagner">Andrew Wagner</a> and I took on the challenge of developing a local-search-based solver for a set of <span class="small-caps">Crvp</span> instances. With some carefully crafted metaheuristics, some engineering optimizations, and a little bit of luck, our Python solver (at a concise &tilde;200 lines of effective code!) produced the most optimal results when compared against 21 other implementations on 16 large-scale instances of the problem. Specifically, our solver:
+
+- Produced the most optimal solutions on 6 of the 16 instances (with the next highest teams producing 5, 2, and 2 most optimal solutions).
+
+- Placed in the top three of all teams over all instances when evaluated on solution optimality, with an average rank of 1.4 (out of 21, where 1 is the best) over all instances.
 
 <figure class="lazyload">
     <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/examples/2.png">
