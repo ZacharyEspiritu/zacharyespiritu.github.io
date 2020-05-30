@@ -99,13 +99,13 @@ Our local search routine was inspired by the local search framework from [Paul V
 1. The _acceptance criterion_, which determines if we accept a given proposal solution (and thus start
 the next loop iteration with our newly proposed solution), or reject the solution and retry again with our previous solution.
 
-    To determine if a solution is acceptable in the search, we then use an _acceptance epsilon_ which sets the threshold at which we will allow searches to perform worse with the expectation that they will allow us to escape local minima. This is a reflection of the "exporation-vs-exploitation" tradeoff problem in local search algorithms---while we want to exploit the regions of the solution space which seem to be promising, we also want to make sure we explore other regions since we only have local knowledge of where we are in the solution space. Thus, if we don't explore enough, we might get stuck in a convex region of the function while attempting to exploit a local minima of the function, even though this area will not lead to its true minimum.
+    To determine if a solution is acceptable in the search, we then use an _acceptance epsilon_ which sets the threshold at which we will allow searches to perform worse with the expectation that they will allow us to escape local minima. This is a reflection of the "exploration-vs-exploitation" tradeoff problem in local search algorithms---while we want to exploit the regions of the solution space which seem to be promising, we also want to make sure we explore other regions since we only have local knowledge of where we are in the solution space. Thus, if we don't explore enough, we might get stuck in a convex region of the function while attempting to exploit a local minima of the function, even though this area will not lead to its true minimum.
 
 2. The _stopping condition_, which determines when we stop the local search routine. The basic stopping condition is an _improvement timeout_---that is, if you don't see enough improvement within a certain time delta, then the local search should terminate.
 
     Our solver uses a somewhat more complicated approach to deciding on a stopping condition, though this approach is meta to the actual local search process and thus is not important directly to the implementation of a local search routine. (This approach is described in the "Simulated Annealing" section below.)
 
-How the proposal functions and objective function are used within the local search framework does not generally change from problem-to-problem. We can thus separate our concerns and utilize a problem-agnostic framework helps constrain our work to designing effective heuristics for the proposal function which makes for easier testing and design.
+How the proposal functions and objective function are used within the local search framework does not generally change from problem-to-problem. We can thus separate our concerns and utilize a problem-agnostic framework that helps constrain our work to designing effective heuristics for the proposal function which makes for easier testing and design.
 
 To do this, we implemented a `local_search` routine with the following signature (where `Solution` is some arbitrary interface):
 
@@ -117,7 +117,7 @@ def local_search(objective_function: Callable[[Solution], Number],
                  improvement_time:   Number,
                  improvement_delta:  Number) -> Solution:
     """
-    General-purpose local search minimiziation function.
+    General-purpose local search minimization function.
 
     @param objective_function: The function to minimize.
     @param proposal_function: The function that gives us new solutions.
@@ -290,7 +290,7 @@ To combat this, we had our solver skip certain calls to `local_search` early in 
   </pre>
 </figure>
 
-An alternative approach we considered to mitigate the "large vs small instance epsilon" calibration issues was to use percentage-based epsilons, where the epsilon would be some decreasing percentage of the current objective value. While this seemed cleaner to implement compared to the "one-third" skip trick mentioned in the previous paragraph, we found that this caused the local search to get stuck too quickly on small instances because of the discrete nature of the problem. It was difficult to calibrate exactly what kinds of percentage epsilons would work on both samll-scale and large-scale instances, and thus we found that just using the integer-based approach worked better with the solution space at play.
+An alternative approach we considered to mitigate the "large vs small instance epsilon" calibration issues was to use percentage-based epsilons, where the epsilon would be some decreasing percentage of the current objective value. While this seemed cleaner to implement compared to the "one-third" skip trick mentioned in the previous paragraph, we found that this caused the local search to get stuck too quickly on small instances because of the discrete nature of the problem. It was difficult to calibrate exactly what kinds of percentage epsilons would work on both small-scale and large-scale instances, and thus we found that just using the integer-based approach worked better with the solution space at play.
 
 ## Feasibility
 
@@ -302,11 +302,11 @@ We implemented two techniques in our solver to help with the process of reaching
 
 While each <span class="small-caps">Cvrp</span> instance only provides for $$num\_instance$$ vehicles in a valid solution, we initialized our solutions to contain $$num\_instance + 1$$ routes. This extra "ghost vehicle" holds unassigned customers and acts as a temporary container until a customer has been assigned to a valid route.
 
-If any customers are currently being serviced by the "ghost" vehicle, the distance traversed by the "ghost" vehicle is multiplied by a large constant as a penalty within the objective function. (We arbitrarily decided on `100000` as our constant based on the scope of the instances we were tasked with solving.) This incentivizes the local search algorithm to move as many things out of the "ghost" vehicle as possible as to lower the objective function's value.
+If any customers are currently being served by the "ghost" vehicle, the distance traversed by the "ghost" vehicle is multiplied by a large constant as a penalty within the objective function. (We arbitrarily decided on `100000` as our constant based on the scope of the instances we were tasked with solving.) This incentivizes the local search algorithm to move as many things out of the "ghost" vehicle as possible as to lower the objective function's value.
 
 Multiplying the ghost vehicle's distance by a constant is preferable to simply returning $$\infty$$ (as what our objective function would do if any of the capacity constraints were violated by a route) for two reasons:
 
-- It allows our objective function to "express" how close it is to the valid region of the solution space. If $$\infty$$ was returned when any customers were serviced by the ghost vehicle, regardless of how many customers needed to be moved (all customers vs just one customer), the objective function would not express that the solution had improved in any way, and thus getting stuck in the invalid solution region was possible since $$\infty$$ values makes it easy to backtrack farther away from the valid solution region (for example, by moving vehicles out of valid routes back into the ghost vehicle).
+- It allows our objective function to "express" how close it is to the valid region of the solution space. If $$\infty$$ was returned when any customers were served by the ghost vehicle, regardless of how many customers needed to be moved (all customers vs just one customer), the objective function would not express that the solution had improved in any way, and thus getting stuck in the invalid solution region was possible since $$\infty$$ values makes it easy to backtrack farther away from the valid solution region (for example, by moving vehicles out of valid routes back into the ghost vehicle).
 
 - Improvements in route distance are captured by the objective function even if elements still remain in the ghost vehicle, whether in routes that represent actual vehicles as well as routes within the ghost vehicle. This allows improvements towards the true optimum to be made even if the ghost vehicle has not yet been fully resolved, and essentially allows `local_search` to multipurpose the computation time spent on resolving the ghost vehicle for improving overall routing distance on the valid portions of the solution.
 
