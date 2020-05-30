@@ -58,7 +58,7 @@ Each instance implicitly defines a set of _constraints_ on the set of valid solu
 
 * **Maximum Trucks:** The number of trucks we can utilize is equal to $$num\_vehicles$$.
 * **Maximum Capacity:** Each truck can only deliver up to $$vehicle\_capacity$$ demand.
-* **Trucks Return Home:** Every route needs to start and end at the delivery hub (located at $$(0, 0)$$).
+* **Trucks Return Home:** Every route needs to start and end at the delivery hub (denoted by the "customer" with index $$0$$).
 
 Given this specification, the challenge is to produce an _optimal solution_, where "optimal" is defined as the solution that satisfies all of the constraints of the problem while minimizing the total _distance_ travelled by all vehicles on their routes.
 
@@ -135,11 +135,45 @@ def local_search(objective_function: Callable[[Solution], Number],
 
 2. Apply the `objective_function` to the candidate `Solution`.
 
-3. If the candidate `Solution`'s objective value is better than the best objective value we've seen so far _or_ is within `acceptance_epsilon` units of the best objective value, update the current `Solution`.
+3. If the candidate `Solution`'s objective value is better than the current solution's objective value _or_ is within `acceptance_epsilon` units of the current objective value, update the current `Solution`.
 
 4. If the candidate `Solution`'s objective value is better than the best objective value we've seen so far, update the best objective value we've seen so far.
 
 5. If the current `Solution` hasn't been changed in the last `improvement_time` seconds, terminate and return the current `Solution`.
+
+<figure>
+  <pre id="local-search-algorithm" style="display:hidden;">
+    \begin{algorithm}
+    \caption{Problem-agnostic local search}
+    \begin{algorithmic}
+      \INPUT ($\Theta$, $\rho$, $solution$, $\epsilon$, $\tau$, $\Delta$), where $\Theta$ is objective function; $\rho$ is proposal function
+      \OUTPUT best solution found during local search
+      \ENSURE objective value of output $\leq$ objective value of $solution$
+      \STATE $\Delta_\text{objective} \gets \Theta(solution) - \Delta$ \COMMENT{improvement target before timeout}
+      \STATE $\Delta_\text{start} \gets $ current time \COMMENT{track how long we've been trying to improve}
+      \STATE $best \gets solution$
+      \WHILE{current time $< \Delta_\text{start} + \tau$} \COMMENT{stop if $\Delta$ change not made in $\tau$ seconds}
+        \STATE $candidate \gets \rho(solution)$
+        \IF{$\Theta(candidate) < \Theta(solution) + \epsilon$} \COMMENT{is $candidate$ acceptable?}
+          \STATE $solution \gets candidate$
+          \IF{$\Theta(solution) < \Theta(best)$} \COMMENT{is current solution new best?}
+            \STATE $best \gets solution$
+            \IF{$\Theta(best) \leq \Delta_\text{objective}$} \COMMENT{should timeout reset?}
+              \STATE $\Delta_\text{objective} \gets \Theta(best) - \Delta$
+              \STATE $\Delta_\text{start} \gets $ current time
+            \ENDIF
+          \ENDIF
+        \ENDIF
+      \ENDWHILE
+      \RETURN $best$
+    \end{algorithmic}
+    \end{algorithm}
+  </pre>
+</figure>
+<script>
+  pseudocode.renderElement(document.getElementById("local-search-algorithm"),
+                           { lineNumber: true });
+</script>
 
 With `local_search` implemented, the main work involved is in figuring out how to best apply such a routine to <span class="small-caps">Crvp</span>. We discuss our <span class="small-caps">Crvp</span>-specific work below in four parts.
 
@@ -188,7 +222,7 @@ These proposal functions focus on making local moves across two routes. (They're
 
 2. **Swap:** This heuristic swaps a pair of customers in each route to another route. It does this by randomly picking a customer in each route and then swapping them in their respective routes.
 
-    A potentially more effective variant of the swap heuristic would be to swap entire segments between routes, though this was not explored in-depth in our implementation.
+    A potentially more effective variant of the swap heuristic would be to swap entire segments between routes (similar to how the 2-opt <span class="small-caps">Tsp</span> heuristic works), though this was not explored in-depth in our implementation.
 
     <figure class="lazyload">
         <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/swap.svg">
@@ -218,15 +252,42 @@ improvement_schedule = [100,  10,  8,  8,  7,  6,  3,   3,  1,   0.5]
 timeout_schedule     = [2,    4,   6,  12, 8,  8,  6,   5,  4,   4]
 {% endhighlight %}
 
-These hyperparameters were chosen by hand and with trial-and-error, though interestingly we found that at least our `epsilon_schedule` follows a somewhat logarithmic pattern:
+These hyperparameters were chosen by hand and with trial-and-error, though interestingly we found that at least our `epsilon_schedule` follows a somewhat logarithmic pattern.
 
 <figure class="lazyload">
     <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/chart.svg">
 </figure>
 
-Our solver needed to handle both large instances and small instances, which explains the wide range of epsilon values displayed in the annealing schedule were motivated by our solver's need to handle both large-scale instances (for example, with all locations fitting inside of a 10000 unit square) and small-scale instances (with locations fitting under 500 units, etc.). However, some of the small instances had objective values of less than 1000 on their base initial solution alone, which made some of the early phases of the annealing schedule particularly ineffective.
+Our solver needed to handle both large instances and small instances, which explains the wide range of epsilon values displayed in the annealing schedule were motivated by our solver's need to handle both large-scale instances (for example, with all locations fitting inside of a 4000 unit square) and small-scale instances (with locations fitting under 100 units, etc.). However, some of the small instances had objective values of less than 1000 on their base initial solution alone, which made some of the early phases of the annealing schedule particularly ineffective.
 
 To combat this, we had our solver skip certain calls to `local_search` early in the schedule if the epsilon was less than one-third of the initial solution's objective value. This "one-third" value was chosen arbitrarily and after some trial-and-error on our test data, but we found that it was particularly effective on small instances at cutting out early phases that would ultimately just make no progress and waste time waiting to time out (according to the `timeout_schedule`).
+
+<figure>
+  <pre id="simulated-annealing-algorithm" style="display:hidden;">
+    \begin{algorithm}
+    \caption{Simulated annealing technique}
+    \begin{algorithmic}
+      \REQUIRE lengths of $epsilon\_schedule$, $timeout\_schedule$, and $improvement\_schedule$ are equal and non-zero
+      \ENSURE objective value of $solution$ is non-increasing after each iteration
+      \STATE $solution \gets$ initial solution
+      \STATE $initial\_objective \gets $ \texttt{objective\_function}($solution$)
+      \FOR{$i \gets 0$ \TO length of $epsilon\_schedule - 1$}
+        \STATE $\epsilon \gets epsilon\_schedule[i]$
+        \STATE $\tau \gets timeout\_schedule[i]$
+        \STATE $\Delta \gets improvement\_schedule[i]$
+
+        \IF{one-third of $initial\_objective < \epsilon$} \COMMENT{skip large phases}
+          \STATE $solution \gets$ \texttt{local\_search}(\texttt{objective\_function}, \texttt{proposal\_function}, $solution$, $\epsilon$, $\tau$, $\Delta$)
+        \ENDIF
+      \ENDFOR
+    \end{algorithmic}
+    \end{algorithm}
+  </pre>
+</figure>
+<script>
+  pseudocode.renderElement(document.getElementById("simulated-annealing-algorithm"),
+                           { lineNumber: true });
+</script>
 
 An alternative approach we considered to mitigate the "large vs small instance epsilon" calibration issues was to use percentage-based epsilons, where the epsilon would be some decreasing percentage of the current objective value. While this seemed cleaner to implement compared to the "one-third" skip trick mentioned in the previous paragraph, we found that this caused the local search to get stuck too quickly on small instances because of the discrete nature of the problem. It was difficult to calibrate exactly what kinds of percentage epsilons would work on both samll-scale and large-scale instances, and thus we found that just using the integer-based approach worked better with the solution space at play.
 
@@ -242,46 +303,88 @@ While each <span class="small-caps">Cvrp</span> instance only provides for $$num
 
 If any customers are currently being serviced by the "ghost" vehicle, the distance traversed by the "ghost" vehicle is multiplied by a large constant as a penalty within the objective function. (We arbitrarily decided on `100000` as our constant based on the scope of the instances we were tasked with solving.) This incentivizes the local search algorithm to move as many things out of the "ghost" vehicle as possible as to lower the objective function's value.
 
-The ghost vehicle approach is preferable to simply returning $$\infty$$ (as what our objective function would do if any of the capacity constraints were violated by a route) because it allows our objective function to "express" how close it is to the valid region of the solution space. If $$\infty$$ was returned when any customers were serviced by the ghost vehicle, regardless of how many customers needed to be moved (all customers vs just one customer), the objective function would not express that the solution had improved in any way, and thus getting stuck in the invalid solution region was possible since $$\infty$$ values makes it easy to backtrack farther away from the valid solution region (for example, by moving vehicles out of valid routes back into the ghost vehicle).
+Multiplying the ghost vehicle's distance by a constant is preferable to simply returning $$\infty$$ (as what our objective function would do if any of the capacity constraints were violated by a route) for two reasons:
+
+- It allows our objective function to "express" how close it is to the valid region of the solution space. If $$\infty$$ was returned when any customers were serviced by the ghost vehicle, regardless of how many customers needed to be moved (all customers vs just one customer), the objective function would not express that the solution had improved in any way, and thus getting stuck in the invalid solution region was possible since $$\infty$$ values makes it easy to backtrack farther away from the valid solution region (for example, by moving vehicles out of valid routes back into the ghost vehicle).
+
+- Improvements in route distance are captured by the objective function even if elements still remain in the ghost vehicle, whether in routes that represent actual vehicles as well as routes within the ghost vehicle. This allows improvements towards the true optimum to be made even if the ghost vehicle has not yet been fully resolved, and essentially allows `local_search` to multipurpose the computation time spent on resolving the ghost vehicle for improving overall routing distance on the valid portions of the solution.
 
 ### Greedy Binpacking
 
 Throughout most of the development process, we started with setting our initial local search solution to a solution where all other vehicle routes were blank and the ghost vehicle contained all possible customers. However, we noticed that this would waste time early in the local search process as the solver attempted to find the valid region of the solution space.
 
-To expedite this process, we initialized our initial solution using a first-fit descending greedy bin packing algorithm. If, in the process of this algorithm, we are unable to assign a given customer to any route, we assign it to a "ghost" vehicle, which acts as a temporary container for unassigned customers. This allowed us to place most, if not all, of the customers for a given <span class="small-caps">Cvrp</span> instance immediately so the solver no longer had to worry about finding feasible solutions and could focus on finding more optimal solutions.
+To expedite this process, we initialized our initial solution using a first-fit descending greedy bin packing algorithm shown in $$\textbf{Algorithm 1}$$. The algorithm performs an in-order traversal over all $$(demand_i, x_i, y_i)$$ tuples (each representing one customer that needs deliveries) and attempts to assign them to the first vehicle with remaining capacity. If no route remains that will accomodate a given customer, the algorithm assigns the customer to the ghost vehicle.
 
-{% highlight python %}
-# Keep track of routes and demands met by each route:
-vehicle_routes   = [[] for _ in range(0, self.num_vehicles)]
-vehicle_demands  = [0 for _ in range(0, self.num_vehicles)]
+<figure>
+  <pre id="initial-solution-algorithm" style="display:hidden;">
+    \begin{algorithm}
+    \caption{Create initial solution from \textsc{Crvp} instance}
+    \begin{algorithmic}
+      \INPUT $(num\_vehicles, vehicle\_capacity, \{(demand_i, x_i, y_i), ...\})$
+      \OUTPUT initial solution to be passed to \texttt{local\_search}
+      \STATE $routes \gets [\{\}~\textbf{for}~0 \leq i < num\_vehicle]$ \COMMENT{track customers assigned per vehicle}
+      \STATE $ghost \gets \{\}$
+      \FORALL{$(demand_i, x_i, y_i)$ in demand-descending order}
+        \STATE $assigned \gets$ \FALSE \COMMENT{used for ghost vehicle assignment}
+        \FOR{$v \gets 0$ \TO $num\_vehicles$ \AND \NOT $assigned$}
+          \IF{$\left ( \sum_{j \in routes[v]} demand_j \right ) + demand_i \leq vehicle\_capacity$}
+            \STATE add customer $i$ to $routes[v]$
+            \STATE $assigned \gets$ \TRUE
+          \ENDIF
+        \ENDFOR
+        \IF{\NOT $assigned$} \COMMENT{customer did not fit in any route}
+          \STATE add customer $i$ to $ghost$
+        \ENDIF
+      \ENDFOR
+      \RETURN $(routes, ghost)$
+    \end{algorithmic}
+    \end{algorithm}
+  </pre>
+</figure>
+<script>
+  pseudocode.renderElement(document.getElementById("initial-solution-algorithm"),
+                           { lineNumber: true });
+</script>
 
-# Create a list of tuples where the first element is the demand of a
-# customer and the second element is the "index" (customer #) of that
-# customer, then sort them in demand-descending order:
-tuples = [(demand, index)
-    for index, demand in enumerate(self.customer_demands)]
-tuples = sorted(tuples, key=lambda tup: tup[0])[::-1]
-
-# Iterate over all of the tuples in demand-descending order:
-ghost_route = []
-for (demand, customer) in tuples:
-    # Skip the first "customer" (which is actually the factory:)
-    if customer == 0:
-        continue
-
-    # Attempt to assign this customer into the first route that has
-    # enough capacity to hold it:
-    for v in range(0, self.num_vehicles):
-        if vehicle_demands[v] + demand <= self.vehicle_capacity:
-            vehicle_demands[v] += demand
-            vehicle_routes[v].append(customer)
-            continue
-
-    # If we weren't able to assign this customer, then let's add it to
-    # the "ghost" vehicle
-    ghost_route.append(customer)
-{% endhighlight %}
+This allowed us to place most, if not all, of the customers for a given <span class="small-caps">Cvrp</span> instance immediately so the solver no longer had to worry about finding feasible solutions and could focus on finding more optimal solutions.
 
 # Results
 
-Our solver performed the best compared against 22 other implementations submitted by other teams enrolled in [CSCI2951O](https://cs.brown.edu/courses/csci2951-o/).
+Our solver performed the best compared against 21 other implementations submitted by other teams enrolled in [CSCI2951O](https://cs.brown.edu/courses/csci2951-o/). Solvers were evaluated against 16 instances of varying scope with a solving time limit of 300 seconds, with the largest instance going up to 386 customers and 47 vehicles.
+
+Some statistics on our solver's performance:
+
+- Produced valid solutions under 194 seconds on all instances.
+
+- Produced the most optimal solutions on 6 of the 16 instances (with the next highest teams producing 5, 2, and 2 most optimal solutions).
+
+- Placed in the top three of all teams over all instances when evaluated on solution optimality, with an average rank of 1.4 (out of 21, where 1 is the best) over all instances.
+
+## Examples
+
+Example solutions produced by our solver are displayed below. Customers are represented by gray dots with the central hub represented by the larger red dot in the center of each instance. Each customer has a hidden demand not shown in the instance visualizations. Individual routes generated by the solver are represented by the colored lines.
+
+<figure class="lazyload">
+    <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/examples/1.png">
+    <figcaption>Instance of 262 customers and 25 vehicles. Customers are generally evenly distributed across the instance.</figcaption>
+</figure>
+
+<figure class="lazyload">
+    <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/examples/2.png">
+    <figcaption>Instance of 386 customers and 47 vehicles. Customers are distributed across a Y-shaped region of the instance.</figcaption>
+</figure>
+
+<figure class="lazyload">
+    <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/examples/3.png">
+    <figcaption>Instance of 151 customers and 15 vehicles. Customers are clustered in different regions of the instance.</figcaption>
+</figure>
+
+<figure class="lazyload">
+    <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/examples/4.png">
+    <figcaption>Instance of 76 customers and 8 vehicles. Customers are generally evenly distributed across the instance.</figcaption>
+</figure>
+
+<figure class="lazyload">
+    <img class="responsive-image responsive-large-image lazyload" data-src="/images/projects/vehicle-routing/examples/5.png">
+    <figcaption>Instance of 241 customers and 22 vehicles. Customers are distributed in a six-point star-shape region of the instance.</figcaption>
+</figure>
