@@ -300,7 +300,7 @@ We implemented two techniques in our solver to help with the process of reaching
 
 ### Ghost Vehicles
 
-While each <span class="small-caps">Cvrp</span> instance only provides for $$num\_instance$$ vehicles in a valid solution, we initialized our solutions to contain $$num\_instance + 1$$ routes. This extra "ghost vehicle" holds unassigned customers and acts as a temporary container until a customer has been assigned to a valid route.
+While each <span class="small-caps">Cvrp</span> instance only provides for $$num\_vehicles$$ vehicles in a valid solution, we initialized our solutions to contain $$num\_vehicles + 1$$ routes. This extra "ghost vehicle" holds unassigned customers and acts as a temporary container until a customer has been assigned to a valid route.
 
 If any customers are currently being served by the "ghost" vehicle, the distance traversed by the "ghost" vehicle is multiplied by a large constant as a penalty within the objective function. (We arbitrarily decided on `100000` as our constant based on the scope of the instances we were tasked with solving.) This incentivizes the local search algorithm to move as many things out of the "ghost" vehicle as possible as to lower the objective function's value.
 
