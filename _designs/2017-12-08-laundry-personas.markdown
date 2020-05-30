@@ -3,7 +3,7 @@ layout: post
 title:  User Personas
 image_path: /images/designs/laundry-personas/storyboard.png
 tagline: Developing a set of personas for Brown University dorm room laundry machines
-card_color: "#3498DB"
+card_color: "#DB008C"
 skills: photoshop indesign
 filters: design case_studies academic
 ---
