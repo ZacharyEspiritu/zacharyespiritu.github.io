@@ -162,18 +162,16 @@ def local_search(objective_function: Callable[[Solution], Number],
       \INPUT ($\Theta$, $\rho$, $solution$, $\epsilon$, $\tau$, $\Delta$), where $\Theta$ is objective function; $\rho$ is proposal function
       \OUTPUT best solution found during local search
       \ENSURE objective value of output $\leq$ objective value of $solution$
-      \STATE $\Delta_\text{objective} \gets \Theta(solution) - \Delta$ \COMMENT{improvement target before timeout}
-      \STATE $\Delta_\text{start} \gets $ current time \COMMENT{track how long we've been trying to improve}
+      \STATE $\delta_\text{goal} \gets \Theta(solution) - \Delta$ \COMMENT{improvement needed before timeout ($\tau$)}
       \STATE $best \gets solution$
-      \WHILE{current time $< \Delta_\text{start} + \tau$} \COMMENT{stop if $\Delta$ change not made in $\tau$ seconds}
+      \WHILE{time since $\delta_\text{goal}$ last updated $< \tau$}
         \STATE $candidate \gets \rho(solution)$
-        \IF{$\Theta(candidate) < \Theta(solution) + \epsilon$} \COMMENT{is $candidate$ acceptable?}
-          \STATE $solution \gets candidate$
-          \IF{$\Theta(solution) < \Theta(best)$} \COMMENT{is current solution new best?}
+        \IF{$\Theta(candidate) < \Theta(solution) + \epsilon$}
+          \STATE $solution \gets candidate$ \COMMENT{$candidate$ accepted}
+          \IF{$\Theta(solution) < \Theta(best)$}
             \STATE $best \gets solution$
-            \IF{$\Theta(best) \leq \Delta_\text{objective}$} \COMMENT{should timeout reset?}
-              \STATE $\Delta_\text{objective} \gets \Theta(best) - \Delta$
-              \STATE $\Delta_\text{start} \gets $ current time
+            \IF{$\Theta(best) \leq \delta_\text{goal}$}
+              \STATE $\delta_\text{goal} \gets \Theta(best) - \Delta$ \COMMENT{reset improvement goal and reset timeout}
             \ENDIF
           \ENDIF
         \ENDIF
