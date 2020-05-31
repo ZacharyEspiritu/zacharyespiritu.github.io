@@ -318,7 +318,7 @@ Multiplying the ghost vehicle's distance by a constant is preferable to simply r
 
 Throughout most of the development process, we started with setting our initial local search solution to a solution where all other vehicle routes were blank and the ghost vehicle contained all possible customers. However, we noticed that this would waste time early in the local search process as the solver attempted to find the valid region of the solution space.
 
-To expedite this process, we initialized our initial solution using a first-fit descending greedy bin packing algorithm shown in $$\textbf{Algorithm 1}$$. The algorithm performs an in-order traversal over all $$(demand_i, x_i, y_i)$$ tuples (each representing one customer that needs deliveries) and attempts to assign them to the first vehicle with remaining capacity. If no route remains that will accomodate a given customer, the algorithm assigns the customer to the ghost vehicle.
+To expedite this process, we initialized our initial solution using a first-fit descending greedy bin packing algorithm. The algorithm performs an in-order traversal over all $$(demand_i, x_i, y_i)$$ tuples (each representing one customer that needs deliveries) and attempts to assign them to the first vehicle with remaining capacity. If no route remains that will accomodate a given customer, the algorithm assigns the customer to the ghost vehicle.
 
 <figure>
   <pre id="initial-solution-algorithm" style="display:hidden;">
