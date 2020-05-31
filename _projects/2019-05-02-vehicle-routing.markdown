@@ -36,6 +36,10 @@ In Spring 2019, <a href="https://github.com/a-wagner">Andrew Wagner</a> and I to
 
 # The Problem
 
+<aside class="post-aside">
+  This section and the next describe the theory and implementation details behind <span class="small-caps">Cvrp</span> as well as our solver. If you just want to learn more about how our solver performed and more output examples, jump to <a href="#results">Results</a>.
+</aside>
+
 Each <span class="small-caps">Cvrp</span> _instance_ consists of three parameters: $$num\_vehicles$$, or the number of vehicles that are available in the fleet; $$vehicle\_capacity$$, the amount of units each vehicle can hold; and a finite set of $$(demand_i, x_i, y_i)$$ tuples for $$1 \leq i \leq n$$, where each tuple represents a customer's location and the number of units that needs to be delivered to them.
 
 <p> <!-- <p> tags are necessary to get MathJAX output aligned correctly -->
