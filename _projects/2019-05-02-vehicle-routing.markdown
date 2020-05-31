@@ -283,7 +283,7 @@ To combat this, we had our solver skip certain calls to `local_search` early in 
         \STATE $\tau \gets timeout\_schedule[i]$
         \STATE $\Delta \gets improvement\_schedule[i]$
 
-        \IF{one-third of $initial\_objective < \epsilon$} \COMMENT{skip large phases}
+        \IF{one-third of $initial\_objective \geq \epsilon$} \COMMENT{skip large phases}
           \STATE $solution \gets$ \texttt{local\_search}(\texttt{objective\_function}, \texttt{proposal\_function}, $solution$, $\epsilon$, $\tau$, $\Delta$)
         \ENDIF
       \ENDFOR
