@@ -19,11 +19,11 @@ filters: academic software
   This project was developed with <a href="https://github.com/a-wagner">Andrew Wagner</a> as part of the <a href="https://cs.brown.edu/courses/csci2951-o/">CSCI2951-O: Foundations of Prescriptive Analytics</a> course at Brown University.
 </aside>
 
-The **Capacitated Vehicle Routing Problem (<span class="small-caps">Crvp</span>)** is an optimization problem that consists of charting optimal routes to deliver goods to a given set of customers using a fleet of vehicles with capacity constraints. The objective of the <span class="small-caps">Crvp</span> is to minimize the total distance, or "cost", of all of the routes.
+The **Capacitated Vehicle Routing Problem (<span class="small-caps">Cvrp</span>)** is an optimization problem that consists of charting optimal routes to deliver goods to a given set of customers using a fleet of vehicles with capacity constraints. The objective of the <span class="small-caps">Cvrp</span> is to minimize the total distance, or "cost", of all of the routes.
 
-The motivations here are clear: minimizing the driving distance of your delivery fleet minimizes fueling costs, and thus produces greater profits overall. The challenges are abound though: <span class="small-caps">Crvp</span> is $$\textsf{NP}$$-hard, and so developing a deterministic algorithm that produces optimal results while still operating under reasonable computation bounds is difficult and unpractical.
+The motivations here are clear: minimizing the driving distance of your delivery fleet minimizes fueling costs, and thus produces greater profits overall. The challenges are abound though: <span class="small-caps">Cvrp</span> is $$\textsf{NP}$$-hard, and so developing a deterministic algorithm that produces optimal results while still operating under reasonable computation bounds is difficult and unpractical.
 
-In Spring 2019, <a href="https://github.com/a-wagner">Andrew Wagner</a> and I took on the challenge of developing a local-search-based solver for a set of <span class="small-caps">Crvp</span> instances. With some carefully crafted metaheuristics, some engineering optimizations, and a little bit of luck, our Python solver (at a concise &tilde;200 lines of effective code!) produced the most optimal results when compared against 21 other implementations on 16 large-scale instances of the problem. Specifically, our solver:
+In Spring 2019, <a href="https://github.com/a-wagner">Andrew Wagner</a> and I took on the challenge of developing a local-search-based solver for a set of <span class="small-caps">Cvrp</span> instances. With some carefully crafted metaheuristics, some engineering optimizations, and a little bit of luck, our Python solver (at a concise &tilde;200 lines of effective code!) produced the most optimal results when compared against 21 other implementations on 16 large-scale instances of the problem. Specifically, our solver:
 
 - Produced the most optimal solutions on 6 of the 16 instances (with the next highest teams producing 5, 2, and 2 most optimal solutions).
 
@@ -36,7 +36,7 @@ In Spring 2019, <a href="https://github.com/a-wagner">Andrew Wagner</a> and I to
 
 # The Problem
 
-Each <span class="small-caps">Crvp</span> _instance_ consists of three parameters: $$num\_vehicles$$, or the number of vehicles that are available in the fleet; $$vehicle\_capacity$$, the amount of units each vehicle can hold; and a finite set of $$(demand_i, x_i, y_i)$$ tuples for $$1 \leq i \leq n$$, where each tuple represents a customer's location and the number of units that needs to be delivered to them.
+Each <span class="small-caps">Cvrp</span> _instance_ consists of three parameters: $$num\_vehicles$$, or the number of vehicles that are available in the fleet; $$vehicle\_capacity$$, the amount of units each vehicle can hold; and a finite set of $$(demand_i, x_i, y_i)$$ tuples for $$1 \leq i \leq n$$, where each tuple represents a customer's location and the number of units that needs to be delivered to them.
 
 <p> <!-- <p> tags are necessary to get MathJAX output aligned correctly -->
     $$
@@ -51,7 +51,7 @@ Each <span class="small-caps">Crvp</span> _instance_ consists of three parameter
     $$
 </p>
 
-A _solution_ to a <span class="small-caps">Crvp</span> instance is a set of variable-length tuples which each denote the route of a particular truck. The set has cardinality $$num\_vehicles$$ such that each vehicle in the fleet is given a route. (We'll denote when a vehicle is routed to a given customer $$i$$ by their $$i$$ index in the set of $$(demand_i, x_i, y_i)$$ tuples.)
+A _solution_ to a <span class="small-caps">Cvrp</span> instance is a set of variable-length tuples which each denote the route of a particular truck. The set has cardinality $$num\_vehicles$$ such that each vehicle in the fleet is given a route. (We'll denote when a vehicle is routed to a given customer $$i$$ by their $$i$$ index in the set of $$(demand_i, x_i, y_i)$$ tuples.)
 
 <p> <!-- <p> tags are necessary to get MathJAX output aligned correctly -->
     $$
@@ -79,12 +79,12 @@ Given this specification, the challenge is to produce an _optimal solution_, whe
     $$
 </p>
 
-In this variant of <span class="small-caps">Crvp</span>, we'll make two simplifying assumptions:
+In this variant of <span class="small-caps">Cvrp</span>, we'll make two simplifying assumptions:
 
 * **Visits Fully Satisfy:** When a truck visits a customer, it must satisfy all of the customer's demand at once. In other words, a truck will not make a "partial delivery". This means that a customer should never be visited twice.
 * **Trucks Travel Once:** When a truck leaves the hub and eventually returns back to the hub, it will not depart the hub again. Thus, a vehicle's capacity is exactly the amount of capacity they can handle when deliveries happen (i.e. it cannot return back to the hub to pick up more demand).
 
-With the specification in mind, we set out to develop a solver that would generate solutions for <span class="small-caps">Crvp</span> instances.
+With the specification in mind, we set out to develop a solver that would generate solutions for <span class="small-caps">Cvrp</span> instances.
 
 {% comment %}
 # Initial Attempt: Integer Programming
@@ -180,11 +180,11 @@ def local_search(objective_function: Callable[[Solution], Number],
   </pre>
 </figure>
 
-With `local_search` implemented, the main work involved is in figuring out how to best apply such a routine to <span class="small-caps">Crvp</span>. We discuss our <span class="small-caps">Crvp</span>-specific work below in four parts.
+With `local_search` implemented, the main work involved is in figuring out how to best apply such a routine to <span class="small-caps">Cvrp</span>. We discuss our <span class="small-caps">Cvrp</span>-specific work below in four parts.
 
 ## Heuristics
 
-Our first goal was to determine what a <span class="small-caps">Crvp</span> `proposal_function` should look like. One approach for formulating proposal functions is to try to analyze various facets about the problem and then come up with a single overall proposal. However, a key insight is that instead of trying to form one optimal kind of proposal, we can simply come up with multiple proposals and choose randomly among them each time we need to look at a solution.  While this might seem wasteful (especially if one just adds a proposal function that isn't particularly effective), the intuition behind why this approach is still effective is that adding "too many" proposal functions will only decrease our performance by a constant while missing a critical proposal function might prevent us from moving past a blocking frontier in the solution space.
+Our first goal was to determine what a <span class="small-caps">Cvrp</span> `proposal_function` should look like. One approach for formulating proposal functions is to try to analyze various facets about the problem and then come up with a single overall proposal. However, a key insight is that instead of trying to form one optimal kind of proposal, we can simply come up with multiple proposals and choose randomly among them each time we need to look at a solution.  While this might seem wasteful (especially if one just adds a proposal function that isn't particularly effective), the intuition behind why this approach is still effective is that adding "too many" proposal functions will only decrease our performance by a constant while missing a critical proposal function might prevent us from moving past a blocking frontier in the solution space.
 
 In the end, we created five proposal functions that aimed to express various intuitions we had about the shape of the problem space. We describe these metaheuristics in detail below, but one thing worth noting that might seem to contradict the previous paragraph is that we found that some proposal functions were effective very early on in the local search process and then became extremely ineffective as the function converged towards its true minimum. We thus applied our `local_search` routine in such a way that allowed us to remove some proposal functions after some amount of time had passed during the search.
 
@@ -319,7 +319,7 @@ To expedite this process, we initialized our initial solution using a first-fit 
 <figure>
   <pre id="initial-solution-algorithm" style="display:hidden;">
     \begin{algorithm}
-    \caption{Create initial solution from \textsc{Crvp} instance}
+    \caption{Create initial solution from \textsc{Cvrp} instance}
     \begin{algorithmic}
       \INPUT $(num\_vehicles, vehicle\_capacity, \{(demand_i, x_i, y_i), ...\})$
       \OUTPUT initial solution to be passed to \texttt{local\_search}
