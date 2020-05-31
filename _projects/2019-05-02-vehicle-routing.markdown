@@ -347,14 +347,14 @@ To expedite this process, we initialized our initial solution using a first-fit 
   </pre>
 </figure>
 <script>
-  (function() {
+  document.addEventListener("DOMContentLoaded", function(event) {
     pseudocode.renderElement(document.getElementById("local-search-algorithm"),
                              { lineNumber: true });
     pseudocode.renderElement(document.getElementById("simulated-annealing-algorithm"),
                              { lineNumber: true });
     pseudocode.renderElement(document.getElementById("initial-solution-algorithm"),
                              { lineNumber: true });
-  })();
+  });
 </script>
 
 This allowed us to place most, if not all, of the customers for a given <span class="small-caps">Cvrp</span> instance immediately so the solver no longer had to worry about finding feasible solutions and could focus on finding more optimal solutions.
