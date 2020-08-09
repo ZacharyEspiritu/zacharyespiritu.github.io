@@ -270,8 +270,8 @@ figure {
 .cv-section-intro {
   font-family: $serif-fonts;
   max-width: 800px;
-  font-size: 19px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 25px;
   margin: 34px 0;
 
   @media (max-width: 1080px) {
@@ -333,7 +333,7 @@ figure {
 
   .cv-item-description {
     font-family: $serif-fonts;
-    font-size: 18px;
+    font-size: 17.5px;
 
     p {
       margin-top: 12px;
@@ -352,6 +352,7 @@ figure {
 
     li {
       margin-bottom: 3.5px;
+      line-height: 23px;
     }
   }
 
@@ -696,7 +697,7 @@ a.block-link {
 .post-content {
   font-size: 19px;
   font-family: $serif-fonts;
-  line-height: 26.5px;
+  line-height: 26px;
   counter-reset: section;
   padding: 20px 0;
 

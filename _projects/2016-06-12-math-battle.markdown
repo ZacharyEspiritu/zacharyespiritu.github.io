@@ -75,8 +75,6 @@ To give the game more polish, the last month or so of development was spent work
 
 For marketing purposes, I designed and printed Math Battle "trading cards." They feature download information on the backside, and a randomized tile and background color combination on the front.
 
-I usually always have some on hand, so if you ever meet me in person, feel free to ask me for one.
-
 <figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/projects/math-battle/trading-cards.jpg">
 </figure>
