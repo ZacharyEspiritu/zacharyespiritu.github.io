@@ -8,6 +8,7 @@ location: Providence, RI
 
 * Foundations of Prescriptive Analytics (SAT, CP, LP, IP, Local Search)
 * Human-Computer Interaction Seminar
+* Topics in Computer Systems Security <sup>*</sup>
 
 <span class="text-underline">Undergraduate Coursework:</span>
 
@@ -23,3 +24,5 @@ location: Providence, RI
 * Operating Systems
 * Statistical Inference
 * User Interfaces and User Experience
+
+<sup>* in progress</sup>
