@@ -23,6 +23,7 @@ location: Providence, RI
 * Logic For Systems (Formal Methods and Verification)
 * Operating Systems
 * Statistical Inference
+* Technology and Health Behavior Change <sup>*</sup>
 * User Interfaces and User Experience
 
 <sup>* in progress</sup>
