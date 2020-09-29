@@ -22,6 +22,7 @@ location: Providence, RI
 * Introduction to Computer Graphics
 * Logic For Systems (Formal Methods and Verification)
 * Operating Systems
+* Software Security and Exploitation <sup>*</sup>
 * Statistical Inference
 * Technology and Health Behavior Change <sup>*</sup>
 * User Interfaces and User Experience
