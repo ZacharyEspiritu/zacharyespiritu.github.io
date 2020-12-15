@@ -1,6 +1,6 @@
 ---
 title: Brown University
-date_range: "Sc.B. in Computer Science<div class='vertical-spacer spacer-tiny'></div>September 2017 - December 2021"
+date_range: "Concurrent Sc.B. / Sc.M. in Computer Science<div class='vertical-spacer spacer-tiny'></div>September 2017 - May 2022<sup> *</sup>"
 location: Providence, RI
 ---
 
@@ -8,7 +8,7 @@ location: Providence, RI
 
 * Foundations of Prescriptive Analytics (SAT, CP, LP, IP, Local Search)
 * Human-Computer Interaction Seminar
-* Topics in Computer Systems Security <sup>*</sup>
+* Topics in Computer Systems Security
 
 <span class="text-underline">Undergraduate Coursework:</span>
 
@@ -22,9 +22,9 @@ location: Providence, RI
 * Introduction to Computer Graphics
 * Logic For Systems (Formal Methods and Verification)
 * Operating Systems
-* Software Security and Exploitation <sup>*</sup>
+* Software Security and Exploitation
 * Statistical Inference
-* Technology and Health Behavior Change <sup>*</sup>
+* Technology and Health Behavior Change
 * User Interfaces and User Experience
 
-<sup>* in progress</sup>
+<sup>* Not enrolled in Fall 2019.</sup>
