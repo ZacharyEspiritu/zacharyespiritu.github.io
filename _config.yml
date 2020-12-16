@@ -41,9 +41,9 @@ collections:
   designs:
     output: true
     permalink: /design/:title/
-  posts:
+  notes:
     output: true
-    permalink: /blog/:slug/
+    permalink: /notes/:slug/
   experience:
     output: false
   presentations:
@@ -63,9 +63,9 @@ defaults:
         path: /images/social-banner.png
   - scope:
       path: ""
-      type: posts
+      type: notes
     values:
-      is_post: true
+      is_note: true
   - scope:
       path: ""
       type: projects
