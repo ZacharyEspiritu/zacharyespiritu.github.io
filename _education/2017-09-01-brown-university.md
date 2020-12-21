@@ -6,8 +6,10 @@ location: Providence, RI
 
 <span class="text-underline">Graduate-Level Coursework:</span>
 
+* Algorithms: in Depth
 * Foundations of Prescriptive Analytics (SAT, CP, LP, IP, Local Search)
 * Human-Computer Interaction Seminar
+* Operating Systems Laboratory
 * Topics in Computer Systems Security
 
 <span class="text-underline">Undergraduate Coursework:</span>
