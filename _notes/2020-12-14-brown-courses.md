@@ -84,8 +84,8 @@ Here's how I used these courses to fulfill the ScB requirements (using the [2020
 | | Theory | CSCI1570 (core) |
 | |  | CSCI1950Y (related) |
 | **Additional** | Electives | CSCI1575 / CSCI1690 (half-credit substitutions) |
-| |  | CSCI1970 |
-| |  | CSCI1960 |
+| |  | CSCI1970 (thesis as capstone) |
+| |  | CSCI1970 (thesis as capstone) |
 | | Breadth | CSCI1230 |
 
 ## Concurrent Degree Requirements

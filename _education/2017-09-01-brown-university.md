@@ -29,4 +29,4 @@ location: Providence, RI
 * Technology and Health Behavior Change
 * User Interfaces and User Experience
 
-<sup>* Not enrolled in Fall 2019.</sup>
+<sup>* Not enrolled in Fall 2019. Some notes on completing the Concurrent Degree can be found [here](notes/brown-courses)</sup>
