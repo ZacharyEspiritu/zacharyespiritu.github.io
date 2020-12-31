@@ -7,8 +7,6 @@ card_color: "gray"
 
 # Introduction
 
-_This post is an incomplete draft, and may be updated later._
-
 Some students have emailed me about the Concurrent Bachelor's / Master's Degree at Brown University. The University (likely on purpose) does not publicize this program too much—the Deans told me that at most 8–12 students complete this program every year—and so there's not too much information available about the program.
 
 Aside from University-official documentation, Eric Jang has a [great blog post](https://blog.evjang.com/2018/01/brown-cm.html) detailing his Concurrent Degree petition from 2015. This post contains some information about my specific program that attempts to build off of Eric's post with new information, reaffirm still-relevant information, and also just provide an example of the course plan I went through.
@@ -23,11 +21,17 @@ There are several requirements to complete the Concurrent Degree:
 
 It's worth noting that the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_. What this ultimately meant for me was that I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester.
 
-It's also worth noting that the Committee may add additional requirements to Concurrent Degree candidacy based on your application. In my case, I was required to take additional breadth courses in my 7th semester because the Committee asked that I take more breadth courses outside of my concentration department.
+It's also worth noting that the Committee may add additional requirements to Concurrent Degree candidacy based on your application.
 
 # Courses
 
-These are all of the courses that went towards my Concurrent Degree application. Note that there are more courses here than are necessary to complete the requirements by the 6th semester.
+Below are all of the courses that went towards my Concurrent Degree application.
+
+## Course Plan
+
+I had a somewhat unusual course plan during my first three years, and my unexpected leave of absence in Fall 2019 complicated my degree completion a bit further—I almost gave up on candidacy after I returned from leave—but then I stretched the requirements to their limits to get accepted into the program in my sixth semester.
+
+(Specifically, I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester. This was allowed because _technically_ the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_. It's worth noting though that I was asked by the Committee to take additional breadth courses in my seventh semester because they really did want to see the breadth courses placed outside of my concentration department.)
 
 |        Semester |    Course     | Title |
 |----------------:|:-------------:|:------|
@@ -61,6 +65,30 @@ These are all of the courses that went towards my Concurrent Degree application.
 |                 |   ECON1090    | Introduction to Game Theory |
 |                 |    PHP1690    | Technology and Health Behavior Change |
 |                 |   CSCI1650    | Software Security and Exploitation |
+
+## Bachelor's Requirements
+
+Here's how I used these courses to fulfill the ScB requirements (using the [2020 "new" requirements](https://cs.brown.edu/degrees/undergrad/concentrating-in-cs/concentration-requirements-2020/new-scb-requirements/)):
+
+|Category|Sub-Category|Course|
+|-------:|:----:|
+| **Introductory Sequence** | 19 Track | CSCI0190 |
+| | | CSCI1730 (1000-level substitution with CSCI0190) |
+| **Intermediates** | Foundations | CSCI0220 |
+| | | CSCI1010 |
+| | Systems | CSCI0330 |
+| | Mathematics | APMA1650 |
+| | | MATH0520 |
+| **Pathways** | Systems | CSCI1670 (core) |
+| |  | CSCI1660 (related) |
+| | Theory | CSCI1570 (core) |
+| |  | CSCI1950Y (related) |
+| **Additional** | Electives | CSCI1575 / CSCI1690 (half-credit substitutions) |
+| |  | CSCI1970 |
+| |  | CSCI1960 |
+| | Breadth | CSCI1230 |
+
+## Concurrent Degree Requirements
 
 Here's how I used these courses to satisfy the Concurrent Degree's breadth requirement:
 
