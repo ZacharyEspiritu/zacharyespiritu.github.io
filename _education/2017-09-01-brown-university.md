@@ -6,6 +6,7 @@ location: Providence, RI
 
 <span class="text-underline">Graduate-Level Coursework:</span>
 
+* Advanced Probabilistic Methods in Computer Science <sup>**</sup>
 * Algorithms: in Depth
 * Foundations of Prescriptive Analytics (SAT, CP, LP, IP, Local Search)
 * Human-Computer Interaction Seminar
@@ -29,4 +30,4 @@ location: Providence, RI
 * Technology and Health Behavior Change
 * User Interfaces and User Experience
 
-<sup>* Not enrolled in Fall 2019. Some notes on completing the Concurrent Degree can be found [here](notes/brown-courses).</sup>
+<sup>* Not enrolled in Fall 2019. Some notes on completing the Concurrent Degree can be found [here](notes/brown-courses).<br>** In progress.</sup>

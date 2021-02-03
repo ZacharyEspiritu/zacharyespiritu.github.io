@@ -65,6 +65,10 @@ I had a somewhat unusual course plan during my first three years, and my unexpec
 |                 |   ECON1090    | Introduction to Game Theory |
 |                 |    PHP1690    | Technology and Health Behavior Change |
 |                 |   CSCI1650    | Software Security and Exploitation |
+| **Spring 2021** |   CSCI1970    | Individual Independent Study |
+|                 |   CSCI1973    | Independent Study |
+|                 |   CSCI2540    | Advanced Probabilistic Methods in Computer Science |
+|                 |    ECON0110    | Principles of Economics |
 
 ## Bachelor's Requirements
 
