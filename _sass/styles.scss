@@ -399,12 +399,12 @@ figure {
   }
 }
 
-.cv-item:nth-of-type(6n+2) { @include cv-item-styles($rainbow-two); }
-.cv-item:nth-of-type(6n+3) { @include cv-item-styles($rainbow-three); }
-.cv-item:nth-of-type(6n+4) { @include cv-item-styles($rainbow-four); }
-.cv-item:nth-of-type(6n+5) { @include cv-item-styles($rainbow-five); }
-.cv-item:nth-of-type(6n+6) { @include cv-item-styles($rainbow-six); }
-.cv-item:nth-of-type(6n+7) { @include cv-item-styles($rainbow-seven); }
+.cv-item:nth-of-type(6n+1) { @include cv-item-styles($rainbow-two); }
+.cv-item:nth-of-type(6n+2) { @include cv-item-styles($rainbow-three); }
+.cv-item:nth-of-type(6n+3) { @include cv-item-styles($rainbow-four); }
+.cv-item:nth-of-type(6n+4) { @include cv-item-styles($rainbow-five); }
+.cv-item:nth-of-type(6n+5) { @include cv-item-styles($rainbow-six); }
+.cv-item:nth-of-type(6n+6) { @include cv-item-styles($rainbow-seven); }
 
 .vertical-align {
   position: relative;
