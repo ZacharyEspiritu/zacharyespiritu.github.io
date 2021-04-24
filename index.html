@@ -82,17 +82,19 @@ layout: default
             <div class="section-box">
                 <div class="section-title black-text">Experience</div>
             </div>
-            {% assign sorted_experience = site.experience | reverse %}
-            {% for experience in sorted_experience %}
-                {% assign experience_subtitle = experience.tagline
-                                              | append: "<div class='vertical-spacer spacer-tiny'></div>"
-                                              | append: experience.date_string %}
-                {% include cv_item.html link=experience.link
-                                        main_header=experience.title
-                                        right_header=experience.location
-                                        subtitle=experience_subtitle
-                                        content=experience.content %}
-            {% endfor %}
+            <div>
+                {% assign sorted_experience = site.experience | reverse %}
+                {% for experience in sorted_experience %}
+                    {% assign experience_subtitle = experience.tagline
+                                                  | append: "<div class='vertical-spacer spacer-tiny'></div>"
+                                                  | append: experience.date_string %}
+                    {% include cv_item.html link=experience.link
+                                            main_header=experience.title
+                                            right_header=experience.location
+                                            subtitle=experience_subtitle
+                                            content=experience.content %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
@@ -109,13 +111,15 @@ layout: default
                 teaching assistant role.
             </div>
             <hr>
-            {% assign sorted_teaching = site.teaching | reverse %}
-            {% for teaching in sorted_teaching %}
-                {% include cv_item.html link=teaching.course_link
-                                        main_header=teaching.title
-                                        subtitle=teaching.semester
-                                        content=teaching.content %}
-            {% endfor %}
+            <div>
+                {% assign sorted_teaching = site.teaching | reverse %}
+                {% for teaching in sorted_teaching %}
+                    {% include cv_item.html link=teaching.course_link
+                                            main_header=teaching.title
+                                            subtitle=teaching.semester
+                                            content=teaching.content %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
@@ -125,13 +129,15 @@ layout: default
             <div class="section-box">
                 <div class="section-title black-text">Education</div>
             </div>
-            {% assign sorted_education = site.education | reverse %}
-            {% for education in sorted_education %}
-                {% include cv_item.html main_header=education.title
-                                        right_header=education.location
-                                        subtitle=education.date_range
-                                        content=education.content %}
-            {% endfor %}
+            <div>
+                {% assign sorted_education = site.education | reverse %}
+                {% for education in sorted_education %}
+                    {% include cv_item.html main_header=education.title
+                                            right_header=education.location
+                                            subtitle=education.date_range
+                                            content=education.content %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
