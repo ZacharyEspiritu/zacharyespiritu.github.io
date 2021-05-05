@@ -2,6 +2,8 @@
 .jekyll-metadata
 .DS_Store
 .git-metadata/
+.ruby-version
 _site/
 resume/pages
 resume/pdfs
+resume/resume-*.pdf
