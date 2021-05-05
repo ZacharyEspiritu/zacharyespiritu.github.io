@@ -61,9 +61,7 @@ A large amount of Math Battle's time in production was spent developing an unifi
 
 ## Animations
 
-One of the things I always like to do in my games is make sure that there is motion on the screen at all times—this prevents players from ever thinking that the game froze and also, in my opinion, simply makes for a better game feel overall. As such, almost all of the backgrounds in Math Battle are moving on a loop.
-
-I'm most proud of the subtle, "intersecting" backgrounds as seen in the gameplay screens, which I achieved through some custom OpenGL tinkering to selectively prevent textures from rendering on top of one another. You can see this in the GIF below:
+To make sure that there is motion on the screen at all times—this prevents players from thinking that the game froze—I implemented looping motion backgrounds in the gameplay scenes. I achieved these through some custom OpenGL tinkering to selectively prevent textures from rendering on top of one another. You can see this in the GIF below:
 
 <figure class="lazyload">
     <img class="responsive-screenshot lazyload" data-src="/images/projects/math-battle/animations.gif">
@@ -85,7 +83,7 @@ Math Battle was originally created at [Local Hack Day][local-hack-day] 2015 @ Ge
 
 After a complete redesign of the app, in February 2016, I won the 2015 [Congressional App Challenge][congressional-app-challenge]. As a result, I was invited to Washington, D.C. to a reception with the other regional winners, political representatives, and engineers from tech companies such as Spotify and IBM.
 
-Most recently, I was named on CEWeek's [10Under20: Young Innovators To Watch][ceweek-awards] list for my work on Math Battle. Since then, I've been featured in several publications around the internet—you can view several of these articles on the [Math Battle website][math-battle-website].
+In June 2016, I was named on CEWeek's [10Under20: Young Innovators To Watch][ceweek-awards] list for my work on Math Battle. Since then, I've been featured in several publications around the internet—you can view several of these articles on the [Math Battle website][math-battle-website].
 
 <figure class="lazyload">
     <img class="responsive-image lazyload" data-src="/images/projects/math-battle/ceweek-presentation.jpg">
