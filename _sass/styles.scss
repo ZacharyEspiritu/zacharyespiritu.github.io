@@ -24,10 +24,6 @@ body {
   font-size: 42px;
 }
 
-a {
-  outline: 0;
-}
-
 table {
   margin: 0 auto;
   color: #333333;
@@ -272,6 +268,38 @@ figure {
   }
 }
 
+.cv-item-description {
+  a {
+    outline: 0;
+    color: black;
+    background: rgba(75, 187, 193, 0.27);
+    text-decoration: none;
+    transition: all linear .2s;
+    padding: 1px 3px;
+    border-radius: 3px;
+  }
+
+  a:hover {
+    background: rgba(75, 187, 193, 0.45);
+  }
+}
+
+.cv-section-intro {
+  a {
+    outline: 0;
+    color: black;
+    background: rgba(75, 187, 193, 0.27);
+    text-decoration: none;
+    transition: all linear .2s;
+    padding: 1px 3px;
+    border-radius: 3px;
+  }
+
+  a:hover {
+    background: rgba(75, 187, 193, 0.45);
+  }
+}
+
 .cv-section-intro {
   font-family: $serif-fonts;
   max-width: 800px;
@@ -399,9 +427,9 @@ figure {
 @mixin cv-item-styles($item-color) {
   border-left-color: rgba-hex($item-color, 0.75);
 
-  .cv-item-description a {
-    color: #2980B9;
-  }
+  // .cv-item-description a {
+  //   color: #2980B9;
+  // }
 }
 
 .cv-item:nth-of-type(6n+1) { @include cv-item-styles($rainbow-two); }
