@@ -69,10 +69,10 @@ I had a somewhat unusual course plan during my first three years, and my unexpec
 |                 |   CSCI1973    | Independent Study |
 |                 |   CSCI2540    | Advanced Probabilistic Methods in Computer Science |
 |                 |   ECON0110    | Principles of Economics |
-|   **Fall 2021** |   CSCI1010    | Theory of Computation |
-|                 |   CSCI1510    | Introduction to Cryptography and Computer Security |
+|   **Fall 2021** |   CSCI1510    | Introduction to Cryptography and Computer Security |
 |                 |   CSCI1970    | Individual Independent Study |
 |                 |   CSCI1973    | Independent Study |
+|                 |   MATH0180    | Multivariable Calculus |
 
 ## Bachelor's Requirements
 
