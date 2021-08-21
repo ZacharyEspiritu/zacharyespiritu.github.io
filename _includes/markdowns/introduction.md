@@ -1,4 +1,4 @@
-I'm a 8th-semester concurrent undergraduate and masters student at [Brown University](https://www.brown.edu/) **actively seeking full-time software engineering or security analyst / engineering positions with a start date of January / Feburary 2021.**
+I'm a 8th-semester concurrent undergraduate and masters student at [Brown University](https://www.brown.edu/) **actively seeking full-time software engineering or security analyst / engineering positions with a start date of January / Feburary 2022.**
 
 My current technical and research interests focus on applied cryptography, systems security, usable security, programming languages, and computer systems. I am particularly interested in _practical deployments_ of applied cryptography&mdash;in other words, how to architect cryptographic (and, more generally, secure) systems in ways that are _usable_ and _efficient_, solve real-world problems, and work under real-world constraints and assumptions.
 
