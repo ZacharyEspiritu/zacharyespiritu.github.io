@@ -227,31 +227,31 @@ figure {
   }
 }
 
-.cv-section {
-  .section-box {
-    display: flex;
-    justify-content: center;
-    margin-top: 38px;
+.section-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
 
-    .section-title {
-      display: inline-block;
-      padding: 15px 30px;
-      font-weight: bold;
-      font-size: 19px;
-      border-style: solid;
-      border-width: 1px;
-      font-family: $sans-serif-fonts;
-    }
-
-    @mixin section-coloring($color) {
-      border-color: $color;
-      color: $color;
-    }
-
-    .white-text { @include section-coloring(white); }
-    .black-text { @include section-coloring(black); }
+  .section-title {
+    display: inline-block;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 19px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: $sans-serif-fonts;
   }
 
+  @mixin section-coloring($color) {
+    border-color: $color;
+    color: $color;
+  }
+
+  .white-text { @include section-coloring(white); }
+  .black-text { @include section-coloring(black); }
+}
+
+.cv-section {
   &.gray-cv-section {
     background: #F6F6F6;
     padding: 1px 0;
