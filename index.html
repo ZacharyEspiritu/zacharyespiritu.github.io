@@ -29,6 +29,49 @@ layout: default
         </div>
     </div>
 </header>
+<section class="cv-section">
+    <div class="wrapper">
+        <div class="small-wrapper">
+            <div class="section-box">
+                <div class="section-title black-text">About Me</div>
+            </div>
+            <div class="cv-section-intro">
+                {% include markdown_renderer.html markdown_file="introduction.md" %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cv-section yellow-cv-section">
+    <div class="wrapper">
+        <div class="small-wrapper">
+            <div class="section-box">
+                <div class="section-title black-text">News</div>
+            </div>
+            <div class="cv-section-intro">
+                <div class="news-item">
+                    <div class="news-date">Aug 2021</div>
+                    <div class="news-description">I received an Crowdstrike NextGen Scholarship for 2021! (I'm honored to join the ranks of Brown CS students who have also been recipients of this award.)</div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">Apr 2021</div>
+                    <div class="news-description">Received an (ISC) Undergraduate Information Security Scholarship for 2021.</div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">Mar 2021</div>
+                    <div class="news-description">I received the Randy Pausch Undergraduate Research Award from Brown CS to support my research with Roberto Tamassia on encrypted database schemes!</div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">Nov 2020</div>
+                    <div class="news-description">I finished 1st place out of ~100 participants at the inaugural Hack@Home Cybersecurity CTF!</div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">Jun 2020</div>
+                    <div class="news-description">Started an internship at Google.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="content">
     <div class="wrapper">
         <div class="project-filters">
@@ -58,25 +101,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="cv-section dark-gray-cv-section">
-    <div class="wrapper">
-        <div class="small-wrapper">
-            <div class="section-box">
-                <div class="section-title white-text">More About Me</div>
-            </div>
-            <div class="cv-section-intro" style="color: white;">
-                <p>I'm currently a 7th-semester Concurrent Degree candidate at Brown University. (What "Concurrent Degree" means is that I'm mostly an undergraduate who is pursuing a ScB in Computer Science, but I moonlight as a graduate student along the way in order to graduate with an ScM in Computer Science at the same time.)</p>
-
-                <p>My current technical and research interests focus on applied cryptography, systems security, usable security, programming languages, and computer science education. I am particularly interested in <i>practical deployments</i> of applied cryptography&mdash;in other words, how to architect cryptographic (and, more generally, secure) systems in ways that are practical and usable, solve real-world problems, and work under real-world constraints and assumptions.</p>
-
-                <!-- <p>In addition to funding from Brown University, my undergraduate studies have been generously supported by scholarships from the CIT Group. Additionally, my secondary school experience was funded by numerous generations of Regis High School alumni. I am extremely grateful for all of this financial support, though these companies and organizations do not necessarily represent my views.</p> -->
-
-                <p>I really like musical theater, lighting design, speech and debate,  and rhythm games.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="cv-section gray-cv-section">
+<section class="cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">

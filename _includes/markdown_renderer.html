@@ -1,0 +1,10 @@
+{% comment %}
+  This is a hacky trick to allow us to include multiple Markdown
+  Jekyll content files in the same page. We need to capture the content of the
+  file (which is loaded as pure Markdown), then pass it to `markdownify` to get
+  it to render as HTML.
+{% endcomment %}
+{% capture markdown %}
+  {% include markdowns/{{ include.markdown_file }} %}
+{% endcapture %}
+{{ markdown | markdownify }}

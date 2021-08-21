@@ -261,6 +261,11 @@ figure {
     padding: 1px 0;
   }
 
+  &.yellow-cv-section {
+    background: #FFFCD6;
+    padding: 1px 0;
+  }
+
   &.dark-gray-cv-section {
     background: #18212D;
     padding: 1px 0 12px;
@@ -1330,4 +1335,20 @@ figure {
 figure.highlight {
   padding: 16px 20px;
   border-radius: 4px;
+}
+
+.news-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+
+  .news-date {
+    text-align: left;
+    width: 120px;
+    font-style: oblique;
+  }
+
+  .news-description {
+    width: 680px;
+  }
 }
