@@ -1,6 +1,6 @@
 ---
 title: Brown University
-date_range: "Concurrent Sc.B. / Sc.M. in Computer Science<div class='vertical-spacer spacer-tiny'></div>September 2017 - May 2022<sup> *</sup>"
+date_range: "Concurrent Sc.B. / Sc.M. in Computer Science<div class='vertical-spacer spacer-tiny'></div>September 2017 - December 2021 <sup> *</sup>"
 location: Providence, RI
 ---
 
