@@ -15,7 +15,7 @@ Aside from University-official documentation, Eric Jang has a [great blog post](
 
 There are several requirements to complete the Concurrent Degree:
 
-- **Credit Requiement:** You must complete 38 credits. You can count two courses from your undergraduate degree towards your masters degree, if any are applicable—doing this reduces your credit requirement to 36.
+- **Credit Requirement:** You must complete 38 credits. You can count two courses from your undergraduate degree towards your masters degree, if any are applicable—doing this reduces your credit requirement to 36.
 - **Breadth Requirement:** You must complete 10 courses outside of your concentration. Of these 10 courses, you must take 2 courses within each of the "areas of study" outside of your concentration. The areas of study are defined as _Humanities_, _Physical Science_, _Life Science_, and _Social Science_, and the departments contained within those areas of study are detailed in the Concurrent Degree application. These 10 courses must be completed by the end of your 6th semester (when you apply).
 - **Depth Requirement:** Of the 10 breadth courses, you must complete 2 courses (outside of your concentration) that are at the 1000-level or greater in a single department.
 
@@ -31,7 +31,7 @@ Below are all of the courses that went towards my Concurrent Degree application.
 
 I had a somewhat unusual course plan during my first three years, and my unexpected leave of absence in Fall 2019 complicated my degree completion a bit further—I almost gave up on candidacy after I returned from leave—but then I stretched the requirements to their limits to get accepted into the program in my sixth semester.
 
-(Specifically, I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester. This was allowed because _technically_ the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_. It's worth noting though that I was asked by the Committee to take additional breadth courses in my seventh semester because they really did want to see the breadth courses placed outside of my concentration department.)
+(Specifically, I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester. This was allowed because _technically_ the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_, though your mileage may vary.)
 
 |        Semester |    Course     | Title |
 |----------------:|:-------------:|:------|
@@ -69,36 +69,50 @@ I had a somewhat unusual course plan during my first three years, and my unexpec
 |                 |   CSCI1973    | Independent Study |
 |                 |   CSCI2540    | Advanced Probabilistic Methods in Computer Science |
 |                 |   ECON0110    | Principles of Economics |
-|   **Fall 2021** |   CSCI1510    | Introduction to Cryptography and Computer Security |
+|   **Fall 2021** |   APMA0350    | Applied Ordinary Differential Equations |
+|                 |   CSCI0081    | TA Apprenticeship: Full Credit |
+|                 |   CSCI1510    | Introduction to Cryptography and Computer Security |
 |                 |   CSCI1970    | Individual Independent Study |
-|                 |   CSCI1973    | Independent Study |
-|                 |   MATH0180    | Multivariable Calculus |
 
-## Bachelor's Requirements
+# Degree Plan
 
-Here's how I used these courses to fulfill the ScB requirements (using the [2020 "new" requirements](https://cs.brown.edu/degrees/undergrad/concentrating-in-cs/concentration-requirements-2020/new-scb-requirements/)):
+Below is how I used these courses to fulfill the [2020 ScB requirements](https://cs.brown.edu/degrees/undergrad/concentrating-in-cs/concentration-requirements-2020/new-scb-requirements/) and the [Masters requirements](http://cs.brown.edu/degrees/masters/reqs/).
+
+## Sc.B. in Computer Science
 
 |Category|Sub-Category|Course|
 |-------:|:----:|
 | **Introductory Sequence** | 19 Track | CSCI0190 |
 | | | CSCI1730 (1000-level substitution with CSCI0190) |
 | **Intermediates** | Foundations | CSCI0220 |
-| | | CSCI1010 |
 | | Systems | CSCI0330 |
-| | Mathematics | APMA1650 |
+| | Mathematics | APMA0350 |
+| | | APMA1650 |
 | | | MATH0520 |
-| **Pathways** | Systems | CSCI1670 (core) |
-| |  | CSCI1660 (related) |
-| | Theory | CSCI1570 (core) |
-| |  | CSCI1950Y (related) |
+| **Pathways** | Systems | CSCI1380 |
+| |  | CSCI1670 |
+| | Security | CSCI1650 |
+| |  | CSCI1660 |
 | **Additional** | Electives | CSCI1575 / CSCI1690 (half-credit substitutions) |
 | |  | CSCI1970 (thesis as capstone) |
 | |  | CSCI1970 (thesis as capstone) |
 | | Breadth | CSCI1230 |
+| **Capstone** | | Honors Thesis |
 
-## Concurrent Degree Requirements
+## Sc.M. in Computer Science
 
-Here's how I used these courses to satisfy the Concurrent Degree's breadth requirement:
+|Category|Sub-Category|Course|
+|-------:|:----:|
+| **Pathway** | Theory | CSCI1570 |
+| | | CSCI2540 |
+| **Additional** | Electives | CSCI1510 |
+| | | CSCI1660 (double-counted from Sc.B.) |
+| | | CSCI1950Y |
+| | Breadth | CSCI1670 (double-counted from Sc.B.) |
+| **Track** | 2000-Level Coursework | CSCI2951E |
+| | | CSCI2951O |
+
+## Concurrent Degree: Breadth Requirement
 
 |        Area of Study |    Course     | Title | Semester |
 |----------------:|:-------------:|:------|:----------:|
@@ -112,10 +126,5 @@ Here's how I used these courses to satisfy the Concurrent Degree's breadth requi
 |   **Physical Science**  |   CSCI1300    | User Interfaces and User Experience | Fall 2017 |
 |       |   CSCI2300    | Human-Computer Interaction | Spring 2020 |
 |       |   CSCI1973    | Independent Study | Fall 2020 |
-|   **Social Science**  |   EDUC1130    | Economics of Education | Spring 2019 |
-|                  |   ECON1090    | Introduction to Game Theory | Fall 2020 |
-
-To satisfy the depth requirement, I used the following two ECON courses:
-
-- **EDUC1130** _(cross-listed as ECON1301)_: Economics of Education
-- **ECON1090**: Introduction to Game Theory
+|   **Social Science**  |   EDUC1130 (depth)    | Economics of Education | Spring 2019 |
+|                  |   ECON1090 (depth)   | Introduction to Game Theory | Fall 2020 |
