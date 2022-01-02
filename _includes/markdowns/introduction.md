@@ -10,4 +10,6 @@ I completed a four-year combined Sc.B. and Sc.M. in Computer Science at [Brown U
 - [Encrypted Systems Lab](http://esl.cs.brown.edu/), where I researched applications of searchable encryption and multi-party-computation to support public health initiatives with [Seny Kamara](http://cs.brown.edu/~seny/)
 - [Brown PLT](https://cs.brown.edu/research/plt/), where I developed [a machine learning library](https://cs0190.github.io/tensorflow.html) for Pyret, a functional programming language used in education, with [Shriram Krishnamurthi](http://cs.brown.edu/~sk/)
 
-Outside of Computer Science, I really like theater, [lighting design](design/lighting-design/), speech and debate, and rhythm games.
+Additionally, I was the course designer and Head Teaching Assistant for the Computer Science department's flagship [computer systems security course](https://cs.brown.edu/courses/info/csci1660/) from 2019 to 2021, where I designed 80% of the assignments, and delivered 40% of the course lecture content, and taught over 250 students over three years.
+
+I also really like theater, [lighting design](design/lighting-design/), speech and debate, and rhythm games.
