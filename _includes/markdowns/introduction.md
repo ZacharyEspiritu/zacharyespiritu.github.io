@@ -1,4 +1,4 @@
-My name is Zach, though some people call me Zesp. (You can call me whatever you prefer!) I'm an incoming systems security engineer at [D.E. Shaw. & Co.](https://deshaw.com) in New York, where I'm building systems to enhance the security posture of the firm.
+My name is Zach, though a bunch of people call me Zesp. (You can call me whatever you prefer!) I'm an incoming systems security engineer at [D.E. Shaw. & Co.](https://deshaw.com) in New York, where I'm building systems to enhance the security posture of the firm.
 
 My current technical and research interests focus on applied cryptography, systems security, usable security, and computer systems. I am particularly interested in secure systems design—specifically, how to design cryptographic (and, more generally, secure) systems in ways that are _usable_ and _efficient_, solve real-world problems, and work under real-world constraints and assumptions.
 
