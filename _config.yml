@@ -17,6 +17,7 @@ repository: ZacharyEspiritu/zacharyespiritu.github.io
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-github-metadata
 
 # jekyll-seo-tag options.
 # Refer to https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md

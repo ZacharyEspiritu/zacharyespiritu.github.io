@@ -266,6 +266,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (>= 214)
   jekyll (>= 3.9.0)
+  jekyll-github-metadata
   jekyll-seo-tag
   jekyll-sitemap
   minima
