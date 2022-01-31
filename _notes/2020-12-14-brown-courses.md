@@ -19,10 +19,7 @@ There are several requirements to complete the Concurrent Degree:
 - **Breadth Requirement:** You must complete 10 courses outside of your concentration. Of these 10 courses, you must take 2 courses within each of the "areas of study" outside of your concentration. The areas of study are defined as _Humanities_, _Physical Science_, _Life Science_, and _Social Science_, and the departments contained within those areas of study are detailed in the Concurrent Degree application. These 10 courses must be completed by the end of your 6th semester (when you apply).
 - **Depth Requirement:** Of the 10 breadth courses, you must complete 2 courses (outside of your concentration) that are at the 1000-level or greater in a single department.
 
-It's worth noting that the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_. What this ultimately meant for me was that I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester.
-
-It's also worth noting that the Committee may add additional requirements to Concurrent Degree candidacy based on your application.
-
+It's worth noting that the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_.
 
 # Statement of Purpose
 
@@ -40,13 +37,11 @@ In general, my statement hit the following topics in about 1000 words:
 
 3. Why I was ready for the program.
 
-I found that the best way to communicate my SOP's "story" was to dedicate 40% of my SOP to #1, 20% to #2, and 40% to #3. Make sure your course selections for the following year (as denoted in your application's course plan) support your story; in particular, make sure your plan for the "advanced" component of the Master's requirements (i.e. the Research track or the Coursework track) _really_ connects to your story.
+I found that the best way to communicate my SOP's "story" was to dedicate 40% of my SOP to #1, 20% to #2, and 40% to #3, though do what works best for you. Like any SOP, make sure your plan (research, courses, etc.) for the "advanced" component of the Master's requirements (i.e. the Research track or the Coursework track) connects to the story you're trying to convey.
 
 # Courses
 
 Below are all of the courses that went towards my Concurrent Degree application. I had a somewhat unusual course plan during my first three years, and my unexpected leave of absence in Fall 2019 complicated my degree completion a bit further—I almost gave up on candidacy after I returned from leave—but then I stretched the requirements to their limits to get accepted into the program in my sixth semester.
-
-(Specifically, I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester. This was allowed because _technically_ the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_, though YMMV.)
 
 |        Semester |    Course     | Title |
 |----------------:|:-------------:|:------|
@@ -143,3 +138,20 @@ Below is how I used these courses to fulfill the [2020 ScB requirements](https:/
 |       |   CSCI1973    | Independent Study | Fall 2020 |
 |   **Social Science**  |   EDUC1130 (depth)    | Economics of Education | Spring 2019 |
 |                  |   ECON1090 (depth)   | Introduction to Game Theory | Fall 2020 |
+|                  |   ECON0110   | Principles of Economics | Spring 2021[^1] |
+
+# Post-Mortem Analysis
+
+## Pros
+
+* Much, much cheaper than doing a fifth-year Masters. (At the time of writing, a fifth-year Master's in CS at Brown will cost you over 100k.)
+
+* There were several organizations during my job search that explicitly mentioned that the Master's degree was an especially attractive point on my application. (This mostly was in research-focused organizations, but about 20% of the more "industry" companies stated something similar as well.)
+
+## Cons
+
+
+
+[^1]: Close inspection of my breadth courses will look a little strange if you're familiar with the requirements as I counted CSCI courses towards my breath requirement in order to fulfill it by the end of my 6th semester. This was _technically_ allowed because the breadth requirement specifically refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_, though I was asked to complete an additional breadth course by the end of my 7th semester (Spring 2021).[^2] I don't really recommend attempting this strategy.
+
+[^2]: This appears to be consistent with this newly added (as of January 2022) wording from the official University page: "In extremely rare instances, a student who would otherwise be a strong candidate for the concurrent degrees program, can be granted provisional approval in their 6th semester (or equivalent semester) based on the following three criteria: (1) The student’s application has been approved or endorsed by the department’s Master’s program. (2) The student will have no more than two breadth requirements remaining by the end of their 6th semester. (3) The student will have completed all breadth requirements prior to starting their 8th semester of enrollment.

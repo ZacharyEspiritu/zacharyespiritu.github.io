@@ -422,6 +422,12 @@ figure {
   }
 }
 
+.footnotes {
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 28px;
+}
+
 @function rgba-hex($hex-color, $alpha) {
   @return rgba(red($hex-color), green($hex-color), blue($hex-color), $alpha)
 }
