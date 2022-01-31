@@ -321,7 +321,7 @@ figure {
 .cv-item {
   margin: 32px 0;
   border-left: 7px black solid;
-  padding: 20px 0 1px 19px;
+  padding: 20px 0 20px 19px;
 
   .cv-item-header {
     display: flex;
@@ -369,13 +369,15 @@ figure {
     font-size: 17.5px;
 
     p {
-      margin-top: 12px;
       line-height: 24px;
+      margin-top: 14px;
+      margin-bottom: 0px;
     }
 
     ul {
       padding-left: 26px;
-      margin-top: -7px;
+      margin-top: 14px;
+      margin-bottom: 0px;
 
       ul {
         margin-top: 6px;
