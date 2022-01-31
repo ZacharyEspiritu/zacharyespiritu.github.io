@@ -7,9 +7,9 @@ card_color: "gray"
 
 # Introduction
 
-Some students have emailed me about the Concurrent Bachelor's / Master's Degree at Brown University. The University (likely on purpose) does not publicize this program too much—the Deans told me that at most 8–12 students complete this program every year—and so there's not too much information available about the program.
+Some students have emailed me about the Concurrent Bachelor's / Master's Degree at Brown University. The University (likely on purpose) does not publicize this program much—the Deans told me that at most 8–12 students complete this program every year—and so there's not too much information available about the program. But, if you can wade through the hard-to-find documentation about the program, it's a pretty attractive program if you'd land up completing (or getting close to completing) the requirements anyways.
 
-Aside from University-official documentation, Eric Jang has a [great blog post](https://blog.evjang.com/2018/01/brown-cm.html) detailing his Concurrent Degree petition from 2015. This post contains some information about my specific program that attempts to build off of Eric's post with new information, reaffirm still-relevant information, and also just provide an example of the course plan I went through.
+First, Eric Jang has a [great blog post](https://blog.evjang.com/2018/01/brown-cm.html) detailing his Concurrent Degree petition from 2015. This post contains some information about my specific program that attempts to build off of Eric's post with new information, reaffirm still-relevant information, and also just provide an example of the course plan I went through.
 
 # Requirements
 
@@ -23,15 +23,30 @@ It's worth noting that the breadth requirement refers to courses that are _not a
 
 It's also worth noting that the Committee may add additional requirements to Concurrent Degree candidacy based on your application.
 
+
+# Statement of Purpose
+
+You'll be asked to submit a "statement of purpose" (SOP) with your application that does the following:
+
+> The statement should discuss how this program will enhance your undergraduate education; a description of the graduate program you intend to pursue, including a tentative description of the final research project for the master’s degree (if any); and your professional goals. This statement is comparable to the statement of purpose in a regular graduate school admissions process.
+
+If you're a student at Brown who's thinking about pursing this program and want to read my SOP for reference, feel free to email me and I'll happily send you a copy.
+
+In general, my statement hit the following topics in about 1000 words:
+
+1. What my professional goals were (in general);
+
+2. How the Concurrent degree program would help me achieve those goals;
+
+3. Why I was ready for the program.
+
+I found that the best way to communicate my SOP's "story" was to dedicate 40% of my SOP to #1, 20% to #2, and 40% to #3. Make sure your course selections for the following year (as denoted in your application's course plan) support your story; in particular, make sure your plan for the "advanced" component of the Master's requirements (i.e. the Research track or the Coursework track) _really_ connects to your story.
+
 # Courses
 
-Below are all of the courses that went towards my Concurrent Degree application.
+Below are all of the courses that went towards my Concurrent Degree application. I had a somewhat unusual course plan during my first three years, and my unexpected leave of absence in Fall 2019 complicated my degree completion a bit further—I almost gave up on candidacy after I returned from leave—but then I stretched the requirements to their limits to get accepted into the program in my sixth semester.
 
-## Course Plan
-
-I had a somewhat unusual course plan during my first three years, and my unexpected leave of absence in Fall 2019 complicated my degree completion a bit further—I almost gave up on candidacy after I returned from leave—but then I stretched the requirements to their limits to get accepted into the program in my sixth semester.
-
-(Specifically, I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester. This was allowed because _technically_ the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_, though your mileage may vary.)
+(Specifically, I counted a CSCI course towards my breath requirement in order to fulfill it by my 6th semester. This was allowed because _technically_ the breadth requirement refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_, though YMMV.)
 
 |        Semester |    Course     | Title |
 |----------------:|:-------------:|:------|

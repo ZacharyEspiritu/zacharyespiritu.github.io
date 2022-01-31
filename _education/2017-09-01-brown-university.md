@@ -16,6 +16,7 @@ location: Providence, RI
 <span class="text-underline">Undergraduate Coursework:</span>
 
 * Advanced Deductive Logic (Computability and Logic)
+* Cryptography
 * Computer Systems Security
 * Design and Analysis of Algorithms
 * Design and Implementation of Programming Languages
