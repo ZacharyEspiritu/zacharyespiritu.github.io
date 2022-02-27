@@ -140,17 +140,6 @@ Below is how I used these courses to fulfill the [2020 ScB requirements](https:/
 |                  |   ECON1090 (depth)   | Introduction to Game Theory | Fall 2020 |
 |                  |   ECON0110   | Principles of Economics | Spring 2021[^1] |
 
-# Post-Mortem Analysis
-
-## Pros
-
-* Much, much cheaper than doing a fifth-year Masters. (At the time of writing, a fifth-year Master's in CS at Brown will cost you over 100k.)
-
-* There were several organizations during my job search that explicitly mentioned that the Master's degree was an especially attractive point on my application. (This mostly was in research-focused organizations, but about 20% of the more "industry" companies stated something similar as well.)
-
-## Cons
-
-* It's hard to maintain a social life with this coursework _and_ doing other things. In my case, "other things" generally involved being a Head TA and participating in student theater projects for lighting design.
 
 
 [^1]: Close inspection of my breadth courses will look a little strange if you're familiar with the requirements as I counted CSCI courses towards my breath requirement in order to fulfill it by the end of my 6th semester. This was _technically_ allowed because the breadth requirement specifically refers to courses that are _not applied towards your undergraduate concentration requirements or masters requirements_, though I was asked to complete an additional breadth course by the end of my 7th semester (Spring 2021).[^2] I don't really recommend attempting this strategy.
