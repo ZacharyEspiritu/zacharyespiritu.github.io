@@ -805,6 +805,11 @@ a.block-link {
     @media (max-width: 870px) {
       margin-right: 0px;
     }
+
+    &.full-width {
+      margin-right: 0px;
+      max-width: none;
+    }
   }
 
   > ul,
@@ -1386,5 +1391,9 @@ figure.highlight {
 
   .news-description {
     width: 680px;
+
+    p {
+      margin: 0;
+    }
   }
 }

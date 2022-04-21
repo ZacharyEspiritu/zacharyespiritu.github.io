@@ -48,34 +48,12 @@ layout: default
                 <div class="section-title black-text">News</div>
             </div>
             <div class="cv-section-intro">
-                <div class="news-item">
-                    <div class="news-date">Jan 2022</div>
-                    <div class="news-description">Our work on attacking multi-dimensional encrypted database schemes is now available on <a href="https://eprint.iacr.org/2022/090">ePrint</a>!</div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">Dec 2021</div>
-                    <div class="news-description">I defended my honors thesis work on "Efficient Range Aggregate Queries on Encrypted Databases", a joint work with Evangelia Anna Markatou and Roberto Tamassia, and finished my Bachelor's and Master's requirements at Brown!</div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">Aug 2021</div>
-                    <div class="news-description">I received an <a href="https://www.crowdstrike.org/scholarships.html">Crowdstrike NextGen Scholarship</a> for 2021! (I'm honored to join the ranks of Brown CS students who have also been recipients of this award.)</div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">Apr 2021</div>
-                    <div class="news-description">Received an <a href="https://iamcybersafe.org/s/undergraduate-scholarships">(ISC)<sup>2</sup> Undergraduate Information Security Scholarship</a> for 2021.</div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">Mar 2021</div>
-                    <div class="news-description">I received the <a href="https://cs.brown.edu/news/2021/03/24/ross-briden-and-zachary-espiritu-win-randy-f-pausch-computer-science-undergraduate-summer-research-award/">Randy Pausch Undergraduate Research Award</a> from Brown CS to support my research with Roberto Tamassia on encrypted database schemes!</div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">Nov 2020</div>
-                    <div class="news-description">I finished 1st place out of ~100 participants at the inaugural Hack@Home Cybersecurity CTF!</div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">Jun 2020</div>
-                    <div class="news-description">Started an internship at Google.</div>
-                </div>
+                {% for announcement in site.data.news %}
+                    <div class="news-item">
+                        <div class="news-date">{{ announcement.date }}</div>
+                        <div class="news-description">{{ announcement.text | markdownify }}</div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -134,6 +112,27 @@ layout: default
         </div>
     </div>
 </section>
+<!-- <section class="cv-section cv-section">
+    <div class="wrapper">
+        <div class="small-wrapper">
+            <div class="section-box">
+                <div class="section-title black-text">Publications</div>
+            </div>
+            <div>
+                {% for publication in site.data.publications %}
+                    {% assign experience_subtitle = experience.tagline
+                                                  | append: "<div class='vertical-spacer spacer-tiny'></div>"
+                                                  | append: experience.date_string %}
+                    {% include cv_item.html link=publication.link
+                                            main_header=publication.title
+                                            right_header=experience.location
+                                            subtitle=experience_subtitle
+                                            content=experience.content %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section> -->
 <section class="cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
