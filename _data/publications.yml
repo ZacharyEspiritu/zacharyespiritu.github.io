@@ -26,19 +26,3 @@
       library in order to evaluate **ARQ**'s practicality. Our experiments on
       real-world datasets demonstrate the efficiency of the schemes derived from
       the **ARQ** framework in comparison to prior work.
-
-- title: Partially Authorized Private Set Intersection
-  authors:
-    - name: Zachary Espiritu
-      affiliation: Brown University
-      self: true
-      name: Francesca Falzon
-      affiliation: Brown University and University of Chicago
-    - name: Evangelia Anna Markatou
-      affiliation: Brown University
-  venue: Privacy Enhancing Technologies Symposium (PETS)
-  location: Sydney, Australia
-  month: January
-  year: 2023
-  paper_link: "#"
-  software_link: "#"
