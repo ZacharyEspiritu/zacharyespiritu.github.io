@@ -46,8 +46,6 @@ collections:
     permalink: /notes/:slug/
   experience:
     output: false
-  presentations:
-    output: false
   awards:
     output: false
   teaching:

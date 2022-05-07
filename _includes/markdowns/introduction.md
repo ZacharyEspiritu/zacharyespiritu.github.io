@@ -12,4 +12,4 @@ I completed a four-year combined Sc.B. and Sc.M. in Computer Science at [Brown U
 
 Additionally, I was the course designer and Head Teaching Assistant for the Computer Science department's flagship [computer systems security course](https://cs.brown.edu/courses/info/csci1660/) from 2019 to 2021, where I designed 80% of the assignments, delivered 40% of the course lecture content, and taught over 250 students over three years.
 
-I also really like theater, board games, [lighting design](design/lighting-design/), speech and debate, and rhythm games.
+I also really like theater, board games (especially _Blood on the Clocktower_), [lighting design](design/lighting-design/), speech and debate, and rhythm games.
