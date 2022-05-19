@@ -1,6 +1,18 @@
+- date: Jul 2022
+  text: I'll be in attendance (and presenting) at [PETS 2022](https://petsymposium.org/2022/) in Sydney, Australia.
+
+- date: May 2022
+  text: I'll be at Brown University's Commencement, where I'll "officially" graduate
+      with a Sc.B. in Computer Science (with Honors) and an Sc.M. in Computer Science.
+
+- date: May 2022
+  text: I was awarded a [Senior Prize in Computer Science](https://cs.brown.edu/news/2022/05/16/twenty-five-students-win-brown-cs-senior-prizes/)
+      as well as the [Norman&nbsp;K.&nbsp;Meyrowitz&nbsp;&rsquo;81 Award](http://cs.brown.edu/news/2022/05/17/zachary-espiritu-wins-norman-k-meyrowitz-81-award/)
+      for "exceptionally meritorious service to Brown CS".
+
 - date: May 2022
   text: Our paper "Time- and Space- Efficient Aggregate Range Queries on Encrypted Databases"
-      will appear at [PETS 2022](https://petsymposium.org/2022/)!
+      will appear in [PoPETs 2022](https://petsymposium.org/2022/)!
 
 - date: Jan 2022
   text: Our work on attacking multi-dimensional encrypted database schemes is now
@@ -19,7 +31,7 @@
 
 - date: Mar 2021
   text: I received the [Randy Pausch Undergraduate Research Award](https://cs.brown.edu/news/2021/03/24/ross-briden-and-zachary-espiritu-win-randy-f-pausch-computer-science-undergraduate-summer-research-award/)
-      from Brown CS to support my research with Roberto Tamassia on encrypted database schemes!
+      from Brown CS to support my research with Roberto Tamassia on encrypted databases!
 
 - date: Nov 2020
   text: I finished 1st place out of ~100 participants at the inaugural Hack@Home

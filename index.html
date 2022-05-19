@@ -118,7 +118,7 @@ layout: default
                                 <span {% if author.self %}style="font-weight: 600;"{% endif %}>{{ author.name }}</span>{% unless forloop.last %}, {% endunless %}
                             {% endfor %}
                             <div class='vertical-spacer spacer-tiny'></div>
-                            <i>{{ publication.venue }} ({{ publication.location }}), {{ publication.month }} {{ publication.year }}</i>
+                            <i>{{ publication.venue }}{% if publication.location %} ({{ publication.location }}){% endif %}, {{ publication.month }} {{ publication.year }}</i>
                         </div>
                         <div class="cv-item-description">
                             {{ publication.abstract | rstrip | markdownify }}

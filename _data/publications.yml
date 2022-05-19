@@ -16,9 +16,7 @@
   abstract: >
       In this work, we develop _ARQ_, a systematic framework for creating
       cryptographic schemes that  handle range aggregate queries (sum, minimum,
-      median, and mode) over encrypted datasets. Our schemes do not rely on trusted
-      hardware or specialized cryptographic primitives such as order-preserving or
-      homomorphic encryption. Instead, _ARQ_ unifies structures from the plaintext
+      median, and mode) over encrypted datasets. _ARQ_ unifies structures from the plaintext
       data management community with existing STE primitives. We prove how such
       combinations yield efficient (and secure) constructions in the encrypted setting.
       As part of this work, we designed and implemented a new, open-source, encrypted
@@ -26,3 +24,26 @@
       library in order to evaluate _ARQ_'s practicality. Our experiments on
       real-world datasets demonstrate the efficiency of the schemes derived from
       the _ARQ_ framework in comparison to prior work.
+
+- title:  Attacks on Encrypted Range Search Schemes in Multiple Dimensions
+  authors:
+    - name: Francesca Falzon
+      affiliation: University of Chicago and Brown University
+    - name: Evangelia Anna Markatou
+      affiliation: Brown University
+    - name: Zachary Espiritu
+      affiliation: Brown University
+      self: true
+    - name: Roberto Tamassia
+      affiliation: Brown University
+  venue: Cryptology ePrint Archive
+  month: Jan
+  year: 2022
+  paper_link: "https://eprint.iacr.org/2022/090"
+  abstract: >
+      We present the first systematic security evaluation of multi-attribute range search
+      schemes on symmetrically encrypted data. We present four database reconstruction
+      attacks that apply to a broad class of schemes and rely on volume and search pattern
+      leakage. For schemes achieving efficiency by decomposing a query into a small number of
+      subqueries, we further show how to exploit their structure pattern, i.e., co-occurrences
+      of subqueries.
