@@ -1,10 +1,6 @@
 # personal-website
 The current version of my personal website, built using Jekyll.
 
-The theme was revamped in January 2018. 
-
-You can find the 2017 version of my website [here](https://github.com/ZacharyEspiritu/2017-website), and you can find the 2015 version of my website [here](https://github.com/ZacharyEspiritu/2015-website).
-
 ## Installation
 
 ```console
@@ -13,5 +9,3 @@ cd zacharyespiritu.github.io
 bundle install
 bundle exec jekyll serve
 ```
-
-You can use <kbd>Option</kbd><kbd>C</kbd> to stop the server.
