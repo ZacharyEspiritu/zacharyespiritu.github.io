@@ -5,14 +5,17 @@
       self: true
     - name: Evangelia Anna Markatou
       affiliation: Brown University
+      website: "https://markatou.github.io/"
     - name: Roberto Tamassia
       affiliation: Brown University
+      website: "https://www.tamassia.net/"
   venue: Proceedings of Privacy Enhancing Technologies
   location: Sydney, Australia
   month: July
   year: 2022
-  paper_link: "#"
-  software_link: "#"
+  links:
+    - name: Thesis
+      url: "https://cs.brown.edu/research/pubs/theses/ugrad/2022/espiritu.zachary.pdf"
   abstract: >
       In this work, we develop _ARQ_, a systematic framework for creating
       cryptographic schemes that  handle range aggregate queries (sum, minimum,
@@ -29,17 +32,22 @@
   authors:
     - name: Francesca Falzon
       affiliation: University of Chicago and Brown University
+      website: "https://ffalzon.github.io/"
     - name: Evangelia Anna Markatou
       affiliation: Brown University
+      website: "https://markatou.github.io/"
     - name: Zachary Espiritu
       affiliation: Brown University
       self: true
     - name: Roberto Tamassia
       affiliation: Brown University
-  venue: Cryptology ePrint Archive
+      website: "https://www.tamassia.net/"
+  venue: Cryptology ePrint Archive Report 2022/090
   month: Jan
   year: 2022
-  paper_link: "https://eprint.iacr.org/2022/090"
+  links:
+    - name: ePrint
+      url: "https://eprint.iacr.org/2022/090"
   abstract: >
       We present the first systematic security evaluation of multi-attribute range search
       schemes on symmetrically encrypted data. We present four database reconstruction

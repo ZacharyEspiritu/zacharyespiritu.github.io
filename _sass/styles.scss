@@ -251,6 +251,26 @@ figure {
   .black-text { @include section-coloring(black); }
 }
 
+
+.paper-link-box {
+  display: inline-block;
+  padding: 6px 16px;
+  font-weight: 500;
+  font-size: 15px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 17px;
+  font-family: $sans-serif-fonts;
+
+  @mixin paper-link-coloring($color) {
+    border-color: $color;
+    color: $color;
+  }
+
+  .white-text { @include paper-link-coloring(white); }
+  .black-text { @include paper-link-coloring(black); }
+}
+
 .cv-section {
   &.gray-cv-section {
     background: #F6F6F6;
