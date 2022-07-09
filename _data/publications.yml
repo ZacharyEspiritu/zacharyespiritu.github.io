@@ -14,7 +14,11 @@
   month: July
   year: 2022
   links:
-    - name: Thesis
+    - name: Paper
+      url: "/documents/papers/popets-2022.pdf"
+    - name: Artifact
+      url: "https://github.com/cloudsecuritygroup/arca"
+    - name: Thesis Version
       url: "https://cs.brown.edu/research/pubs/theses/ugrad/2022/espiritu.zachary.pdf"
   abstract: >
       In this work, we develop _ARQ_, a systematic framework for creating
@@ -46,7 +50,7 @@
   month: Jan
   year: 2022
   links:
-    - name: ePrint
+    - name: Paper
       url: "https://eprint.iacr.org/2022/090"
   abstract: >
       We present the first systematic security evaluation of multi-attribute range search
