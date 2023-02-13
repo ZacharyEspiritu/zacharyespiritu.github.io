@@ -252,7 +252,7 @@ figure {
 }
 
 
-.paper-link-box {
+.link-box {
   display: inline-block;
   padding: 6px 16px;
   font-weight: 500;
@@ -1402,6 +1402,10 @@ figure.highlight {
   display: flex;
   justify-content: space-between;
   padding-bottom: 12px;
+
+  &.news-item-hidden {
+    display: none;
+  }
 
   .news-date {
     text-align: left;

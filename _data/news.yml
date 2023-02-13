@@ -1,3 +1,11 @@
+- date: Feb 2023
+  text: I reunited with some of my former collaborators from the [Encrypted Systems Lab](https://esl.cs.brown.edu) at
+      Brown University by joining the Advanced Cryptography Research Group at [MongoDB](https://mongodb.com)!
+
+- date: Nov 2022
+  text: Our paper ["Range Search over Encrypted Multi-Attribute Data"](https://eprint.iacr.org/2022/1076)
+      will appear at [VLDB 2023](https://vldb.org/2023/) in Vancouver, Canada!
+
 - date: Jul 2022
   text: I'll be in attendance (and presenting) at [PETS 2022](https://petsymposium.org/2022/) in Sydney, Australia.
 
@@ -11,8 +19,11 @@
       for "exceptionally meritorious service to Brown CS" (second to receive the award in the award's history).
 
 - date: May 2022
-  text: Our paper "Time- and Space- Efficient Aggregate Range Queries on Encrypted Databases"
-      will appear in [PoPETs 2022](https://petsymposium.org/2022/)!
+  text: Our paper ["Time- and Space- Efficient Aggregate Range Queries on Encrypted Databases"](https://petsymposium.org/popets/2022/popets-2022-0128.pdf)
+      will appear at [PETS 2022](https://petsymposium.org/2022/)!
+
+- date: Feb 2022
+  text: Started work at [D. E. Shaw & Co.](https://deshaw.com/)!
 
 - date: Jan 2022
   text: Our work on attacking multi-dimensional encrypted database schemes is now

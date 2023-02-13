@@ -48,13 +48,32 @@ layout: default
                 <div class="section-title black-text">News</div>
             </div>
             <div class="cv-section-intro">
+                {% assign max_post = 5 %}
+                {% assign counter = 0 %}
                 {% for announcement in site.data.news %}
-                    <div class="news-item">
+                    <div class="news-item {% if counter >= max_post %}news-item-hidden{% endif %}">
                         <div class="news-date">{{ announcement.date }}</div>
                         <div class="news-description">{{ announcement.text | markdownify }}</div>
                     </div>
+                    {% assign counter = counter | plus: 1 %}
                 {% endfor %}
+                <div class="link-box news-toggle-button">
+                    Show older news
+                </div>
             </div>
+            <script>
+                const button = document.querySelector('.news-toggle-button');
+                const hiddenItems = document.querySelectorAll('.news-item-hidden');
+                let isHidden = true;
+                button.addEventListener('click', () => {
+                  button.textContent = isHidden
+                  ? 'Hide older news'
+                  : 'Show older news';
+
+                  isHidden = !isHidden;
+                  hiddenItems.forEach(item => item.classList.toggle('news-item-hidden'));
+                });
+            </script>
         </div>
     </div>
 </section>
@@ -90,7 +109,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="cv-section cv-section gray-cv-section">
+<section id="publications" class="cv-section cv-section gray-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -125,7 +144,7 @@ layout: default
                             {{ publication.abstract | rstrip | markdownify }}
                         </div>
                         {% for link in publication.links %}
-                            <div class="paper-link-box black-text">
+                            <div class="link-box black-text">
                                 <a href="{{ link.url }}" style="color: black; text-decoration: none;">{{ link.name }}</a>
                             </div>
                         {% endfor %}
