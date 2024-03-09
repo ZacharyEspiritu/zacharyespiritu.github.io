@@ -1,3 +1,44 @@
+- title: "Synq: Public Policy Analytics Over Encrypted Data"
+  authors:
+    - name: Zachary Espiritu
+      affiliation: MongoDB Research
+      self: true
+    - name: Marilyn George
+      affiliation: MongoDB Research
+      website: "https://marilyngeorge.com/"
+    - name: Seny Kamara
+      affiliation: MongoDB Research and Brown University
+      website: "https://senykamara.com/"
+    - name: Lucy Qin
+      affiliation: Brown University
+      website: "https://lucyq.in/"
+  author_note: "listed alphabetically"
+  venue: 45th IEEE Symposium on Security and Privacy
+  location: San Francisco, California, USA
+  month: May
+  year: 2024
+  abstract: >
+      We design _Synq_, a system that addresses privacy concerns by
+      supporting public policy analytics over encrypted data. We
+      specifically use an application-centric approach which drives
+      _Synq_'s design around a study conducted on the opioid epidemic
+      in Massachusetts. We systematize the design considerations of
+      the public policy context and demonstrate how the combination
+      of design considerations that _Synq_ addresses is novel through
+      a survey of the literature. We then present our protocol which
+      combines structured encryption, somewhat homomorphic encryption, 
+      and oblivious pseudorandom functions to support
+      a complex query language that includes filtering (retrieving
+      rows by attribute/value pairs), linking (merging rows from
+      different tables that represent the same individual) and aggregate 
+      functions (sum, count, average, variance, regression).
+      We formally express the security of our protocol and show that
+      Synq is efficient in practice while satisfying more demanding
+      constraints than prior work.
+  links:
+    - name: Paper
+      url: "https://doi.ieeecomputersociety.org/10.1109/SP54263.2024.00085"
+
 - title: "Range Search over Encrypted Multi-Attribute Data"
   authors:
     - name: Evangelia Anna Markatou
@@ -19,11 +60,8 @@
   links:
     - name: Paper
       url: "https://vldb.org/pvldb/volumes/16/paper/Range%20Search%20over%20Encrypted%20Multi-Attribute%20Data"
-    - name: Eprint
-      url: "https://eprint.iacr.org/2022/1076"
   abstract: >
-      This work addresses expressive queries over encrypted data by presenting
-      the first systematic study of multi-attribute range search on a
+      We present the first systematic study of multi-attribute range search on a
       symmetrically encrypted database outsourced to an honest-but-curious
       server. Prior work includes a thorough analysis of single-attribute
       range search schemes (e.g. Demertzis et al. 2016) and a proposed
@@ -40,6 +78,46 @@
       application. We evaluate our schemes with a formal complexity and
       security analysis, a prototype implementation, and an experimental
       evaluation on real-world datasets.
+
+- title: Attacks on Encrypted Response-Hiding Range Search Schemes in Multiple Dimensions
+  authors:
+    - name: Francesca Falzon
+      affiliation: University of Chicago and Brown University
+      website: "https://ffalzon.github.io/"
+    - name: Evangelia Anna Markatou
+      affiliation: Brown University
+      website: "https://markatou.github.io/"
+    - name: Zachary Espiritu
+      affiliation: Brown University
+      self: true
+    - name: Roberto Tamassia
+      affiliation: Brown University
+      website: "https://www.tamassia.net/"
+  venue: Proceedings of Privacy Enhancing Technologies
+  location: Lausanne, Switzerland
+  month: July
+  year: 2023
+  links:
+    - name: Paper
+      url: "https://petsymposium.org/popets/2022/popets-2022-0128"
+  abstract: >
+      We present the first database reconstruction attacks
+      against response-hiding private range search schemes on encrypted
+      databases of arbitrary dimensions. Falzon et al. (VLDB 2022) present
+      a number of range-supporting schemes on arbitrary dimensions
+      exhibiting different security and efficiency trade-offs. Additionally,
+      they characterize a form of leakage, structure pattern leakage, also
+      present in many one-dimensional schemes e.g., Demertzis et al.
+      (SIGMOD 2016) and Faber et al. (ESORICS 2015). We present the
+      first systematic study of this leakage and attack a broad collection
+      of schemes, including schemes that allow the responses to contain
+      false-positives (often considered the gold standard in security). We
+      characterize the information theoretic limitations of a passive persistent 
+      adversary. Our work shows that for range queries, structure
+      pattern leakage can be as vulnerable to attacks as access pattern
+      leakage. We give a comprehensive evaluation of our attacks with a
+      complexity analysis, a prototype implementation, and an experimental 
+      assessment on real-world datasets.
 
 - title: Time- and Space-Efficient Aggregate Range Queries on Encrypted Databases
   authors:
@@ -59,12 +137,10 @@
   links:
     - name: Paper
       url: "https://petsymposium.org/popets/2022/popets-2022-0128.pdf"
-    - name: Artifact
-      url: "https://github.com/cloudsecuritygroup/arca"
     - name: Talk
       url: "https://www.youtube.com/watch?v=ySAJL9FlDn0"
   abstract: >
-      In this work, we develop _ARQ_, a systematic framework for creating
+      We develop _ARQ_, a systematic framework for creating
       cryptographic schemes that  handle range aggregate queries (sum, minimum,
       median, and mode) over encrypted datasets. _ARQ_ unifies structures from the plaintext
       data management community with existing STE primitives. We prove how such
@@ -74,31 +150,3 @@
       library in order to evaluate _ARQ_'s practicality. Our experiments on
       real-world datasets demonstrate the efficiency of the schemes derived from
       the _ARQ_ framework in comparison to prior work.
-
-- title:  Attacks on Encrypted Range Search Schemes in Multiple Dimensions
-  authors:
-    - name: Francesca Falzon
-      affiliation: University of Chicago and Brown University
-      website: "https://ffalzon.github.io/"
-    - name: Evangelia Anna Markatou
-      affiliation: Brown University
-      website: "https://markatou.github.io/"
-    - name: Zachary Espiritu
-      affiliation: Brown University
-      self: true
-    - name: Roberto Tamassia
-      affiliation: Brown University
-      website: "https://www.tamassia.net/"
-  venue: Cryptology ePrint Archive Report 2022/090
-  month: Jan
-  year: 2022
-  links:
-    - name: Eprint
-      url: "https://eprint.iacr.org/2022/090"
-  abstract: >
-      We present the first systematic security evaluation of multi-attribute range search
-      schemes on symmetrically encrypted data. We present four database reconstruction
-      attacks that apply to a broad class of schemes and rely on volume and search pattern
-      leakage. For schemes achieving efficiency by decomposing a query into a small number of
-      subqueries, we further show how to exploit their structure pattern, i.e., co-occurrences
-      of subqueries.

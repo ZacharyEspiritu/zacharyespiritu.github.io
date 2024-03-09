@@ -7,3 +7,6 @@ _site/
 resume/pages
 resume/pdfs
 resume/resume-*.pdf
+
+.bundle
+vendor

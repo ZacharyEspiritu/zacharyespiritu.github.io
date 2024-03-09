@@ -1,13 +1,19 @@
+- date: Dec 2023
+  text: >
+      Our paper ["Synq: Public Policy Analytics Over Encrypted Data"](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a085/1RjEaTgtZhS)
+      will appear at [IEEE Security & Privacy 2024](https://sp2024.ieee-security.org/) in San Francisco, CA!
+
+- date: Aug 2023
+  text: Our new product at [MongoDB](https://mongodb.com)—Queryable Encryption, the first industry database product implementing 
+      structured encryption—is now generally available!
+
 - date: Feb 2023
   text: I reunited with some of my former collaborators from the [Encrypted Systems Lab](https://esl.cs.brown.edu) at
-      Brown University by joining the Advanced Cryptography Research Group at [MongoDB](https://mongodb.com)!
+      Brown University by joining the Cryptography Research Group at [MongoDB](https://mongodb.com)!
 
 - date: Nov 2022
   text: Our paper ["Range Search over Encrypted Multi-Attribute Data"](https://eprint.iacr.org/2022/1076)
       will appear at [VLDB 2023](https://vldb.org/2023/) in Vancouver, Canada!
-
-- date: Jul 2022
-  text: I'll be in attendance (and presenting) at [PETS 2022](https://petsymposium.org/2022/) in Sydney, Australia.
 
 - date: May 2022
   text: Five months after completing my requirements, I "officially" graduated with a Sc.B. in Computer Science

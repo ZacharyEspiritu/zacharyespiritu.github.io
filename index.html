@@ -77,39 +77,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="content">
-    <div class="wrapper">
-        <div class="section-box">
-            <div class="section-title black-text">Projects</div>
-        </div>
-        <div class="project-filters">
-            > Zachary.projects.filter({(p): p.type ==
-            <span data-filter="*" class="filter-option selected">all</span>
-            <span data-filter=".software" class="filter-option">software</span>
-            <span data-filter=".academic" class="filter-option">academic</span>
-            <span data-filter=".design" class="filter-option">design</span>
-            <span data-filter=".games" class="filter-option">games</span>
-            <span data-filter=".case_studies" class="filter-option">case_studies</span>
-            <span data-filter=".fun_things" class="filter-option">fun_things</span>
-            })
-        </div>
-        <div class="projects">
-            {% assign combined_collections = site.projects | concat: site.designs %}
-            {% assign sorted_projects = combined_collections | sort: 'date' | reverse %}
-            {% for project in sorted_projects %}
-                {% include project_card.html project=project %}
-                {% if forloop.last == false %}
-                  <div class="project-gutter-sizer"></div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="no-projects-message">
-            <div class="big-message">Sorry, there's nothing here yet.</div>
-            <div class="small-message">(Try a different filter!)</div>
-        </div>
-    </div>
-</section>
-<section id="publications" class="cv-section cv-section gray-cv-section">
+<section id="publications" class="cv-section cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -154,7 +122,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="cv-section">
+<section class="cv-section gray-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -176,7 +144,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="cv-section gray-cv-section">
+<section class="cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -201,7 +169,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="cv-section">
+<section class="cv-section gray-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -216,6 +184,38 @@ layout: default
                                             content=education.content %}
                 {% endfor %}
             </div>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <div class="wrapper">
+        <div class="section-box">
+            <div class="section-title black-text">Projects</div>
+        </div>
+        <div class="project-filters">
+            > Zachary.projects.filter({(p): p.type ==
+            <span data-filter="*" class="filter-option selected">all</span>
+            <span data-filter=".software" class="filter-option">software</span>
+            <span data-filter=".academic" class="filter-option">academic</span>
+            <span data-filter=".design" class="filter-option">design</span>
+            <span data-filter=".games" class="filter-option">games</span>
+            <span data-filter=".case_studies" class="filter-option">case_studies</span>
+            <span data-filter=".fun_things" class="filter-option">fun_things</span>
+            })
+        </div>
+        <div class="projects">
+            {% assign combined_collections = site.projects | concat: site.designs %}
+            {% assign sorted_projects = combined_collections | sort: 'date' | reverse %}
+            {% for project in sorted_projects %}
+                {% include project_card.html project=project %}
+                {% if forloop.last == false %}
+                  <div class="project-gutter-sizer"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="no-projects-message">
+            <div class="big-message">Sorry, there's nothing here yet.</div>
+            <div class="small-message">(Try a different filter!)</div>
         </div>
     </div>
 </section>
