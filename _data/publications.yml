@@ -1,43 +1,51 @@
-- title: "Synq: Public Policy Analytics Over Encrypted Data"
+- title: "Sequentially Consistent Encrypted Multimaps"
   authors:
-    - name: Zachary Espiritu
+    - name: Archita Agarwal
+      affiliation: MongoDB Research
+      website: "https://architaagarwal.com/"
+    - name: Zachary Espiritu*
+      affiliation: MongoDB Research
+      self: true
+  venue: To appear at IEEE European Symposium on Security and Privacy
+  location: Venice, Italy
+  month: June
+  year: 2025
+
+- title: "Bayesian Leakage Analysis: A Framework for Analyzing Leakage in Encrypted Search"
+  authors:
+    - name: Zachary Espiritu*
+      affiliation: MongoDB Research
+      self: true
+    - name: Seny Kamara
+      affiliation: Brown University and MongoDB Research
+      website: "https://www.senykamara.com/"
+    - name: Tarik Moataz
+      affiliation: MongoDB Research
+      website: "https://tarikmoataz.com/"
+  venue: Cryptography ePrint Archive
+  month: Updated January
+  year: 2025
+  link: "https://eprint.iacr.org/2023/813"
+
+- title: "Synq: An Encrypted Database for Public Policy Studies"
+  authors:
+    - name: Zachary Espiritu*
       affiliation: MongoDB Research
       self: true
     - name: Marilyn George
       affiliation: MongoDB Research
-      website: "https://marilyngeorge.com/"
+      website: "http://cs.brown.edu/~mgeorge5/"
     - name: Seny Kamara
-      affiliation: MongoDB Research and Brown University
-      website: "https://senykamara.com/"
+      affiliation: Brown University and MongoDB Research
+      website: "https://www.senykamara.com/"
     - name: Lucy Qin
       affiliation: Brown University
       website: "https://lucyq.in/"
-  author_note: "listed alphabetically"
-  venue: 45th IEEE Symposium on Security and Privacy
-  location: San Francisco, California, USA
+  venue: IEEE Symposium on Security and Privacy
+  location: San Francisco, California
   month: May
   year: 2024
-  abstract: >
-      We design _Synq_, a system that addresses privacy concerns by
-      supporting public policy analytics over encrypted data. We
-      specifically use an application-centric approach which drives
-      _Synq_'s design around a study conducted on the opioid epidemic
-      in Massachusetts. We systematize the design considerations of
-      the public policy context and demonstrate how the combination
-      of design considerations that _Synq_ addresses is novel through
-      a survey of the literature. We then present our protocol which
-      combines structured encryption, somewhat homomorphic encryption, 
-      and oblivious pseudorandom functions to support
-      a complex query language that includes filtering (retrieving
-      rows by attribute/value pairs), linking (merging rows from
-      different tables that represent the same individual) and aggregate 
-      functions (sum, count, average, variance, regression).
-      We formally express the security of our protocol and show that
-      Synq is efficient in practice while satisfying more demanding
-      constraints than prior work.
-  links:
-    - name: Paper
-      url: "https://doi.ieeecomputersociety.org/10.1109/SP54263.2024.00085"
+  link: "https://ieeexplore.ieee.org/abstract/document/10646768"
 
 - title: "Range Search over Encrypted Multi-Attribute Data"
   authors:
@@ -57,29 +65,9 @@
   location: Vancouver, Canada
   month: September
   year: 2023
-  links:
-    - name: Paper
-      url: "https://vldb.org/pvldb/volumes/16/paper/Range%20Search%20over%20Encrypted%20Multi-Attribute%20Data"
-  abstract: >
-      We present the first systematic study of multi-attribute range search on a
-      symmetrically encrypted database outsourced to an honest-but-curious
-      server. Prior work includes a thorough analysis of single-attribute
-      range search schemes (e.g. Demertzis et al. 2016) and a proposed
-      high-level approach for multi-attribute schemes (De Capitani di
-      Vimercati et al. 2021). We first introduce a flexible framework for
-      building secure range search schemes with an arbitrary number of
-      attributes (dimensions) by adapting a broad class of geometric
-      search data structures to operate on encrypted data. Our framework
-      encompasses widely used data structures such as multi-dimensional
-      range trees and quadtrees, and has strong security properties that
-      we formally prove. We then develop six concrete highly parallelizable
-      range search schemes within our framework that offer a sliding scale
-      of efficiency and security tradeoffs to suit the needs of the
-      application. We evaluate our schemes with a formal complexity and
-      security analysis, a prototype implementation, and an experimental
-      evaluation on real-world datasets.
+  link: "https://vldb.org/pvldb/volumes/16/paper/Range%20Search%20over%20Encrypted%20Multi-Attribute%20Data"
 
-- title: Attacks on Encrypted Response-Hiding Range Search Schemes in Multiple Dimensions
+- title: "Attacks on Encrypted Response-Hiding Range Search Schemes in Multiple Dimensions"
   authors:
     - name: Francesca Falzon
       affiliation: University of Chicago and Brown University
@@ -97,27 +85,7 @@
   location: Lausanne, Switzerland
   month: July
   year: 2023
-  links:
-    - name: Paper
-      url: "https://petsymposium.org/popets/2022/popets-2022-0128"
-  abstract: >
-      We present the first database reconstruction attacks
-      against response-hiding private range search schemes on encrypted
-      databases of arbitrary dimensions. Falzon et al. (VLDB 2022) present
-      a number of range-supporting schemes on arbitrary dimensions
-      exhibiting different security and efficiency trade-offs. Additionally,
-      they characterize a form of leakage, structure pattern leakage, also
-      present in many one-dimensional schemes e.g., Demertzis et al.
-      (SIGMOD 2016) and Faber et al. (ESORICS 2015). We present the
-      first systematic study of this leakage and attack a broad collection
-      of schemes, including schemes that allow the responses to contain
-      false-positives (often considered the gold standard in security). We
-      characterize the information theoretic limitations of a passive persistent 
-      adversary. Our work shows that for range queries, structure
-      pattern leakage can be as vulnerable to attacks as access pattern
-      leakage. We give a comprehensive evaluation of our attacks with a
-      complexity analysis, a prototype implementation, and an experimental 
-      assessment on real-world datasets.
+  link: "https://petsymposium.org/popets/2023/popets-2023-0106.php"
 
 - title: Time- and Space-Efficient Aggregate Range Queries on Encrypted Databases
   authors:
@@ -134,19 +102,4 @@
   location: Sydney, Australia
   month: July
   year: 2022
-  links:
-    - name: Paper
-      url: "https://petsymposium.org/popets/2022/popets-2022-0128.pdf"
-    - name: Talk
-      url: "https://www.youtube.com/watch?v=ySAJL9FlDn0"
-  abstract: >
-      We develop _ARQ_, a systematic framework for creating
-      cryptographic schemes that  handle range aggregate queries (sum, minimum,
-      median, and mode) over encrypted datasets. _ARQ_ unifies structures from the plaintext
-      data management community with existing STE primitives. We prove how such
-      combinations yield efficient (and secure) constructions in the encrypted setting.
-      As part of this work, we designed and implemented a new, open-source, encrypted
-      search library called Arca and implemented the _ARQ_ framework using this
-      library in order to evaluate _ARQ_'s practicality. Our experiments on
-      real-world datasets demonstrate the efficiency of the schemes derived from
-      the _ARQ_ framework in comparison to prior work.
+  link: "https://petsymposium.org/popets/2022/popets-2022-0128.pdf"

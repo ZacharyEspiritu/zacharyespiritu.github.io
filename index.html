@@ -23,8 +23,8 @@ layout: default
                         @{{ site.github["build_revision"] | truncate: 8, "" }}
                     </a>
                 </span>
-                <br>
-                on {{ site_repository["pushed_at"] }}
+                <!-- <br> -->
+                <!-- on {{ site_repository["pushed_at"] }} -->
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="cv-section yellow-cv-section">
+<!-- <section class="cv-section yellow-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -76,8 +76,40 @@ layout: default
             </script>
         </div>
     </div>
-</section>
-<section id="publications" class="cv-section cv-section">
+</section> -->
+<!-- <section class="content">
+    <div class="wrapper">
+        <div class="section-box">
+            <div class="section-title black-text">Projects</div>
+        </div>
+        <div class="project-filters">
+            > Zachary.projects.filter({(p): p.type ==
+            <span data-filter="*" class="filter-option selected">all</span>
+            <span data-filter=".software" class="filter-option">software</span>
+            <span data-filter=".academic" class="filter-option">academic</span>
+            <span data-filter=".design" class="filter-option">design</span>
+            <span data-filter=".games" class="filter-option">games</span>
+            <span data-filter=".case_studies" class="filter-option">case_studies</span>
+            <span data-filter=".fun_things" class="filter-option">fun_things</span>
+            })
+        </div>
+        <div class="projects">
+            {% assign combined_collections = site.projects | concat: site.designs %}
+            {% assign sorted_projects = combined_collections | sort: 'date' | reverse %}
+            {% for project in sorted_projects %}
+                {% include project_card.html project=project %}
+                {% if forloop.last == false %}
+                  <div class="project-gutter-sizer"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="no-projects-message">
+            <div class="big-message">Sorry, there's nothing here yet.</div>
+            <div class="small-message">(Try a different filter!)</div>
+        </div>
+    </div>
+</section> -->
+<section id="publications" class="cv-section cv-section gray-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -85,28 +117,11 @@ layout: default
             </div>
             <div>
                 {% for publication in site.data.publications %}
-                    <div class="cv-item">
-                        <div class="cv-item-header">
-                            <div class="cv-item-header-main">
-                                <!-- {% if include.link %}
-                                    <a class="cv-item-link" href="{{ include.link }}">
-                                {% endif %}-->
-                                {{ publication.title }}
-                                <!-- {% if include.link %}
-                                    </a>
-                                {% endif %}-->
-                            </div>
-                            <div class="cv-item-header-right">
-                                <!-- {{ include.right_header }} -->
-                            </div>
-                        </div>
+                    <div class="cv-item" style="padding: 10px 0 10px 19px;">
                         <div class="cv-item-subtitle">
                             {% for author in publication.authors %}
-                                {% if author.website %}<a href="{{ author.website }}" style="text-decoration: none;">{% endif %}<span {% if author.self %}style="font-weight: 600;"{% endif %}>{{ author.name }}</span>{% if author.website %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}
-                            {% endfor %}
-                            {% if publication.author_note %}<i>({{ publication.author_note }})</i>{% endif %}
-                            <div class='vertical-spacer spacer-tiny'></div>
-                            {{ publication.venue }}{% if publication.location %} ({{ publication.location }}){% endif %}, {{ publication.month }} {{ publication.year }}
+                                {% if author.website %}<a href="{{ author.website }}" style="text-decoration: none;">{% endif %}<span {% if author.self %}style="font-weight: 600;"{% endif %}>{{ author.name }}</span>{% if author.website %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}. <a href="{{ publication.link }}" style="font-weight: 500; text-decoration: none; color: black;">{{ publication.title }}</a>.
+                            {{ publication.venue }}{% if publication.location %} ({{ publication.location }}){% endif %}, {{ publication.month }} {{ publication.year }}.
                         </div>
                         <div class="cv-item-description">
                             {{ publication.abstract | rstrip | markdownify }}
@@ -169,7 +184,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="cv-section gray-cv-section">
+<!-- <section class="cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -186,39 +201,7 @@ layout: default
             </div>
         </div>
     </div>
-</section>
-<section class="content">
-    <div class="wrapper">
-        <div class="section-box">
-            <div class="section-title black-text">Projects</div>
-        </div>
-        <div class="project-filters">
-            > Zachary.projects.filter({(p): p.type ==
-            <span data-filter="*" class="filter-option selected">all</span>
-            <span data-filter=".software" class="filter-option">software</span>
-            <span data-filter=".academic" class="filter-option">academic</span>
-            <span data-filter=".design" class="filter-option">design</span>
-            <span data-filter=".games" class="filter-option">games</span>
-            <span data-filter=".case_studies" class="filter-option">case_studies</span>
-            <span data-filter=".fun_things" class="filter-option">fun_things</span>
-            })
-        </div>
-        <div class="projects">
-            {% assign combined_collections = site.projects | concat: site.designs %}
-            {% assign sorted_projects = combined_collections | sort: 'date' | reverse %}
-            {% for project in sorted_projects %}
-                {% include project_card.html project=project %}
-                {% if forloop.last == false %}
-                  <div class="project-gutter-sizer"></div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="no-projects-message">
-            <div class="big-message">Sorry, there's nothing here yet.</div>
-            <div class="small-message">(Try a different filter!)</div>
-        </div>
-    </div>
-</section>
+</section> -->
 <script>
     var $projects = $('.projects').isotope({
         itemSelector: '.project-box',
