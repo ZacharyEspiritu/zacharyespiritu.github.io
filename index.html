@@ -23,8 +23,6 @@ layout: default
                         @{{ site.github["build_revision"] | truncate: 8, "" }}
                     </a>
                 </span>
-                <!-- <br> -->
-                <!-- on {{ site_repository["pushed_at"] }} -->
             </div>
         </div>
     </div>
@@ -41,7 +39,8 @@ layout: default
         </div>
     </div>
 </section>
-<!-- <section class="cv-section yellow-cv-section">
+{% comment %}
+<section class="cv-section yellow-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -76,8 +75,8 @@ layout: default
             </script>
         </div>
     </div>
-</section> -->
-<!-- <section class="content">
+</section>
+<section class="content">
     <div class="wrapper">
         <div class="section-box">
             <div class="section-title black-text">Projects</div>
@@ -108,36 +107,73 @@ layout: default
             <div class="small-message">(Try a different filter!)</div>
         </div>
     </div>
-</section> -->
-<section id="publications" class="cv-section cv-section gray-cv-section">
+</section>
+{% endcomment %}
+<section id="publications" class="cv-section cv-section yellow-cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
                 <div class="section-title black-text">Publications</div>
             </div>
+            <div class="cv-section-intro centered">
+                <p>
+                    <span class="asterism">⁂</span> denotes authors listed alphabetically. Click abstracts to expand.
+                </p>
+            </div>
             <div>
-                {% for publication in site.data.publications %}
-                    <div class="cv-item" style="padding: 10px 0 10px 19px;">
-                        <div class="cv-item-subtitle">
-                            {% for author in publication.authors %}
-                                {% if author.website %}<a href="{{ author.website }}" style="text-decoration: none;">{% endif %}<span {% if author.self %}style="font-weight: 600;"{% endif %}>{{ author.name }}</span>{% if author.website %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}. <a href="{{ publication.link }}" style="font-weight: 500; text-decoration: none; color: black;">{{ publication.title }}</a>.
-                            {{ publication.venue }}{% if publication.location %} ({{ publication.location }}){% endif %}, {{ publication.month }} {{ publication.year }}.
+                {% assign pubnum = 0 %}
+                {% for yeargroup in site.data.publications %}
+                    <div class="publication-year-line-break"></div>
+                    <div class="publication-year-container">
+                        <div class="year-date">
+                            {{ yeargroup.year }}
                         </div>
-                        <div class="cv-item-description">
-                            {{ publication.abstract | rstrip | markdownify }}
+                        <div class="publication-items">
+                            {% for publication in yeargroup.publications %}
+
+                                <div class="publication-item">
+                                    <div class="publication-number">
+                                        {% assign pubnum = pubnum | plus:1 %}
+                                        {{ pubnum }}
+                                    </div>
+                                    <div class="publication-details">
+                                        <div class="title">
+                                            {{ publication.title }}
+                                        </div>
+                                        <div class="authors">
+                                            {% for author in publication.authors %}{% if author.website %}<a href="{{ author.website }}" style="text-decoration: none;">{% endif %}<span {% if author.self %}style="font-weight: 600;"{% endif %}>{{ author.name }}</span>{% if author.website %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if publication.alphabetical %} <span class="asterism">⁂</span>{% endif %}
+                                        </div>
+                                        <div class="venue">
+                                            {{ publication.venue }}{% if publication.location %} ({{ publication.location }}){% endif %}
+                                        </div>
+                                        {% if publication.abstract %}
+                                            <div class="abstract abstract-hidden">
+                                                {{ publication.abstract | markdownify }}
+                                            </div>
+                                        {% endif %}
+                                        <div class="links">
+                                            {% for link in publication.links %}
+                                                <a href="{{ link.url }}" style="text-decoration: none; text-transform: lowercase;">{{ link.name }}</a>&nbsp;&nbsp;
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
                         </div>
-                        {% for link in publication.links %}
-                            <div class="link-box black-text">
-                                <a href="{{ link.url }}" style="color: black; text-decoration: none;">{{ link.name }}</a>
-                            </div>
-                        {% endfor %}
                     </div>
                 {% endfor %}
+                <script>
+                    const abstracts = document.querySelectorAll('.abstract');
+                    abstracts.forEach(abstract => abstract.addEventListener('click', () => {
+                        abstract.classList.toggle('abstract-hidden');
+                    }));
+                </script>
             </div>
         </div>
     </div>
 </section>
-<section class="cv-section gray-cv-section">
+{% comment %}
+<section class="cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -159,6 +195,7 @@ layout: default
         </div>
     </div>
 </section>
+{% endcomment %}
 <section class="cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
@@ -166,10 +203,14 @@ layout: default
                 <div class="section-title black-text">Teaching</div>
             </div>
             <div class="cv-section-intro">
-                I served as a teaching assistant every semester I was
-                at Brown University, sometimes even during semesters I wasn't
-                enrolled. Semesters marked with an asterisk (*) denote a Head
-                Teaching Assistant role.
+            </div>
+            <div class="cv-section-intro centered">
+                <p>
+                    I served as a teaching assistant every semester I was
+                    at Brown University, sometimes even during semesters I wasn't
+                    enrolled. <span class="asterism">⁂</span> denotes a Head
+                    Teaching Assistant role.
+                </p>
             </div>
             <hr>
             <div>
@@ -184,7 +225,8 @@ layout: default
         </div>
     </div>
 </section>
-<!-- <section class="cv-section">
+{% comment %}
+<section class="cv-section">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
@@ -201,7 +243,8 @@ layout: default
             </div>
         </div>
     </div>
-</section> -->
+</section>
+{% endcomment %}
 <script>
     var $projects = $('.projects').isotope({
         itemSelector: '.project-box',

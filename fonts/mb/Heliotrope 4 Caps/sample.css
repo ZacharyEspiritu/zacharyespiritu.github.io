@@ -1,0 +1,17 @@
+@font-face {
+font-family: heliotrope_4_caps;
+font-style: normal;
+font-weight: normal;
+font-stretch: normal;
+font-display: auto;
+src: url('heliotrope_4_caps_regular.woff2') format('woff2');
+}
+
+@font-face {
+font-family: heliotrope_4_caps;
+font-style: normal;
+font-weight: bold;
+font-stretch: normal;
+font-display: auto;
+src: url('heliotrope_4_caps_bold.woff2') format('woff2');
+}
