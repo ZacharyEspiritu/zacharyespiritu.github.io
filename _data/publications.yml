@@ -1,5 +1,27 @@
 - year: 2025
   publications:
+    - title: "Bayesian Leakage Analysis: A Framework for Analyzing Leakage in Encrypted Search"
+      authors:
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research
+          self: true
+        - name: Seny Kamara
+          affiliation: Brown University and MongoDB Research
+          website: "https://www.senykamara.com/"
+        - name: Tarik Moataz
+          affiliation: MongoDB Research
+          website: "https://tarikmoataz.com/"
+      alphabetical: true
+      venue: To appear in IACR Communications of Cryptology, Volume 2, Issue 1
+      abstract: |
+          We introduce a framework based on Bayesian statistical inference for analyzing leakage and its vulnerability to inference attacks. Our framework naturally integrates auxiliary information, defines a notion of adversarial advantage, and provides information-theoretic measures that capture the security of leakage patterns against both full and functional recovery attacks.
+
+          We present two main theorems that bound the advantage of powerful inference techniques: the maximum a posteriori (MAP), the maximum likelihood estimate (MLE) and the MAP test. Specifically, we show that the advantage of these methods is exponentially bounded by new entropy measures that capture the susceptibility of leakage patterns to inference.
+
+          To demonstrate the applicability of our framework, we design and implement an automated leakage attack engine, <em>Bleak</em>, which leverages a novel inference algorithm that efficiently computes MAP estimates for a large class of i.i.d. leakage models. These models include, for example, query equality, the combination of query equality and volume, and leakage patterns arising from naive conjunctions.
+      links:
+        - name: Preprint
+          url: "https://eprint.iacr.org/2023/813"
     - title: "Sequentially Consistent Encrypted Multimaps"
       authors:
         - name: Archita Agarwal
@@ -15,28 +37,6 @@
           Encrypted data structures are essential for designing efficient encrypted search algorithms and secure databases. However, a critical aspect that has not been adequately addressed is the concurrent nature of modern databases, which allow multiple operations to be executed simultaneously. Agarwal, Kamara, and Moataz (Asiacrypt 2024) recently initiated the study of concurrent encrypted data structures, introducing formalisms for their design and analysis.
 
           Building on their foundational work, we adapt their security definitions to support sequential consistency instead of linearizability. While linearizability offers a strong correctness guarantee by ensuring operations appear to occur instantaneously, sequential consistency allows operations to be executed in a consistent order without immediate synchronization across clients, making it more efficient for concurrent environments. We present a new concurrent encrypted multimap (EMM), denoted as <em>SCM</em>, which achieves sequential consistency and provides significant improvements in both asymptotic and empirical efficiency compared to their linearizable EMM scheme, <em>TST</em>.
-    - title: "Bayesian Leakage Analysis: A Framework for Analyzing Leakage in Encrypted Search"
-      authors:
-        - name: Zachary Espiritu
-          affiliation: MongoDB Research
-          self: true
-        - name: Seny Kamara
-          affiliation: Brown University and MongoDB Research
-          website: "https://www.senykamara.com/"
-        - name: Tarik Moataz
-          affiliation: MongoDB Research
-          website: "https://tarikmoataz.com/"
-      alphabetical: true
-      venue: Cryptography ePrint Archive, 2023/813 (updated 2025)
-      abstract: |
-          We introduce a framework based on Bayesian statistical inference for analyzing leakage and its vulnerability to inference attacks. Our framework naturally integrates auxiliary information, defines a notion of adversarial advantage, and provides information-theoretic measures that capture the security of leakage patterns against both full and functional recovery attacks.
-
-          We present two main theorems that bound the advantage of powerful inference techniques: the maximum a posteriori (MAP), the maximum likelihood estimate (MLE) and the MAP test. Specifically, we show that the advantage of these methods is exponentially bounded by new entropy measures that capture the susceptibility of leakage patterns to inference.
-
-          To demonstrate the applicability of our framework, we design and implement an automated leakage attack engine, <em>Bleak</em>, which leverages a novel inference algorithm that efficiently computes MAP estimates for a large class of i.i.d. leakage models. These models include, for example, query equality, the combination of query equality and volume, and leakage patterns arising from naive conjunctions.
-      links:
-        - name: Preprint
-          url: "https://eprint.iacr.org/2023/813"
 - year: 2024
   publications:
     - title: "Synq: An Encrypted Database for Public Policy Studies"
