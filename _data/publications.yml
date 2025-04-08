@@ -12,17 +12,17 @@
           affiliation: MongoDB Research
           website: "https://tarikmoataz.com/"
       alphabetical: true
-      venue: To appear in IACR Communications of Cryptology, Volume 2, Issue 1
+      venue: IACR Communications of Cryptology, Volume 2, Issue 1
       abstract: |
-          We introduce a framework based on Bayesian statistical inference for analyzing leakage and its vulnerability to inference attacks. Our framework naturally integrates auxiliary information, defines a notion of adversarial advantage, and provides information-theoretic measures that capture the security of leakage patterns against both full and functional recovery attacks.
+          We introduce a framework based on Bayesian statistical inference for analyzing leakage in cryptography and its vulnerability to inference attacks. Our framework naturally integrates auxiliary information, defines a notion of adversarial advantage, and provides information-theoretic measures that capture the security of leakage patterns against both full and functional recovery attacks.
 
           We present two main theorems that bound the advantage of powerful inference techniques: the maximum a posteriori (MAP), the maximum likelihood estimate (MLE) and the MAP test. Specifically, we show that the advantage of these methods is exponentially bounded by new entropy measures that capture the susceptibility of leakage patterns to inference.
 
-          To demonstrate the applicability of our framework, we design and implement an automated leakage attack engine, <em>Bleak</em>, which leverages a novel inference algorithm that efficiently computes MAP estimates for a large class of i.i.d. leakage models. These models include, for example, query equality, the combination of query equality and volume, and leakage patterns arising from naive conjunctions.
+          To demonstrate the applicability of our framework, we design and implement an automated leakage attack engine, <em>Bayle</em>, which leverages a novel inference algorithm that efficiently computes MAP estimates for a large class of i.i.d. leakage models. These models include query equality leakage, the combination of query equality and volume leakage, and leakage patterns arising from naive conjunctions.
       links:
-        - name: Preprint
-          url: "https://eprint.iacr.org/2023/813"
-    - title: "Sequentially Consistent Encrypted Multimaps"
+        - name: Article
+          url: "https://doi.org/10.62056/a36c0lmol"
+    - title: "Sequentially Consistent Concurrent Encrypted Multimaps"
       authors:
         - name: Archita Agarwal
           affiliation: MongoDB Research
@@ -59,8 +59,8 @@
       abstract: |
           Data analytics is a core part of modern decision making, especially in public policy. However, there exists a tension between data privacy and otherwise socially beneficial analytics when data sources contain personal information. We design <em>Synq</em>, a system that supports analytics over encrypted data while accounting for the usability considerations institutions may have when conducting studies that affect public policy. We specifically use an application-centric approach and model <em>Synq</em>’s design requirements from a large-scale series of studies conducted on the opioid epidemic in Massachusetts. We systematize the design considerations of the public policy context and demonstrate how the combination of design considerations that <em>Synq</em> addresses is novel through a survey of the literature. We then present our protocol which combines structured encryption, somewhat homomorphic encryption, and oblivious pseudorandom functions to support a complex query language that includes filtering (retrieving rows by attribute/value pairs), linking (merging rows from different tables that represent the same individual) and aggregate functions (sum, count, average, variance, regression). We formally express the security of our protocol and show that <em>Synq</em> is efficient in practice while satisfying usability considerations that are critical to deployment in the setting of public policy studies.
       links:
-        - name: Paper
-          url: "https://ieeexplore.ieee.org/abstract/document/10646768"
+        - name: Proceedings
+          url: "https://doi.org/10.1109/SP54263.2024.00085"
 - year: 2023
   publications:
     - title: "Range Search over Encrypted Multi-Attribute Data"
@@ -82,8 +82,8 @@
       abstract: |
           This work addresses expressive queries over encrypted data by presenting the first systematic study of multi-attribute range search on a symmetrically encrypted database outsourced to an honest-but-curious server. Prior work includes a thorough analysis of single-attribute range search schemes (e.g. Demertzis et al. 2016) and a proposed high-level approach for multi-attribute schemes (De Capitani di Vimercati et al. 2021). We first introduce a flexible framework for building secure range search schemes over multiple attributes (dimensions) by adapting a broad class of geometric search data structures to operate on encrypted data. Our framework encompasses widely used data structures such as multi-dimensional range trees and quadtrees, and has strong security properties that we formally prove. We then develop six concrete highly parallelizable range search schemes within our framework that  offer a sliding scale of efficiency and security tradeoffs to suit the needs of the application. We evaluate our schemes  with a formal complexity and security analysis, a prototype implementation, and an experimental evaluation on real-world datasets.
       links:
-        - name: Paper
-          url: "https://vldb.org/pvldb/volumes/16/paper/Range%20Search%20over%20Encrypted%20Multi-Attribute%20Data"
+        - name: Article
+          url: "https://doi.org/10.14778/3574245.3574247"
     - title: "Attacks on Encrypted Response-Hiding Range Search Schemes in Multiple Dimensions"
       authors:
         - name: Francesca Falzon
@@ -103,8 +103,8 @@
       abstract: |
           In this work, we present the first database reconstruction attacks against response-hiding private range search schemes on encrypted databases of arbitrary dimensions. Falzon et al. (VLDB 2022) present a number of range-supporting schemes on arbitrary dimensions exhibiting different security and efficiency trade-offs. Additionally, they characterize a form of leakage, structure pattern leakage, also present in many one-dimensional schemes e.g., Demertzis et al. (SIGMOD 2016) and Faber et al. (ESORICS 2015). We present the first systematic study of this leakage and attack a broad collection of schemes, including schemes that allow the responses to contain false-positives (often considered the gold standard in security). We characterize the information theoretic limitations of a passive persistent adversary. Our work shows that for range queries, structure pattern leakage can be as vulnerable to attacks as access pattern leakage. We give a comprehensive evaluation of our attacks with a complexity analysis, a prototype implementation, and an experimental assessment on real-world datasets.
       links:
-        - name: Paper
-          url: "https://petsymposium.org/popets/2023/popets-2023-0106.php"
+        - name: Article
+          url: "https://doi.org/10.56553/popets-2023-0106"
 - year: 2022
   publications:
     - title: Time- and Space-Efficient Aggregate Range Queries on Encrypted Databases
@@ -123,5 +123,5 @@
       abstract: |
           We present <em>ARQ</em>, a systematic framework for creating cryptographic schemes that handle range aggregate queries (sum, minimum, median, and mode) over encrypted datasets. Our framework does not rely on trusted hardware or specialized cryptographic primitives such as property-preserving or homomorphic encryption. Instead, <em>ARQ</em> unifies structures from the plaintext data management community with existing structured encryption primitives. We prove how such combinations yield efficient (and secure) constructions in the encrypted setting. We also propose a series of domain reduction techniques that can improve the space efficiency of our schemes against sparse datasets at the cost of small leakage. As part of this work, we designed and implemented a new, open-source, encrypted search library called <em>Arca</em> and implemented the <em>ARQ</em> framework using this library in order to evaluate <em>ARQ</em>’s practicality. Our experiments on real-world datasets demonstrate the efficiency of the schemes derived from <em>ARQ</em> in comparison to prior work.
       links:
-        - name: Paper
-          url: "https://petsymposium.org/popets/2022/popets-2022-0128.pdf"
+        - name: Article
+          url: "https://doi.org/10.56553/popets-2022-0128"
