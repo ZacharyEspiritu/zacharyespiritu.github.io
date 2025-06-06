@@ -80,9 +80,6 @@
           step toward a general-purpose framework for designing leak-
           age attacks. We believe future work can further enhance its
           efficiency to scale to larger and more complex workloads.
-      links:
-        - name: Proceedings
-          url: "https://eurosp2025.ieee-security.org/accepted_and_awards.html"
 - year: 2024
   publications:
     - title: "Synq: An Encrypted Database for Public Policy Studies"
