@@ -1,5 +1,43 @@
 - year: 2025
   publications:
+    - title: "PolySys: an Algebraic Leakage Attack Engine"
+      authors:
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research
+          self: true
+        - name: Seny Kamara
+          affiliation: Brown University and MongoDB Research
+          website: "https://www.senykamara.com/"
+        - name: Tarik Moataz
+          affiliation: MongoDB Research
+          website: "https://tarikmoataz.com/"
+        - name: Andrew Park
+          affiliation: MongoDB Research
+          website: "https://tarikmoataz.com/"
+      alphabetical: true
+      venue: To appear at 34th USENIX Security Symposium
+      location: Seattle, WA, USA
+      abstract: |
+          In this work, we propose a novel framework called <em>Polysys</em> for
+          modeling and designing leakage attacks as constraint-solving
+          algorithms over polynomial systems. <em>Polysys</em> formalizes the
+          design of attacks using invertible encodings, structural and
+          leakage equations, and efficient constraint-solving algorithms
+          including SAT and constraint solvers. It is capable of model-
+          ing resolution, known-data, and inference attacks for common
+          leakage patterns.
+
+          To demonstrate the practicality of our framework, we im-
+          plement a <em>Polysys</em> attack engine in Python and apply it to
+          state-of-the-art query recovery, data resolution, and query in-
+          ference attacks on point and range multi-maps. Our results
+          show that <em>Polysys</em> outperforms all existing attacks under
+          identical assumptions, achieving up to 60× higher recovery
+          rates in some scenarios. While scalability remains a chal-
+          lenge for larger datasets, <em>Polysys</em> represents a promising
+          step toward a general-purpose framework for designing leak-
+          age attacks. We believe future work can further enhance its
+          efficiency to scale to larger and more complex workloads.
     - title: "Bayesian Leakage Analysis: A Framework for Analyzing Leakage in Encrypted Search"
       authors:
         - name: Zachary Espiritu
@@ -42,44 +80,6 @@
       links:
         - name: Proceedings
           url: "https://eurosp2025.ieee-security.org/accepted_and_awards.html"
-    - title: "PolySys: an Algebraic Leakage Attack Engine"
-      authors:
-        - name: Zachary Espiritu
-          affiliation: MongoDB Research
-          self: true
-        - name: Seny Kamara
-          affiliation: Brown University and MongoDB Research
-          website: "https://www.senykamara.com/"
-        - name: Tarik Moataz
-          affiliation: MongoDB Research
-          website: "https://tarikmoataz.com/"
-        - name: Andrew Park
-          affiliation: MongoDB Research
-          website: "https://tarikmoataz.com/"
-      alphabetical: true
-      venue: To appear at 34th USENIX Security Symposium
-      location: Seattle, WA, USA
-      abstract: |
-          In this work, we propose a novel framework called <em>Polysys</em> for
-          modeling and designing leakage attacks as constraint-solving
-          algorithms over polynomial systems. <em>Polysys</em> formalizes the
-          design of attacks using invertible encodings, structural and
-          leakage equations, and efficient constraint-solving algorithms
-          including SAT and constraint solvers. It is capable of model-
-          ing resolution, known-data, and inference attacks for common
-          leakage patterns.
-
-          To demonstrate the practicality of our framework, we im-
-          plement a <em>Polysys</em> attack engine in Python and apply it to
-          state-of-the-art query recovery, data resolution, and query in-
-          ference attacks on point and range multi-maps. Our results
-          show that <em>Polysys</em> outperforms all existing attacks under
-          identical assumptions, achieving up to 60× higher recovery
-          rates in some scenarios. While scalability remains a chal-
-          lenge for larger datasets, <em>Polysys</em> represents a promising
-          step toward a general-purpose framework for designing leak-
-          age attacks. We believe future work can further enhance its
-          efficiency to scale to larger and more complex workloads.
 - year: 2024
   publications:
     - title: "Synq: An Encrypted Database for Public Policy Studies"
