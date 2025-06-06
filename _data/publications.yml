@@ -31,12 +31,58 @@
           affiliation: MongoDB Research
           self: true
       alphabetical: true
-      venue: To appear at the 10th IEEE European Symposium on Security and Privacy
+      venue: To appear at 10th IEEE European Symposium on Security and Privacy
       location: Venice, Italy
       abstract: |
-          Encrypted data structures are essential for designing efficient encrypted search algorithms and secure databases. However, a critical aspect that has not been adequately addressed is the concurrent nature of modern databases, which allow multiple operations to be executed simultaneously. Agarwal, Kamara, and Moataz (Asiacrypt 2024) recently initiated the study of concurrent encrypted data structures, introducing formalisms for their design and analysis.
+          Encrypted data structures are essential for designing efficient encrypted search algorithms and secure databases. However, a critical aspect that has not been adequately addressed is the concurrent nature of modern databases, which allow multiple operations to be executed simultaneously. Agarwal, Kamara, and Moataz (Asiacrypt 2024) recently initiated the study of concurrent encrypted data structures and introduced formalisms for their design and analysis.
 
           Building on their foundational work, we adapt their security definitions to support sequential consistency instead of linearizability. While linearizability offers a strong correctness guarantee by ensuring operations appear to occur instantaneously, sequential consistency allows operations to be executed in a consistent order without immediate synchronization across clients, making it more efficient for concurrent environments. We present a new concurrent encrypted multimap (EMM), denoted as <em>SCM</em>, which achieves sequential consistency and provides significant improvements in both asymptotic and empirical efficiency compared to their linearizable EMM scheme, <em>TST</em>.
+
+          Additionally, we develop a benchmarking suite designed to assess the performance of concurrent EMMs, extending the widely used YCSB benchmark to accommodate multimaps that allow multiple values to be associated with a single key. Our results demonstrate that <em>SCM</em> outperforms <em>TST</em> across various workloads and datasets, especially as the number of concurrent operations increases. In our experiments with 16 concurrent clients, <em>SCM</em> has up to $357\times$ faster P95 read latency (with the best read performance as the overall percentage of reads decreases) and up to $69\times$ faster P95 write latency (with the best write performance as the percentage of writes approaches 50\%) than <em>TST</em>, demonstrating <em>SCM</em> effectively balances efficiency and correctness.
+      links:
+        - name: Proceedings
+          url: "https://eurosp2025.ieee-security.org/accepted_and_awards.html"
+    - title: "PolySys: an Algebraic Leakage Attack Engine"
+      authors:
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research
+          self: true
+        - name: Seny Kamara
+          affiliation: Brown University and MongoDB Research
+          website: "https://www.senykamara.com/"
+        - name: Tarik Moataz
+          affiliation: MongoDB Research
+          website: "https://tarikmoataz.com/"
+        - name: Andrew Park
+          affiliation: MongoDB Research
+          website: "https://tarikmoataz.com/"
+      alphabetical: true
+      venue: To appear at 34th USENIX Security Symposium
+      location: Seattle, WA, USA
+      abstract: |
+          In this work, we propose a novel framework called <em>Polysys</em> for
+          modeling and designing leakage attacks as constraint-solving
+          algorithms over polynomial systems. <em>Polysys</em> formalizes the
+          design of attacks using invertible encodings, structural and
+          leakage equations, and efficient constraint-solving algorithms
+          including SAT and constraint solvers. It is capable of model-
+          ing resolution, known-data, and inference attacks for common
+          leakage patterns.
+
+          To demonstrate the practicality of our framework, we im-
+          plement a <em>Polysys</em> attack engine in Python and apply it to
+          state-of-the-art query recovery, data resolution, and query in-
+          ference attacks on point and range multi-maps. Our results
+          show that <em>Polysys</em> outperforms all existing attacks under
+          identical assumptions, achieving up to 60× higher recovery
+          rates in some scenarios. While scalability remains a chal-
+          lenge for larger datasets, <em>Polysys</em> represents a promising
+          step toward a general-purpose framework for designing leak-
+          age attacks. We believe future work can further enhance its
+          efficiency to scale to larger and more complex workloads.
+      links:
+        - name: Proceedings
+          url: "https://eurosp2025.ieee-security.org/accepted_and_awards.html"
 - year: 2024
   publications:
     - title: "Synq: An Encrypted Database for Public Policy Studies"
@@ -55,7 +101,7 @@
           website: "https://lucyq.in/"
       alphabetical: true
       venue: 45th IEEE Symposium on Security and Privacy
-      location: San Francisco, California
+      location: San Francisco, CA, USA
       abstract: |
           Data analytics is a core part of modern decision making, especially in public policy. However, there exists a tension between data privacy and otherwise socially beneficial analytics when data sources contain personal information. We design <em>Synq</em>, a system that supports analytics over encrypted data while accounting for the usability considerations institutions may have when conducting studies that affect public policy. We specifically use an application-centric approach and model <em>Synq</em>’s design requirements from a large-scale series of studies conducted on the opioid epidemic in Massachusetts. We systematize the design considerations of the public policy context and demonstrate how the combination of design considerations that <em>Synq</em> addresses is novel through a survey of the literature. We then present our protocol which combines structured encryption, somewhat homomorphic encryption, and oblivious pseudorandom functions to support a complex query language that includes filtering (retrieving rows by attribute/value pairs), linking (merging rows from different tables that represent the same individual) and aggregate functions (sum, count, average, variance, regression). We formally express the security of our protocol and show that <em>Synq</em> is efficient in practice while satisfying usability considerations that are critical to deployment in the setting of public policy studies.
       links:
