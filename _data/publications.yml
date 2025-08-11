@@ -15,7 +15,7 @@
           affiliation: MongoDB Research
           website: "https://tarikmoataz.com/"
       alphabetical: true
-      venue: To appear at 34th USENIX Security Symposium
+      venue: 34th USENIX Security Symposium
       location: Seattle, WA, USA
       abstract: |
           In this work, we propose a novel framework called <em>Polysys</em> for
@@ -38,6 +38,9 @@
           step toward a general-purpose framework for designing leak-
           age attacks. We believe future work can further enhance its
           efficiency to scale to larger and more complex workloads.
+      links:
+        - name: Proceedings
+          url: "https://www.usenix.org/conference/usenixsecurity25/presentation/espiritu"
     - title: "Bayesian Leakage Analysis: A Framework for Analyzing Leakage in Encrypted Search"
       authors:
         - name: Zachary Espiritu
@@ -69,7 +72,7 @@
           affiliation: MongoDB Research
           self: true
       alphabetical: true
-      venue: To appear at 10th IEEE European Symposium on Security and Privacy
+      venue: 10th IEEE European Symposium on Security and Privacy
       location: Venice, Italy
       abstract: |
           Encrypted data structures are essential for designing efficient encrypted search algorithms and secure databases. However, a critical aspect that has not been adequately addressed is the concurrent nature of modern databases, which allow multiple operations to be executed simultaneously. Agarwal, Kamara, and Moataz (Asiacrypt 2024) recently initiated the study of concurrent encrypted data structures and introduced formalisms for their design and analysis.
