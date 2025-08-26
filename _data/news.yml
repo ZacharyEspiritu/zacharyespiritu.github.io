@@ -1,3 +1,33 @@
+- date: Aug 2025
+  text: >
+      I've joined the inaugural [IEEE Security & Privacy 2026 Artifact Evalaution Committee](https://sp2026.ieee-security.org/cfartifacts.html)!
+      I've also joined the [PETS 2026 Artifact Evaluation Committee](https://petsymposium.org/artifacts.php)!
+
+- date: Aug 2025
+  text: >
+      Our paper "Structured Encryption and Distribution-aware Leakage Suppression" will appear at
+      [Asiacrypt 2025](https://asiacrypt.iacr.org/2025/) in Melbourne, Australia!
+
+- date: May 2025
+  text: >
+      Our paper ["PolySys: an Algebraic Leakage Attack Engine"](https://www.usenix.org/conference/usenixsecurity25/presentation/espiritu)
+      will appear at the [34th USENIX Security Symposium](https://www.usenix.org/conference/usenixsecurity25)
+      in Seattle, WA, USA!
+
+- date: Mar 2025
+  text: >
+      Our paper ["Bayesian Leakage Analysis"](https://cic.iacr.org/p/2/1/38) was published
+      in [IACR Communications of Cryptography](https://cic.iacr.org/)!
+
+- date: Jan 2025
+  text: >
+      Our paper "Sequentially Consistent Concurrent Encrypted Multimaps" will appear at
+      [IEEE Euro Security & Privacy 2025](https://eurosp2025.ieee-security.org/) in Venice, Italy!
+
+- date: Oct 2024
+  text: >
+      Range Search is now generally available in MongoDB's Queryable Encryption!
+
 - date: Dec 2023
   text: >
       Our paper ["Synq: Public Policy Analytics Over Encrypted Data"](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a085/1RjEaTgtZhS)
@@ -28,13 +58,6 @@
   text: Our paper ["Time- and Space- Efficient Aggregate Range Queries on Encrypted Databases"](https://petsymposium.org/popets/2022/popets-2022-0128.pdf)
       will appear at [PETS 2022](https://petsymposium.org/2022/)!
 
-- date: Feb 2022
-  text: Started work at [D. E. Shaw & Co.](https://deshaw.com/)!
-
-- date: Jan 2022
-  text: Our work on attacking multi-dimensional encrypted database schemes is now
-      available on [ePrint](https://eprint.iacr.org/2022/090)!
-
 - date: Dec 2021
   text: I defended my honors thesis on ["Time- and Space- Efficient Aggregate Range Queries on Encrypted Databases"](https://cs.brown.edu/research/pubs/theses/ugrad/2022/espiritu.zachary.pdf)
       and finished my Bachelor's and Master's requirements at Brown!
@@ -49,10 +72,3 @@
 - date: Mar 2021
   text: I received the [Randy Pausch Undergraduate Research Award](https://cs.brown.edu/news/2021/03/24/ross-briden-and-zachary-espiritu-win-randy-f-pausch-computer-science-undergraduate-summer-research-award/)
       from Brown CS to support my research with Roberto Tamassia on encrypted databases!
-
-- date: Nov 2020
-  text: I finished 1st place out of ~100 participants at the inaugural Hack@Home
-      Cybersecurity CTF!
-
-- date: Jun 2020
-  text: Started an internship at Google.
