@@ -66,7 +66,7 @@
       location: Venice, Italy
       links:
         - name: Proceedings
-          url: "https://eurosp2025.ieee-security.org/accepted_and_awards.html"
+          url: "https://ieeexplore.ieee.org/document/11129380"
 - year: 2024
   publications:
     - title: "Synq: An Encrypted Database for Public Policy Studies"
