@@ -1,3 +1,21 @@
+- year: 2026
+  publications:
+    - title: "Leafblower: A Leakage Attack Against TEE-Based Encrypted Databases"
+      authors:
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research
+          self: true
+        - name: Seny Kamara
+          affiliation: Brown University and MongoDB Research
+          website: "https://www.senykamara.com/"
+        - name: Tarik Moataz
+          affiliation: MongoDB Research
+          website: "https://tarikmoataz.com/"
+        - name: Valentin Ogier
+          affiliation: NetApp
+      alphabetical: true
+      venue: To appear at the 47th IEEE Symposium on Security and Privacy
+      location: San Francisco, CA, USA
 - year: 2025
   publications:
     - title: "Structured Encryption and Distribution-aware Leakage Suppression"
@@ -15,7 +33,7 @@
           affiliation: MongoDB Research
           website: "https://tarikmoataz.com/"
       alphabetical: true
-      venue: To appear at ASIACRYPT 2025
+      venue: To appear at Asiacrypt 2025
       location: Melbourne, Australia
     - title: "PolySys: an Algebraic Leakage Attack Engine"
       authors:
@@ -29,8 +47,8 @@
           affiliation: MongoDB Research
           website: "https://tarikmoataz.com/"
         - name: Andrew Park
-          affiliation: MongoDB Research
-          website: "https://tarikmoataz.com/"
+          affiliation: Carnegie Mellon University and MongoDB Research
+          website: "https://andyp223.github.io/"
       alphabetical: true
       venue: 34th USENIX Security Symposium
       location: Seattle, WA, USA
