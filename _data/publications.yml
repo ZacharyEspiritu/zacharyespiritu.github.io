@@ -20,9 +20,6 @@
   publications:
     - title: "Structured Encryption and Distribution-aware Leakage Suppression"
       authors:
-        - name: Zachary Espiritu
-          affiliation: MongoDB Research
-          self: true
         - name: Marilyn George
           affiliation: MongoDB Research
           website: "https://marilyngeorge.com/"
@@ -32,7 +29,9 @@
         - name: Tarik Moataz
           affiliation: MongoDB Research
           website: "https://tarikmoataz.com/"
-      alphabetical: true
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research
+          self: true
       venue: To appear at Asiacrypt 2025
       location: Melbourne, Australia
     - title: "PolySys: an Algebraic Leakage Attack Engine"
@@ -111,12 +110,12 @@
   publications:
     - title: "Range Search over Encrypted Multi-Attribute Data"
       authors:
-        - name: Evangelia Anna Markatou
-          affiliation: Brown University
-          website: "https://markatou.github.io/"
         - name: Francesca Falzon
           affiliation: Brown University and University of Chicago
           website: "https://ffalzon.github.io/"
+        - name: Evangelia Anna Markatou
+          affiliation: Brown University
+          website: "https://markatou.github.io/"
         - name: Zachary Espiritu
           affiliation: Brown University
           self: true
@@ -130,12 +129,12 @@
           url: "https://doi.org/10.14778/3574245.3574247"
     - title: "Attacks on Encrypted Response-Hiding Range Search Schemes in Multiple Dimensions"
       authors:
-        - name: Francesca Falzon
-          affiliation: University of Chicago and Brown University
-          website: "https://ffalzon.github.io/"
         - name: Evangelia Anna Markatou
           affiliation: Brown University
           website: "https://markatou.github.io/"
+        - name: Francesca Falzon
+          affiliation: University of Chicago and Brown University
+          website: "https://ffalzon.github.io/"
         - name: Zachary Espiritu
           affiliation: Brown University
           self: true
