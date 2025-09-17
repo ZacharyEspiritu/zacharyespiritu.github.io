@@ -12,4 +12,4 @@ I am passionate about teaching computer security. While at Brown, I spent a lot 
 
 Previously, I worked as a security engineer at [D. E. Shaw. & Co.](https://deshaw.com) and interned at [Google](https://www.google.com/) and [Order](https://www.order.co/).
 
-I spend a lot of time [long distance running](https://www.strava.com/athletes/91146604) and thinking about things like: [theatrical lighting design](design/lighting-design/), immersive theater, tabletop gaming, public transit, speech and debate, and Dance Dance Revolution.
+Outside of research, I spend a lot of time thinking about things like [long distance running](https://www.strava.com/athletes/91146604), pottery on the wheel, [theatrical lighting design](design/lighting-design/), large-scale Broadway theater, small-scale immersive theater, tabletop gaming, public transit, speech and debate, and Dance Dance Revolution.
