@@ -16,6 +16,9 @@
       alphabetical: true
       venue: To appear at the 47th IEEE Symposium on Security and Privacy
       location: San Francisco, CA, USA
+      links:
+        - name: Paper
+          url: "/papers/leafblower-sp2026.pdf"
 - year: 2025
   publications:
     - title: "Structured Encryption and Distribution-aware Leakage Suppression"
