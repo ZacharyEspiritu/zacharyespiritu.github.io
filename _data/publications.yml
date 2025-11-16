@@ -14,9 +14,11 @@
         - name: Valentin Ogier
           affiliation: NetApp
       alphabetical: true
-      venue: To appear at the 47th IEEE Symposium on Security and Privacy
+      venue: 47th IEEE Symposium on Security and Privacy
       location: San Francisco, CA, USA
       links:
+        - name: Proceedings
+          url: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I"
         - name: Paper
           url: "/papers/leafblower-sp2026.pdf"
 - year: 2025
