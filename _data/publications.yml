@@ -1,5 +1,25 @@
 - year: 2026
   publications:
+    - title: "tigro: Trust Infrastructure for Grassroots Organizing via Grounded Digital Annotations"
+      authors:
+        - name: Leah Namisa Rosenbloom
+          affiliation: Northeastern University
+          website: "https://namisa.art/"
+        - name: Seny Kamara
+          affiliation: Brown University and MongoDB Research
+          website: "https://www.senykamara.com/"
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research
+          self: true
+        - name: Tarik Moataz
+          affiliation: MongoDB Research
+          website: "https://tarikmoataz.com/"
+        - name: Amine Bahi
+          affiliation: École Normale Supérieure
+        - name: John Wilkinson
+          affiliation: Brown University
+      venue: To appear at Privacy Enhancing Technologies Symposium 2026
+      location: Calgary, Canada
     - title: "Leafblower: A Leakage Attack Against TEE-Based Encrypted Databases"
       authors:
         - name: Zachary Espiritu
