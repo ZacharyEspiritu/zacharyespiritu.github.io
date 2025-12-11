@@ -19,7 +19,15 @@
         - name: John Wilkinson
           affiliation: Brown University
       venue: To appear at Privacy Enhancing Technologies Symposium 2026
+      acronym: PETS
       location: Calgary, Canada
+      abstract: >
+          A cryptographic primitive for "grounded annotations", motivated by the
+          needs of activist communication in authoritarian environments. We create an
+          broader protocol using this primitive and implement it in a proof-of-concept
+          application.
+- year: 2025
+  publications:
     - title: "Leafblower: A Leakage Attack Against TEE-Based Encrypted Databases"
       authors:
         - name: Zachary Espiritu
@@ -35,14 +43,21 @@
           affiliation: NetApp
       alphabetical: true
       venue: 47th IEEE Symposium on Security and Privacy
+      acronym: S&P
       location: San Francisco, CA, USA
       links:
         - name: Proceedings
           url: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I"
         - name: Paper
           url: "/papers/leafblower-sp2026.pdf"
-- year: 2025
-  publications:
+      abstract: >
+          Attack against a class of TEE-based encrypted
+          databases. It allows a _multi-snapshot external memory adversary_
+          (weaker than the traditional, _persistent_ TEE adversaries) to learn
+          the plaintext of `INSERT` operations on a SQLite database running
+          inside of Gramine. We do this by exploiting B+-tree invariants
+          that are observable just from snapshots of
+          encrypted index files.
     - title: "Structured Encryption and Distribution-aware Leakage Suppression"
       authors:
         - name: Marilyn George
@@ -57,8 +72,16 @@
         - name: Zachary Espiritu
           affiliation: MongoDB Research
           self: true
-      venue: To appear at Asiacrypt 2025
+      venue: Asiacrypt 2025
+      acronym: Asiacrypt
       location: Melbourne, Australia
+      links:
+        - name: Proceedings
+          url: "https://link.springer.com/chapter/10.1007/978-981-95-5096-8_7"
+      abstract: >
+          New, static, distribution-aware, replication-based leakage suppressors with
+          better performance than existing full suppressors (Kamara et al. (2018);
+          George et al. (2022)) and prior replication-based suppressors (Pancake, Waffle).
     - title: "PolySys: an Algebraic Leakage Attack Engine"
       authors:
         - name: Zachary Espiritu
@@ -75,10 +98,14 @@
           website: "https://andyp223.github.io/"
       alphabetical: true
       venue: 34th USENIX Security Symposium
+      acronym: USENIX
       location: Seattle, WA, USA
       links:
         - name: Proceedings
           url: "https://www.usenix.org/conference/usenixsecurity25/presentation/espiritu"
+      abstract: >
+          Polynomial-system-based theory for modeling leakage profiles and automatically
+          evaluating their security in provably optimal ways via SAT solvers.
     - title: "Bayesian Leakage Analysis: A Framework for Analyzing Leakage in Encrypted Search"
       authors:
         - name: Zachary Espiritu
@@ -92,9 +119,15 @@
           website: "https://tarikmoataz.com/"
       alphabetical: true
       venue: IACR Communications of Cryptology, Volume 2, Issue 1
+      acronym: CIC
       links:
         - name: Article
           url: "https://doi.org/10.62056/a36c0lmol"
+      abstract: >
+          Bayesian-network-based theory for modeling leakage profiles and mathematically
+          evaluating their security in provably optimal ways. We also come up with a new
+          network inference algorithm that efficiently handles the types of "leakage
+          networks" commonly seen in encrypted search.
     - title: "Sequentially Consistent Concurrent Encrypted Multimaps"
       authors:
         - name: Archita Agarwal
@@ -105,10 +138,15 @@
           self: true
       alphabetical: true
       venue: 10th IEEE European Symposium on Security and Privacy
+      acronym: EuroS&P
       location: Venice, Italy
       links:
         - name: Proceedings
           url: "https://ieeexplore.ieee.org/document/11129380"
+      abstract: >
+          New definitions, schemes, and implementations for encrypted multimaps that
+          are sequentially consistent, a consistency model that closely resembles
+          the transactional guarantees of common real-world databases.
 - year: 2024
   publications:
     - title: "Synq: An Encrypted Database for Public Policy Studies"
@@ -127,10 +165,15 @@
           website: "https://lucyq.in/"
       alphabetical: true
       venue: 45th IEEE Symposium on Security and Privacy
+      acronym: S&P
       location: San Francisco, CA, USA
       links:
         - name: Proceedings
           url: "https://doi.org/10.1109/SP54263.2024.00085"
+      abstract: >
+          In collaboration with Brown's Policy Lab, a system for encrypted, multi-party,
+          data analytics specifically designed to support a government-mandated study
+          run by the Massachusetts's Department of Public Health on the opioid epidemic.
 - year: 2023
   publications:
     - title: "Range Search over Encrypted Multi-Attribute Data"
@@ -148,10 +191,13 @@
           affiliation: Brown University
           website: "https://www.tamassia.net/"
       venue: 49th International Conference on Very Large Data Bases
+      acronym: VLDB
       location: Vancouver, Canada
       links:
         - name: Article
           url: "https://doi.org/10.14778/3574245.3574247"
+      abstract: >
+          New schemes for encrypted, multi-dimensional range search.
     - title: "Attacks on Encrypted Response-Hiding Range Search Schemes in Multiple Dimensions"
       authors:
         - name: Evangelia Anna Markatou
@@ -167,10 +213,16 @@
           affiliation: Brown University
           website: "https://www.tamassia.net/"
       venue: Privacy Enhancing Technologies Symposium 2023
+      acronym: PETS
       location: Lausanne, Switzerland
       links:
         - name: Article
           url: "https://doi.org/10.56553/popets-2023-0106"
+      abstract: >
+          Algorithmic leakage attacks against encrypted, response-hiding,
+          multi-dimensional range search schemes. We use data structural,
+          invariant-based reasoning to demonstrate how to fully recover
+          the plaintext of queries (and thus, the indexed values).
 - year: 2022
   publications:
     - title: Time- and Space-Efficient Aggregate Range Queries on Encrypted Databases
@@ -185,7 +237,11 @@
           affiliation: Brown University
           website: "https://www.tamassia.net/"
       venue: Privacy Enhancing Technologies Symposium 2022
+      acronym: PETS
       location: Sydney, Australia
       links:
         - name: Article
           url: "https://doi.org/10.56553/popets-2022-0128"
+      abstract: >
+          New schemes  for encrypted, aggregate range queries. (This was
+          also my undergraduate honors thesis.)
