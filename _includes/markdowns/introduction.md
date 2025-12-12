@@ -1,3 +1,5 @@
+<img src="/images/profile/profile.jpg" style="float: right; width: 200px; float: right; max-width: 100%; padding-left: 19px; padding-bottom: 19px;" alt="Headshot photo of Zachary Espiritu.">
+
 My name is Zach. My pronouns are he/him/his. I'm a senior research engineer at [MongoDB Research](https://www.mongodb.com/company/research).
 
 My research vision is to make privacy-preserving systems for data processing and retrieval so efficient, expressive, understandable, and appropriately secure that they become the default choice in many real-world scenarios. My [recent work](#publications) focuses on structural-invariant-based leakage attacks, automated leakage analysis engines, expressive and efficient encrypted data structures, and application-centric cryptographic design to support at-risk communities. To do this, I maintain a broad set of interests in cryptography, formal methods, data structures, computer systems, and human factors.
