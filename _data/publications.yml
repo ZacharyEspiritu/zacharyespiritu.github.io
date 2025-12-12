@@ -16,8 +16,10 @@
           website: "https://tarikmoataz.com/"
         - name: Amine Bahi
           affiliation: École Normale Supérieure
+          website: "https://www.linkedin.com/in/amine-bahi-6ba572145/"
         - name: John Wilkinson
           affiliation: Brown University
+          website: "https://www.johnwilkinson.dev/"
       venue: To appear at Privacy Enhancing Technologies Symposium 2026
       acronym: PETS
       location: Calgary, Canada
@@ -41,6 +43,7 @@
           website: "https://tarikmoataz.com/"
         - name: Valentin Ogier
           affiliation: NetApp
+          website: "https://www.linkedin.com/in/valentin-ogier-4831b11a1/"
       alphabetical: true
       venue: 47th IEEE Symposium on Security and Privacy
       acronym: S&P
