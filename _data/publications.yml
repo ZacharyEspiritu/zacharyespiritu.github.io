@@ -28,8 +28,6 @@
           needs of activist communication in authoritarian environments. We create an
           broader protocol using this primitive and implement it in a proof-of-concept
           application.
-- year: 2025
-  publications:
     - title: "Leafblower: A Leakage Attack Against TEE-Based Encrypted Databases"
       authors:
         - name: Zachary Espiritu
@@ -61,6 +59,8 @@
           inside of Gramine. We do this by exploiting B+-tree invariants
           that are observable just from snapshots of
           encrypted index files.
+- year: 2025
+  publications:
     - title: "Structured Encryption and Distribution-aware Leakage Suppression"
       authors:
         - name: Marilyn George
