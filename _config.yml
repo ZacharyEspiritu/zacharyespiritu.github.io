@@ -1,6 +1,9 @@
 title: Zachary Espiritu
 email: me@zacharyespiritu.com
-description: Zachary Espiritu is a computer scientist, applied cryptography researcher, and systems security engineer.
+description: >
+  I'm a systems security and applied cryptography researcher. My research
+  primarily centers on the design and cryptanalysis of privacy-preserving
+  systems for data processing and retrieval.
 baseurl: ""
 
 markdown: kramdown
