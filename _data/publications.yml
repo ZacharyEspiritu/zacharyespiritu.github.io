@@ -51,6 +51,8 @@
           url: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I"
         - name: Paper
           url: "/papers/leafblower-sp2026.pdf"
+        - name: Extended Talk
+          url: "https://www.youtube.com/watch?v=UE471UInufc"
       abstract: >
           Attack against a class of TEE-based encrypted
           databases. It allows a _multi-snapshot external memory adversary_
