@@ -10,7 +10,7 @@
   <meta property="og:title" content="Leafblower at IEEE S&amp;P 2026">
   <meta
     property="og:description"
-    content="Paper, homepage, and MongoDB Research links for Zachary Espiritu's IEEE Security &amp; Privacy 2026 poster.">
+    content="Paper, extended talk, homepage, and MongoDB Research links for Zachary Espiritu's IEEE Security &amp; Privacy 2026 poster.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zacharyespiritu.com/leafblower-sp2026.html">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/icon.ico/favicon-32x32.png">
@@ -28,6 +28,7 @@
       --red: #b93838;
       --aqua: #4bbbc1;
       --aqua-dark: #2c7478;
+      --purple: #7a408e;
       --shadow: 0 18px 54px rgba(24, 33, 45, 0.17);
       --mono: "SF Mono", "Lucida Console", "Monaco", monospace;
       --sans: "DM Sans", "Lato", "Verdana", "Helvetica Neue", "Helvetica", sans-serif;
@@ -165,6 +166,10 @@
       color: var(--header);
     }
 
+    .link.talk {
+      color: var(--purple);
+    }
+
     .link.research {
       color: var(--aqua-dark);
     }
@@ -187,6 +192,10 @@
 
     .home .icon {
       background: var(--header);
+    }
+
+    .talk .icon {
+      background: var(--purple);
     }
 
     .research .icon {
@@ -271,6 +280,15 @@
           <span>
             <span class="label">Read the paper</span>
             <span class="url">zacharyespiritu.com/papers/leafblower-sp2026.pdf</span>
+          </span>
+          <span class="arrow" aria-hidden="true">&gt;</span>
+        </a>
+
+        <a class="link talk" href="https://www.youtube.com/watch?v=UE471UInufc">
+          <span class="icon" aria-hidden="true">TALK</span>
+          <span>
+            <span class="label">Watch the extended talk</span>
+            <span class="url">youtube.com/watch?v=UE471UInufc</span>
           </span>
           <span class="arrow" aria-hidden="true">&gt;</span>
         </a>
