@@ -1,18 +1,27 @@
-- date: Apr 2026
+- date: May 2026
   text: >
-      I'll be presenting "Leafblower" at [IEEE Security & Privacy 2026](https://sp2026.ieee-security.org/) 
+      I'll be presenting ["Leafblower"](https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I)
+      at [IEEE Security & Privacy 2026](https://sp2026.ieee-security.org/)
       in San Francisco, CA. Come say hi!
 
-- date: Feb 2026
+- date: May 2026
   text: >
-      I gave two in-person talks at Brown University at the end of the spring semester:
-      I presented "Leafblower" in the [Theory Seminar](https://events.brown.edu/computer-science/event/332556-theory-seminar-by-zachary-espiritu-leafblower-a)
-      on April 29 (see my talk [video](https://www.youtube.com/watch?v=UE471UInufc)), and then I gave a guest lecture on "Messy, Real-World Cryptography"
-      in ["Logic for Systems"](https://csci1710.github.io/2026/) on May 1.
+      I gave a guest lecture on "Messy, Real-World Cryptography"
+      in Brown University's ["Logic for Systems"](https://csci1710.github.io/2026/) course on May 1!
+      Among many other things, this covered our work on
+      [PolySys](https://www.usenix.org/conference/usenixsecurity25/presentation/espiritu)
+      and [BLA](https://doi.org/10.62056/a36c0lmol)!
+
+- date: Apr 2026
+  text: >
+      I presented ["Leafblower"](https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I)
+      at Brown University's [Theory Seminar](https://events.brown.edu/computer-science/event/332556-theory-seminar-by-zachary-espiritu-leafblower-a)
+      on April 29 (see my talk [video](https://www.youtube.com/watch?v=UE471UInufc))!
 
 - date: Jan 2026
   text: >
-      I presented "Leafblower" in-person at [The University of Chicago](https://computerscience.uchicago.edu/events/event/zachary-espiritu-mongodb-research-leafblower-a-leakage-attack-against-tee-based-encrypted-databases/)
+      I presented ["Leafblower"](https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I)
+      in-person at [The University of Chicago](https://computerscience.uchicago.edu/events/event/zachary-espiritu-mongodb-research-leafblower-a-leakage-attack-against-tee-based-encrypted-databases/)
       on January 22!
 
 - date: Dec 2025
