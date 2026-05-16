@@ -10,7 +10,7 @@ I completed a [concurrent Sc.B. and Sc.M.](notes/brown-courses/) at [Brown Unive
 - [Encrypted Systems Lab](http://esl.cs.brown.edu/), where I designed systems to securely execute public policy studies with [Seny Kamara](http://cs.brown.edu/~seny/).
 - [Brown PLT](https://cs.brown.edu/research/plt/), where I developed [a Pyret ML library](https://cs0190.github.io/tensorflow.html) with [Shriram Krishnamurthi](http://cs.brown.edu/~sk/).
 
-I've had the pleasure of advising several students at MongoDB Research: [John Wilkinson](https://www.johnwilkinson.dev/) (summer 2024), [Valentin Ogier](https://www.linkedin.com/in/valentin-ogier-4831b11a1/) (summer 2024; co-hosted with Tarik Moataz).
+I've had the pleasure of advising several students at MongoDB Research: [John Wilkinson](https://www.johnwilkinson.dev/) (summer 2024), [Valentin Ogier](https://www.linkedin.com/in/valentin-ogier-4831b11a1/) (summer 2024; co-hosted with Tarik Moataz), Yoav Rafalin (summer 2026).
 
 I love teaching, and I particularly love teaching computer security. I was the course designer and Head Teaching Assistant of the Computer Science department’s flagship [computer systems security course](https://cs.brown.edu/courses/info/csci1660/) from 2019 to 2021.
 
