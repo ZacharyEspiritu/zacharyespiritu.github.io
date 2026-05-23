@@ -51,12 +51,15 @@
           url: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I"
         - name: Paper
           url: "/papers/leafblower-sp2026.pdf"
-        - name: Extended Talk
+        - name: Short Talk (10 min)
+          url: "https://drive.google.com/file/d/1b8eRGvOIO3Luy04V_mhE-ZcUyhvHW0Wb/view?usp=sharing"
+        - name: Extended Talk (60 min)
           url: "https://www.youtube.com/watch?v=UE471UInufc"
       abstract: >
           Attack against a class of TEE-based encrypted
           databases. It allows a _multi-snapshot external memory adversary_
-          (weaker than the traditional, _persistent_ TEE adversaries) to learn
+          (significantly weaker than the traditional, <i>persistent</i> TEE adversaries,
+          as it can't see anything happening <i>during</i> an operation's execution) to learn
           the plaintext of `INSERT` operations on a SQLite database running
           inside of Gramine. We do this by exploiting B+-tree invariants
           that are observable just from snapshots of
