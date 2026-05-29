@@ -28,6 +28,9 @@
           needs of activist communication in authoritarian environments. We create an
           broader protocol using this primitive and implement it in a proof-of-concept
           application.
+      links:
+        - name: Article
+          url: "https://doi.org/10.56553/popets-2026-0052"
     - title: "Leafblower: A Leakage Attack Against TEE-Based Encrypted Databases"
       authors:
         - name: Zachary Espiritu
