@@ -1,5 +1,16 @@
 - year: 2026
   publications:
+    - title: "Plaintext Recovery Against Post-Filtering Access Control Systems"
+      authors:
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research
+          self: true
+        - name: David Cash
+          affiliation: University of Chicago
+          website: "https://people.cs.uchicago.edu/~davidcash/"
+      venue: To appear at the 35th USENIX Security Symposium
+      acronym: USENIX
+      location: Baltimore, MD, USA
     - title: "tigro: Trust Infrastructure for Grassroots Organizing via Grounded Digital Annotations"
       authors:
         - name: Leah Namisa Rosenbloom
