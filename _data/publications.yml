@@ -1,6 +1,6 @@
 - year: 2026
   publications:
-    - title: "Plaintext Recovery Against Post-Filtering Access Control Systems"
+    - title: "Plaintext Recovery Against Post-Filtering Access Control"
       authors:
         - name: Zachary Espiritu
           affiliation: MongoDB Research
