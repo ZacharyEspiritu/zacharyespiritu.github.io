@@ -8,9 +8,24 @@
         - name: David Cash
           affiliation: University of Chicago
           website: "https://people.cs.uchicago.edu/~davidcash/"
-      venue: To appear at the 35th USENIX Security Symposium
+      venue: 35th USENIX Security Symposium
       acronym: USENIX
       location: Baltimore, MD, USA
+      abstract: >
+          Fine-grained access control (FGAC) mechanisms such as row-level security
+          (RLS) and document-level security (DLS) are widely deployed in multi-tenant
+          databases. FGAC implementations
+          often use post-filtering where untrusted queries run over all data and
+          private results are redacted afterwards. Prior work shows this approach
+          can lead to side-channels that enable attackers to test if a chosen value
+          exists in unseen data, but otherwise do not enable the
+          efficient recovery of rich, high-entropy data like full records or text
+          documents. We show these side-channels are more damaging than previously
+          thought—using <i>rich</i> query interfaces (e.g., range, prefix, and conjunctive
+          predicates), we amplify existence leakage into <i>rich</i> reconstruction attacks.
+      links:
+        - name: Proceedings
+          url: "https://www.usenix.org/conference/usenixsecurity26/presentation/espiritu"
     - title: "tigro: Trust Infrastructure for Grassroots Organizing via Grounded Digital Annotations"
       authors:
         - name: Leah Namisa Rosenbloom
