@@ -26,6 +26,8 @@
       links:
         - name: Proceedings
           url: "https://www.usenix.org/conference/usenixsecurity26/presentation/espiritu"
+        - name: Full Version
+          url: "https://arxiv.org/abs/2608.11730"
     - title: "tigro: Trust Infrastructure for Grassroots Organizing via Grounded Digital Annotations"
       authors:
         - name: Leah Namisa Rosenbloom
