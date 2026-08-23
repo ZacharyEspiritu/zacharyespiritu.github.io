@@ -1,5 +1,13 @@
 - year: 2026
   publications:
+    - title: "Title Under Embargo"
+      authors:
+        - name: Zachary Espiritu
+          affiliation: MongoDB Research and New York University
+          self: true
+      venue: 33rd ACM SIGSAC Conference on Computer and Communications Security
+      acronym: CCS
+      location: The Hague, The Netherlands
     - title: "Plaintext Recovery Against Post-Filtering Access Control"
       authors:
         - name: Zachary Espiritu
@@ -9,7 +17,7 @@
           affiliation: University of Chicago
           website: "https://people.cs.uchicago.edu/~davidcash/"
       venue: 35th USENIX Security Symposium
-      acronym: USENIX
+      acronym: SEC
       location: Baltimore, MD, USA
       abstract: >
           Fine-grained access control (FGAC) mechanisms such as row-level security
@@ -137,7 +145,7 @@
           website: "https://andyp223.github.io/"
       alphabetical: true
       venue: 34th USENIX Security Symposium
-      acronym: USENIX
+      acronym: SEC
       location: Seattle, WA, USA
       links:
         - name: Proceedings
