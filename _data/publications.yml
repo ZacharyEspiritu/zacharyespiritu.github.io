@@ -7,7 +7,7 @@
           self: true
       venue: 33rd ACM SIGSAC Conference on Computer and Communications Security
       acronym: CCS
-      location: The Hague, The Netherlands
+      location: The Hague, Netherlands
     - title: "Plaintext Recovery Against Post-Filtering Access Control"
       authors:
         - name: Zachary Espiritu

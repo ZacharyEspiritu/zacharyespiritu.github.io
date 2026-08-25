@@ -155,7 +155,7 @@ layout: default
                                             {% for author in publication.authors %}{% if author.website %}<a href="{{ author.website }}" style="text-decoration: none;">{% endif %}<span {% if author.self %}style="font-weight: 600;"{% endif %}>{{ author.name }}</span>{% if author.website %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if publication.alphabetical %} <span class="asterism">⁂</span>{% endif %}
                                         </div>
                                         <div class="venue">
-                                            {{ publication.venue }}{% if publication.location %} ({{ publication.location }}){% endif %}
+                                            {{ publication.venue }} <span class="acronym">({{ publication.acronym }})</span> {% if publication.location %} ({{ publication.location }}){% endif %}
                                         </div>
                                         {% if publication.abstract %}
                                             <div class="abstract abstract-hidden">
@@ -207,7 +207,7 @@ layout: default
     </div>
 </section>
 {% endcomment %}
-<section class="cv-section gray-cv-section">
+<section class="cv-section gray-cv-section" id="teaching">
     <div class="wrapper">
         <div class="small-wrapper">
             <div class="section-box">
