@@ -1,0 +1,18 @@
+# Events appear in the order listed. Remove past events manually.
+# Dates are display text; descriptions support Markdown, including links.
+# Set this file to [] to hide the events panel.
+- date: "Late Oct"
+  text: >-
+    Seminar talk on TBA @ UChicago
+
+- date: "Nov 16–18"
+  text: >-
+    Presenting "Title Under Embargo" at ACM CCS 2026 in The Hague, Netherlands
+
+- date: "Dec 1"
+  text: >-
+    Seminar talk on TBA with CryptoSec @ NYU
+
+- date: "Dec 8–9"
+  text: >-
+    Presenting TBA at BlackHat Europe in London, UK

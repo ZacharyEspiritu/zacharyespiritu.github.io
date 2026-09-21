@@ -1,0 +1,16 @@
+<div class="profile-sidebar">
+    <img src="/images/profile/profile.jpg" alt="Headshot photo of Zachary Espiritu.">
+    {% if site.data.events.size > 0 %}
+    <aside class="upcoming-events" aria-labelledby="upcoming-events-title">
+        <h2 id="upcoming-events-title">upcoming events</h2>
+        <ul>
+            {% for event in site.data.events %}
+            <li>
+                <div class="event-date">{{ event.date | escape }}</div>
+                <div class="event-description">{{ event.text | markdownify }}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </aside>
+    {% endif %}
+</div>

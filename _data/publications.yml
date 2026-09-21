@@ -5,9 +5,15 @@
         - name: Zachary Espiritu
           affiliation: MongoDB Research and New York University
           self: true
-      venue: 33rd ACM SIGSAC Conference on Computer and Communications Security
-      acronym: CCS
-      location: The Hague, Netherlands
+      venue:
+        - name: 33rd ACM SIGSAC Conference on Computer and Communications Security
+          acronym: CCS
+          location: The Hague, Netherlands
+        - name: BlackHat Europe
+          acronym: BHEU
+          location: London, United Kingdom
+      abstract: >
+          Abstract under embargo.
     - title: "Plaintext Recovery Against Post-Filtering Access Control"
       authors:
         - name: Zachary Espiritu
@@ -16,9 +22,10 @@
         - name: David Cash
           affiliation: University of Chicago
           website: "https://people.cs.uchicago.edu/~davidcash/"
-      venue: 35th USENIX Security Symposium
-      acronym: SEC
-      location: Baltimore, MD, USA
+      venue:
+        - name: 35th USENIX Security Symposium
+          acronym: SEC
+          location: Baltimore, MD, USA
       abstract: >
           Fine-grained access control (FGAC) mechanisms such as row-level security
           (RLS) and document-level security (DLS) are widely deployed in multi-tenant
@@ -56,9 +63,10 @@
         - name: John Wilkinson
           affiliation: Brown University
           website: "https://www.johnwilkinson.dev/"
-      venue: Privacy Enhancing Technologies Symposium 2026
-      acronym: PETS
-      location: Calgary, Canada
+      venue:
+        - name: Privacy Enhancing Technologies Symposium 2026
+          acronym: PETS
+          location: Calgary, Canada
       abstract: >
           A cryptographic primitive for "grounded annotations", motivated by the
           needs of activist communication in authoritarian environments. We create an
@@ -82,9 +90,10 @@
           affiliation: NetApp
           website: "https://www.linkedin.com/in/valentin-ogier-4831b11a1/"
       alphabetical: true
-      venue: 47th IEEE Symposium on Security and Privacy
-      acronym: S&P
-      location: San Francisco, CA, USA
+      venue:
+        - name: 47th IEEE Symposium on Security and Privacy
+          acronym: S&P
+          location: San Francisco, CA, USA
       links:
         - name: Proceedings
           url: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500a129/2bojvbCyc6I"
@@ -119,9 +128,10 @@
         - name: Zachary Espiritu
           affiliation: MongoDB Research
           self: true
-      venue: Asiacrypt 2025
-      acronym: Asiacrypt
-      location: Melbourne, Australia
+      venue:
+        - name: Asiacrypt 2025
+          acronym: Asiacrypt
+          location: Melbourne, Australia
       links:
         - name: Proceedings
           url: "https://link.springer.com/chapter/10.1007/978-981-95-5096-8_7"
@@ -144,9 +154,10 @@
           affiliation: Carnegie Mellon University and MongoDB Research
           website: "https://andyp223.github.io/"
       alphabetical: true
-      venue: 34th USENIX Security Symposium
-      acronym: SEC
-      location: Seattle, WA, USA
+      venue:
+        - name: 34th USENIX Security Symposium
+          acronym: SEC
+          location: Seattle, WA, USA
       links:
         - name: Proceedings
           url: "https://www.usenix.org/conference/usenixsecurity25/presentation/espiritu"
@@ -165,8 +176,9 @@
           affiliation: MongoDB Research
           website: "https://tarikmoataz.com/"
       alphabetical: true
-      venue: IACR Communications of Cryptology, Volume 2, Issue 1
-      acronym: CIC
+      venue:
+        - name: IACR Communications of Cryptology, Volume 2, Issue 1
+          acronym: CIC
       links:
         - name: Article
           url: "https://doi.org/10.62056/a36c0lmol"
@@ -184,9 +196,10 @@
           affiliation: MongoDB Research
           self: true
       alphabetical: true
-      venue: 10th IEEE European Symposium on Security and Privacy
-      acronym: EuroS&P
-      location: Venice, Italy
+      venue:
+        - name: 10th IEEE European Symposium on Security and Privacy
+          acronym: EuroS&P
+          location: Venice, Italy
       links:
         - name: Proceedings
           url: "https://ieeexplore.ieee.org/document/11129380"
@@ -211,9 +224,10 @@
           affiliation: Brown University
           website: "https://lucyq.in/"
       alphabetical: true
-      venue: 45th IEEE Symposium on Security and Privacy
-      acronym: S&P
-      location: San Francisco, CA, USA
+      venue:
+        - name: 45th IEEE Symposium on Security and Privacy
+          acronym: S&P
+          location: San Francisco, CA, USA
       links:
         - name: Proceedings
           url: "https://doi.org/10.1109/SP54263.2024.00085"
@@ -237,9 +251,10 @@
         - name: Roberto Tamassia
           affiliation: Brown University
           website: "https://www.tamassia.net/"
-      venue: 49th International Conference on Very Large Data Bases
-      acronym: VLDB
-      location: Vancouver, Canada
+      venue:
+        - name: 49th International Conference on Very Large Data Bases
+          acronym: VLDB
+          location: Vancouver, Canada
       links:
         - name: Article
           url: "https://doi.org/10.14778/3574245.3574247"
@@ -259,9 +274,10 @@
         - name: Roberto Tamassia
           affiliation: Brown University
           website: "https://www.tamassia.net/"
-      venue: Privacy Enhancing Technologies Symposium 2023
-      acronym: PETS
-      location: Lausanne, Switzerland
+      venue:
+        - name: Privacy Enhancing Technologies Symposium 2023
+          acronym: PETS
+          location: Lausanne, Switzerland
       links:
         - name: Article
           url: "https://doi.org/10.56553/popets-2023-0106"
@@ -283,9 +299,10 @@
         - name: Roberto Tamassia
           affiliation: Brown University
           website: "https://www.tamassia.net/"
-      venue: Privacy Enhancing Technologies Symposium 2022
-      acronym: PETS
-      location: Sydney, Australia
+      venue:
+        - name: Privacy Enhancing Technologies Symposium 2022
+          acronym: PETS
+          location: Sydney, Australia
       links:
         - name: Article
           url: "https://doi.org/10.56553/popets-2022-0128"

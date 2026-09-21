@@ -1,6 +1,4 @@
-<img src="/images/profile/profile.jpg" style="float: right; width: 200px; float: right; max-width: 100%; padding-left: 19px; padding-bottom: 19px;" alt="Headshot photo of Zachary Espiritu.">
-
-My name is Zach. My pronouns are he/him/his. I'm a senior research engineer at [MongoDB Research](https://www.mongodb.com/company/research) and a visiting researcher at [New York University](https://cims.nyu.edu/dynamic/) hosted by [Joseph Bonneau](https://jbonneau.com/).
+My name is Zach. My pronouns are he/him/his. I'm a researcher at [MongoDB Research](https://www.mongodb.com/company/research) and a visiting researcher at [New York University](https://cims.nyu.edu/dynamic/) hosted by [Joseph Bonneau](https://jbonneau.com/).
 
 My research vision is to improve the efficiency, interpretability, and overall security for privacy-preserving systems in real-world scenarios. To do this, I maintain a broad set of interests in cryptography, formal methods, data structures, computer systems, and human factors. My [recent work](#publications) focuses on leakage attacks and cryptanalysis, designing efficient encrypted data structures, and application-centric cryptographic design to support at-risk communities.
 
@@ -9,4 +7,3 @@ I completed a [concurrent Sc.B. and Sc.M.](notes/brown-courses/) at [Brown Unive
 I've had the pleasure of advising several students at MongoDB Research: [John Wilkinson](https://www.johnwilkinson.dev/) (summer 2024), [Valentin Ogier](https://www.linkedin.com/in/valentin-ogier-4831b11a1/) (summer 2024; co-hosted with [Tarik Moataz](https://tarikmoataz.com/)), [Yoav Rafalin](https://www.linkedin.com/in/yoav-rafalin-588829151) (summer 2026; co-hosted with [A. Jesse Jiryu Davis](https://emptysqua.re/blog/)).
 
 Outside of research, I think about things like [long distance running](https://www.strava.com/athletes/91146604), pottery on the wheel, [theatrical lighting design](design/lighting-design/), Broadway theater producing and investing, small-scale immersive theater, tabletop gaming, and Dance Dance Revolution.
-

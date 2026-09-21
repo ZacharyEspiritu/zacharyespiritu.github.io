@@ -331,6 +331,65 @@ figure {
   }
 }
 
+.about-intro {
+  display: flow-root;
+}
+
+.profile-sidebar {
+  float: right;
+  width: 200px;
+  max-width: 100%;
+  margin: 0 0 19px 19px;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.upcoming-events {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 14px;
+  padding: 15px;
+  background: #fef9c5;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+
+  h2 {
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 4px double gray;
+    text-align: center;
+    font-family: $sans-serif-caps-fonts;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li + li {
+    margin-top: 16px;
+  }
+
+  .event-date {
+    font-family: $sans-serif-fonts;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+
+  .event-description p {
+    margin: 0;
+  }
+}
+
 .cv-item {
   margin: 32px 0;
   border-left: 7px black solid;

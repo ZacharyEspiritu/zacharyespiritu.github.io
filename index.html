@@ -42,7 +42,8 @@ layout: default
             <div class="section-box">
                 <div class="section-title black-text">About</div>
             </div>
-            <div class="cv-section-intro">
+            <div class="cv-section-intro about-intro">
+                {% include profile_sidebar.html %}
                 {% include markdown_renderer.html markdown_file="introduction.md" %}
             </div>
         </div>
@@ -134,6 +135,9 @@ layout: default
             <div>
                 {% assign pubnum = 0 %}
                 {% for yeargroup in site.data.publications %}
+                    {% assign pubnum = pubnum | plus: yeargroup.publications.size %}
+                {% endfor %}
+                {% for yeargroup in site.data.publications %}
                     <div class="publication-year-line-break"></div>
                     <div class="publication-year-container">
                         <div class="year-date">
@@ -144,8 +148,8 @@ layout: default
 
                                 <div class="publication-item">
                                     <div class="publication-number">
-                                        {% assign pubnum = pubnum | plus:1 %}
                                         {{ pubnum }}
+                                        {% assign pubnum = pubnum | minus: 1 %}
                                     </div>
                                     <div class="publication-details">
                                         <div class="title">
@@ -154,9 +158,11 @@ layout: default
                                         <div class="authors">
                                             {% for author in publication.authors %}{% if author.website %}<a href="{{ author.website }}" style="text-decoration: none;">{% endif %}<span {% if author.self %}style="font-weight: 600;"{% endif %}>{{ author.name }}</span>{% if author.website %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if publication.alphabetical %} <span class="asterism">⁂</span>{% endif %}
                                         </div>
-                                        <div class="venue">
-                                            {{ publication.venue }} <span class="acronym">({{ publication.acronym }})</span> {% if publication.location %} ({{ publication.location }}){% endif %}
-                                        </div>
+                                        {% for venue in publication.venue %}
+                                            <div class="venue">
+                                                {{ venue.name }} <span class="acronym">({{ venue.acronym }})</span> {% if venue.location %} ({{ venue.location }}){% endif %}
+                                            </div>
+                                        {% endfor %}
                                         {% if publication.abstract %}
                                             <div class="abstract abstract-hidden">
                                                 {{ publication.abstract | markdownify }}
