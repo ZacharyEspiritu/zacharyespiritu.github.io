@@ -1,6 +1,6 @@
 - year: 2026
   publications:
-    - title: "Title Under Embargo"
+    - title: "Snapshots of TEE-Based Encrypted Databases Leak Plaintext Histograms via Dendrochronology"
       authors:
         - name: Zachary Espiritu
           affiliation: MongoDB Research and New York University
@@ -13,7 +13,18 @@
           acronym: BHEU
           location: London, United Kingdom
       abstract: >
-          Abstract under embargo.
+          Arborists use _dendrochronology_, or the study of tree "growth rings"
+          (as in, the plant), to infer past environmental events. We identify an
+          analogous, exploitable phenomenon in the B+-tree indexes used by several
+          <i>encrypted databases</i> (EDBs) based on <i>trusted execution environments</i>
+          (TEEs). Such EDBs have been cryptanalyzed as leaking the <i>order</i> of
+          indexed values, but not the histogram (or <i>frequency</i> of each value), with respect to a weaker class of
+          <i>snapshot adversaries</i>. Such <i>order-only</i> leakage substantially reduces
+          the effectiveness of possible inference attacks.
+          We show, in fact, <i>frequency is recoverable</i> in the snapshot model from
+          many TEE-based EDBs, even if the TEE itself is "secure". We show attacks that enable stronger
+          inference attacks on several TEE-based EDBs and point to broader lessons for TEE
+          applications designed around legacy code.
     - title: "Plaintext Recovery Against Post-Filtering Access Control"
       authors:
         - name: Zachary Espiritu

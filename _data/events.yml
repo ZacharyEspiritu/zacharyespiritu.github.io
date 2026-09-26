@@ -7,7 +7,7 @@
 
 - date: "Nov 16–18"
   text: >-
-    Presenting "Title Under Embargo" at ACM CCS 2026 in The Hague, Netherlands
+    Presenting "Snapshots ..." at ACM CCS 2026 in The Hague, Netherlands
 
 - date: "Dec 1"
   text: >-
@@ -15,4 +15,5 @@
 
 - date: "Dec 8–9"
   text: >-
-    Presenting TBA at BlackHat Europe in London, UK
+    Presenting ["Dendrochronology Attacks"](https://blackhat.com/europe/briefings/schedule/#dendrochronology-attacks-breaking-tee-based-encrypted-databases-without-breaking-the-tee-56307)
+    at BlackHat Europe in London, UK
