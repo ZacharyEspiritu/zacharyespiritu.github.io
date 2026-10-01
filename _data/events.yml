@@ -1,9 +1,9 @@
 # Events appear in the order listed. Remove past events manually.
 # Dates are display text; descriptions support Markdown, including links.
 # Set this file to [] to hide the events panel.
-- date: "Late Oct"
+- date: "Oct 29"
   text: >-
-    Seminar talk on TBA @ UChicago
+    Seminar talk on "Snapshots ..." @ UChicago
 
 - date: "Nov 16–18"
   text: >-
