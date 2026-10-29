@@ -25,6 +25,9 @@
           many TEE-based EDBs, even if the TEE itself is "secure". We show attacks that enable stronger
           inference attacks on several TEE-based EDBs and point to broader lessons for TEE
           applications designed around legacy code.
+      links:
+        - name: Full Version
+          url: "https://eprint.iacr.org/2026/2465"
     - title: "Plaintext Recovery Against Post-Filtering Access Control"
       authors:
         - name: Zachary Espiritu
