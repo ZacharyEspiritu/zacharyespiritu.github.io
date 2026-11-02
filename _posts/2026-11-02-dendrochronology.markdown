@@ -10,10 +10,10 @@ author:
   twitter: ZacharyEspiritu
   url: https://zacharyespiritu.com
 image:
-  path: /images/og-dendrochronology.png
+  path: /images/og-dendrochronology-figure-e.png
   width: 1200
   height: 630
-  alt: Title card reading Using Arborism to Recover Plaintexts beside a photo of tree growth rings
+  alt: Figure E showing record ID descents and the recovered ordered histogram (3, 6, 2, 4)
 date: 2026-11-02
 is_post: true
 card_color: "#39735B"
