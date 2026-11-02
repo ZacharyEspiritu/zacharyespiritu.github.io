@@ -1,0 +1,34 @@
+{% assign dendro_ids = '3,6,15,2,4,7,8,12,14,1,11,5,9,10,13' | split: ',' %}
+<div class="paper-figure-frame paper-figure-frame--index" role="img" aria-label="A line graph traces the encrypted index's plaintext record IDs: 3, 6, 15, 2, 4, 7, 8, 12, 14, 1, 11, 5, 9, 10, 13. Letters A through D in the hatched key boxes show hidden plaintext values only for this illustration. Descents after 15, 14, and 11 reveal ordered groups of sizes 3, 6, 2, and 4.">
+  <div class="paper-index-body" aria-hidden="true">
+    <div class="paper-row-labels">
+      <span>Encrypted key</span>
+      <span>Plaintext ID</span>
+    </div>
+    <div class="paper-index-main">
+      <div class="paper-index-row">
+        {% for id in dendro_ids %}
+          {% if forloop.index <= 3 %}{% assign group = 'a' %}{% elsif forloop.index <= 9 %}{% assign group = 'b' %}{% elsif forloop.index <= 11 %}{% assign group = 'c' %}{% else %}{% assign group = 'd' %}{% endif %}
+          <div class="paper-index-entry paper-group-{{ group }}">
+            <span class="paper-index-key">{{ group | upcase }}</span>
+            <span class="paper-index-id">{{ id }}</span>
+            {% assign point_height = id | times: 100 | divided_by: 16 %}
+            {% unless forloop.last %}{% assign next_id = dendro_ids[forloop.index] | plus: 0 %}{% assign next_height = next_id | times: 100 | divided_by: 16 %}{% endunless %}
+            <span class="paper-index-plot" style="--point-height: {{ point_height }}%;{% unless forloop.last %} --next-height: {{ next_height }}%;{% endunless %}">
+              {% unless forloop.last %}<span class="paper-index-line"></span>{% endunless %}
+              <span class="paper-index-point"></span>
+            </span>
+            {% if forloop.index == 3 or forloop.index == 9 or forloop.index == 11 %}<span class="paper-descent-mark"></span>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="paper-count-row paper-count-row--fifteen">
+        <span class="paper-count paper-group-a" style="grid-column: span 3">3</span>
+        <span class="paper-count paper-group-b" style="grid-column: span 6">6</span>
+        <span class="paper-count paper-group-c" style="grid-column: span 2">2</span>
+        <span class="paper-count paper-group-d" style="grid-column: span 4">4</span>
+      </div>
+    </div>
+  </div>
+  <p class="paper-recovered">Recovered ordered histogram: (3, 6, 2, 4)</p>
+</div>

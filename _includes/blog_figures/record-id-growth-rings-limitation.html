@@ -1,0 +1,33 @@
+{% assign limitation_ids = '3,6,15,2,4,7,8,9,10,11,12,1,5,13,14' | split: ',' %}
+<div class="paper-figure-frame paper-figure-frame--index paper-figure-frame--index-limitation" role="img" aria-label="The encrypted index contains four hidden plaintext groups with true frequencies 3, 6, 2, and 4. Within group B, record IDs are 2, 4, 7, 8, 9, and 10; the two C records have IDs 11 and 12. Because the IDs rise from 10 to 11 at the B/C boundary, no descent reveals that boundary. The attacker sees descents only after A and C and recovers the approximate histogram 3, 8, 4.">
+  <div class="paper-index-body" aria-hidden="true">
+    <div class="paper-row-labels">
+      <span>Encrypted key</span>
+      <span>Plaintext ID</span>
+    </div>
+    <div class="paper-index-main">
+      <div class="paper-index-row">
+        {% for id in limitation_ids %}
+          {% if forloop.index <= 3 %}{% assign group = 'a' %}{% elsif forloop.index <= 9 %}{% assign group = 'b' %}{% elsif forloop.index <= 11 %}{% assign group = 'c' %}{% else %}{% assign group = 'd' %}{% endif %}
+          <div class="paper-index-entry paper-group-{{ group }}">
+            <span class="paper-index-key">{{ group | upcase }}</span>
+            <span class="paper-index-id">{{ id }}</span>
+            {% assign point_height = id | times: 100 | divided_by: 16 %}
+            {% unless forloop.last %}{% assign next_id = limitation_ids[forloop.index] | plus: 0 %}{% assign next_height = next_id | times: 100 | divided_by: 16 %}{% endunless %}
+            <span class="paper-index-plot" style="--point-height: {{ point_height }}%;{% unless forloop.last %} --next-height: {{ next_height }}%;{% endunless %}">
+              {% unless forloop.last %}<span class="paper-index-line"></span>{% endunless %}
+              <span class="paper-index-point"></span>
+            </span>
+            {% if forloop.index == 3 or forloop.index == 11 %}<span class="paper-descent-mark"></span>{% endif %}
+            {% if forloop.index == 9 %}<span class="paper-index-lost">lost</span>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="paper-count-row paper-count-row--fifteen">
+        <span class="paper-count paper-group-a" style="grid-column: span 3">3</span>
+        <span class="paper-count paper-count--merged" style="grid-column: span 8">8</span>
+        <span class="paper-count paper-group-d" style="grid-column: span 4">4</span>
+      </div>
+    </div>
+  </div>
+</div>

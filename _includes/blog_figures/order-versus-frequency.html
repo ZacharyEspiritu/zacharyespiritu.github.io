@@ -1,0 +1,61 @@
+<div class="paper-figure-frame paper-figure-frame--comparison" data-figure1 data-target-counts="2,5,3">
+  <div class="paper-comparison-panels">
+    <div class="paper-auxiliary">
+      <p class="paper-panel-label">Auxiliary</p>
+      <p class="paper-aux-drag-hint" id="aux-histogram-instructions" data-aux-drag-hint hidden><span class="paper-aux-drag-icon" aria-hidden="true">↕</span><strong>drag the bars</strong></p>
+      <div class="paper-aux-histogram" data-aux-histogram role="group" aria-label="Auxiliary estimate: A 4, B 3, C 3 records.">
+        <div class="paper-aux-histogram-axis" aria-hidden="true"><span>10</span><span>5</span><span>0</span></div>
+        <div class="paper-aux-histogram-plot" data-aux-plot aria-hidden="true">
+          <span class="paper-aux-bar paper-group-a" data-aux-bar="a" style="--bar-height: 48px"><b data-aux-bar-count>4</b><span class="paper-aux-bar-grip" aria-hidden="true">↕</span></span>
+          <span class="paper-aux-bar paper-group-b" data-aux-bar="b" style="--bar-height: 36px"><b data-aux-bar-count>3</b><span class="paper-aux-bar-grip" aria-hidden="true">↕</span></span>
+          <span class="paper-aux-bar paper-group-c" data-aux-bar="c" style="--bar-height: 36px"><b data-aux-bar-count>3</b><span class="paper-aux-bar-grip" aria-hidden="true">↕</span></span>
+        </div>
+        <div class="paper-aux-histogram-labels" aria-hidden="true"><span>A</span><span>B</span><span>C</span></div>
+      </div>
+    </div>
+
+    <div class="paper-comparison-panel">
+      <p class="paper-panel-label">Order only</p>
+      <div class="paper-chip-row paper-chip-row--ten" aria-hidden="true">
+        {% for position in (1..10) %}<span class="paper-chip paper-chip--neutral">?</span>{% endfor %}
+      </div>
+      <div class="paper-count-row paper-count-row--ten paper-count-row--assumed" data-order-counts aria-hidden="true">
+        <span class="paper-count paper-group-a" style="grid-column: span 4">4</span>
+        <span class="paper-count paper-group-b" style="grid-column: span 3">3</span>
+        <span class="paper-count paper-group-c" style="grid-column: span 3">3</span>
+      </div>
+      <p class="paper-comparison-note">With no other information, we just have to take our auxiliary as ground truth.</p>
+      <div class="paper-example-row paper-example-row--guess" data-order-guess aria-hidden="true">
+        {% for position in (1..10) %}
+          {% if position <= 4 %}{% assign group = 'a' %}{% assign label = 'A' %}{% elsif position <= 7 %}{% assign group = 'b' %}{% assign label = 'B' %}{% else %}{% assign group = 'c' %}{% assign label = 'C' %}{% endif %}
+          <span class="paper-example-cell paper-group-{{ group }}{% if position == 3 or position == 4 %} paper-example-cell--wrong{% endif %}">{{ label }}</span>
+        {% endfor %}
+      </div>
+      <p class="paper-example-outcome paper-example-outcome--wrong" data-order-outcome>2 of 10 records get wrong label</p>
+    </div>
+
+    <div class="paper-comparison-panel">
+      <p class="paper-panel-label">Order + frequency</p>
+      <div class="paper-chip-row paper-chip-row--ten" aria-hidden="true">
+        {% for position in (1..10) %}
+          {% if position <= 2 %}{% assign group = 'a' %}{% elsif position <= 7 %}{% assign group = 'b' %}{% else %}{% assign group = 'c' %}{% endif %}
+          <span class="paper-chip paper-group-{{ group }}">?</span>
+        {% endfor %}
+      </div>
+      <div class="paper-count-row paper-count-row--ten" aria-hidden="true">
+        <span class="paper-count paper-group-a" style="grid-column: span 2">2</span>
+        <span class="paper-count paper-group-b" style="grid-column: span 5">5</span>
+        <span class="paper-count paper-group-c" style="grid-column: span 3">3</span>
+      </div>
+      <p class="paper-comparison-note">With frequency leakage, we can "align" our auxiliary to the observed leakage.</p>
+      <div class="paper-example-row paper-example-row--guess" aria-hidden="true">
+        {% for position in (1..10) %}
+          {% if position <= 2 %}{% assign group = 'a' %}{% assign label = 'A' %}{% elsif position <= 7 %}{% assign group = 'b' %}{% assign label = 'B' %}{% else %}{% assign group = 'c' %}{% assign label = 'C' %}{% endif %}
+          <span class="paper-example-cell paper-group-{{ group }}">{{ label }}</span>
+        {% endfor %}
+      </div>
+      <p class="paper-example-outcome">All ten labels align</p>
+    </div>
+  </div>
+  <p class="paper-figure-sr-only" data-figure1-summary aria-live="polite">Order-only labels: A A A A B B B C C C; 2 of 10 wrong. Order-plus-frequency labels: A A B B B B B C C C.</p>
+</div>

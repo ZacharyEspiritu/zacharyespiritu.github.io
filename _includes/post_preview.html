@@ -1,5 +1,5 @@
 {% if page.is_post %}
-    {% assign post_type = "writeup" %}
+    {% assign post_type = "post" %}
 {% elsif page.is_project %}
     {% assign post_type = "project" %}
 {% else %}
@@ -14,6 +14,9 @@
         previews.txt<br>
         ------------<br>
         <a class="preview-link" href="/">-> home</a><br>
+        {% if page.is_post %}
+            <a class="preview-link" href="/blog/">-> blog</a><br>
+        {% endif %}
         {% if next_post %}
             <a class="preview-link" href="{{ next_post.url }}">-> next_{{ post_type }}</a><br>
         {% endif %}

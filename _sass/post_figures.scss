@@ -1,0 +1,41 @@
+.blog-post-content {
+  counter-reset: section post-figure;
+}
+
+.blog-post-content > figure:has(> figcaption) {
+  counter-increment: post-figure;
+  scroll-margin-top: 24px;
+}
+
+.blog-post-content:not(.figure-links-ready) > figure > figcaption::before {
+  content: "Figure " counter(post-figure, upper-alpha) ". ";
+  font-weight: 700;
+}
+
+.blog-post-content > figure > figcaption .figure-permalink {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .16em;
+  white-space: nowrap;
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+}
+
+.figure-permalink-icon {
+  margin-left: .2em;
+  font-family: $monospace-fonts;
+  font-size: .85em;
+  font-weight: 400;
+}
+
+.figure-copy-announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

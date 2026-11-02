@@ -1,0 +1,44 @@
+{% assign leafblower_pages = 'A:1,A:11,A:12,A:21,A:22|A:23,A:24,A:25,B:6,B:7|B:8,B:13,B:14,B:15,B:16|B:17,B:18,B:19,B:20,C:2|C:3,C:4,C:5,C:9,C:10' | split: '|' %}
+{% assign leafblower_births = '1,25,15,20,10' | split: ',' %}
+<div class="paper-figure-frame paper-figure-frame--leafblower" role="img" aria-label="Five encrypted leaf pages contain three hidden plaintext values. In final index order, their birth times are 1, 25, 15, 20, and 10. Birth times descend after leaves 2 and 4, dividing the pages into groups of 2, 2, and 1. At an estimated five records per leaf, this yields an approximate ordered histogram of 10, 10, and 5 records. The example leaf contents are shown only for the reader and remain encrypted from the attacker.">
+  <div aria-hidden="true">
+    <div class="paper-leafblower-pages">
+      {% for page in leafblower_pages %}
+        <div class="paper-leafblower-page">
+          {% if forloop.index == 2 or forloop.index == 4 %}<span class="paper-leafblower-true-boundary" style="left: {% if forloop.index == 4 %}80{% else %}60{% endif %}%">▽</span>{% endif %}
+          <span class="paper-leafblower-page-name">Page {{ forloop.index }}</span>
+          <div class="paper-leafblower-entries">
+            {% assign entries = page | split: ',' %}
+            {% for entry in entries %}
+              {% assign pieces = entry | split: ':' %}
+              {% assign group = pieces[0] | downcase %}
+              <span class="paper-leafblower-entry paper-group-{{ group }}"><span>{{ pieces[0] }}</span><small>{{ pieces[1] }}</small></span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <p class="paper-leafblower-chart-title">Leaf birth time</p>
+    <div class="paper-leafblower-chart">
+      {% for birth in leafblower_births %}
+        {% assign point_height = birth | times: 70 | divided_by: 25 | plus: 12 %}
+        {% unless forloop.last %}{% assign next_birth = leafblower_births[forloop.index] | plus: 0 %}{% assign next_height = next_birth | times: 70 | divided_by: 25 | plus: 12 %}{% endunless %}
+        <span class="paper-leafblower-plot" style="--point-height: {{ point_height }}%;{% unless forloop.last %} --next-height: {{ next_height }}%;{% endunless %}">
+          {% unless forloop.last %}<span class="paper-leafblower-line"></span>{% endunless %}
+          <span class="paper-leafblower-point"></span>
+          <span class="paper-leafblower-birth-label">{{ birth }}</span>
+          <span class="paper-leafblower-leaf-label">{{ forloop.index }}</span>
+          {% if forloop.index == 2 or forloop.index == 4 %}<span class="paper-leafblower-descent"></span>{% endif %}
+        </span>
+      {% endfor %}
+    </div>
+    <div class="paper-leafblower-groups">
+      <span class="paper-leafblower-group paper-group-a" style="grid-column: span 2">≈ 10</span>
+      <span class="paper-leafblower-group paper-group-b" style="grid-column: span 2">≈ 10</span>
+      <span class="paper-leafblower-group paper-group-c" style="grid-column: span 1">≈ 5</span>
+    </div>
+
+    <p class="paper-recovered">Recovered estimated histogram: (10, 10, 5)</p>
+  </div>
+</div>

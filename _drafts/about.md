@@ -38,8 +38,6 @@ For the automatically sorting "cards" seen on the front page, I use [Isotope][is
 
 If you've viewed some of the articles or project writeups, you'll notice that the images only load after the page has rendered. I'm using [Lazysizes][lazysizes] to lazily load the images in for faster response times.
 
-Finally, in order to make sure all the necessary, visual-based Javascript is loaded before the page renders, I use [PleaseWait][please-wait] to display a brief interstitial with a humorous loading message until the page is ready to display.
-
 [lighting-design]: /design/lighting-design
 
 [github-pages]: https://pages.github.com/
@@ -47,4 +45,3 @@ Finally, in order to make sure all the necessary, visual-based Javascript is loa
 [source-code]: https://github.com/ZacharyEspiritu/zacharyespiritu.github.io
 [isotope]: http://isotope.metafizzy.co/
 [lazysizes]: http://afarkas.github.io/lazysizes/
-[please-wait]: http://pathgather.github.io/please-wait/

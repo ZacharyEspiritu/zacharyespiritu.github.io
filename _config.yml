@@ -7,11 +7,13 @@ description: >
 baseurl: ""
 
 markdown: kramdown
+permalink: /blog/:slug
 
 sass:
   style: compressed
 
 timezone: America/New_York
+future: true
 
 github_username: ZacharyEspiritu
 

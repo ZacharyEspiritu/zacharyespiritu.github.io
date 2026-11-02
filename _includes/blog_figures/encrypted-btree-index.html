@@ -1,0 +1,46 @@
+{% assign tree_ids = '3,6,15,2,4,7,8,12,14,1,11,5,9,10,13' | split: ',' %}
+<div class="paper-figure-frame paper-figure-frame--btree" role="img" aria-label="A B-plus-tree index has a root node pointing to three linked leaves. Each entry pairs an encrypted search key with a plaintext record ID. Letters A through D inside the hatched key boxes reveal the hidden plaintext values only for this illustration; the server cannot read them. The leaves contain 15 entries in sorted plaintext-key order, with visible IDs 3, 6, 15, 2, 4, 7, 8, 12, 14, 1, 11, 5, 9, 10, and 13. A TEE decrypts keys only for comparisons; the ordinary database engine sees the tree structure and record IDs.">
+  <div class="paper-btree-legend" aria-hidden="true">
+    <span><i class="paper-btree-swatch paper-btree-swatch--encrypted"></i> encrypted key</span>
+    <span><i class="paper-btree-swatch paper-btree-swatch--plaintext"></i> plaintext record ID</span>
+  </div>
+
+  <div class="paper-btree-root-row" aria-hidden="true">
+    <div class="paper-btree-node paper-btree-root">
+      <p class="paper-btree-node-label">Root node</p>
+      <div class="paper-btree-entries paper-btree-entries--root">
+        <span class="paper-btree-entry paper-group-a"><span class="paper-btree-cipher">A</span><span class="paper-btree-id">3</span></span>
+        <span class="paper-btree-entry paper-group-b"><span class="paper-btree-cipher">B</span><span class="paper-btree-id">7</span></span>
+        <span class="paper-btree-entry paper-group-c"><span class="paper-btree-cipher">C</span><span class="paper-btree-id">11</span></span>
+      </div>
+    </div>
+    <div class="paper-btree-tee">
+      <span class="paper-btree-tee-chip">TEE</span>
+      <span class="paper-btree-tee-key">A</span>
+      <span class="paper-btree-tee-operator"><small>?</small>≷</span>
+      <span class="paper-btree-tee-key">B</span>
+    </div>
+  </div>
+
+  <div class="paper-btree-fork" aria-hidden="true">
+    <span class="paper-btree-trunk"></span>
+    <span class="paper-btree-crossbar"></span>
+    <span class="paper-btree-branches"><i></i><i></i><i></i></span>
+  </div>
+
+  <div class="paper-btree-leaves" aria-hidden="true">
+    {% for leaf in (0..2) %}
+      {% assign start = leaf | times: 5 %}
+      <div class="paper-btree-node paper-btree-leaf">
+        <p class="paper-btree-node-label">Leaf {{ leaf | plus: 1 }}</p>
+        <div class="paper-btree-entries">
+          {% for offset in (0..4) %}
+            {% assign position = start | plus: offset %}
+            {% if position <= 2 %}{% assign group = 'a' %}{% elsif position <= 8 %}{% assign group = 'b' %}{% elsif position <= 10 %}{% assign group = 'c' %}{% else %}{% assign group = 'd' %}{% endif %}
+            <span class="paper-btree-entry paper-group-{{ group }}"><span class="paper-btree-cipher">{{ group | upcase }}</span><span class="paper-btree-id">{{ tree_ids[position] }}</span></span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

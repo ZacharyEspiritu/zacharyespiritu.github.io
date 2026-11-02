@@ -1,10 +1,6 @@
 # Events appear in the order listed. Remove past events manually.
 # Dates are display text; descriptions support Markdown, including links.
 # Set this file to [] to hide the events panel.
-- date: "Oct 29"
-  text: >-
-    Seminar talk on ["Snapshots ..."](https://eprint.iacr.org/2026/2465) @ UChicago
-
 - date: "Nov 16–18"
   text: >-
     Presenting ["Snapshots ..."](https://eprint.iacr.org/2026/2465) at ACM CCS 2026 in The Hague, Netherlands

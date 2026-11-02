@@ -1,3 +1,9 @@
+- date: Oct 2026
+  text: >
+      I presented ["Dendrochronology"](https://eprint.iacr.org/2026/2465)
+      in-person at [The University of Chicago](https://computerscience.uchicago.edu/events/event/zachary-espiritu-mongodb-research-leafblower-a-leakage-attack-against-tee-based-encrypted-databases/)
+      on October 29!
+
 - date: Sep 2026
   text: >
       I'll be presenting ["Dendrochronology Attacks"](https://blackhat.com/europe/briefings/schedule/#dendrochronology-attacks-breaking-tee-based-encrypted-databases-without-breaking-the-tee-56307)
@@ -10,8 +16,7 @@
 
 - date: Aug 2026
   text: >
-      My (solo) paper "Snapshots of TEE-Based Encrypted Databases Leak Plaintext Histograms via
-      Dendrochronology" will appear at [ACM CCS 2026](https://www.sigsac.org/ccs/CCS2026/)
+      My (solo) paper ["Snapshots of TEE-Based Encrypted Databases Leak Plaintext Histograms via Dendrochronology"](https://eprint.iacr.org/2026/2465) will appear at [ACM CCS 2026](https://www.sigsac.org/ccs/CCS2026/)
       in The Hague, The Netherlands!
 
 - date: Aug 2026

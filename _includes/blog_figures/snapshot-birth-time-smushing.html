@@ -1,0 +1,82 @@
+{% assign dendro_ids = '2,3,5,1,4,8,7,9,6,10' | split: ',' %}
+{% assign dendro_births = '1,1,2,1,2,3,3,3,2,3' | split: ',' %}
+{% assign dendro_groups = 'a,a,a,b,b,b,c,c,d,d' | split: ',' %}
+<div class="paper-figure-frame paper-figure-frame--smush" data-snapshot-figure data-record-ids="{{ dendro_ids | join: ',' }}" data-true-boundaries="3,6,8">
+  <div class="paper-smush-panels">
+    <section class="paper-smush-panel" role="img" aria-label="Ten snapshots, one after each insertion, reveal sorted record IDs 2, 3, 5, 1, 4, 8, 7, 9, 6, 10 and true equal-value groups of sizes 3, 3, 2, and 2.">
+      <p class="paper-panel-label">Snapshot after every insert</p>
+      <div class="paper-smush-table">
+        {% for snapshot in (1..10) %}
+          <span class="paper-smush-label">T<sub>{{ snapshot }}</sub></span>
+          <div class="paper-smush-row">
+            {% for id in dendro_ids %}
+              {% assign numeric_id = id | plus: 0 %}
+              {% if numeric_id <= snapshot %}<span class="paper-smush-cell paper-smush-stamp paper-group-{{ dendro_groups[forloop.index0] }}">{{ numeric_id }}</span>{% else %}<span class="paper-smush-cell paper-smush-cell--empty"></span>{% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="paper-smush-chart-layout">
+        <span class="paper-smush-label">Birth time</span>
+        <div class="paper-smush-chart">
+          {% for id in dendro_ids %}
+            {% assign point_height = id | times: 100 | divided_by: 11 %}
+            {% unless forloop.last %}{% assign next_id = dendro_ids[forloop.index] | plus: 0 %}{% assign next_height = next_id | times: 100 | divided_by: 11 %}{% endunless %}
+            <span class="paper-smush-plot paper-group-{{ dendro_groups[forloop.index0] }}" style="--point-height: {{ point_height }}%;{% unless forloop.last %} --next-height: {{ next_height }}%;{% endunless %}">
+              {% unless forloop.last %}<span class="paper-index-line"></span>{% endunless %}
+              <span class="paper-index-point"></span>
+              {% if forloop.index == 3 or forloop.index == 6 or forloop.index == 8 %}<span class="paper-smush-descent"></span>{% endif %}
+            </span>
+          {% endfor %}
+        </div>
+        <span></span>
+        <div class="paper-smush-counts">
+          <span class="paper-count paper-group-a" style="grid-column: span 3">3</span>
+          <span class="paper-count paper-group-b" style="grid-column: span 3">3</span>
+          <span class="paper-count paper-group-c" style="grid-column: span 2">2</span>
+          <span class="paper-count paper-group-d" style="grid-column: span 2">2</span>
+        </div>
+      </div>
+      <p class="paper-smush-note">True ordered frequencies: (3, 3, 2, 2)</p>
+    </section>
+    <section class="paper-smush-panel" data-sampled-panel role="group" aria-label="Snapshots T3, T6, and T10 reveal observed frequencies 3, 5, and 2.">
+      <p class="paper-panel-label">Less snapshots <span class="paper-smush-drag-cue" aria-hidden="true">Drag outlined rows ↕</span></p>
+      <div class="paper-smush-table paper-smush-table--sampled" data-sampled-table>
+        {% for time in (1..10) %}<span class="paper-smush-time-slot" style="--snapshot-row: {{ time }}" aria-hidden="true">T<sub>{{ time }}</sub></span>{% endfor %}
+        {% for snapshot in (1..3) %}
+          {% assign cutoff = snapshot | times: 3 %}{% if snapshot == 3 %}{% assign cutoff = 10 %}{% endif %}
+          <span class="paper-smush-label" data-snapshot-label="{{ snapshot }}" style="--snapshot-row: {{ cutoff }}">T<sub>{{ cutoff }}</sub></span>
+          <div class="paper-smush-row" data-snapshot-row="{{ snapshot }}" style="--snapshot-row: {{ cutoff }}">
+            {% for id in dendro_ids %}
+              {% assign numeric_id = id | plus: 0 %}
+              {% if numeric_id <= cutoff %}<span class="paper-smush-cell paper-smush-stamp paper-group-{{ dendro_groups[forloop.index0] }}" data-record-id="{{ id }}">{{ dendro_births[forloop.index0] }}</span>{% else %}<span class="paper-smush-cell paper-smush-cell--empty paper-group-{{ dendro_groups[forloop.index0] }}" data-record-id="{{ id }}"></span>{% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="paper-smush-chart-layout">
+        <span class="paper-smush-label">Birth time</span>
+        <div class="paper-smush-chart" data-birth-chart>
+          {% for birth in dendro_births %}
+            {% assign point_height = birth | times: 25 %}
+            {% unless forloop.last %}{% assign next_birth = dendro_births[forloop.index] | plus: 0 %}{% assign next_height = next_birth | times: 25 %}{% endunless %}
+            <span class="paper-smush-plot paper-group-{{ dendro_groups[forloop.index0] }}" style="--point-height: {{ point_height }}%;{% unless forloop.last %} --next-height: {{ next_height }}%;{% endunless %}">
+              {% unless forloop.last %}<span class="paper-index-line"></span>{% endunless %}
+              <span class="paper-index-point"></span>
+              {% unless forloop.last %}<span class="paper-smush-descent" data-observed-descent {% unless forloop.index == 3 or forloop.index == 8 %}hidden{% endunless %}></span>{% endunless %}
+              {% if forloop.index == 3 or forloop.index == 6 or forloop.index == 8 %}<span class="paper-smush-lost" data-lost-boundary {% unless forloop.index == 6 %}hidden{% endunless %}>lost</span>{% endif %}
+            </span>
+          {% endfor %}
+        </div>
+        <span></span>
+        <div class="paper-smush-counts" data-sampled-counts>
+          <span class="paper-count paper-group-a" style="grid-column: span 3">3</span>
+          <span class="paper-count paper-smush-merged" style="grid-column: span 5">5</span>
+          <span class="paper-count paper-group-d" style="grid-column: span 2">2</span>
+        </div>
+      </div>
+      <p class="paper-smush-note" data-sampled-note>Observed frequencies: (3, 5, 2)</p>
+    </section>
+  </div>
+  <p class="paper-figure-sr-only" data-snapshot-summary aria-live="polite">Snapshots T3, T6, and T10 reveal observed frequencies 3, 5, and 2; one true boundary is lost.</p>
+</div>

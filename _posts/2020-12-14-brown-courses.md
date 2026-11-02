@@ -1,8 +1,21 @@
 ---
 layout: post
 title:  Doing a Concurrent Degree
-tagline: Some notes about the Concurrent Degree program at Brown University
+permalink: /blog/brown-courses
+date: 2020-12-14
+is_post: true
 card_color: "gray"
+tagline: "My course plan and experience completing Brown's concurrent Sc.B. and Sc.M. in computer science"
+description: "My course plan and experience completing Brown University's concurrent Sc.B. and Sc.M. degrees in computer science."
+author:
+  name: Zachary Espiritu
+  twitter: ZacharyEspiritu
+  url: https://zacharyespiritu.com
+image:
+  path: /images/og-brown-courses.png
+  width: 1200
+  height: 630
+  alt: Title card for Doing a Concurrent Degree
 ---
 
 # Introduction

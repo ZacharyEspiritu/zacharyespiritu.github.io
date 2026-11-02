@@ -1,0 +1,18 @@
+---
+layout: post
+title: Blog
+permalink: /blog/
+is_blog_index: true
+tagline: Research notes on security, cryptography, and systems
+card_color: "#39735B"
+---
+
+{% for post in site.posts %}
+<div class="blog-list-item">
+  <time class="blog-list-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+  <div class="blog-list-main">
+    <h2 class="blog-list-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.tagline %}<p class="blog-list-tagline">{{ post.tagline }}</p>{% endif %}
+  </div>
+</div>
+{% endfor %}
