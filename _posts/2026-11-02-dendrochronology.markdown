@@ -46,10 +46,17 @@ Despite how surprisingly simple this vulnerability is, it affects a multitude of
 ## Why is this interesting?
 
 <aside class="post-aside post-aside--references">
-  <p>How much is okay to leak? That's a complicated question, and it's an active area of research that I have <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/espiritu">some</a> <a href="https://cic.iacr.org/p/2/1/38">work</a> on, but we'll talk about an example of what can go wrong when you leak too much below. <a href="https://www.senykamara.com/">Seny Kamara</a> has some great expository blog posts on encrypted search that discuss some of these possible tradeoffs in more detail (start with <a href="https://esl.cs.brown.edu/blog/how-to-search-on-encrypted-data-introduction-part-1/">Part 1</a>).</p>
+  <p>How much is okay to leak? That's a complicated question, and it's an active area of research that I have <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/espiritu">some</a> <a href="https://cic.iacr.org/p/2/1/38">work</a> on, but we'll talk about an example of what can go wrong when you leak too much below. <a href="https://www.senykamara.com/">Seny Kamara</a> has some great posts on encrypted search that discuss some of these tradeoffs in more detail (start with <a href="https://esl.cs.brown.edu/blog/how-to-search-on-encrypted-data-introduction-part-1/">Part 1</a>).</p>
 </aside>
 
-_End-to-end encrypted databases_ aim to allow a client to end-to-end encrypt data between the client and an untrusted database server in such a way that allows the data to still issue queries over the data. Designing such a database is quite hard and not straightforward. Confidentiality (e.g., encryption) eliminates structure which we would normally use to search over the data efficiently, but, in some cases, we might be okay with leaking a little bit of information about the underlying plaintext in order to increase efficiency. Because of this, there is not really one "best" encrypted database scheme—it depends on your efficiency requirements and how much information you are willing to _leak_ to a potential adversary.
+_End-to-end encrypted databases_ aim to allow a client to end-to-end encrypt data between the client and an untrusted database server in such a way that allows the data to still issue queries over the data. Designing such a database is not straightforward—confidentiality (e.g., encryption) eliminates structure which we would normally use to search over the data efficiently, but, in some cases, we might be okay with leaking a little bit of information about the underlying plaintext in order to increase efficiency. Because of this, there is not really one "best" encrypted database scheme—it depends on your efficiency requirements and how much information you are willing to _leak_ to a potential adversary.
+
+<figure class="paper-figure" id="figure-security-efficiency-tradeoff">
+  <div class="paper-figure-viewport">
+    {% include blog_figures/security-efficiency-tradeoff.html %}
+  </div>
+  <figcaption>A very approximate sketch of the security–efficiency tradeoff in encrypted database design.</figcaption>
+</figure>
 
 One way that industry and academic encrypted database designers in industry and academia have tried to simplify encrypted database design is by using _trusted execution environments_ (TEEs) like  [Intel SGX](https://www.intel.com/content/www/us/en/products/details/processors/xeon/features/software-guard-extensions.html), [AMD SEV](https://www.amd.com/en/developer/sev.html), and others. Instead of designing a new database engine from scratch, designers can leverage the claimed security guarantees of a TEE (namely, that the memory is confidential to adversaries that compromise the server) to supposedly "safely" reuse mature components of  existing plaintext database engines.
 
@@ -88,14 +95,9 @@ In <a href="#figure-encrypted-btree" data-figure-ref>the figure</a>, we show an 
   <div class="paper-figure-viewport">
     {% include blog_figures/encrypted-btree-index.html %}
   </div>
-  <figcaption>A TEE-hybrid encrypted B<sup>+</sup>-tree, adapted from <a href="https://eprint.iacr.org/2026/2465.pdf">Figure 1 of the paper</a>.</figcaption>
+  <figcaption>A TEE-hybrid encrypted B<sup>+</sup>-tree.</figcaption>
 </figure>
 
-<aside class="post-aside post-aside--references">
-<p>
-  Recovering such a histogram was previously believed (including in <a href="https://dl.acm.org/doi/10.1145/3318464.3386141">Microsoft's own paper</a>) to require a stronger adversary who could <em>persistently</em> compromise the server or otherwise break the TEE's security guarantees.
-</p>
-</aside>
 
 
 We can see that the storage of the index itself leaks _plaintext order_ of the ciphertexts. This is the observation that was exploited by [prior snapshot model cryptanalysis by Seah et al.](https://eprint.iacr.org/2024/1308). Notably, because the ciphertexts use a randomized encryption scheme, it does not leak the _frequency_, or the histogram of the records. In other words, from a single snapshot, an adversary cannot see which encrypted values are equal to each other.
@@ -126,11 +128,17 @@ Those counts also help an attacker guess the values themselves. With order alone
 </figure>
 <script defer src="{{ '/javascripts/figure1-interactive.js' | relative_url }}"></script>
 
+<aside class="post-aside post-aside--references">
+<p>
+  Recovering such a histogram was widely believed (in <a href="https://dl.acm.org/doi/10.1145/3318464.3386141">Microsoft's own paper</a> and by <a href="https://petsymposium.org/popets/2019/popets-2019-0052.php">other</a> <a href="https://www.usenix.org/conference/osdi23/presentation/li-mingyu">TEE-hybrid</a> <a href="https://dl.acm.org/doi/abs/10.1145/2463676.2467797">constructions</a>) to require a stronger adversary who could <em>persistently</em> compromise the server or otherwise break the TEE's security guarantees.
+</p>
+</aside>
+
 Because of this, claims of order-only leakage for Always Encrypted (and other TEE-based EDBs) are significant: they exclude the frequency information which gives classical inference attacks (like the ones described above) their power. Microsoft even emphasizes this point in later security analyses, with statements like:
 
 > PPE attacks that rely on the static DB [e.g., snapshots] are not applicable to enclave-enabled EDBs which store data strongly-encrypted [e.g., using randomized encryption] ([source](https://vldb.org/cidrdb/2021/integrity-based-attacks-for-encrypted-databases-and-implications.html))
 
-Of course, we will now show a PPE attack against Always Encrypted's randomized encryption scheme which relies solely on a single snapshot of the database.
+I'll show that this is false by showing a PPE attack against Always Encrypted's randomized encryption scheme which relies solely on a single snapshot of the database.
 
 # The Vulnerability
 
@@ -229,11 +237,12 @@ Think of each leaf as a bucket of records. When a bucket fills, the storage engi
 
 I really enjoyed working on this research project, primarily because—in the words of one of the anonymous reviewers—it has this kind of nice "obvious after the fact" flavor to it that makes it really easy to appreciate.
 
-<aside class="post-aside post-aside--references">
-  <p>Though I can speculate with <em>some</em> authority since I missed this idea when I was working on my earlier <a href="https://zacharyespiritu.com/papers/leafblower-sp2026.pdf">Leafblower</a> attack, which only recovers order-only leakage against <b>TEE-native</b> databases. In the <a href="https://eprint.iacr.org/2026/2465">dendrochronology</a> paper, I show that the same dendrochronology idea transfers to recover approximate histograms from TEE-native databases, which in turn can sometimes improve the performance of the Leafblower attack.</p>
-</aside>
-
 As with any such "obvious"  idea, one should then ask: why has this seemingly simple vulnerability gone unnoticed for many years? (The earliest such database, [TrustedDB](https://dl.acm.org/doi/10.1145/1989323.1989346), appeared as early as 2011.)
+
+
+<aside class="post-aside post-aside--references">
+  <p>I can speculate with <em>some</em> authority since I missed this idea when I was working on my earlier <a href="https://zacharyespiritu.com/papers/leafblower-sp2026.pdf">Leafblower</a> attack, which only recovers order-only leakage against <b>TEE-native</b> databases. In the <a href="https://eprint.iacr.org/2026/2465">dendrochronology</a> paper, I show that the same  idea can recover approximate histograms from TEE-native databases, which may improve the performance of Leafblower.</p>
+</aside>
 
 While I can only speculate, I think prior analyses of TEE-based EDBs modeled the TEE-based index as a sorted sequence of ciphertexts and abstracted additional practical index metadata—such as tie-breakers—out of the model. This highlights an occupational hazard of designing TEE-based applications: the promise of reusing a plaintext storage engine invites designers to treat the existing engine as a black box, when, in reality, its algorithmic invariants become critical parts of the security boundary (and surprising vectors of leakage). Seemingly benign features that make legacy storage engines practical end up becoming surprising sources of leakage.
 
@@ -246,4 +255,9 @@ must be carefully
 analyzed as part of the security boundary—and, as shown in <a href="#strawman-what-if-we-encrypt-the-record-ids">Section 6</a>,  simple modifications to secure those algorithms could have non-obvious pitfalls too. I expect that as additional TEE-based applications become more mainstream, vulnerabilities like these will arise from natural consequences of the underlying (plaintext) algorithms.
 
 Want to learn more? Check out the full paper, ["Snapshots of TEE-Based Encrypted Databases Leak Plaintext Histograms via Dendrochronology"](https://eprint.iacr.org/2026/2465), for more  formal analysis,  additional case studies, experimental details, and to appreciate TiKZ diagrams I spent too much time working on.
+
+<section class="post-acknowledgments" aria-labelledby="post-acknowledgments-heading">
+  <h2 id="post-acknowledgments-heading">Acknowledgments</h2>
+  <p>Special thanks to Casey Nelson for reviewing earlier drafts of this post, as well as: the anonymous CCS reviewers for their helpful feedback on the paper; Seny Kamara, Tarik Moataz, and Andrew Park for early, helpful discussions; and Microsoft and Alibaba for their responses in the coordinated disclosure process.</p>
+</section>
 

@@ -68,6 +68,78 @@ $paper-green: #338444;
 
 }
 
+.paper-figure-frame.paper-figure-frame--tradeoff {
+  padding: clamp(8px, 4cqw, 28px) clamp(8px, 5cqw, 32px);
+  background: #39735B;
+  color: #fff;
+  font-family: $monospace-fonts;
+}
+
+.paper-tradeoff-chart {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 610 / 370;
+  overflow: hidden;
+  font-family: $monospace-fonts;
+  line-height: 1;
+
+  > span {
+    position: absolute;
+  }
+}
+
+.paper-tradeoff-axis {
+  background: rgba(255, 255, 255, .9);
+}
+
+.paper-tradeoff-axis--vertical {
+  left: 30%;
+  top: 25%;
+  width: 1.5px;
+  height: 55%;
+}
+
+.paper-tradeoff-axis--horizontal {
+  left: 30%;
+  top: 80%;
+  width: 40%;
+  height: 1.5px;
+}
+
+.paper-tradeoff-curve {
+  left: 34%;
+  top: 30%;
+  width: 32%;
+  height: 43%;
+  border-top: 2px solid #f6e4a6;
+  border-right: 2px solid #f6e4a6;
+  border-top-right-radius: 100% 100%;
+}
+
+.paper-tradeoff-axis-label {
+  color: #fff;
+  font-family: $monospace-fonts;
+  font-size: 19px;
+  white-space: nowrap;
+}
+
+.paper-tradeoff-axis-label--efficiency { left: 23%; top: 16%; }
+.paper-tradeoff-axis-label--security { left: 59%; top: 84%; }
+
+.paper-tradeoff-note {
+  right: 5%;
+  top: 8%;
+  color: #e6eee9;
+  font-family: $monospace-fonts;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+@container (max-width: 430px) {
+  .paper-tradeoff-axis-label { font-size: clamp(10px, 4.4cqw, 19px); }
+  .paper-tradeoff-note { font-size: clamp(8px, 3.7cqw, 16px); }
+}
+
 .paper-btree-legend {
   display: flex;
   flex-wrap: wrap;

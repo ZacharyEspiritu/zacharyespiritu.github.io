@@ -66,7 +66,7 @@
       list.appendChild(note);
     });
 
-    var ending = article.querySelector(':scope > .post-ending');
+    var ending = article.querySelector(':scope > .post-acknowledgments, :scope > .post-ending');
     article.insertBefore(section, ending || null);
     article.classList.add('post-footnotes-ready');
   }

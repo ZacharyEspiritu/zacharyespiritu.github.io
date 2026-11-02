@@ -1169,6 +1169,40 @@ a.block-link {
     }
   }
 
+  .post-acknowledgments {
+    box-sizing: border-box;
+    margin: 38px 310px 0 30px;
+    padding: 16px 32px;
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    background: #F6F6F6;
+    color: #000;
+    font-family: $sans-serif-fonts;
+    font-size: 15px;
+    line-height: 1.5;
+
+    h2 {
+      margin: 0 0 8px;
+      padding: 0;
+      font-family: $monospace-fonts;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    @media (max-width: 870px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 500px) {
+      padding: 18px;
+    }
+  }
+
   .post-footnote-ref,
   .post-footnotes {
     display: none;
