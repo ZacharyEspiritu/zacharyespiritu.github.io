@@ -12,6 +12,9 @@ permalink: /blog/:slug
 sass:
   style: compressed
 
+compress_html:
+  comments: ["<!-- ", " -->"]
+
 timezone: America/New_York
 future: true
 

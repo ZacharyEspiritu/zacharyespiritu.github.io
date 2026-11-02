@@ -10,6 +10,14 @@ bundle install
 bundle exec jekyll serve
 ```
 
+## HTML minification
+
+The site uses [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)
+v3.2.0 as its outermost layout. It minifies generated HTML during the regular
+GitHub Pages build, without requiring an unsupported Ruby plugin. The vendored
+layout is in `_layouts/compress.html`, and its MIT license is in
+`licenses/jekyll-compress-html.txt`. Sass already produces compressed CSS.
+
 ## Upcoming events
 
 Edit `_data/events.yml` to update the yellow panel beneath the profile photo.
