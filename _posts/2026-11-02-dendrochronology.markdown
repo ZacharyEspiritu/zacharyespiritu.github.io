@@ -19,7 +19,7 @@ is_post: true
 card_color: "#39735B"
 ending:
   tagline: Check out the full paper!
-  link: https://eprint.iacr.org/2026/2465
+  link: "/papers/dendrochronology-ccs2026.pdf"
   link_text: read paper
 ---
 
