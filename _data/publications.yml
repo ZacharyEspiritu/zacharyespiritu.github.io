@@ -26,6 +26,8 @@
           inference attacks on several TEE-based EDBs and point to broader lessons for TEE
           applications designed around legacy code.
       links:
+        - name: Proceedings
+          url: "https://dl.acm.org/doi/10.1145/3830454.3846542"
         - name: Full Version
           url: "https://eprint.iacr.org/2026/2465"
         - name: Blog Post
